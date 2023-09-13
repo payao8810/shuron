@@ -5,14 +5,15 @@
 \label{sec:background}
 %**********************************************************
 人流シミュレーションは，コンピュータ上で人の動きを再現する手法であり，
-図\ref{fig:aaaa}に人流シミュレーションの例を示す．図\ref{fig:aaaa}中の
+図\ref{fig:jinryu_image}に人流シミュレーションの例を示す．
+図\ref{fig:jinryu_image}中の
 青色の丸は右側に進む人，緑色の丸は左側に進む人，黄色の四角は壁，青色の四角
 は障害物である．
 赤色の障害物は，自動販売機やゴミ箱などの移動が可能である設置物である．
-図\ref{fig:aaaa}の例では，通路が赤色の障害物によって通路が狭くなっている
+図\ref{fig:jinryu_image}の例では，通路が赤色の障害物によって通路が狭くなっている
 ため，人の滞留や混雑が起きているため，赤色の障害物を撤去することで滞留や
 混雑を防ぐことができる．
-図\ref{fig:aaaa}のような混雑や滞留を発見するためには，実際に多くの人で
+図\ref{fig:jinryu_image}のような混雑や滞留を発見するためには，実際に多くの人で
 実験する必要があるため，時間や費用がかかる．一方で，
 人流シミュレーションは，コンピュータ上で再現できることから
 ，実際に多くの人を用いて実験するよりも，必要な時間や金額を抑えることが可能である．
@@ -32,7 +33,7 @@
     \begin{center}
      \includegraphics[width=14cm,clip]{figure/jinryu_image2_r2.eps}
      \caption{人流シミュレーションの活用例}
-     \label{fig:jinryu_image2}
+     \label{fig:jinryu_image}
     \end{center}
 \end{figure}
 
@@ -62,14 +63,29 @@
 \subsection{フロアフィールドモデル}
 フロアフィールドモデルは，
 
+
 \subsection{連続座標モデル}
 連続座標モデルは，
+
+
+\begin{figure}[htbp]
+    \begin{minipage}[b]{0.5\linewidth}
+      \centering
+      \includegraphics[keepaspectratio, scale=0.23]{figure/floormodel_ex.eps}
+      \caption{フロアフィールドモデルの例}
+      \label{fig:serumaton}
+    \end{minipage}
+    \begin{minipage}[b]{0.5\linewidth}
+      \centering
+      \includegraphics[keepaspectratio, scale=0.23]{figure/renzoku_model_ex.eps}
+      \caption{二次元連続座標モデルの例}
+      \label{fig:renzoku}
+    \end{minipage}
+\end{figure}
 
 \section{歩行者モデル}
 
 \subsection{セルオートマトン}
-
-\subsection{RVOモデル}
 
 \subsection{ソーシャルフォースモデル}
 

@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.141592653-p3.9.1-210218-2.6 (utf8.euc) (TeX Live 2022/dev/Debian) (preloaded format=platex 2023.6.24)  13 SEP 2023 16:52
+This is e-pTeX, Version 3.141592653-p3.9.1-210218-2.6 (utf8.euc) (TeX Live 2022/dev/Debian) (preloaded format=platex 2023.6.24)  13 SEP 2023 17:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -232,11 +232,7 @@ File: l3backend-dvips.def 2022-01-12 L3 backend support: dvips
 \g__pdf_backend_link_int=\count313
 \g__pdf_backend_link_sf_int=\count314
 )
-(./main.aux
-
-LaTeX Warning: Label `fig:jinryu_image2' multiply defined.
-
-)
+(./main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 36.
@@ -434,34 +430,31 @@ LaTeX Warning: Citation `katayose' on page 1 undefined on input line 44.
 
 ]) (./2_background.tex [2]
 第 2 章
-
-LaTeX Warning: Reference `fig:aaaa' on page 3 undefined on input line 8.
-
-
-LaTeX Warning: Reference `fig:aaaa' on page 3 undefined on input line 8.
-
-
-LaTeX Warning: Reference `fig:aaaa' on page 3 undefined on input line 12.
-
-
-LaTeX Warning: Reference `fig:aaaa' on page 3 undefined on input line 15.
-
 File: figure/jinryu_image2_r2.eps Graphic file (type eps)
 <figure/jinryu_image2_r2.eps>
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <17.28> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 40.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 41.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <17.28> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 40.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 41.
  [3
 
 ]
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <14.4> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 50.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 51.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <14.4> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 50.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 51.
 File: figure/networkmodel_ex.eps Graphic file (type eps)
- <figure/networkmodel_ex.eps> [4] [5] [6])
-(./3_survey.tex [7]
+ <figure/networkmodel_ex.eps>
+File: figure/floormodel_ex.eps Graphic file (type eps)
+
+<figure/floormodel_ex.eps>
+File: figure/renzoku_model_ex.eps Graphic file (type eps)
+ <figure/renzoku_model_ex.eps>
+Overfull \hbox (2.61108pt too wide) in paragraph at lines 72--84
+[][] [] 
+ []
+
+[4] [5] [6]) (./3_survey.tex [7]
 第 3 章
 [8
 
@@ -535,17 +528,14 @@ One-sided document style.
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: There were multiply-defined labels.
-
  ) 
 Here is how much of TeX's memory you used:
- 3393 strings out of 479850
- 49572 string characters out of 5887378
- 368083 words of memory out of 5000000
- 21647 multiletter control sequences out of 15000+600000
+ 3405 strings out of 479850
+ 49899 string characters out of 5887378
+ 368086 words of memory out of 5000000
+ 21657 multiletter control sequences out of 15000+600000
  496604 words of font info for 148 fonts, out of 8000000 for 9000
  264 hyphenation exceptions out of 8191
  70i,14n,76p,229b,480s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.dvi (28 pages, 64856 bytes).
+Output written on main.dvi (28 pages, 65760 bytes).
