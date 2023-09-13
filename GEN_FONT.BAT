@@ -1,0 +1,1 @@
+D:\Program\w32tex\bin\mktexpk.exe --dpi 746 --bdpi 300 --mag 2+146/300 ils

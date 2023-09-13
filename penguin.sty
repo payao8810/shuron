@@ -1,0 +1,469 @@
+% vim: set tabstop=4 : 
+%***********************************************************
+%       中村さんの修論すたいるふぁいる ver.2016 
+%
+%===========================================================
+%
+%       emacsユーザーへ  タブ幅4で表示すると幸せになれます
+%
+%
+%        DATE                   COMMENT(DIARY)
+%       ===========        =========================================
+%        2011/01/29             本ファイルを作成．
+%                                       (2010年までは「富永教授のテンプレート」を使用)
+%        2011/01/30             井上が朝マックを間違えて買ってきやがりました．悔しい．
+%        2011/01/31             情処の本文をそのままコピーしても大丈夫！
+%                                       (\figref と \tabref を再定義/ゴシックにはなりません)
+%                                       中村さんの便利\newcommand を追加
+%        2011/02/08             修論発表終わった！
+%        2011/02/11             本ファイルを元に卒論用フォーマットを作成
+%        2015/01/29             佐藤さんから「表紙に表示確認っていう謎文字がある」
+%                                       って文句が出たので修正．
+%        2015/02/20             2011/02/11で生成したスタイルファイルを1つのファイルに統合 
+%                                       penguinB4.sty + penguinM2.sty → penguin.sty
+%                                       (ver.2.0に更新)
+%        2016/10/22             川瀬から文句が出たので余白削減
+%
+%***********************************************************
+%
+%       富永教授のテンプレートとの相違点(ページデザイン編)
+%               ヘッダ             "章番号 章タイトル"を追加
+%               本文              上下の余白の削減 / 左右余白の拡大 / 章タイトルの位置と文字サイズを変更
+%               フッタ             変更無し
+%               章題(卒論)  余白削減
+%
+%
+%***********************************************************
+
+\ProvidesFile{penguin.sty}
+\ProvidesPackage{penguin}[2015/02/20 v2015.0] 
+\typeout{ Penguin cheer for you. ------ I hope you feel happier. ------}
+
+%-----------------------------------------------------------
+
+\usepackage{geometry}   % 余白楽々設定
+\usepackage{layout}             % レイアウト表示 
+
+%-----------------------------------------------------------
+% 表紙項目
+%-----------------------------------------------------------
+
+\def\表紙題目#1{\def\@表紙題目{#1}}
+\def\令和年度#1{\def\@令和年度{#1}}
+%
+\def\@表紙タイトル{\@表紙題目}
+\def\@表紙令和年度{\@令和年度}
+
+\def\@表紙令和年{\@令和年度}
+\def\表紙令和年度{\@令和年度}
+%\def\@表紙令和年{\@令和年度}
+%\def\表紙令和年度{\@令和年度}
+
+\def\西暦年度#1{\def\@西暦年度{#1}}
+\def\提出日#1{\def\@提出日{#1}}
+%
+\def\@西暦{\@西暦年度}
+\def\@提出{\@提出日}
+
+%-----------------------------------------------------------
+% 卒論ver, か 修論ver. かの判定 
+%-----------------------------------------------------------
+\newif\if修論     % 卒論/修論のフラグ作成
+\修論true         %フラグを修士状態で初期化
+                                %デフォルトだとabstract.tex内で学部生verに上書き
+
+\input{abstract}        % アブストラクトの設定
+
+%-----------------------------------------------------------
+% 余白設定
+%-----------------------------------------------------------
+%
+% 縦方向に増量する \backlineskip 
+% 縦方向に減量する \topskip
+%
+
+\newif\ifold
+\oldfalse
+
+
+\addtolength{\headsep}{0.5\topskip}                     %ヘッダ/本文間の余白
+\addtolength{\footskip}{2.5\topskip}            %本文/フッタ間の余白
+\def\baselinestretch{1.15} \small\normalsize%文字間隔調整
+
+\if修論
+        \geometry{top=4cm, bottom=3cm, left=3cm, right=3cm}
+\else
+        \geometry{top=4cm, bottom=3cm, left=3.5cm, right=2.5cm}
+\fi
+
+
+%-----------------------------------------------------------
+% ヘッダーとフッター 
+%-----------------------------------------------------------
+% 気にくわなかったら変更する
+%  (pagestyleの引数自体を変えるとtexで用意された設定に変更しやすい)
+%
+% 検索ワード:pagestyle
+%
+% [参考] penguinplainの設定
+%       @oddhead                : 奇数ヘッダ → 右側に章タイトル
+%       @oddfoot                : 奇数フッタ → 真ん中にページ番号
+%       @evenhead               : 偶数ヘッダ == 奇数ヘッダ        
+%       @evenfoot               : 偶数フッタ == 奇数フッタ        
+%
+
+% panguinplainというスタイルを定義する
+\def\ps@penguinplain{%
+        \let\@mkboth    \@gobbletwo
+        \def\@oddhead{\reset@font\footnotesize \hfil \rightmark}%       
+        \def\@oddfoot{\reset@font \hfil\thepage\hfil}%          
+        \let\@evenhead  \@oddhead
+        \let\@evenfoot  \@oddfoot                                                       
+        \let\chaptermark\@gobble                % chapを初期化しないように
+        \let\sectionmark\@gobble                % chapを初期化しないように
+        \let\subsectionmark\@gobble             % chapを初期化しないように
+}
+
+% この行でヘッダとフッタの設定
+\pagestyle{penguinplain}                        % 今回は自作スタイルpenguinplainを用いる
+
+
+%-----------------------------------------------------------
+% 図表題
+%-----------------------------------------------------------
+% captionのところの設定
+%       アンダーラインは要らないよね
+%
+%       ":"の前にスペースを入れた 
+%               →       気に入らないなら★の行を変更する．2行の内容は同じ形にしておくこと．
+%
+
+\long\def\@makecaption#1#2{
+        \vskip 10pt 
+        \setbox\@tempboxa\hbox{#1\ ： #2}                                                % ★     
+        \ifdim \wd\@tempboxa >\hsize #1\ ： #2\par \else \hbox   % ★ 
+                to\hsize{\hfil\box\@tempboxa\hfil}
+        \fi
+}
+
+
+%-----------------------------------------------------------
+% 参照番号
+%-----------------------------------------------------------
+%
+% デフォルト(1.1) から(1-1)のような形式に変更する
+%
+% [参考] (1・1)の形にするならこれを使う
+%               \def\theequation{\thechapter\mbox{$\cdot$}\arabic{equation}}
+%
+
+%式番号
+\def\theequation{\thechapter\mbox{--}\arabic{equation}}
+
+%表番号
+\def\thetable{\thechapter\mbox{--}\@arabic\c@table}
+
+%図番号
+\def\thefigure{\thechapter\mbox{--}\@arabic\c@figure}
+
+
+%-----------------------------------------------------------
+% 付録部分の章タイトル編集
+%-----------------------------------------------------------
+% 付録部分でフラグを立てるためにコマンド再定義
+
+\newif\ifap                                             % ここが付録か本文か調べるためのフラグ
+\newif\ifaps                                    % 付録の章番号の有無を設定するフラグ
+\apfalse                                                % フラグを"まだ本文"に設定
+\apsfalse
+
+\newcommand{\appendixes}{
+        \setcounter{chapter}{0}%
+        \setcounter{section}{0}%
+        \renewcommand{\@chapapp}{\appendixname\space}%  % スペース追加
+        \renewcommand{\@chappos}\space%
+        \renewcommand{\thechapter}{\@Alph\c@chapter}    % 章番号をアルファベットに
+        \aptrue                                         % ヘッダ情報のためにフラグセット
+        \apstrue
+}
+\renewcommand{\appendix}{\par
+        \appendixes
+        \renewcommand{\thechapter}{付録}% 章番号自体を"付録"にしちゃう
+        \renewcommand{\thesection}{\Alph{section}}% 節番号には"付録"を付けない
+        \renewcommand{\@chapapp}{}              % 第〇章みたいな表記を消去
+        \apsfalse
+}
+
+
+
+%-----------------------------------------------------------
+% 本文の章タイトル編集
+%               makechapterheadで検索
+%-----------------------------------------------------------
+%       chapter
+%               jreport.cls の \@makechapterheadを再定義
+%               章番号の次に改行を入れる
+%               ヘッダ情報を付加
+%       subsubsection
+%               文字を拡大
+%
+
+\def\@makechapterhead#1{\hbox{}%
+%       \vskip2\Cvs                                                     %この数字が章題の上の改行幅になる(要らないや)
+        {
+                \parindent\z@
+                \raggedright
+                \reset@font\huge\bfseries               %文字サイズ指定
+                \leavevmode
+                \ifnum \c@secnumdepth >\m@ne
+                        \setlength\@tempdima{\linewidth}%
+                        \setbox\z@\hbox{\@chapapp\thechapter\@chappos}% %一文字の空きは不要
+                        \unhbox\z@\nobreak
+                        \par                                            % 改行を追加 (重要！)
+                        \vtop{\hsize\@tempdima#1}%
+                \else
+                        #1\relax
+                \fi
+        }
+        \nobreak\vskip2\Cvs                                     %この数字が章題の下の改行幅になる
+        %ここから下でヘッダ情報を設定---------------------------
+        \ifap   %付録の部分で"章"なんて書かれても困るのでapフラグで分岐
+                \ifaps
+                        \markright{付録\thechapter\ \ #1} %章番号あり
+                \else
+                        \markright{付録\ \ #1}                            %章番号なし
+                \fi
+        \else
+                \markright{第\thechapter 章\ \ #1}                                                
+        \fi
+}
+
+
+
+\renewcommand{\subsubsection}{
+        \@startsection{subsubsection}{3}{\z@}%  
+        {0.5\Cvs \@plus.5\Cvs \@minus.\Cvs}%    %元の設定より狭めた
+        {0.1\Cvs}%                                                              %同上
+        {\reset@font\large\bfseries}                    %フォントサイズをでかくした
+}
+
+
+%-----------------------------------------------------------
+% 参考文献
+%-----------------------------------------------------------
+% 情処のフォーマットに合わせる
+%
+
+\def\thebibliography#1{
+        \section*{{\huge\bfseries 参考文献}\\ \markboth{参考文献}{参考文献}}
+ \list                                  % list環境を使うよ
+  {(\arabic{enumi})}    % デフォルトの[1]から(1)に変更
+  {\settowidth\labelwidth{(#1)}
+  \leftmargin\labelwidth
+  \advance\leftmargin\labelsep
+  \usecounter{enumi}}
+  \def\newblock{\hskip .11em plus .33em minus -.07em}
+  \fussy
+  \sfcode`\.=1000\relax}
+\let\endthebibliography=\endlist
+% 参考文献の引用形式を上付き文字にする
+\def\@cite#1#2{$^{\mbox{\scriptsize ({#1\if@tempswa,#2\fi})}}$} 
+
+% 情処のbibtexスタイルファイルを参照します
+\bibliographystyle{sty/ipsjunsrt} 
+
+
+%----------------------------------------------------------
+% 表紙 
+%----------------------------------------------------------
+%
+%
+
+
+\newcommand{\nametable}{
+\begin{tabular}{lll}
+%       表示確認 & \@表紙令和年 &\\
+所属専攻       &:& 情報科学専攻 \\
+学生番号・氏名 &:& {\@学生番号}番　{\@和文氏名}\\
+指導教員       &:& 前川 仁孝　教授 \\
+\end{tabular}
+}
+
+\if修論
+        \def\@所属{千葉工業大学　情報科学専攻}
+        \def\@表紙上部{\@西暦 年度　修士学位論文}
+\else
+        \def\@所属{千葉工業大学　情報工学科}
+        \def\@表紙上部{{令和\@令和年度}年度　卒業論文}
+\fi
+
+\newcommand{\covertable}{
+\begin{tabular}{c}
+{\@所属} \\
+{\@学生番号}　{\@和文氏名} \\
+\\
+指導教員　前川仁孝 教授 \\
+提出日　{\@提出} \\
+\end{tabular}
+}
+
+% 学校提出用の表紙
+\if修論
+        \newcommand{\addtitlepage}{
+                \begin{titlepage}
+                \XYBC{2.5mm}{0.5mm}{164.5mm}{10.5mm}{\LARGE 千葉工業大学}
+                \XYBC{2.5mm}{13.5mm}{164.5mm}{23.5mm}{\LARGE 修士学位論文}
+                \XYBC{2.5mm}{25.5mm}{164.5mm}{100.5mm}{\Huge\bf \begin{tabular}{c}\@表紙タイトル\end{tabular}}
+
+                \XYBC{2.5mm}{145.5mm}{164.5mm}{155.5mm}{\LARGE 令和\表紙令和年度 年3月}
+                \XYBC{2.5mm}{170.5mm}{164.5mm}{210.5mm}{\LARGE \nametable}
+                \end{titlepage}
+                \clearpage
+
+                \和文要旨
+                \英文要旨
+        }
+\else
+        \newcommand{\addtitlepage}{\onlytitle}
+\fi
+
+% 学科提出用の表紙
+\newcommand{\onlytitle}{
+        \begin{titlepage}
+        \XYBC{-15.5mm}{0.5mm}{164.5mm}{12.5mm}{\Large {\@表紙上部}}
+        \XYBC{-15.5mm}{13.5mm}{164.5mm}{100.5mm}{\LARGE\bf \begin{tabular}{c}\@表紙タイトル\end{tabular}}
+
+        \XYBC{-15.5mm}{165.5mm}{164.5mm}{210.5mm}{\Large \covertable}
+        \end{titlepage}
+        \clearpage
+}
+
+
+%----------------------------------------------------------
+% 目次 
+%----------------------------------------------------------
+%
+\newcommand{\tocpage}{
+\clearpage
+\pagenumbering{roman}
+\markright{目次}
+\tableofcontents
+\pagebreak
+\addcontentsline{toc}{chapter}{図一覧}
+\markright{図一覧}
+\listoffigures
+\clearpage
+\addcontentsline{toc}{chapter}{表一覧}
+\markright{表一覧}
+\listoftables
+\clearpage
+\pagenumbering{arabic}
+}
+
+%-----------------------------------------------------------
+% 謝辞のところに書く日付
+%-----------------------------------------------------------
+\newcommand{\thanksend}{
+        %\vspace{1em}
+        \hspace*{\fill}
+        {\@提出}
+}
+
+
+%-----------------------------------------------------------
+% 誰得？設定 
+%-----------------------------------------------------------
+% texfractionを0にすると，1行だけのページが生成される
+%
+
+\def\topfraction{0.8}           % ページの上0.8まで図表で占めてよい
+\def\texfraction{0.05}          % ページ中で本文の占める割合の下限
+\def\floatpagefraction{0.8}     % 図表だけのページは，少なくともこれだけを図表で占める
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 簡単コマンド
+%**********************************************************
+% もし気が向いたら，使ってやってください
+%
+
+%----------------------------------------------------------
+%オワタ
+%----------------------------------------------------------
+%       \owataと入力すると\(^o^)/を表示  (現実逃避用)
+%
+\newcommand{\owata}{$\backslash ( \hat{\ } o \hat{\ } ) / $}
+
+%----------------------------------------------------------
+% 数式に"バー"をつける(ショートカットコマンド)
+%----------------------------------------------------------
+%       $\ol{数式}$
+%       最適化問題や集合論で式を使う際にどうぞ
+%
+\newcommand*{\ol}{\overline}
+\DeclareRobustCommand*{\ol}{\overline}
+
+%----------------------------------------------------------
+%図の貼り付け(ショートカットコマンド)
+%       個人の好みに合わせた改造推奨
+%----------------------------------------------------------
+%       1枚だけ
+%               \fig{タイトル}{ファイル名}{図の横幅}
+%
+%       2枚並べて
+%               \doublefig{タイトル1}{ファイル名1}{図の横幅1}{図と図の間隔}{title_2}{file_name2}{size_2}
+%
+%       横幅はcm単位で指定する(小数点使えます)
+%       参照ラベルが"fig:ファイル名"になる
+%
+%       [例] ./figure/penguin.epsを貼り付ける
+%               \figref{fig:penguin}に，横幅が4.3cmになるようにペンギンの図を貼り付ける．
+%               \fig{ペンギンの図}{penguin}{4.3}
+%
+%       ※現在の設定だと，図は必ず./figureディレクトリ内に保存する必要あり
+%
+\newcommand{\fig}[3]{
+\begin{figure}[htb]
+\begin{center}  
+\includegraphics[width=#3cm,clip]{./figure/#2.eps}      %epsファイルを保存したディレクトリを指定
+\caption{#1}
+\label{fig:#2}  
+\end{center}
+\end{figure}}
+
+\newcommand{\doublefig}[7]{
+\begin{figure}[htb]
+\begin{tabular}{rl}
+%-[1枚目]------------------
+\begin{minipage}{0.45\hsize}
+\begin{center}
+\includegraphics[width=#3cm,clip]{./figure/#2.eps}      %epsファイルを保存したディレクトリを指定
+\caption{#1}
+\label{fig:#2}
+\end{center}
+\end{minipage}
+%-[2枚目]------------------
+\hspace*{#4cm}
+\begin{minipage}{0.45\hsize}
+\begin{center}
+\includegraphics[width=#7cm,clip]{./figure/#6.eps}      %epsファイルを保存したディレクトリを指定
+\caption{#5}
+\label{fig:#6}
+\end{center}
+\end{minipage}
+\end{tabular}
+\end{figure}}
+
+
+%----------------------------------------------------------
+% 情処の楽々参照コマンド(偽)
+%----------------------------------------------------------
+%       初参照時にゴシック体で表記する機能はありません
+%       情処で学会発表した原稿をそのままコピペできるように補完
+%
+\newcommand{\figref}[1]{図\ref{#1}}
+\newcommand{\tabref}[1]{表\ref{#1}}
+
+
+
+%%%%%%%%%%%%%%% END %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

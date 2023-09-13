@@ -1,0 +1,69 @@
+%====================================================================
+% 修論てんぷれ 
+%
+%       メモ
+%               章(chapter)＞節(section)＞項(subsection)
+%               2行空白をあけるためには…   \vspace{2\Cvs}
+%
+%====================================================================
+\documentclass[a4j,12pt]{jreport}
+\usepackage{graphicx}
+
+
+%====[ プリアンプル ]================================================
+%
+% 不必要ならコメントアウトするとコンパイルが速くなる
+%       パッケージの機能は「tex パッケージ名」で検索
+%
+\usepackage{subfigure}  % 図に(a)(b)(c)と記号を振れるパッケージ
+\usepackage{amsfonts}   % \mathbb 4兄弟 (数式の太文字フォント/自然数Nとかで使う)
+\usepackage{amsmath}    % \mathbb
+\usepackage{amssymb}    % \mathbb
+%\usepackage{bbm}               % \mathbb
+%\usepackage{enumitem}  % 箇条書きのフォーマットを編集できる
+%\usepackage{theorem}   % 補題/定理/定義 
+%\usepackage{boites}    % 文章を枠で囲む
+%\usepackage{cases}             % 場合分けした数式に式番号をつける
+%\usepackage{mathrsfs}  % 花文字
+%\usepackage{fancybox}  % verbatimを四角で囲む
+
+
+%以下の2行はコメントアウトすると卒業できなくなる
+\usepackage[HeaderWithUnderline]{shuronABS}     % アブストラクト
+\usepackage{penguin}    % ページレイアウト設定
+
+%====[ 表紙 ]========================================================
+\begin{document}
+\addtitlepage           % タイトル
+\tocpage                        % 目次
+
+%====[ 本文 ]========================================================
+
+\input{1_intro}
+\input{2_background}
+\input{3_survey}
+\input{4_method}
+\input{5_result}
+\input{6_discuss}
+
+
+%====[ 謝辞 ]========================================================
+\clearpage
+\addcontentsline{toc}{chapter}{謝辞}
+\markright{謝辞}
+\input{thanks}
+
+%====[ 参考文献 ]====================================================
+
+\clearpage
+\addcontentsline{toc}{chapter}{参考文献}
+\markright{参考文献}
+\bibliography{bibfile}          % どちらか片方を選択     
+%\input{bibfile}                        % どちらか片方を選択
+
+
+%====[ 付録 ]========================================================
+\appendixes             %付録に章番号が必要ない場合は"es"を削除(\appendixにする)
+\input{appendix}
+
+\end{document}

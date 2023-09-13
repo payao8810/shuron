@@ -1,0 +1,264 @@
+\NeedsTeXFormat{pLaTeX2e}
+%\ProvidesFile{shuronABS.sty}
+%    [2003/12/23 v1.0]
+\newif\if@HeaderWithUnderline
+  \@HeaderWithUnderlinefalse
+\newif\if@ilschar
+\DeclareOption{HeaderWithUnderline}{\@HeaderWithUnderlinetrue}
+\DeclareOption{ilschar}{%
+  \DeclareFontFamily{U}{ils}{\skewchar\font"7F}
+  \DeclareFontShape{U}{ils}{m}{n}{<-> ils}{}
+  \DeclareMathAlphabet{\ils}{U}{ils}{m}{n}
+  \def\koudai{\ils A}
+  \def\Koudai{\ils B}
+  \@ilschartrue
+}
+\ExecuteOptions{12pt,oneside,onecolumn,final}
+\ProcessOptions\relax
+\setlength\lineskip{1pt}
+\setlength\normallineskip{1pt}
+\renewcommand{\baselinestretch}{1.5}
+\setlength\parskip{0pt}
+\setlength\parindent{1zw}
+\setlength\smallskipamount{3\p@ \@plus 1\p@ \@minus 1\p@}
+\setlength\medskipamount{6\p@ \@plus 2\p@ \@minus 2\p@}
+\setlength\bigskipamount{12\p@ \@plus 4\p@ \@minus 4\p@}
+\setlength\headheight{12pt} % ヘッダの高さ(4.2mm)
+\setlength\headsep{45pt}    % ヘッダと本文の距離(15.75mm)
+\setlength\topskip{-20pt}   % 上余白(-7mm)
+\setlength\footskip{73pt} % (25.55mm)
+\if@compatibility
+  \setlength\maxdepth{4\p@}
+\else
+  \setlength\maxdepth{.5\topskip}
+\fi
+\setlength\textwidth{465pt}  % 本文幅(162.75mm)
+\@settopoint\textwidth
+\setlength\textheight{630pt}  % 本文高さ(220.5mm)
+\@settopoint\textheight
+\addtolength\textheight{\topskip}
+\@settopoint\textheight
+\setlength\topmargin{-20pt} % 上余白 (-7mm)
+\setlength\marginparsep{10pt} % (3.5mm)
+\setlength\marginparpush{7pt} % (2.45mm)
+\setlength\oddsidemargin{13pt}
+\setlength\evensidemargin{0pt}
+\setlength\marginparwidth{68pt}
+\setlength\footnotesep{8.4pt}
+\setlength{\skip\footins}{10.8pt \@plus 4pt minus 2pt}
+  \newfont{\egtrm}{cmr8}
+  \newfont{\tenrm}{cmr10}
+  \newfont{\twlrm}{cmr10 scaled \magstep 1}
+  \newfont{\frtnrm}{cmr10 scaled \magstep 2}
+  \newfont{\svtnrm}{cmr10 scaled \magstep 3}
+  \newfont{\twtyrm}{cmr10 scaled \magstep 4}
+  \newfont{\twfvrm}{cmr10 scaled \magstep 5}
+  \newfont{\twtybf}{cmbx10 scaled \magstep 4}
+  \newfont{\twfvbf}{cmbx10 scaled \magstep 5}
+  \newfont{\svtngt}{goth10 scaled \magstep 3}
+  \newfont{\twtygt}{goth10 scaled \magstep 4}
+  \newfont{\twfvgt}{goth10 scaled \magstep 5}
+  \newfont{\tenmin}{min10}
+  \newfont{\twlmin}{min10 scaled \magstep 1}
+  \newfont{\frtnmin}{min10 scaled \magstep 2}
+  \newfont{\svtnmin}{min10 scaled \magstep 3}
+  \newfont{\twtymin}{min10 scaled \magstep 4}
+  \newfont{\twfvmin}{min10 scaled \magstep 5}
+  \newfont{\twfrils}{ils scaled \magstep 4}
+  \newfont{\twfvils}{ils scaled \magstep 5}
+  \newfont{\thtyils}{ils scaled 2986}
+\def\@論文種類{修士論文}
+\setlength\paperheight {297mm}%
+\setlength\paperwidth  {210mm}
+\@lowpenalty   51
+\@medpenalty  151
+\@highpenalty 301
+\if@compatibility
+  \setlength\maxdepth{4\p@}
+\else
+  \setlength\maxdepth{.5\topskip}
+\fi
+\def\学生番号#1{\def\@学生番号{#1}}
+\def\和文氏名#1{\def\@和文氏名{#1}}
+\def\和文題目#1{\def\@和文題目{#1}}
+\def\和文キーワード#1{\def\@和文キーワード{#1}}
+\def\英文氏名#1{\def\@英文氏名{#1}}
+\def\英文題目#1{\def\@英文題目{#1}}
+\def\英文キーワード#1{\def\@英文キーワード{#1}}
+\def\@論文題目{\@和文題目}
+%\def\@研究者{\@学生番号 & \@和文氏名}
+\newtoks\和文論文要旨
+\newtoks\英文論文要旨
+\newdimen\HOFFSET \HOFFSET=0mm
+\newdimen\VOFFSET \VOFFSET=0mm
+\def\OFFSET{
+  \advance\hoffset by \HOFFSET
+  \advance\voffset by \VOFFSET
+}
+\newbox\dummybox
+\newdimen\X
+\newdimen\Y
+\newdimen\XXA
+\newdimen\YYA
+\newdimen\XM \XM=4mm% X-direction margin
+\newdimen\YM \YM=2mm% Y-direction margin
+\newdimen\htbackskip
+\newdimen\dpbackskip
+\long\def\XY#1#2#3{
+  \setbox\dummybox=\vbox{
+    \vskip#2
+    \hbox to \hsize{%
+      \hskip#1
+      \vbox{\advance\hsize by -#1#3}\hfil
+    }
+  }
+  \htbackskip=-\ht\dummybox
+  \dpbackskip=-\dp\dummybox
+  \box\dummybox\nointerlineskip
+  \vskip\htbackskip
+  \vskip\dpbackskip
+}
+\long\def\XYBC#1#2#3#4#5{
+  \X=#3 \Y=#4 \advance\X by -#1 \advance\Y by -#2
+  \XY{#1}{#2}{\CBOX{\X}{\Y}{#5}}
+}
+\long\def\XYBP#1#2#3#4#5{
+  \X=#3 \Y=#4 \advance\X by -#1 \advance\Y by -#2
+  \XY{#1}{#2}{\PBOX{\X}{\Y}{#5}}
+}
+\long\def\PBOX#1#2#3{
+   \X=#1 \Y=#2 \advance\X by -\XM \XXA=\X \advance\X by -\XM
+               \advance\Y by -\YM \YYA=\Y \advance\Y by -\YM
+   \vbox to \YYA{\vskip\YM
+   \hbox to \XXA{\hskip\XM\vbox to \Y{\hsize=\X\linewidth=\X \parbox{\hsize}{\parindent=1zw #3}\vfil}%
+   \hfil}
+}}
+
+\long\def\CBOX#1#2#3{{
+  \hsize=#1\linewidth=\hsize
+  \setbox\dummybox\hbox{#3}
+  \vbox to #2{
+    \vfil
+    \ifdim#1 < \wd\dummybox
+      \X=#1
+      \advance\X by -4mm
+      \hbox to \hsize{\hfil\vbox{\hsize=\X\linewidth=\hsize #3}\hfil}
+    \else
+      \hbox to \hsize{\hfil #3\hfil}
+    \fi
+    \vfil
+  }
+}}
+\newdimen\rulelength
+\def\Vrule#1#2#3{
+   \rulelength=#3
+   \advance\rulelength by -#2
+   \XY{#1}{#2}{\vrule width0.7pt height\rulelength depth0pt}
+}
+\def\Hrule#1#2#3{
+   \rulelength=#3
+   \advance\rulelength by -#1
+   \XY{#1}{#2}{\vrule width\rulelength height0.7pt depth0pt}
+}
+\def\Vrulethick#1#2#3{
+   \rulelength=#3
+   \advance\rulelength by -#2
+   \XY{#1}{#2}{\vrule width1.4pt height\rulelength depth0pt}
+}
+\def\Hrulethick#1#2#3{
+   \rulelength=#3
+   \advance\rulelength by -#1
+   \XY{#1}{#2}{\vrule width\rulelength height1.4pt depth0pt}
+}
+\newif\if和文\和文true
+\DeclareFontFamily{U}{ils}{\skewchar\font"7F}
+\DeclareFontShape{U}{ils}{m}{n}{<-> ils}{}
+\DeclareMathAlphabet{\ils}{U}{ils}{m}{n}
+\def\koudai{\ils A}
+\def\Koudai{\ils B}
+\def\和文要旨{\和文true  \論文要旨}
+\def\英文要旨{\和文false \論文要旨}
+\def\論文要旨{{
+  \hoffset=0mm \voffset=0mm
+  \advance\hsize by -\hoffset
+  \advance\vsize by -\voffset
+  \OFFSET
+  \thispagestyle{empty}
+  \headsep\z@ \headheight\z@ \oddsidemargin -1.0mm %% サイドマージンを適当に調整しましょう！ modified by Doi, (Thu) January 08, 2004.
+  \topmargin -3.0mm %% トップマージンを適当に調整しましょう！ modified by Doi, (Thu) January 08, 2004.
+  \hsize=170mm \vsize=280mm
+  \parindent\z@ \parskip\z@
+  \linewidth=\hsize \baselineskip = 4.0mm plus1mm minus0.5mm
+  \rightskip = 0pt plus 120mm \lineskip\z@ \topskip\z@
+  \def\baselinestretch{1}\large\normalsize
+  \Hrulethick{2.5mm}{23.5mm}{164.5mm} \Hrulethick{  2.5mm}{243.5mm}{164.5mm}
+  \Vrulethick{2.5mm}{23.5mm}{243.5mm} \Vrulethick{164.5mm}{ 23.5mm}{244mm}
+
+  \Hrule{2.5mm}{33.5mm}{164.5mm} \Hrule{2.5mm}{48.5mm}{164.5mm}
+  \Hrule{2.5mm}{78.5mm}{164.5mm} \Hrule{2.5mm}{88.5mm}{164.5mm}
+
+  \Vrule{52.5mm}{23.5mm}{48.5mm} \Vrule{92.5mm}{23.5mm}{48.5mm}
+
+%% \XYBC{2.5mm}{-9mm}{164.5mm}{10mm}{\kern-1.7zw\raisebox{-6zh}{ \Huge $\Koudai$}} % 工大マークを右上にずらした.
+  \XYBC{7.7mm}{-14mm}{164.5mm}{10mm}{\kern-1.7zw\raisebox{-6zh}{ \Huge $\Koudai$}} % modified by Doi, (Thu) January 08, 2004.
+
+  \if和文
+    \XYBC{2.5mm}{ 11.0mm}{164.5mm}{ 23.5mm}{\twfvmin 修士論文要旨}
+
+    \XYBC{2.5mm}{246.5mm}{164.5mm}{252.5mm}{\frtnmin 千葉工業大学大学院情報科学研究科}
+    \XYBC{2.5mm}{252.5mm}{164.5mm}{258.5mm}{\tenmin \tenrm ◎要旨は600字程度}
+
+    \XYBC{ 2.5mm}{23.5mm}{ 52.5mm}{33.5mm}{\svtnmin 専　攻}
+    \XYBC{ 2.5mm}{33.5mm}{ 52.5mm}{48.5mm}{\svtnmin 情報科学}
+    \XYBC{52.5mm}{23.5mm}{ 92.5mm}{33.5mm}{\svtnmin 学生番号}
+    \XYBC{52.5mm}{33.5mm}{ 92.5mm}{48.5mm}{\svtnrm\@学生番号}
+    \XYBC{92.5mm}{23.5mm}{164.5mm}{33.5mm}{\svtnmin 氏　　名}
+    \XYBC{92.5mm}{33.5mm}{164.5mm}{48.5mm}{\svtnmin\@和文氏名}
+
+    \XYBC{2.5mm}{48.5mm}{ 32.5mm}{58.5mm}{\svtnmin 論文題目}
+
+%%% \XYBC{2.5mm}{58.5mm}{164.5mm}{78.5mm}{\svtnmin \svtnrm \begin{tabular}{c}\@論文題目\end{tabular}}
+%%% \XYBC{2.5mm}{53.5mm}{164.5mm}{78.5mm}{\svtnmin \svtnrm \begin{tabular}{c}\@論文題目\end{tabular}} % modified by DOI, (Tue) December 23, 2003.
+    \XYBC{2.5mm}{53.5mm}{164.5mm}{78.5mm}{\svtnmin \svtnrm \begin{tabular}{l}\@論文題目\end{tabular}} % modified by Penguin, (Thu) January 20, 2011.
+
+    \XYBC{ 2.5mm}{78.5mm}{ 32.5mm}{88.5mm}{\frtnmin キーワード}
+    \XYBC{32.5mm}{78.5mm}{164.5mm}{88.5mm}{\tenmin\tenrm\baselineskip=1.5mm%
+\begin{tabular}{p{127.5mm}}\@和文キーワード\end{tabular}
+    \baselineskip = 4.0mm plus1mm minus0.5mm}
+
+    \XYBC{ 2.5mm}{ 88.5mm}{ 32.5mm}{100.5mm}{\svtnmin 論文要旨}
+    \XYBP{12.5mm}{100.5mm}{154.5mm}{243.5mm}{\twlmin \the\和文論文要旨}
+  \else
+    \XYBC{2.5mm}{ 11.0mm}{164.5mm}{ 23.5mm}{\twtyrm Summary of Master's Thesis}
+
+    \XYBC{2.5mm}{246.5mm}{164.5mm}{252.5mm}{\twlrm Graduate School Information and Computer Science,\ Chiba Institute of Technology}
+    \XYBC{2.5mm}{252.5mm}{164.5mm}{258.5mm}{\egtrm The contents of English summary should be written in about 200 words.}
+
+    \XYBC{ 2.5mm}{23.5mm}{ 52.5mm}{33.5mm}{\svtnrm Course}
+%%% \XYBC{ 2.5mm}{33.5mm}{ 52.5mm}{48.5mm}{\frtnrm Computer Science} % "Information and"を追加  
+    \XYBC{ 2.5mm}{31.0mm}{ 47.0mm}{46.0mm}{\frtnrm Information and}  % modified by Penguin, (Thu) January 20, 2011. 
+    \XYBC{ 2.5mm}{37.0mm}{ 54.5mm}{52.0mm}{\frtnrm Computer Science} % modified by Penguin, (Thu) January 20, 2011. 
+
+    \XYBC{52.5mm}{23.5mm}{ 92.5mm}{33.5mm}{\frtnrm Student No.}
+    \XYBC{52.5mm}{33.5mm}{ 92.5mm}{48.5mm}{\frtnrm\@学生番号}
+    \XYBC{92.5mm}{23.5mm}{164.5mm}{33.5mm}{\frtnrm SURNAME,\ Firstname}
+    \XYBC{92.5mm}{33.5mm}{164.5mm}{48.5mm}{\frtnrm\@英文氏名}
+
+    \XYBC{2.5mm}{48.5mm}{ 20.5mm}{58.5mm}{\svtnrm Title}
+
+%%% \XYBC{2.5mm}{58.5mm}{164.5mm}{78.5mm}{\svtnmin \svtnrm \begin{tabular}{c}\@英文題目\end{tabular}}
+%%% \XYBC{2.5mm}{52.5mm}{164.5mm}{78.5mm}{\svtnmin \svtnrm \begin{tabular}{c}\@英文題目\end{tabular}} % modified by DOI, (Tue) December 23, 2003.
+    \XYBC{2.5mm}{52.5mm}{164.5mm}{78.5mm}{\svtnmin \svtnrm \begin{tabular}{l}\@英文題目\end{tabular}} % modified by Penguin, (Thu) January 20, 2011.
+
+    \XYBC{ 2.5mm}{78.5mm}{ 32.5mm}{88.5mm}{\frtnrm Keywords}
+    \XYBC{32.5mm}{78.5mm}{162.5mm}{88.5mm}{\tenrm\tenrm\baselineskip=3.5mm%
+\begin{tabular}{p{127.5mm}}\@英文キーワード\end{tabular}
+    \baselineskip = 4.0mm plus1mm minus0.5mm}
+
+    \XYBC{ 2.5mm}{ 88.5mm}{ 32.5mm}{100.5mm}{\svtnrm Summary}
+    \XYBP{12.5mm}{100.5mm}{154.5mm}{243.5mm}{\twlrm \the\英文論文要旨}
+  \fi
+  \def\baselinestretch{1.5}\large\normalsize
+  \vfil\break
+}}
+\endinput

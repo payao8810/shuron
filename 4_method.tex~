@@ -1,0 +1,93 @@
+% vim: set tabstop=4 :
+%**********************************************************
+\chapter{提案手法にあたる章}
+\label{sec:method}
+%**********************************************************
+
+\section{ファイル構成}
+
+
+\tabref{tb:filelist}に，zipファイル中のファイル一覧を示します．
+\tabref{tb:filelist}中の記号の意味を以下に示します．
+\begin{description}
+\item[◎]編集してはいけない大切なファイル
+\item[○]全員が編集するファイル
+\item[△]状況に合わせて編集
+\item[×]使わない
+\end{description}
+
+表紙に記述する情報の設定する際は，abstract.texを書き換えてください．
+また，表紙フォーマットを変更したい場合は，
+penguinB4.styおよびpenguinM2.styの250行目くらいを書き換えてください．
+
+
+
+\begin{table}[htb]
+\begin{center}
+\caption{ファイル一覧}
+\label{tb:filelist}
+{\tabcolsep=0.3cm
+\begin{tabular}{l|l|c|c}
+\hline\hline
+ファイル名 & 内容 & B4 & M2 \\ \hline
+figure/     & 図を入れておくためのディレクトリ  & & \\ \hline
+sty/        & スタイルファイルが多いのでまとめた & & \\ \hline
+abs\_ sample/ & & & \\  \hline
+1\_ intro.tex & main.texが呼び出すファイル& & \\  
+2\_ background.tex & 研究内容に合わせて章構成を決めてください& & \\ 
+3\_ survey.tex & &○&○\\ 
+4\_ method.tex & & & \\ 
+5\_ result.tex & & & \\ 
+6\_ discuss.tex & & & \\ \hline
+astract.tex & 表紙情報と修論アブストラクト&○&○\\ \hline
+appendix.tex & 付録を書く&○&○\\ \hline
+bibfile.bib & bibファイル使用時は，ここに記述する &△&△\\ \hline
+bibfile.tex & bibファイル未使用時は，参考文献をここに書く &△&△\\ \hline
+cover.tex   & 表紙を作るためのファイル &◎&◎\\ \hline
+ils.mf & 修論テンプレートに入っていたファイル(未変更)  &×&◎\\ \hline
+ipsjunsrt.bst & 情処の参考文献スタイルファイル &◎&◎\\ \hline
+main.tex  & platexでコンパイルするtexファイル &〇&〇\\ \hline
+makefile    & &△&○\\ \hline
+penguin.sty &中村さんが作ったスタイルファイル &◎&◎\\ \hline
+shuronABS.sty &学科の修論abstractスタイルファイル&◎&◎\\ \hline
+thanks.tex    & 謝辞を書くところ &○&○\\ \hline
+\end{tabular}}
+\end{center}
+\end{table}
+
+
+
+\section{makeコマンドの使い方}
+
+\tabref{tb:6_arc}に，texファイルをコンパイルするためのコマンドを示します．
+生成されるpdfファイルは以下の2種類です．
+\begin{description}
+\item[main.pdf (main.dvi)] 図書館提出用の修論データ
+\item[cover.pdf (cover.dvi) ] 学科提出用ファイルの表紙に張り付けるためのデータ
+\end{description}
+
+\begin{table}[htb]
+\begin{center}
+\caption{makeコマンドの使い方について}
+\label{tb:6_arc}
+{\tabcolsep=0.3cm
+\begin{tabular}{l|l|l}
+\hline\hline
+%\multicolumn{2}{|c}{コマンド}
+コマンド  & 効果 & 生成ファイル \\
+\hline
+make       & 論文データを2回コンパイル & main.pdf 	\\
+		   & 印刷用pdf作成		       & cover.pdf  \\ 			\hline
+make cover & 学科提出用の表紙のみ作成  & cover.pdf 	\\ 			\hline
+make dvi   & 論文データを2回コンパイル & main.dvi 	\\ 			\hline
+make clean & dviファイルを作るために作成したファイルを削除& \\ 	\hline 
+\end{tabular}}
+\end{center}
+\end{table}
+
+
+
+
+%***** END ************************************************
+
+
