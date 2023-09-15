@@ -1,4 +1,4 @@
-This is pBibTeX, Version 0.99d-j0.33 (utf8.euc) (TeX Live 2022/dev/Debian)
+This is upBibTeX, Version 0.99d-j0.36-u1.29 (utf8.euc) (TeX Live 2023)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
 The style file: sty/ipsjunsrt.bst
@@ -20,6 +20,8 @@ Warning--I didn't find a database entry for "1ji_sfm2"
 Warning--I didn't find a database entry for "seru_sfm1"
 Warning--I didn't find a database entry for "seru_sfm2"
 Warning--I didn't find a database entry for "katayose"
+Warning--I didn't find a database entry for "21_Isozaki"
+Warning--I didn't find a database entry for "ando_sfm"
 Warning--editor or author is missing in 1983_Ibaraki
 Warning--Missing required argument title in 1983_Ibaraki
 Warning--Missing required argument publisher in 1983_Ibaraki
@@ -27,7 +29,7 @@ Warning--Missing required argument author in test1
 Warning--Missing required argument title in test1
 You've used 2 entries,
             2207 wiz_defined-function locations,
-            556 strings with 4395 characters,
+            559 strings with 4423 characters,
 and the built_in function-call counts, 233 in all, are:
 = -- 6
 > -- 2
@@ -67,4 +69,4 @@ while$ -- 0
 width$ -- 3
 write$ -- 11
 is.kanji.str$ -- 2
-(There were 21 warnings)
+(There were 23 warnings)
