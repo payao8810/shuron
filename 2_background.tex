@@ -76,7 +76,9 @@
 図\ref{fig:network_ex}中の(a)は解析対象であり，(b)はネットワークモデルである．
 図\ref{fig:network_ex}中の(b)の青丸は交差点や道路の末端であり，ノードと呼ばれる．
 ネットワークモデルでは，ノード間に数十から数百人単位で動かすことで，人の動きを解析する．
-このため，ネットワークモデルを用いた解析では，都市間の人々の移動や，津波や地震などの
+ネットワークモデルは，解析が高速であるが，モデルの準備に大きな作業が必要になるだけでなく，
+モデルの定義に知識や経験が必要になることが多い．
+ネットワークモデルを用いた解析では，都市間の人々の移動や，津波や地震などの
 災害時における都市の避難シミュレーションのような解析人数が多い解析に用いられることが多い
 （参考文献）
 ネットワークモデルで建物内の人の流れを解析する場合は，図\ref{fig:nework_situnai}に示すように
@@ -142,19 +144,20 @@
 
 
 \begin{figure}[htbp]
-    \begin{minipage}[b]{0.5\linewidth}
-      \centering
-      \includegraphics[keepaspectratio, scale=0.23]{figure/floormodel_ex.eps}
-      \caption{フロアフィールドモデルの例}
-      \label{fig:serumaton}
-    \end{minipage}
-    \begin{minipage}[b]{0.5\linewidth}
-      \centering
-      \includegraphics[keepaspectratio, scale=0.23]{figure/renzoku_model_ex.eps}
-      \caption{二次元連続座標モデルの例}
-      \label{fig:renzoku}
-    \end{minipage}
+  \begin{minipage}[b]{0.5\linewidth}
+    \centering
+    \includegraphics[keepaspectratio, scale=0.37]{figure/seruotomaton_image4.eps}
+    \caption{フロアフィールドモデルの例}
+    \label{fig:serumaton}
+  \end{minipage}
+  \begin{minipage}[b]{0.5\linewidth}
+    \centering
+    \includegraphics[keepaspectratio, scale=0.37]{figure/renzoku_image2.eps}
+    \caption{二次元連続座標モデルの例}
+    \label{fig:renzoku}
+  \end{minipage}
 \end{figure}
+
 
 
 \subsection{SocialForceModel(SFM)}
@@ -292,6 +295,95 @@ SFMを用いた人流シミュレーションは，図\ref{fig:sfm_flowchart}に
   \label{fig:sfm_flowchart}
  \end{center}
 \end{figure}
+
+他のエージェントから受ける力は，解析領域全体に存在する他のエージェントから
+受ける．このため，SFMは，解析する人数が増えると他のエージェントから受ける
+力の計算時間が長くなる．他のエージェントから受
+ける力の計算負荷を削減するために，SFMを用いる人流シミュレーションでは，
+他のエージェントから受ける力を計算する範囲を限定することが多い
+\cite{seru_sfm1}\cite{seru_sfm2}．
+他のエージェントから受ける力を計算する範囲を限定することで，遠くに存在する
+エージェントから受ける力を0に近似することができる．
+図\ref{fig:sougo_hani}に他のエージェントから受ける力の計算範囲の例
+を示す．図\ref{fig:sougo_hani}の赤丸は他のエージェントから受ける力を計算
+するエージェント，黒丸はエージェント4が計算するときの他のエージェント，
+オレンジ色の点線は他のエージェント
+から受ける力の範囲を示す．図\ref{fig:sougo_hani} のエージェント4は，
+オレンジ色の点線内に存在するエージェント0，1，2，6，7，10の合計5人から力を
+受ける．本論文では，近くのエージェントから受ける力の範囲を限定するSFMを前提
+として述べる．
+近くのエージェントから受ける力の範囲は，図\ref{fig:sougo_hani}の
+ように，計算するエージェントの半径数メートルの範囲である．このため，SFMでは，
+他のエージェントが近くのエージェントから受ける力の範囲に存在するか判定が必要
+である．
+この範囲に存在するかの判定は，エージェント$i$とエージェント$j$とのエージェン
+ト間の距離$d_{ij}$の算出が必要である．
+本論文では，式(\ref{eq:kyori_siki})を用いてエージェント間の距離$d_{ij}$
+を求め，他のエージェントから受ける力の範囲内であるかどうか判定する．
+
+\begin{eqnarray}
+　d_{ij} =  \sqrt{ (x_i-x_j)^2 + (y_i-y_j)^2 }
+ \label{eq:kyori_siki}
+\end{eqnarray}
+
+式(\ref{eq:kyori_siki})中の$x_i$と$y_i$はエージェント$i$の座標$(x_i,y_i)$，$x_j$
+と$y_j$はエージェント$j$の座標$(x_j,y_j)$である．エージェント$i$は
+，式(\ref{eq:kyori_siki})
+で求めたエージェント距離$d_ij$が他のエージェントから受ける力の範囲内であれば，
+エージェント$j$から式(\ref{eq:sfm_siki2})を用いて算出した力を受ける．
+他のエージェントから受ける力の範囲の半径を$R$としたとき，エージェント$i$の他のエージェント
+$j$が範囲内にいるかどうかの判定式を式(\ref{eq:jouken_siki1})に示す．
+
+\begin{eqnarray}
+  \label{eq:jouken_siki1}
+  R \geq d_{ij}
+\end{eqnarray}
+
+エージェント$i$は，式(\ref{eq:jouken_siki1})の条件を満たす他のエージェント$j$から式(\ref{eq:sfm_siki2})
+で求まる力を受ける．
+
+他のエージェントから受ける力の範囲を限定するSFMのフローチャート
+を図\ref{fig:sougosayou_flow}に示す．
+図\ref{fig:sougosayou_flow}のフローチャートでは，各エージェントに対しエー
+ジェント間の距離を計算し，範囲内であるか判定することで，他のエージェントから受ける力の範囲を限定
+している．SFMを用いる人流シミュレーションは，他のエージェントから受ける力の範囲を視野の範囲に
+することで，視野を再現できる．
+
+\begin{figure}[hbtp]
+ \begin{center}
+  \includegraphics[width=11.5cm,clip]{figure/sougo_hani_image_r2.eps}
+  \caption{他のエージェントから受ける力の範囲を限定するときの例}
+  \label{fig:sougo_hani}
+ \end{center}
+\end{figure}
+
+%経由地のことを述べる
+
+
+\begin{figure}[hbtp]
+ \begin{center}
+  \includegraphics[height=4cm,clip]{figure/sutakku_ex.eps}
+  \caption{SFMでスタック現象が起きる例}
+  \label{fig:sougo_hani}
+ \end{center}
+\end{figure}
+
+\begin{figure}[hbtp]
+ \begin{center}
+  \includegraphics[height=4cm,clip]{figure/keiyuti_ex.eps}
+  \caption{経由地を設定するSFMの例}
+  \label{fig:sougo_hani}
+ \end{center}
+\end{figure}
+
+\begin{figure}[hbtp]
+ \begin{center}
+  \includegraphics[height=4cm,clip]{figure/keiyuti_ex2.eps}
+  \caption{経由地を設定するSFMの例}
+  \label{fig:sougo_hani}
+ \end{center}
+\end{figure}
+
 
 
 %論文引用{{{

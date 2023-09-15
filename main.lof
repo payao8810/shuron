@@ -10,10 +10,14 @@
 \contentsline {figure}{\numberline {2\mbox {--}8}{\ignorespaces SFMを用いた人流シミュレーションのフローチャート}}{9}{}%
 \contentsline {figure}{\numberline {2\mbox {--}9}{\ignorespaces SFMにおける周囲のエージェントから受ける力の計算}}{10}{}%
 \contentsline {figure}{\numberline {2\mbox {--}10}{\ignorespaces SFMにおける周囲の壁から受ける力の計算}}{10}{}%
+\contentsline {figure}{\numberline {2\mbox {--}11}{\ignorespaces 他のエージェントから受ける力の範囲を限定するときの例}}{12}{}%
+\contentsline {figure}{\numberline {2\mbox {--}12}{\ignorespaces SFMでスタック現象が起きる例}}{12}{}%
+\contentsline {figure}{\numberline {2\mbox {--}13}{\ignorespaces 経由地を設定するSFMの例}}{12}{}%
+\contentsline {figure}{\numberline {2\mbox {--}14}{\ignorespaces 経由地を設定するSFMの例}}{13}{}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3\mbox {--}1}{\ignorespaces 適当な図を張ってみた}}{16}{}%
-\contentsline {figure}{\numberline {3\mbox {--}2}{\ignorespaces 横並び(左)}}{16}{}%
-\contentsline {figure}{\numberline {3\mbox {--}3}{\ignorespaces 横並び(右)}}{16}{}%
+\contentsline {figure}{\numberline {3\mbox {--}1}{\ignorespaces 適当な図を張ってみた}}{18}{}%
+\contentsline {figure}{\numberline {3\mbox {--}2}{\ignorespaces 横並び(左)}}{18}{}%
+\contentsline {figure}{\numberline {3\mbox {--}3}{\ignorespaces 横並び(右)}}{18}{}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
