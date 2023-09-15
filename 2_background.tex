@@ -95,7 +95,7 @@
 方向である．
 図\ref{fig:huroa_model_image}のように，静的フロアフィールドモデルは，
 
-\begin{figure}[h]
+\begin{figure}[t]
     \begin{center}
      \includegraphics[width=7cm,clip]{figure/floormodel_image.eps}
      \caption{静的フロアフィールドモデルのイメージ}
@@ -174,13 +174,13 @@ SFMの解析空間は，二次元
 SFMにおけるエージェント移動は，目的地へ進む力と他のエージェントから受ける力，
 壁などの障害物から受ける力を用いる運動方程式を用いて求める．
 式(\ref{eq:sfm_siki1})にSFMの運動方程式を示す．
-
+%
 \begin{eqnarray}
  m_i \frac{dv_i}{dt} = m_i \frac{v_i^0(t)e_i^0(t)-v_i(t)}{t_i}
  +\sum_{j(\neq i)}f_{ij}+\sum_{W}f_{iW}
  \label{eq:sfm_siki1}
 \end{eqnarray}
-
+%
 式(\ref{eq:sfm_siki1})中の
 総和の記号$\sum_{j(\neq i)}f_{ij}$は，エージェント$i$以外のすべ
 てのエージェント$j$の総和をとることを意味する．同様に，$\sum_{W}f_{iW}$
@@ -192,7 +192,7 @@ SFMにおけるエージェント移動は，目的地へ進む力と他のエ�
 $f_{ij}$，第三項は壁などの障害物から受ける力$f_{iW}$の合力である．
 $f_{ij}$と$f_{iW}$は，式(\ref{eq:sfm_siki2})と式(\ref{eq:sfm_siki3})を用
 いて導出する．
-
+%
 \begin{eqnarray}
  f_{ij} = & \{A_i exp[\frac{r_{ij} - d_{ij}}{B_i}]
   + kg(r_{ij} - d_{ij})\} n_{ij}
@@ -200,20 +200,19 @@ $f_{ij}$と$f_{iW}$は，式(\ref{eq:sfm_siki2})と式(\ref{eq:sfm_siki3})を用
   v^t_{ij} t_{ij}
  \label{eq:sfm_siki2}
 \end{eqnarray}
-
+%
 \begin{eqnarray}
  f_{iW} = \{A_i exp[\frac{r_{i} - d_{iW}}{B_i}]
   + kg(r_{i} - d_{iW})\} n_{iW} + \kappa g (r_{i} - d_{iW})
   (v_i t_{iW}) t_{iW}
  \label{eq:sfm_siki3}
 \end{eqnarray}
-
-
+%
 表\ref{tab:tab_para}に
 式(\ref{eq:sfm_siki2})，(\ref{eq:sfm_siki3})中の変数を示す．
 衝突時関数$g(x)$はエージェント同士や壁などに衝突したときに値をとる関数
 である．式(\ref{eq:gx_siki})に衝突時関数$g(x)$の条件式を示す．
-
+%
 \begin{equation}
   \label{eq:gx_siki}
   g(x) =
@@ -222,7 +221,7 @@ $f_{ij}$と$f_{iW}$は，式(\ref{eq:sfm_siki2})と式(\ref{eq:sfm_siki3})を用
     0 & otherwise
   \end{cases}
 \end{equation}
-
+%
 SFMの衝突時の計算は，条件式である式(\ref{eq:gx_siki})を用いることで，衝突時のみ計算できる．
 SFMを用いる人流シミュレーションのフローチャートを図
 \ref{fig:sfm_flowchart}に示す．
@@ -273,12 +272,29 @@ SFMを用いた人流シミュレーションは，図\ref{fig:sfm_flowchart}に
 \begin{figure}[hbtp]
  \begin{center}
   \includegraphics[width=4cm,clip]{figure/sfm_flowchart.eps}
-  \caption{SFMを用いる人流シミュレーションのフローチャート}
+  \caption{SFMを用いた人流シミュレーションのフローチャート}
+  \label{fig:sfm_flowchart}
+ \end{center}
+\end{figure}
+
+\begin{figure}[hbtp]
+ \begin{center}
+  \includegraphics[width=4cm,clip]{figure/agent_flow.eps}
+  \caption{SFMにおける周囲のエージェントから受ける力の計算}
+  \label{fig:sfm_flowchart}
+ \end{center}
+\end{figure}
+
+\begin{figure}[hbtp]
+ \begin{center}
+  \includegraphics[width=4cm,clip]{figure/kabe_flow.eps}
+  \caption{SFMにおける周囲の壁から受ける力の計算}
   \label{fig:sfm_flowchart}
  \end{center}
 \end{figure}
 
 
+%論文引用{{{
 \if 0
 SFMは，人間の社会心理学的な要素と物理的な力を結びつけた物力学モデルであり，
 周囲のエージェントや壁や机などの障害物から受ける力を用いてエージェントの
@@ -355,7 +371,7 @@ $d_{ij}, t_{ij}, n_{ij}, r_{ij}, \Delta v_{ij}$は，
 衝突時関数$g(x)$中の$x$は，エージェント同士の距離やエージェントと壁の距離であり，
 衝突時であれば1，衝突していなければ0となる．
 \fi
-
+%}}}
 
 
 \section{障害物モデル}

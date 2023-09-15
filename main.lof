@@ -7,11 +7,13 @@
 \contentsline {figure}{\numberline {2\mbox {--}5}{\ignorespaces 静的フロアフィールドモデルのイメージ}}{6}{}%
 \contentsline {figure}{\numberline {2\mbox {--}6}{\ignorespaces フロアフィールドモデルの例}}{7}{}%
 \contentsline {figure}{\numberline {2\mbox {--}7}{\ignorespaces 二次元連続座標モデルの例}}{7}{}%
-\contentsline {figure}{\numberline {2\mbox {--}8}{\ignorespaces SFMを用いる人流シミュレーションのフローチャート}}{9}{}%
+\contentsline {figure}{\numberline {2\mbox {--}8}{\ignorespaces SFMを用いた人流シミュレーションのフローチャート}}{9}{}%
+\contentsline {figure}{\numberline {2\mbox {--}9}{\ignorespaces SFMにおける周囲のエージェントから受ける力の計算}}{10}{}%
+\contentsline {figure}{\numberline {2\mbox {--}10}{\ignorespaces SFMにおける周囲の壁から受ける力の計算}}{10}{}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3\mbox {--}1}{\ignorespaces 適当な図を張ってみた}}{15}{}%
-\contentsline {figure}{\numberline {3\mbox {--}2}{\ignorespaces 横並び(左)}}{15}{}%
-\contentsline {figure}{\numberline {3\mbox {--}3}{\ignorespaces 横並び(右)}}{15}{}%
+\contentsline {figure}{\numberline {3\mbox {--}1}{\ignorespaces 適当な図を張ってみた}}{16}{}%
+\contentsline {figure}{\numberline {3\mbox {--}2}{\ignorespaces 横並び(左)}}{16}{}%
+\contentsline {figure}{\numberline {3\mbox {--}3}{\ignorespaces 横並び(右)}}{16}{}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
