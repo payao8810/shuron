@@ -280,22 +280,8 @@ SFMを用いた人流シミュレーションは，図\ref{fig:sfm_flowchart}に
  \end{center}
 \end{figure}
 
-\begin{figure}[hbtp]
- \begin{center}
-  \includegraphics[width=4cm,clip]{figure/agent_flow.eps}
-  \caption{SFMにおける周囲のエージェントから受ける力の計算}
-  \label{fig:sougo_hani_flow}
- \end{center}
-\end{figure}
 
-\begin{figure}[hbtp]
- \begin{center}
-  \includegraphics[width=4cm,clip]{figure/kabe_flow.eps}
-  \caption{SFMにおける周囲の壁から受ける力の計算}
-  \label{fig:sfm_flowchart}
- \end{center}
-\end{figure}
-
+\newpage
 \subsection{周囲のエージェントから受ける力}
 他のエージェントから受ける力は，解析領域全体に存在する他のエージェントから
 受ける．このため，SFMは，解析する人数が増えると他のエージェントから受ける
@@ -351,7 +337,17 @@ $j$が範囲内にいるかどうかの判定式を式(\ref{eq:jouken_siki1})に
 している．SFMを用いる人流シミュレーションは，他のエージェントから受ける力の範囲を視野の範囲に
 することで，視野を再現できる．
 
-\begin{figure}[hbtp]
+\begin{figure}[t]
+ \begin{center}
+  \includegraphics[width=5cm,clip]{figure/agent_flow.eps}
+  \caption{SFMにおける周囲のエージェントから受ける力の計算}
+  \label{fig:sougo_hani_flow}
+ \end{center}
+\end{figure}
+
+
+
+\begin{figure}[h]
  \begin{center}
   \includegraphics[width=11.5cm,clip]{figure/sougo_hani_image_r2.eps}
   \caption{他のエージェントから受ける力の範囲を限定するときの例}
@@ -359,8 +355,25 @@ $j$が範囲内にいるかどうかの判定式を式(\ref{eq:jouken_siki1})に
  \end{center}
 \end{figure}
 
-\subsection{周囲の壁から受ける力}
 
+\newpage
+\subsection{周囲の壁から受ける力}
+周囲の壁から受ける力は，エージェントの周囲の障害物を避けるために受ける力である．
+SFMを用いた人流シミュレーションは，壁や机などの障害物を粒子として計算することが
+一般的である（参考文献）．
+図\ref{fig:kaberyuusi_ex}に壁を粒子化した例を示す．
+図\ref{fig:kaberyuusi_ex}中の○○色の丸はエージェント，△△色の丸は壁粒子である．
+図\ref{fig:kaberyuusi_ex}のように，〜〜である．
+
+\begin{figure}[hbtp]
+ \begin{center}
+  \includegraphics[width=5cm,clip]{figure/kabe_flow.eps}
+  \caption{SFMにおける周囲の壁から受ける力の計算}
+  \label{fig:sfm_flowchart}
+ \end{center}
+\end{figure}
+
+\newpage
 \subsection{経由地の設定}
 %経由地のことを述べる
 SFMは，エージェントと目的地の間に障害物が存在するとスタック現象が発生することが

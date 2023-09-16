@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.141592653-p4.1.0-230214-2.6 (utf8.euc) (TeX Live 2023) (preloaded format=platex 2023.8.23)  16 SEP 2023 13:31
+This is e-pTeX, Version 3.141592653-p4.1.0-230214-2.6 (utf8.euc) (TeX Live 2023) (preloaded format=platex 2023.8.23)  16 SEP 2023 13:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -516,43 +516,59 @@ LaTeX Warning: Reference `fig:jinryu_image2' on page 7 undefined on input line
 
 [7]
 File: figure/sfm_flowchart.eps Graphic file (type eps)
- <figure/sfm_flowchart.eps>
+ <figure/sfm_flowchart.eps> [8] [9]
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <14.4> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 285.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <14.4> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 285.
+
+
+LaTeX Warning: Citation `seru_sfm1' on page 10 undefined on input line 291.
+
+
+LaTeX Warning: Citation `seru_sfm2' on page 10 undefined on input line 291.
+
+
+LaTeX Warning: Reference `fig:sougosayou_flow' on page 10 undefined on input li
+ne 334.
+
+
+LaTeX Warning: Reference `fig:sougosayou_flow' on page 10 undefined on input li
+ne 335.
+
+[10]
 File: figure/agent_flow.eps Graphic file (type eps)
  <figure/agent_flow.eps>
-File: figure/kabe_flow.eps Graphic file (type eps)
- <figure/kabe_flow.eps>
-LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <14.4> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 299.
-LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <14.4> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 299.
-
-
-LaTeX Warning: Citation `seru_sfm1' on page 8 undefined on input line 305.
-
-
-LaTeX Warning: Citation `seru_sfm2' on page 8 undefined on input line 305.
-
-[8] [9] [10]
-
-LaTeX Warning: Reference `fig:sougosayou_flow' on page 11 undefined on input li
-ne 348.
-
-
-LaTeX Warning: Reference `fig:sougosayou_flow' on page 11 undefined on input li
-ne 349.
-
 File: figure/sougo_hani_image_r2.eps Graphic file (type eps)
-<figure/sougo_hani_image_r2.eps> [11]
+ <figure/sougo_hani_image_r2.eps>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[11]
+
+LaTeX Warning: Reference `fig:kaberyuusi_ex' on page 12 undefined on input line
+ 364.
+
+
+LaTeX Warning: Reference `fig:kaberyuusi_ex' on page 12 undefined on input line
+ 365.
+
+
+LaTeX Warning: Reference `fig:kaberyuusi_ex' on page 12 undefined on input line
+ 366.
+
+File: figure/kabe_flow.eps Graphic file (type eps)
+<figure/kabe_flow.eps> [12] [13]
 File: figure/sutakku_ex.eps Graphic file (type eps)
- <figure/sutakku_ex.eps> [12]
+ <figure/sutakku_ex.eps>
 File: figure/keiyuti_ex.eps Graphic file (type eps)
 
 <figure/keiyuti_ex.eps>
 File: figure/keiyuti_ex2.eps Graphic file (type eps)
- <figure/keiyuti_ex2.eps> [13] [14]) (./3_survey.tex
-[15]
+ <figure/keiyuti_ex2.eps> [14] [15]) (./3_survey.tex
+[16]
 第 3 章
-[16
+[17
 
 ]
 LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 6
@@ -568,7 +584,7 @@ File: ./figure/test1.eps Graphic file (type eps)
 
 <./figure/test1.eps>
 File: ./figure/test2.eps Graphic file (type eps)
- <./figure/test2.eps> [17] [18]
+ <./figure/test2.eps> [18] [19]
 Overfull \hbox (51.80368pt too wide) in paragraph at lines 137--139
 []\OT1/cmr/bx/n/12 main.tex  \OT1/cmr/m/n/12 61 \twlmin 行目 \OT1/cmr/m/n/12 ($
 \OMS/cmsy/m/n/12 n$\OT1/cmr/m/n/12 bibliography\OMS/cmsy/m/n/12 f\OT1/cmr/m/n/1
@@ -578,9 +594,9 @@ Overfull \hbox (51.80368pt too wide) in paragraph at lines 137--139
 12 )
  []
 
-) (./4_method.tex [19]
+) (./4_method.tex [20]
 第 4 章
-[20
+[21
 
 ]
 第 5 章
@@ -594,33 +610,33 @@ Overfull \hbox (11.6978pt too wide) in paragraph at lines 75--86
  [][][] 
  []
 
-) (./5_result.tex [21
+) (./5_result.tex [22
 
-] [22] [23]
+] [23] [24]
 第 6 章
 
-LaTeX Warning: Reference `sec:faq1' on page 24 undefined on input line 20.
+LaTeX Warning: Reference `sec:faq1' on page 25 undefined on input line 20.
 
 
-LaTeX Warning: Reference `sec:faq2' on page 24 undefined on input line 20.
+LaTeX Warning: Reference `sec:faq2' on page 25 undefined on input line 20.
 
-) (./6_discuss.tex [24
+) (./6_discuss.tex [25
 
 ]
 第 7 章
-) [25
+) [26
 
-] (./thanks.tex) [26
+] (./thanks.tex) [27
 
 
-] (./main.bbl) (./appendix.tex [27
+] (./main.bbl) (./appendix.tex [28
 
 ]
 付 録  A  
 One-sided document style.
-[28
+[29
 
-] [29]) (./main.aux)
+] [30]) (./main.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -629,12 +645,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 3531 strings out of 476693
- 52144 string characters out of 5810547
+ 3532 strings out of 476693
+ 52163 string characters out of 5810547
  1864209 words of memory out of 5000000
- 23904 multiletter control sequences out of 15000+600000
+ 23905 multiletter control sequences out of 15000+600000
  539632 words of font info for 152 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
  70i,14n,76p,229b,488s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.dvi (36 pages, 90908 bytes).
+Output written on main.dvi (37 pages, 91768 bytes).
