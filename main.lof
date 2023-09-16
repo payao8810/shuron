@@ -3,17 +3,17 @@
 \contentsline {figure}{\numberline {2\mbox {--}1}{\ignorespaces 人流シミュレーションの活用例}}{3}{}%
 \contentsline {figure}{\numberline {2\mbox {--}2}{\ignorespaces ネットワークモデルの例}}{4}{}%
 \contentsline {figure}{\numberline {2\mbox {--}3}{\ignorespaces 静的フロアフィールドモデルのイメージ}}{5}{}%
-\contentsline {figure}{\numberline {2\mbox {--}4}{\ignorespaces 静的フロアフィールドモデルのイメージ}}{6}{}%
+\contentsline {figure}{\numberline {2\mbox {--}4}{\ignorespaces 静的フロアフィールドモデルのイメージ}}{5}{}%
 \contentsline {figure}{\numberline {2\mbox {--}5}{\ignorespaces 静的フロアフィールドモデルのイメージ}}{6}{}%
-\contentsline {figure}{\numberline {2\mbox {--}6}{\ignorespaces フロアフィールドモデルの例}}{7}{}%
-\contentsline {figure}{\numberline {2\mbox {--}7}{\ignorespaces 二次元連続座標モデルの例}}{7}{}%
+\contentsline {figure}{\numberline {2\mbox {--}6}{\ignorespaces フロアフィールドモデルの例}}{6}{}%
+\contentsline {figure}{\numberline {2\mbox {--}7}{\ignorespaces 二次元連続座標モデルの例}}{6}{}%
 \contentsline {figure}{\numberline {2\mbox {--}8}{\ignorespaces SFMを用いた人流シミュレーションのフローチャート}}{9}{}%
 \contentsline {figure}{\numberline {2\mbox {--}9}{\ignorespaces SFMにおける周囲のエージェントから受ける力の計算}}{10}{}%
 \contentsline {figure}{\numberline {2\mbox {--}10}{\ignorespaces SFMにおける周囲の壁から受ける力の計算}}{10}{}%
 \contentsline {figure}{\numberline {2\mbox {--}11}{\ignorespaces 他のエージェントから受ける力の範囲を限定するときの例}}{12}{}%
-\contentsline {figure}{\numberline {2\mbox {--}12}{\ignorespaces SFMでスタック現象が起きる例}}{12}{}%
-\contentsline {figure}{\numberline {2\mbox {--}13}{\ignorespaces 経由地を設定するSFMの例}}{12}{}%
-\contentsline {figure}{\numberline {2\mbox {--}14}{\ignorespaces 経由地を設定するSFMの例}}{13}{}%
+\contentsline {figure}{\numberline {2\mbox {--}12}{\ignorespaces SFMでスタック現象が起きる例}}{13}{}%
+\contentsline {figure}{\numberline {2\mbox {--}13}{\ignorespaces 経由地を設定するSFMの例}}{13}{}%
+\contentsline {figure}{\numberline {2\mbox {--}14}{\ignorespaces 経由地を設定するSFMの例}}{14}{}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3\mbox {--}1}{\ignorespaces 適当な図を張ってみた}}{18}{}%
 \contentsline {figure}{\numberline {3\mbox {--}2}{\ignorespaces 横並び(左)}}{18}{}%

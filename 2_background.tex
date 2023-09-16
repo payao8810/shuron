@@ -52,16 +52,16 @@
 本章では，各歩行者モデルの使用用途や利点，欠点を用いて各手法の立ち位置について
 述べる．
 
-\section{歩行者モデル}
+\if 0
 歩行者モデルは，歩行者の移動を決定するためのアルゴリズムである．
 シミュレーション対象が海岸から近い都市や人口が多い都市などの道路上の人々の流れを解析するためには，
 数千人から数万人の解析が可能なネットワークモデルが用いられる（参考文献）．
 また，シミュレーション対象が商業施設や駅構内などの施設上の人々を解析するためには，
 フロアフィールドモデルやSFMが用いられる（参考文献）．
+\fi
 
 
-
-\subsection{ネットワークモデルの歩行者モデル**}
+\section{ネットワークモデルの歩行者モデル**}
 ネットワークモデルは，人々の移動や行動をネットワーク構造としてモデル化する手法である．
 図\ref{fig:network_ex}にネットワークモデルの例を示す．
 %
@@ -89,7 +89,7 @@
 などが用いられることが一般的である．
 
 
-\subsection{静的フロアモデル}
+\section{静的フロアモデル}
 静的フロアモデルは，図\ref{fig:serumaton}に示すようなフロアフィールドモデルの空間モデルを用いて
 おり，格子ごとに目的地までの距離を設定し，確率を用いてエージェントを移動させることで解析する手法である．
 図\ref{fig:huroa_model_image}に静的フロアフィールドモデルのイメージを示す．
@@ -160,7 +160,7 @@
 
 
 
-\subsection{SocialForceModel(SFM)}
+\section{SocialForceModel(SFM)}
 SFMは，人間の社会心理学的な要素と物理的な力を結びつけた動力学モデルであり，
 近傍のエージェントや壁といった障害物から受ける力によってエージェントの進行方向
 や速度を解く．本手法は，心理的変数が組み込まれているため，災害時の避難シミュ
@@ -284,7 +284,7 @@ SFMを用いた人流シミュレーションは，図\ref{fig:sfm_flowchart}に
  \begin{center}
   \includegraphics[width=4cm,clip]{figure/agent_flow.eps}
   \caption{SFMにおける周囲のエージェントから受ける力の計算}
-  \label{fig:sfm_flowchart}
+  \label{fig:sougo_hani_flow}
  \end{center}
 \end{figure}
 
@@ -296,6 +296,7 @@ SFMを用いた人流シミュレーションは，図\ref{fig:sfm_flowchart}に
  \end{center}
 \end{figure}
 
+\subsection{周囲のエージェントから受ける力}
 他のエージェントから受ける力は，解析領域全体に存在する他のエージェントから
 受ける．このため，SFMは，解析する人数が増えると他のエージェントから受ける
 力の計算時間が長くなる．他のエージェントから受
@@ -325,6 +326,7 @@ SFMを用いた人流シミュレーションは，図\ref{fig:sfm_flowchart}に
 　d_{ij} =  \sqrt{ (x_i-x_j)^2 + (y_i-y_j)^2 }
  \label{eq:kyori_siki}
 \end{eqnarray}
+
 
 式(\ref{eq:kyori_siki})中の$x_i$と$y_i$はエージェント$i$の座標$(x_i,y_i)$，$x_j$
 と$y_j$はエージェント$j$の座標$(x_j,y_j)$である．エージェント$i$は
@@ -357,14 +359,44 @@ $j$が範囲内にいるかどうかの判定式を式(\ref{eq:jouken_siki1})に
  \end{center}
 \end{figure}
 
+\subsection{周囲の壁から受ける力}
+
+\subsection{経由地の設定}
 %経由地のことを述べる
+SFMは，エージェントと目的地の間に障害物が存在するとスタック現象が発生することが
+報告されている（参考文献）．
+スタック現象は，エージェントが動かなくなる現象のことであり，障害物から受ける力と
+目的地に向かう力の関係により生じる．
+図\ref{fig:sutakku_ex}にSFMでスタック現象が生じる例を示す．
+図\ref{fig:sutakku_ex}中の緑色の丸はエージェント，矢印はエージェントの進行方向，
+オレンジ色の四角は机などの障害物である．
+図\ref{fig:sutakku_ex}中のエージェントAとエージェントBは解析領域右上の出口に向かうため，
+エージェントAが机などの障害物に向かって進む．
+この場合は，エージェントAが机に向かって進み続けることや机の上を歩くなどの
+想定しない動きをすることがある．
+このため，障害物が多く存在するような解析では，出口(目的地)だけでなく，
+目的地までの道のりを示す経由地を設定することで，エージェントのスタック現象や
+想定しない動きを防ぐことができる．
+図\ref{fig:keiyuti_ex}に経由地を設定する例を示す．
+図\ref{fig:keiyuti_ex}中の緑色の丸はエージェント，四角は障害物，青色の四角は経由地，
+赤色の四角は目的地を示す．
+図\ref{fig:keiyuti_ex}の例では，エージェントAは，経由地を通ったあとに目的地に進むため，
+図\ref{fig:sutakku_ex}のように机に進むことが防げる．
+教室などの障害物多い解析では，
+図\ref{fig:jitumondai_ex}に示すように，複数の経由地を設定する必要がある．
+図\ref{fig:jitumondai_ex}の例では，エージェントは一番近くの経由地から
+目的地までの道のりを辿る．
+目的地までの道のりを決定する手法は，ダイクストラ法などのグラフ理論で用いられる
+手法が使われることが多い（参考文献）．
+ダイクストラ法は，○○である．
+
 
 
 \begin{figure}[hbtp]
  \begin{center}
   \includegraphics[height=4cm,clip]{figure/sutakku_ex.eps}
   \caption{SFMでスタック現象が起きる例}
-  \label{fig:sougo_hani}
+  \label{fig:sutakku_ex}
  \end{center}
 \end{figure}
 
@@ -372,7 +404,7 @@ $j$が範囲内にいるかどうかの判定式を式(\ref{eq:jouken_siki1})に
  \begin{center}
   \includegraphics[height=4cm,clip]{figure/keiyuti_ex.eps}
   \caption{経由地を設定するSFMの例}
-  \label{fig:sougo_hani}
+  \label{fig:keiyuti_ex}
  \end{center}
 \end{figure}
 
@@ -380,7 +412,7 @@ $j$が範囲内にいるかどうかの判定式を式(\ref{eq:jouken_siki1})に
  \begin{center}
   \includegraphics[height=4cm,clip]{figure/keiyuti_ex2.eps}
   \caption{経由地を設定するSFMの例}
-  \label{fig:sougo_hani}
+  \label{fig:jitumondai_ex}
  \end{center}
 \end{figure}
 
@@ -464,17 +496,6 @@ $d_{ij}, t_{ij}, n_{ij}, r_{ij}, \Delta v_{ij}$は，
 衝突時であれば1，衝突していなければ0となる．
 \fi
 %}}}
-
-
-\section{障害物モデル}
-
-\subsection{粒子によるモデル化}
-
-\subsection{矩形によるモデル化}
-
-\section{経路の設定}
-
-\subsection{ダイクストラ法}
 
 
 
