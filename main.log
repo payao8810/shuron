@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.141592653-p4.1.0-230214-2.6 (utf8.euc) (TeX Live 2023) (preloaded format=platex 2023.8.23)  16 SEP 2023 13:55
+This is e-pTeX, Version 3.141592653-p4.1.0-230214-2.6 (utf8.euc) (TeX Live 2023) (preloaded format=platex 2023.8.23)  16 SEP 2023 19:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -568,24 +568,38 @@ File: figure/keiyuti_ex2.eps Graphic file (type eps)
  <figure/keiyuti_ex2.eps> [14] [15]) (./3_survey.tex
 [16]
 第 3 章
-[17
 
-]
-LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 6
-4.
- (/usr/share/texmf-dist/tex/latex/base/omscmr.fd
+LaTeX Warning: Reference `fig:1jigen_ex' on page 17 undefined on input line 21.
+
+
+
+LaTeX Warning: Reference `fig:1jigen_ex' on page 17 undefined on input line 22.
+
+
+
+LaTeX Warning: Reference `fig:1jigen_ex' on page 17 undefined on input line 23.
+
+
+File: figure/atigenshou.eps Graphic file (type eps)
+<figure/atigenshou.eps> [17
+
+] [18]
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 1
+00.
+
+(/usr/share/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 64.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 100.
 File: ./figure/ulysses16.eps Graphic file (type eps)
  <./figure/ulysses16.eps>
 File: ./figure/test1.eps Graphic file (type eps)
 
 <./figure/test1.eps>
 File: ./figure/test2.eps Graphic file (type eps)
- <./figure/test2.eps> [18] [19]
-Overfull \hbox (51.80368pt too wide) in paragraph at lines 137--139
+ <./figure/test2.eps> [19] [20]
+Overfull \hbox (51.80368pt too wide) in paragraph at lines 173--175
 []\OT1/cmr/bx/n/12 main.tex  \OT1/cmr/m/n/12 61 \twlmin 行目 \OT1/cmr/m/n/12 ($
 \OMS/cmsy/m/n/12 n$\OT1/cmr/m/n/12 bibliography\OMS/cmsy/m/n/12 f\OT1/cmr/m/n/1
 2 bibfile\OMS/cmsy/m/n/12 g\OT1/cmr/m/n/12 ) \twlmin をコメントアウトし ， \OT1
@@ -594,9 +608,9 @@ Overfull \hbox (51.80368pt too wide) in paragraph at lines 137--139
 12 )
  []
 
-) (./4_method.tex [20]
+) (./4_method.tex [21]
 第 4 章
-[21
+[22
 
 ]
 第 5 章
@@ -610,33 +624,33 @@ Overfull \hbox (11.6978pt too wide) in paragraph at lines 75--86
  [][][] 
  []
 
-) (./5_result.tex [22
+) (./5_result.tex [23
 
-] [23] [24]
+] [24] [25]
 第 6 章
 
-LaTeX Warning: Reference `sec:faq1' on page 25 undefined on input line 20.
+LaTeX Warning: Reference `sec:faq1' on page 26 undefined on input line 20.
 
 
-LaTeX Warning: Reference `sec:faq2' on page 25 undefined on input line 20.
+LaTeX Warning: Reference `sec:faq2' on page 26 undefined on input line 20.
 
-) (./6_discuss.tex [25
+) (./6_discuss.tex [26
 
 ]
 第 7 章
-) [26
+) [27
 
-] (./thanks.tex) [27
+] (./thanks.tex) [28
 
 
-] (./main.bbl) (./appendix.tex [28
+] (./main.bbl) (./appendix.tex [29
 
 ]
 付 録  A  
 One-sided document style.
-[29
+[30
 
-] [30]) (./main.aux)
+] [31]) (./main.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -645,12 +659,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 3532 strings out of 476693
- 52163 string characters out of 5810547
+ 3539 strings out of 476693
+ 52317 string characters out of 5810547
  1864209 words of memory out of 5000000
- 23905 multiletter control sequences out of 15000+600000
+ 23911 multiletter control sequences out of 15000+600000
  539632 words of font info for 152 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
  70i,14n,76p,229b,488s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.dvi (37 pages, 91768 bytes).
+Output written on main.dvi (38 pages, 94876 bytes).
