@@ -13,20 +13,33 @@ SFMの解析時間を削減するために，モデルの単純化（参考文�
 本章では，SFMの各高速化手法について述べる．
 
 \section{モデルの簡易化}
+SFMの簡易化手法は，SFMの計算負荷を削減するために，
+エージェント同士や壁や机などの障害物から受ける力，
+進行方向を単純化する手法である．
+SFMの簡易化手法の一つに一次元歩行者モデルがある（参考文献）．
+一次元歩行者モデルは，エージェントの動きをxやyのみにする手法である．
+図\ref{fig:ichijigen_ex}に避難シミュレーション時のSFMと一次元歩行者モデルの例を示す．
+図\ref{fig:ichijigen_ex}中の(a)はSFMなどの二次元連続空間モデルを示し，
+(b)は一次元連続歩行者モデルの例を示す．
+一次元歩行者モデルは，図\ref{fig:ichijigen_ex}のように，エージェントの動きを
+算出する式を一次元に変更することで，計算負荷を削減できる．
+本手法は，人の流れ(流量)を解析する場合では，
+高速かつ許容できる誤差の範囲で解析できることが報告されている（参考文献）．
+一方で，一次元でエージェントの動きを再現するため，人の押し合いや
+図\ref{fig:atigenshou}のようなアーチ現象などを再現できない．
+このため，人の押し合いやアーチ現象を再現したい場合には，
+一次元歩行者モデルなどのモデルを簡易化しない高速化技法を用いることが
+望ましい．
 
-\subsection{一次元化}
-モデルの一次元化による高速化手法(一次元歩行者モデル)は，SFMの計算負荷を削減するために，
-エージェント同士の受ける力や壁や机などの障害物を避ける力の計算を
-簡略化し，解析する(参考文献)．
-図\ref{fig:1jigen_ex}に一次元歩行者モデルの例を示す．
-図\ref{fig:1jigen_ex}中の△△は〜〜である．
-図\ref{fig:1jigen_ex}
 
 
-
-〜〜できるため，解析時間を削減できる．
-一方で，本手法はエージェントの動きを二次元から一次元に簡易化していることから，
-図\ref{fig:atigenshou}に示すようなアーチ現象を再現することができない．
+\begin{figure}[hbtp]
+ \begin{center}
+  \includegraphics[width=11cm,clip]{figure/ichijigen_ex.eps}
+  \caption{一次元モデルの例}
+  \label{fig:atigenshou}
+ \end{center}
+\end{figure}
 
 \begin{figure}[hbtp]
  \begin{center}
@@ -35,9 +48,6 @@ SFMの解析時間を削減するために，モデルの単純化（参考文�
   \label{fig:atigenshou}
  \end{center}
 \end{figure}
-
-
-\subsection{～～}
 
 \section{エージェント間の距離の計算回数削減}
 SFMは，解析人数が増加するほど周囲のエージェントから受ける力の計算に
@@ -56,6 +66,34 @@ SFMは，解析人数が増加するほど周囲のエージェントから受�
 \section{単位時間あたりの計算回数}
 
 \subsection{エージェントごとの並列性を用いた手法}
+
+\begin{figure}[hp]
+ \begin{center}
+  \includegraphics[width=10cm,clip]{figure/heiretuka_sfm.eps}
+  \caption{SFMの並列化可能な処理}
+  \label{fig:atigenshou}
+ \end{center}
+\end{figure}
+
+\begin{figure}[hp]
+ \begin{center}
+  \includegraphics[width=10cm,clip]{figure/sureddo_heiretu.eps}
+  \caption{3スレッドでの並列化の例}
+  \label{fig:atigenshou}
+ \end{center}
+\end{figure}
+
+
+\begin{figure}[hbtp]
+ \begin{center}
+  \includegraphics[width=10cm,clip]{figure/ryoiki_heiretu.eps}
+  \caption{領域分割の例}
+  \label{fig:atigenshou}
+ \end{center}
+\end{figure}
+
+
+\clearpage
 
 \subsection{解析領域ごとの並列性を用いた手法}
 
