@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.141592653-p3.9.1-210218-2.6 (utf8.euc) (TeX Live 2022/dev/Debian) (preloaded format=platex 2023.6.24)  21 SEP 2023 21:02
+This is e-pTeX, Version 3.141592653-p3.9.1-210218-2.6 (utf8.euc) (TeX Live 2022/dev/Debian) (preloaded format=platex 2023.6.24)  26 SEP 2023 17:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -234,10 +234,7 @@ File: l3backend-dvips.def 2022-01-12 L3 backend support: dvips
 )
 (./main.aux
 
-LaTeX Warning: Label `fig:huroa_model_image' multiply defined.
-
-
-LaTeX Warning: Label `fig:huroa_model_image' multiply defined.
+LaTeX Warning: Label `fig:floormodel_kyori' multiply defined.
 
 
 LaTeX Warning: Label `fig:sfm_flowchart' multiply defined.
@@ -452,113 +449,116 @@ LaTeX Warning: Citation `katayose' on page 1 undefined on input line 49.
 
 ]) (./2_background.tex [2]
 第 2 章
-
-LaTeX Warning: Reference `fig:jinryu_image' on page 3 undefined on input line 1
-9.
-
-
-LaTeX Warning: Reference `fig:jinryu_image' on page 3 undefined on input line 2
-0.
-
-
-LaTeX Warning: Reference `fig:jinryu_image' on page 3 undefined on input line 2
-4.
-
-
-LaTeX Warning: Reference `fig:jinryu_image' on page 3 undefined on input line 2
-7.
-
-LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <17.28> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 66.
-LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <17.28> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 66.
-File: figure/networkmodel_ex.eps Graphic file (type eps)
-<figure/networkmodel_ex.eps>
-
-LaTeX Warning: Reference `fig:nework_situnai' on page 3 undefined on input line
- 86.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[3
+File: figure/jinryu_image2_r2.eps Graphic file (type eps)
+<figure/jinryu_image2_r2.eps> [3
 
 ]
-File: figure/floormodel_image.eps Graphic file (type eps)
- <figure/floormodel_image.eps>
-
-LaTeX Warning: Reference `fig:huroa_model' on page 4 undefined on input line 11
-1.
-
-
-LaTeX Warning: Reference `fig:huroa_model' on page 4 undefined on input line 11
-2.
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <17.28> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 63.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <17.28> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 63.
 
 
-LaTeX Warning: Reference `fig:huroa_model' on page 4 undefined on input line 11
-3.
+LaTeX Warning: Reference `fig:nework_situnai' on page 4 undefined on input line
+ 74.
 
-[4]
-File: figure/floormodel_kyori.eps Graphic file (type eps)
- <figure/floormodel_kyori.eps>
-File: figure/floormodel_ex2.eps Graphic file (type eps)
- <figure/floormodel_ex2.eps>
+File: figure/networkmodel_ex.eps Graphic file (type eps)
+<figure/networkmodel_ex.eps> [4]
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+LaTeX Warning: Reference `fig:huroa_model_image' on page 5 undefined on input l
+ine 95.
+
+
+LaTeX Warning: Reference `fig:huroa_model_image' on page 5 undefined on input l
+ine 96.
+
+
+LaTeX Warning: Reference `fig:huroa_model_image' on page 5 undefined on input l
+ine 98.
+
+
+LaTeX Warning: Reference `fig:huroa_manhattan' on page 5 undefined on input lin
+e 99.
+
+
+LaTeX Warning: Reference `fig:huroa_manhattan' on page 5 undefined on input lin
+e 101.
+
+File: ./figure/floormodel_image.eps Graphic file (type eps)
+<./figure/floormodel_image.eps>
+File: ./figure/floormodel_kyori.eps Graphic file (type eps)
+ <./figure/floormodel_kyori.eps>
+Overfull \hbox (19.83063pt too wide) in paragraph at lines 104--104
+[][][][] 
+ []
+
+File: ./figure/floormodel_kyori.eps Graphic file (type eps)
+<./figure/floormodel_kyori.eps>
+File: ./figure/floormodel_ex2.eps Graphic file (type eps)
+ <./figure/floormodel_ex2.eps>
+Overfull \hbox (19.83063pt too wide) in paragraph at lines 106--106
+[][][][] 
+ []
+
+
+LaTeX Warning: Reference `fig:huroa_manhattan' on page 5 undefined on input lin
+e 108.
 
 
 LaTeX Warning: Reference `fig:huroa_model_ketten' on page 5 undefined on input 
-line 137.
+line 113.
 
 
 LaTeX Warning: Reference `fig:huroa_model_ketten' on page 5 undefined on input 
-line 139.
+line 115.
 
 
 LaTeX Warning: Reference `fig;ruroa_model_ketten' on page 5 undefined on input 
-line 140.
+line 116.
 
-[5]
+[5
+
+]
 File: figure/seruotomaton_image4.eps Graphic file (type eps)
  <figure/seruotomaton_image4.eps>
 File: figure/renzoku_image2.eps Graphic file (type eps)
  <figure/renzoku_image2.eps>
-Overfull \hbox (2.61108pt too wide) in paragraph at lines 149--161
+Overfull \hbox (2.61108pt too wide) in paragraph at lines 124--136
 [][] [] 
  []
 
 
-LaTeX Warning: Citation `21_Isozaki' on page 6 undefined on input line 169.
+LaTeX Warning: Citation `21_Isozaki' on page 6 undefined on input line 144.
 
 
-LaTeX Warning: Citation `ando_sfm' on page 6 undefined on input line 169.
+LaTeX Warning: Citation `ando_sfm' on page 6 undefined on input line 144.
 
 
 LaTeX Warning: Reference `fig:jinryu_image2' on page 6 undefined on input line 
-174.
+149.
 
 [6]
 File: figure/sfm_flowchart.eps Graphic file (type eps)
  <figure/sfm_flowchart.eps> [7] [8]
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <14.4> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 287.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 262.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <14.4> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 287.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 262.
 
 
-LaTeX Warning: Citation `seru_sfm1' on page 9 undefined on input line 293.
+LaTeX Warning: Citation `seru_sfm1' on page 9 undefined on input line 268.
 
 
-LaTeX Warning: Citation `seru_sfm2' on page 9 undefined on input line 293.
+LaTeX Warning: Citation `seru_sfm2' on page 9 undefined on input line 268.
 
 [9]
 
 LaTeX Warning: Reference `fig:sougosayou_flow' on page 10 undefined on input li
-ne 336.
+ne 311.
 
 
 LaTeX Warning: Reference `fig:sougosayou_flow' on page 10 undefined on input li
-ne 337.
+ne 312.
 
 File: figure/agent_flow.eps Graphic file (type eps)
 <figure/agent_flow.eps>
@@ -570,15 +570,15 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 [10]
 
 LaTeX Warning: Reference `fig:kaberyuusi_ex' on page 11 undefined on input line
- 366.
+ 341.
 
 
 LaTeX Warning: Reference `fig:kaberyuusi_ex' on page 11 undefined on input line
- 367.
+ 342.
 
 
 LaTeX Warning: Reference `fig:kaberyuusi_ex' on page 11 undefined on input line
- 368.
+ 343.
 
 File: figure/kabe_flow.eps Graphic file (type eps)
 <figure/kabe_flow.eps> [11]
@@ -608,23 +608,31 @@ File: figure/atigenshou.eps Graphic file (type eps)
  <figure/atigenshou.eps> [17
 
 ]
+
+LaTeX Warning: Citation `mps' on page 18 undefined on input line 62.
+
+
+LaTeX Warning: Citation `sph' on page 18 undefined on input line 63.
+
+[18]
+File: figure/seru_ex1_r2.eps Graphic file (type eps)
+ <figure/seru_ex1_r2.eps>
 File: figure/heiretuka_sfm.eps Graphic file (type eps)
-
-<figure/heiretuka_sfm.eps> [18]
+ <figure/heiretuka_sfm.eps> [19]
 File: figure/sureddo_heiretu.eps Graphic file (type eps)
- <figure/sureddo_heiretu.eps>
-File: figure/ryoiki_heiretu.eps Graphic file (type eps)
 
-<figure/ryoiki_heiretu.eps> [19] [20]
+<figure/sureddo_heiretu.eps>
+File: figure/ryoiki_heiretu.eps Graphic file (type eps)
+ <figure/ryoiki_heiretu.eps> [20] [21]
 LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 1
-38.
+65.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 138.
- [21
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 165.
+ [22
 
 ]
 File: ./figure/ulysses16.eps Graphic file (type eps)
@@ -633,8 +641,8 @@ File: ./figure/ulysses16.eps Graphic file (type eps)
 File: ./figure/test1.eps Graphic file (type eps)
  <./figure/test1.eps>
 File: ./figure/test2.eps Graphic file (type eps)
- <./figure/test2.eps> [22]
-Overfull \hbox (51.80368pt too wide) in paragraph at lines 211--213
+ <./figure/test2.eps> [23]
+Overfull \hbox (51.80368pt too wide) in paragraph at lines 238--240
 []\OT1/cmr/bx/n/12 main.tex  \OT1/cmr/m/n/12 61 \twlmin 行目 \OT1/cmr/m/n/12 ($
 \OMS/cmsy/m/n/12 n$\OT1/cmr/m/n/12 bibliography\OMS/cmsy/m/n/12 f\OT1/cmr/m/n/1
 2 bibfile\OMS/cmsy/m/n/12 g\OT1/cmr/m/n/12 ) \twlmin をコメントアウトし ， \OT1
@@ -643,9 +651,9 @@ Overfull \hbox (51.80368pt too wide) in paragraph at lines 211--213
 12 )
  []
 
-[23]) (./4_method.tex [24]
+[24]) (./4_method.tex [25]
 第 4 章
-[25
+[26
 
 ]
 第 5 章
@@ -659,33 +667,33 @@ Overfull \hbox (11.6978pt too wide) in paragraph at lines 75--86
  [][][] 
  []
 
-) (./5_result.tex [26
+) (./5_result.tex [27
 
-] [27] [28]
+] [28] [29]
 第 6 章
 
-LaTeX Warning: Reference `sec:faq1' on page 29 undefined on input line 20.
+LaTeX Warning: Reference `sec:faq1' on page 30 undefined on input line 20.
 
 
-LaTeX Warning: Reference `sec:faq2' on page 29 undefined on input line 20.
+LaTeX Warning: Reference `sec:faq2' on page 30 undefined on input line 20.
 
-) (./6_discuss.tex [29
+) (./6_discuss.tex [30
 
 ]
 第 7 章
-) [30
+) [31
 
-] (./thanks.tex) [31
+] (./thanks.tex) [32
 
 
-] (./main.bbl) (./appendix.tex [32
+] (./main.bbl) (./appendix.tex [33
 
 ]
 付 録  A  
 One-sided document style.
-[33
+[34
 
-] [34]) (./main.aux)
+] [35]) (./main.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -694,12 +702,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 3501 strings out of 479850
- 52241 string characters out of 5887378
- 368343 words of memory out of 5000000
- 21739 multiletter control sequences out of 15000+600000
+ 3515 strings out of 479850
+ 52628 string characters out of 5887378
+ 369551 words of memory out of 5000000
+ 21751 multiletter control sequences out of 15000+600000
  496604 words of font info for 148 fonts, out of 8000000 for 9000
  264 hyphenation exceptions out of 8191
- 70i,14n,76p,229b,480s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 70i,14n,76p,234b,482s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.dvi (41 pages, 95888 bytes).
+Output written on main.dvi (42 pages, 104312 bytes).
