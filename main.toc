@@ -13,8 +13,8 @@
 \contentsline {section}{\numberline {3.2}エージェント間の距離の計算回数削減}{17}{}%
 \contentsline {subsection}{\numberline {3.2.1}セル分割法}{18}{}%
 \contentsline {subsection}{\numberline {3.2.2}視野パラメータを用いた削減手法}{19}{}%
-\contentsline {section}{\numberline {3.3}単位時間あたりの計算回数}{20}{}%
-\contentsline {subsection}{\numberline {3.3.1}エージェントごとの並列性を用いた手法}{20}{}%
+\contentsline {section}{\numberline {3.3}単位時間あたりの計算回数}{19}{}%
+\contentsline {subsection}{\numberline {3.3.1}エージェントごとの並列性を用いた手法}{19}{}%
 \contentsline {subsection}{\numberline {3.3.2}解析領域ごとの並列性を用いた手法}{22}{}%
 \contentsline {section}{\numberline {3.4}経路選択時の判定回数削減}{22}{}%
 \contentsline {subsection}{\numberline {3.4.1}経路選択の単純化}{22}{}%

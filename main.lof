@@ -20,7 +20,7 @@
 \contentsline {figure}{\numberline {3\mbox {--}2}{\ignorespaces アーチ現象の例}}{18}{}%
 \contentsline {figure}{\numberline {3\mbox {--}3}{\ignorespaces セル分割法を用いた例}}{19}{}%
 \contentsline {figure}{\numberline {3\mbox {--}4}{\ignorespaces SFMの並列化可能な処理}}{20}{}%
-\contentsline {figure}{\numberline {3\mbox {--}5}{\ignorespaces 3スレッドでの並列化の例}}{21}{}%
+\contentsline {figure}{\numberline {3\mbox {--}5}{\ignorespaces 3スレッドでの並列化の例}}{20}{}%
 \contentsline {figure}{\numberline {3\mbox {--}6}{\ignorespaces 領域分割の例}}{21}{}%
 \contentsline {figure}{\numberline {3\mbox {--}7}{\ignorespaces 適当な図を張ってみた}}{23}{}%
 \contentsline {figure}{\numberline {3\mbox {--}8}{\ignorespaces 横並び(左)}}{23}{}%
