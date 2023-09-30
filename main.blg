@@ -1,27 +1,18 @@
-This is upBibTeX, Version 0.99d-j0.36-u1.29 (utf8.euc) (TeX Live 2023)
+This is pBibTeX, Version 0.99d-j0.33 (utf8.euc) (TeX Live 2022/dev/Debian)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
 The style file: sty/ipsjunsrt.bst
 Database file #1: bibfile.bib
 Warning--entry type for "test1" isn't style-file defined
 --line 16 of file bibfile.bib
-Warning--I didn't find a database entry for "taisaku1"
-Warning--I didn't find a database entry for "taisaku2"
 Warning--I didn't find a database entry for "sim_jirei1"
 Warning--I didn't find a database entry for "sim_jirei2"
 Warning--I didn't find a database entry for "sim_jirei3"
 Warning--I didn't find a database entry for "sim_jirei8"
-Warning--I didn't find a database entry for "helbing_sfm"
-Warning--I didn't find a database entry for "sfm_ntt"
-Warning--I didn't find a database entry for "sfm_para1"
-Warning--I didn't find a database entry for "intro_gunshu"
-Warning--I didn't find a database entry for "1ji_sfm1"
-Warning--I didn't find a database entry for "1ji_sfm2"
-Warning--I didn't find a database entry for "seru_sfm1"
-Warning--I didn't find a database entry for "seru_sfm2"
-Warning--I didn't find a database entry for "katayose"
 Warning--I didn't find a database entry for "21_Isozaki"
 Warning--I didn't find a database entry for "ando_sfm"
+Warning--I didn't find a database entry for "seru_sfm1"
+Warning--I didn't find a database entry for "seru_sfm2"
 Warning--I didn't find a database entry for "mps"
 Warning--I didn't find a database entry for "sph"
 Warning--editor or author is missing in 1983_Ibaraki
@@ -31,7 +22,7 @@ Warning--Missing required argument author in test1
 Warning--Missing required argument title in test1
 You've used 2 entries,
             2207 wiz_defined-function locations,
-            561 strings with 4429 characters,
+            552 strings with 4350 characters,
 and the built_in function-call counts, 233 in all, are:
 = -- 6
 > -- 2
@@ -71,4 +62,4 @@ while$ -- 0
 width$ -- 3
 write$ -- 11
 is.kanji.str$ -- 2
-(There were 25 warnings)
+(There were 16 warnings)
