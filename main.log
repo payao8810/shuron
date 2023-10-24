@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.141592653-p3.9.1-210218-2.6 (utf8.euc) (TeX Live 2022/dev/Debian) (preloaded format=platex 2023.6.24)  29 SEP 2023 12:30
+This is e-pTeX, Version 3.141592653-p3.9.1-210218-2.6 (utf8.euc) (TeX Live 2022/dev/Debian) (preloaded format=platex 2023.6.24)  24 OCT 2023 16:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -144,21 +144,29 @@ LaTeX Info: Redefining \] on input line 2939.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
-) (./shuronABS.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
+\multirow@colwidth=\skip58
+\multirow@cntb=\count277
+\multirow@dima=\skip59
+\bigstrutjot=\dimen170
+)
+(./shuronABS.sty
 \和文論文要旨=\toks24
 \英文論文要旨=\toks25
-\HOFFSET=\dimen170
-\VOFFSET=\dimen171
+\HOFFSET=\dimen171
+\VOFFSET=\dimen172
 \dummybox=\box69
-\X=\dimen172
-\Y=\dimen173
-\XXA=\dimen174
-\YYA=\dimen175
-\XM=\dimen176
-\YM=\dimen177
-\htbackskip=\dimen178
-\dpbackskip=\dimen179
-\rulelength=\dimen180
+\X=\dimen173
+\Y=\dimen174
+\XXA=\dimen175
+\YYA=\dimen176
+\XM=\dimen177
+\YM=\dimen178
+\htbackskip=\dimen179
+\dpbackskip=\dimen180
+\rulelength=\dimen181
 ) (./penguin.sty
 File: penguin.sty 
 Package: penguin 2015/02/20 v2015.0
@@ -173,64 +181,64 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 (/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2020/03/06 v1.0d TeX engine tests
 ))
-\Gm@cnth=\count277
-\Gm@cntv=\count278
-\c@Gm@tempcnt=\count279
-\Gm@bindingoffset=\dimen181
-\Gm@wd@mp=\dimen182
-\Gm@odd@mp=\dimen183
-\Gm@even@mp=\dimen184
-\Gm@layoutwidth=\dimen185
-\Gm@layoutheight=\dimen186
-\Gm@layouthoffset=\dimen187
-\Gm@layoutvoffset=\dimen188
+\Gm@cnth=\count278
+\Gm@cntv=\count279
+\c@Gm@tempcnt=\count280
+\Gm@bindingoffset=\dimen182
+\Gm@wd@mp=\dimen183
+\Gm@odd@mp=\dimen184
+\Gm@even@mp=\dimen185
+\Gm@layoutwidth=\dimen186
+\Gm@layoutheight=\dimen187
+\Gm@layouthoffset=\dimen188
+\Gm@layoutvoffset=\dimen189
 \Gm@dimlist=\toks26
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/layout.sty
 Package: layout 2021-03-10 v1.2e Show layout parameters
-\oneinch=\count280
-\cnt@paperwidth=\count281
-\cnt@paperheight=\count282
-\cnt@hoffset=\count283
-\cnt@voffset=\count284
-\cnt@textheight=\count285
-\cnt@textwidth=\count286
-\cnt@topmargin=\count287
-\cnt@oddsidemargin=\count288
-\cnt@evensidemargin=\count289
-\cnt@headheight=\count290
-\cnt@headsep=\count291
-\cnt@marginparsep=\count292
-\cnt@marginparwidth=\count293
-\cnt@marginparpush=\count294
-\cnt@footskip=\count295
-\fheight=\count296
-\ref@top=\count297
-\ref@hoffset=\count298
-\ref@voffset=\count299
-\ref@head=\count300
-\ref@body=\count301
-\ref@foot=\count302
-\ref@margin=\count303
-\ref@marginwidth=\count304
-\ref@marginpar=\count305
-\Interval=\count306
-\ExtraYPos=\count307
-\PositionX=\count308
-\PositionY=\count309
-\ArrowLength=\count310
+\oneinch=\count281
+\cnt@paperwidth=\count282
+\cnt@paperheight=\count283
+\cnt@hoffset=\count284
+\cnt@voffset=\count285
+\cnt@textheight=\count286
+\cnt@textwidth=\count287
+\cnt@topmargin=\count288
+\cnt@oddsidemargin=\count289
+\cnt@evensidemargin=\count290
+\cnt@headheight=\count291
+\cnt@headsep=\count292
+\cnt@marginparsep=\count293
+\cnt@marginparwidth=\count294
+\cnt@marginparpush=\count295
+\cnt@footskip=\count296
+\fheight=\count297
+\ref@top=\count298
+\ref@hoffset=\count299
+\ref@voffset=\count300
+\ref@head=\count301
+\ref@body=\count302
+\ref@foot=\count303
+\ref@margin=\count304
+\ref@marginwidth=\count305
+\ref@marginpar=\count306
+\Interval=\count307
+\ExtraYPos=\count308
+\PositionX=\count309
+\PositionY=\count310
+\ArrowLength=\count311
 ) (./abstract.tex)
 LaTeX Info: Redefining \ol on input line 404.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-dvips.def
 File: l3backend-dvips.def 2022-01-12 L3 backend support: dvips
 \l__pdf_internal_box=\box70
-\g__pdf_backend_object_int=\count311
+\g__pdf_backend_object_int=\count312
 \l__pdf_backend_content_box=\box71
 \l__pdf_backend_model_box=\box72
-\g__pdf_backend_annotation_int=\count312
-\g__pdf_backend_link_int=\count313
-\g__pdf_backend_link_sf_int=\count314
+\g__pdf_backend_annotation_int=\count313
+\g__pdf_backend_link_int=\count314
+\g__pdf_backend_link_sf_int=\count315
 )
 (./main.aux
 
@@ -248,27 +256,36 @@ LaTeX Warning: Label `fig:atigenshou' multiply defined.
 
 LaTeX Warning: Label `fig:atigenshou' multiply defined.
 
+
+LaTeX Warning: Label `fig:sougo_hani' multiply defined.
+
+
+LaTeX Warning: Label `sec:method' multiply defined.
+
+
+LaTeX Warning: Label `fig:5_teian_flow2' multiply defined.
+
 )
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: dvips
@@ -305,60 +322,60 @@ LaTeX Font Info:    ... okay on input line 36.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 
-Overfull \hbox (41.25647pt too wide) detected at line 37
+Overfull \hbox (41.25647pt too wide) detected at line 47
  [] 
  []
 
 
-Overfull \hbox (41.25647pt too wide) detected at line 37
+Overfull \hbox (41.25647pt too wide) detected at line 47
  [] 
  []
 
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <24.88> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 37.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 47.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <24.88> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 37.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 37.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 47.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 47.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 37.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 47.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Overfull \hbox (52.79187pt too wide) in paragraph at lines 37--37
+Overfull \hbox (52.79187pt too wide) in paragraph at lines 47--47
 [][][][] 
  []
 
 
-Overfull \hbox (41.25647pt too wide) detected at line 37
+Overfull \hbox (41.25647pt too wide) detected at line 47
  [] 
  []
 
 
-Overfull \hbox (41.25647pt too wide) detected at line 37
+Overfull \hbox (41.25647pt too wide) detected at line 47
  [] 
  []
 
 
-Overfull \hbox (41.25647pt too wide) detected at line 37
+Overfull \hbox (41.25647pt too wide) detected at line 47
  [] 
  []
 
 [1
 
 ]
-Overfull \hbox (10.57735pt too wide) in paragraph at lines 37--37
+Overfull \hbox (10.57735pt too wide) in paragraph at lines 47--47
 [][][][]  
  []
 
 [1
 
 ]
-Overfull \hbox (16.2679pt too wide) in paragraph at lines 37--37
+Overfull \hbox (16.2679pt too wide) in paragraph at lines 47--47
 [][][][]  
  []
 
@@ -374,17 +391,17 @@ LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <12> not available
 \tf@toc=\write3
 \openout3 = `main.toc'.
 
- [2] (./main.lof)
+ [2] (./main.lof [3
+
+])
 \tf@lof=\write4
 \openout4 = `main.lof'.
 
- [3
-
-] (./main.lot)
+ [4] (./main.lot)
 \tf@lot=\write5
 \openout5 = `main.lot'.
 
- [4
+ [5
 
 
 ] (./1_intro.tex
@@ -415,41 +432,41 @@ File: figure/jinryu_image2_r2.eps Graphic file (type eps)
 
 ]
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <17.28> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 63.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 54.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <17.28> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 63.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 54.
 
 
 LaTeX Warning: Reference `fig:nework_situnai' on page 4 undefined on input line
- 74.
+ 65.
 
 File: figure/networkmodel_ex.eps Graphic file (type eps)
 <figure/networkmodel_ex.eps> [4]
 
 LaTeX Warning: Reference `fig:huroa_model_image' on page 5 undefined on input l
-ine 95.
+ine 86.
 
 
 LaTeX Warning: Reference `fig:huroa_model_image' on page 5 undefined on input l
-ine 96.
+ine 87.
 
 
 LaTeX Warning: Reference `fig:huroa_model_image' on page 5 undefined on input l
-ine 98.
+ine 89.
 
 
 LaTeX Warning: Reference `fig:huroa_manhattan' on page 5 undefined on input lin
-e 99.
+e 90.
 
 
 LaTeX Warning: Reference `fig:huroa_manhattan' on page 5 undefined on input lin
-e 101.
+e 92.
 
 File: ./figure/floormodel_image.eps Graphic file (type eps)
 <./figure/floormodel_image.eps>
 File: ./figure/floormodel_kyori.eps Graphic file (type eps)
  <./figure/floormodel_kyori.eps>
-Overfull \hbox (19.83063pt too wide) in paragraph at lines 104--104
+Overfull \hbox (19.83063pt too wide) in paragraph at lines 95--95
 [][][][] 
  []
 
@@ -457,25 +474,25 @@ File: ./figure/floormodel_kyori.eps Graphic file (type eps)
 <./figure/floormodel_kyori.eps>
 File: ./figure/floormodel_ex2.eps Graphic file (type eps)
  <./figure/floormodel_ex2.eps>
-Overfull \hbox (19.83063pt too wide) in paragraph at lines 106--106
+Overfull \hbox (19.83063pt too wide) in paragraph at lines 97--97
 [][][][] 
  []
 
 
 LaTeX Warning: Reference `fig:huroa_manhattan' on page 5 undefined on input lin
-e 108.
+e 99.
 
 
 LaTeX Warning: Reference `fig:huroa_model_ketten' on page 5 undefined on input 
-line 113.
+line 104.
 
 
 LaTeX Warning: Reference `fig:huroa_model_ketten' on page 5 undefined on input 
-line 115.
+line 106.
 
 
 LaTeX Warning: Reference `fig;ruroa_model_ketten' on page 5 undefined on input 
-line 116.
+line 107.
 
 [5
 
@@ -484,42 +501,42 @@ File: figure/seruotomaton_image4.eps Graphic file (type eps)
  <figure/seruotomaton_image4.eps>
 File: figure/renzoku_image2.eps Graphic file (type eps)
  <figure/renzoku_image2.eps>
-Overfull \hbox (2.61108pt too wide) in paragraph at lines 124--136
+Overfull \hbox (2.61108pt too wide) in paragraph at lines 115--127
 [][] [] 
  []
 
 
-LaTeX Warning: Citation `21_Isozaki' on page 6 undefined on input line 144.
+LaTeX Warning: Citation `21_Isozaki' on page 6 undefined on input line 135.
 
 
-LaTeX Warning: Citation `ando_sfm' on page 6 undefined on input line 144.
+LaTeX Warning: Citation `ando_sfm' on page 6 undefined on input line 135.
 
 
 LaTeX Warning: Reference `fig:jinryu_image2' on page 6 undefined on input line 
-149.
+140.
 
 [6]
 File: figure/sfm_flowchart.eps Graphic file (type eps)
  <figure/sfm_flowchart.eps> [7] [8]
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <14.4> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 262.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 253.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <14.4> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 262.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 253.
 
 
-LaTeX Warning: Citation `seru_sfm1' on page 9 undefined on input line 268.
+LaTeX Warning: Citation `seru_sfm1' on page 9 undefined on input line 259.
 
 
-LaTeX Warning: Citation `seru_sfm2' on page 9 undefined on input line 268.
+LaTeX Warning: Citation `seru_sfm2' on page 9 undefined on input line 259.
 
 [9]
 
 LaTeX Warning: Reference `fig:sougosayou_flow' on page 10 undefined on input li
-ne 311.
+ne 302.
 
 
 LaTeX Warning: Reference `fig:sougosayou_flow' on page 10 undefined on input li
-ne 312.
+ne 303.
 
 File: figure/agent_flow.eps Graphic file (type eps)
 <figure/agent_flow.eps>
@@ -531,15 +548,15 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 [10]
 
 LaTeX Warning: Reference `fig:kaberyuusi_ex' on page 11 undefined on input line
- 341.
+ 332.
 
 
 LaTeX Warning: Reference `fig:kaberyuusi_ex' on page 11 undefined on input line
- 342.
+ 333.
 
 
 LaTeX Warning: Reference `fig:kaberyuusi_ex' on page 11 undefined on input line
- 343.
+ 334.
 
 File: figure/kabe_flow.eps Graphic file (type eps)
 <figure/kabe_flow.eps> [11]
@@ -605,44 +622,81 @@ Overfull \hbox (51.80368pt too wide) in paragraph at lines 239--241
 [26
 
 ]
+File: figure/20230614_hanni_ex.eps Graphic file (type eps)
+ <figure/20230614_hanni_ex.eps>
+File: figure/20231007_hanni.eps Graphic file (type eps)
+ <figure/20231007_hanni.eps>
+File: figure/20220225_sentaku.eps Graphic file (type eps)
+
+<figure/20220225_sentaku.eps>
+Overfull \hbox (84.82631pt too wide) in paragraph at lines 68--94
+ [][][] 
+ []
+
+
+LaTeX Warning: Citation `cell1' on page 27 undefined on input line 98.
+
+
+LaTeX Warning: Citation `cell2' on page 27 undefined on input line 98.
+
+
+LaTeX Warning: Citation `cell_book1' on page 27 undefined on input line 109.
+
+
+LaTeX Warning: Citation `cell_renketu' on page 27 undefined on input line 109.
+
+[27] [28]
+
+LaTeX Warning: Citation `katayose' on page 29 undefined on input line 128.
+
+
+Overfull \hbox (5.97342pt too wide) in paragraph at lines 155--167
+[]\twlmin パタ ーン \OT1/cmr/m/n/12 5 \twlmin は ， セル分割法のセル座標と視野
+範囲の左右両端の座標 $\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 L[]; L[]\OT1/cmr/m/n/12
+ )$\twlmin ， $\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 R[]; R[]\OT1/cmr/m/n/12 )$
+ []
+
+[29]) (./5_method.tex [30]
 第 5 章
+[31
 
-Overfull \hbox (19.03616pt too wide) in paragraph at lines 31--56
- [][][] 
- []
+]
+File: figure/ex1.eps Graphic file (type eps)
+ <figure/ex1.eps>
+File: figure/ex2.eps Graphic file (type eps)
+ <figure/ex2.eps>
+File: figure/5_teian_flow1.eps Graphic file (type eps)
+ <figure/5_teian_flow1.eps>
+File: figure/5_teian_flow2.eps Graphic file (type eps)
 
-
-Overfull \hbox (11.6978pt too wide) in paragraph at lines 75--86
- [][][] 
- []
-
-) (./5_result.tex [27
-
-] [28] [29]
+<figure/5_teian_flow2.eps>
+File: figure/5_teian_flow3.eps Graphic file (type eps)
+ <figure/5_teian_flow3.eps>) (./6_result.tex [32]
+[33] [34] [35]
 第 6 章
 
-LaTeX Warning: Reference `sec:faq1' on page 30 undefined on input line 20.
+LaTeX Warning: Reference `sec:faq1' on page 36 undefined on input line 20.
 
 
-LaTeX Warning: Reference `sec:faq2' on page 30 undefined on input line 20.
+LaTeX Warning: Reference `sec:faq2' on page 36 undefined on input line 20.
 
-) (./6_discuss.tex [30
+) (./7_discuss.tex [36
 
 ]
 第 7 章
-) [31
+) [37
 
-] (./thanks.tex) [32
+] (./thanks.tex) [38
 
 
-] (./main.bbl) (./appendix.tex [33
+] (./main.bbl) (./appendix.tex [39
 
 ]
 付 録  A  
 One-sided document style.
-[34
+[40
 
-] [35]) (./main.aux)
+] [41]) (./main.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -651,12 +705,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 3516 strings out of 479850
- 52635 string characters out of 5887378
- 369566 words of memory out of 5000000
- 21752 multiletter control sequences out of 15000+600000
+ 3637 strings out of 479850
+ 55167 string characters out of 5887378
+ 370291 words of memory out of 5000000
+ 21858 multiletter control sequences out of 15000+600000
  496604 words of font info for 148 fonts, out of 8000000 for 9000
  264 hyphenation exceptions out of 8191
  70i,14n,76p,234b,482s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.dvi (42 pages, 105404 bytes).
+Output written on main.dvi (49 pages, 131676 bytes).

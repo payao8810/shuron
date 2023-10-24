@@ -15,6 +15,11 @@ Warning--I didn't find a database entry for "seru_sfm1"
 Warning--I didn't find a database entry for "seru_sfm2"
 Warning--I didn't find a database entry for "mps"
 Warning--I didn't find a database entry for "sph"
+Warning--I didn't find a database entry for "cell1"
+Warning--I didn't find a database entry for "cell2"
+Warning--I didn't find a database entry for "cell_book1"
+Warning--I didn't find a database entry for "cell_renketu"
+Warning--I didn't find a database entry for "katayose"
 Warning--editor or author is missing in 1983_Ibaraki
 Warning--Missing required argument title in 1983_Ibaraki
 Warning--Missing required argument publisher in 1983_Ibaraki
@@ -22,7 +27,7 @@ Warning--Missing required argument author in test1
 Warning--Missing required argument title in test1
 You've used 2 entries,
             2207 wiz_defined-function locations,
-            552 strings with 4350 characters,
+            557 strings with 4390 characters,
 and the built_in function-call counts, 233 in all, are:
 = -- 6
 > -- 2
@@ -62,4 +67,4 @@ while$ -- 0
 width$ -- 3
 write$ -- 11
 is.kanji.str$ -- 2
-(There were 16 warnings)
+(There were 21 warnings)
