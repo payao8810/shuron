@@ -5,6 +5,7 @@
 \chapter{エージェント間距離の削減手法}
 \label{sec:method}
 %**********************************************************
+\section{はじめに}
 SFMの運動方程式では，エージェント間距離が大きいほどエージェント間に働く相互作用力が小さくなる．
 このため，SFMでは，影響半径$R_{c}$を用いてエージェント間距離の計算回数を削減するのが一般的である．
 \figref{fig:sougo_hani}に，エージェント4の影響半径の例を示す．
@@ -35,6 +36,7 @@ SFMで用いられるエージェント間距離の計算回数削減手法は�
 近似領域外のエージェントに対するエージェント間距離の計算回数を削減することで，
 視野を用いたSFMを高速化する．
 
+\section{近似領域の選択方法}
 提案手法では，近似領域の算出に必要な計算時間を最小限に抑えるために，
 長方形で視野範囲を近似する．
 これに合わせて，
@@ -55,46 +57,14 @@ SFMで用いられるエージェント間距離の計算回数削減手法は�
 \figref{fig:90do_hamideru}に，\figref{fig:sougo_hani}のエージェント4に対して
 \tabref{tb:hantei_jouken}の各実装パターンが設定する視野範囲の近似領域を示す．
 
-\figtb{影響範囲の例}{An example of the scope of influence.}{3.7}{20230614_hanni_ex.eps}{sougo_hani}
+\figtb{影響範囲の例}{An example of the scope of influence.}{5}{20230614_hanni_ex.eps}{sougo_hani}
 
-\figtb{エージェント4の実装パターンごとの近似領域の例}{The approximation region for each pattern of agent 4.}{8}{20231007_hanni.eps}{90do_hamideru}
+\figtb{エージェント4の実装パターンごとの近似領域の例}{The approximation region for each pattern of agent 4.}{9}{20231007_hanni.eps}{90do_hamideru}
 
-\figtb{進行方向ごとの近似領域}{The approximation regions for each direction.}{7}{20220225_sentaku.eps}{sentaku}
+\figtb{進行方向ごとの近似領域}{The approximation regions for each direction.}{8}{20220225_sentaku.eps}{sentaku}
 
-\begin{table*}[tb]
-\begin{center}
-\caption{進行方向を分類する条件}
-\label{tb:hantei_jouken}
-\begin{tabular}{c|c|c|c|c}
-\hline \hline
-			& 右 & 左 & 上 & 下 \\ \hline
-パターン2   & $\frac{1}{\sqrt{2}} < e_x \leq 1  $
-		    & $ -1 \leq e_x < \frac{-1}{\sqrt{2}}$ 
-		    & $ \frac{-1}{\sqrt{2}} < e_x < \frac{1}{\sqrt{2}} $ 
-		    & $ \frac{-1}{2} < e_x < \frac{1}{2} $ \\
-パターン3   & $\frac{-1}{2} < e_y < \frac{1}{2} $ 
-		    & $\frac{-1}{2} < e_y < \frac{1}{2} $
-            & $ \frac{1}{\sqrt{2}} < e_y \leq 1$
-		    & $ -1 \leq e_y < \frac{-1}{\sqrt{2}} $ \\
-\hline
-\multirow{2}{*}{パターン4}   
-			& $R_x \geq A_x$ & $R_x < A_x$ & $R_y \geq A_y$ & $R_y < A_y $ \\
-	        &  $L_x \geq A_x$ & $L_x < A_x$ & $L_y \geq A_y$ & $L_y < A_y$ \\
-\hline
-\multirow{2}{*}{パターン5}   
- 			& $R_x \geq x_1$ & $R_x < x_2$ & $R_y \geq y_1$ & $R_y < y_2 $ \\
-			& $L_x \geq x_1$ & $L_x < x_2$ & $L_y \geq y_1$ & $L_y < y_2 $ \\
-\hline
-パターン6   & $ \cos(\frac{1}{2}\theta_{view}) \leq  e_y $ 
-			& $ e_y \leq -\cos(\frac{1}{2}\theta_{view})$ 
-			& $ \sin(\frac{1}{2}(\pi - \theta_{view})) \leq e_x $ 
-			& $ e_x \leq \sin(\frac{1}{2}(\pi - \theta_{view}))  $ \\
-\hline
-\end{tabular}
-\end{center}
-\end{table*}
-
-\section{パターン1（セル分割法）}
+\clearpage
+\subsection{パターン1（セル分割法）}
 パターン1は，一般的なセル分割法\cite{cell1}，\cite{cell2}によるエージェント間距離の計算回数削減を行う．
 \figref{fig:90do_hamideru}では黄色の領域がセル分割法による近似領域を表す．
 セル分割法は，\figref{fig:90do_hamideru}のように解析領域を格子状のセルに分割し，
@@ -108,7 +78,8 @@ SFMで用いられるエージェント間距離の計算回数削減手法は�
 また，本論文では，セル分割法のなかでもメモリ使用量を抑えることができると知られている
 連結リスト法\cite{cell_book1}，\cite{cell_renketu}を用いる．
 
-\section{パターン2}
+\clearpage
+\subsection{パターン2}
 パターン2は，エージェントの進行方向を表す単位ベクトル$e_{i}$を参照することで，
 パターン1の近似領域を視野範囲に近づける手法である．
 本手法は，\tabref{tb:hantei_jouken}の条件に基づいて
@@ -122,7 +93,28 @@ SFMで用いられるエージェント間距離の計算回数削減手法は�
 一方で，\figref{fig:90do_hamideru}のように視野範囲全体が近似領域内に含まれる保障がないため，
 本来相互作用力の計算が必要なエージェントに対する計算を削減し，誤差が発生する可能性がある．
 
-\section{パターン3}
+\begin{table}[hbtp]
+	\centering
+	\caption{パターン2，3の進行方向判定条件}
+	\label{tb:patan2_joken}
+	\begin{tabular}{c|cccc}
+		\hline \hline
+		& 右 & 左 & 上 & 下  \\ \hline
+		条件1
+		& $\frac{1}{\sqrt{2}} < e_x \leq 1$
+		& $ -1 \leq e_x < \frac{-1}{\sqrt{2}}$
+		& $ \frac{-1}{\sqrt{2}} < e_x < \frac{1}{\sqrt{2}}$
+		& $ \frac{-1}{2} < e_x < \frac{1}{2} $ \\ \hline
+		条件2 
+		& $\frac{-1}{2} < e_y < \frac{1}{2} $ 
+		& $\frac{-1}{2} < e_y < \frac{1}{2} $
+  	& $ \frac{1}{\sqrt{2}} < e_y \leq 1$
+		& $ -1 \leq e_y < \frac{-1}{\sqrt{2}} $ \\ \hline
+	\end{tabular}
+\end{table}
+
+\clearpage
+\subsection{パターン3}
 パターン3は，パターン2で発生する誤差を防ぐために，
 近似領域外に視野範囲が存在しないかを判定する処理を追加し，
 セル分割法と同じ精度を保つ手法である\cite{katayose}．
@@ -138,7 +130,8 @@ $L_{x}, L_{y}$がパターン2の近似領域の外にあるため，
 すべての時間ステップでパターン1よりもエージェント間距離の計算を削減できるとは限らない．
 一方で，パターン3は，パターン1のセル分割法と同じ精度のシミュレーション結果を得ることができる．
 
-\section{パターン4}
+\clearpage
+\subsection{パターン4}
 パターン4は，視野の左右両端の座標$(L_x,L_y)$，$(R_x,R_y)$を用いて近似領域を設定する手法である．
 視野範囲は進行方向の前方に存在するため，
 視野の左右両端の座標はエージェント座標から見て必ず進行方向側となる．
@@ -151,6 +144,19 @@ $L_{x}, L_{y}$がパターン2の近似領域の外にあるため，
 \tabref{tb:hantei_jouken}のいずれの条件にも当てはまらない場合は，
 パターン1（セル分割法）と同様に近傍9セルを近似領域とする．
 
+\begin{table}[hbtp]
+	\centering
+	\caption{パターン4の進行方向判定条件}
+	\label{tb:patan3_joken}
+	\begin{tabular}{c|c|c|c|c}
+		\hline \hline
+		& 右 & 左 & 上 & 下  \\ \hline
+		条件1 & $R_x \geq A_x$ & $R_x < A_x$ & $R_y \geq A_y$ & $R_y < A_y $ \\ \hline
+	  条件2 & $L_x \geq A_x$ & $L_x < A_x$ & $L_y \geq A_y$ & $L_y < A_y$ \\ \hline
+	\end{tabular}
+\end{table}
+
+\clearpage
 \subsection{パターン5}
 パターン5は，セル分割法のセル座標と視野範囲の左右両端の座標$(L_x,L_y)$，$(R_x,R_y)$を
 用いて近似領域を設定する手法である．
@@ -165,7 +171,21 @@ $R_y \geq y_1$および$L_y \geq y_2$が成り立つため，進行方向は上�
 本手法も\tabref{tb:hantei_jouken}のいずれの条件にも当てはまらない場合は，
 パターン1（セル分割法）と同様に近傍9セルを近似領域とする．
 
-\section{パターン6}
+\begin{table}[hbtp]
+	\centering
+	\caption{パターン5の進行方向判定条件}
+	\label{tb:patan3_joken}
+	\begin{tabular}{c|c|c|c|c}
+		\hline \hline
+		& 右 & 左 & 上 & 下  \\ \hline
+ 		条件1 & $R_x \geq x_1$ & $R_x < x_2$ & $R_y \geq y_1$ & $R_y < y_2 $ \\ \hline
+		条件2 & $L_x \geq x_1$ & $L_x < x_2$ & $L_y \geq y_1$ & $L_y < y_2 $ \\ \hline
+	\end{tabular}
+\end{table}
+
+
+\clearpage
+\subsection{パターン6}
 パターン6は，パターン2で設定した上下左右の角度範囲を，
 シミュレーション誤差の出ない範囲で設定する手法である．
 パターン6では，
@@ -181,5 +201,244 @@ $\sin{(\frac{1}{2}(\pi - \theta_{view}))} \leq e_{x}$という条件を設定で
 一方で，進行方向が特定の方向である場合は，
 エージェント座標に関係なくパターン1（セル分割法）と同じ近似領域を設定するため，
 エージェント間距離の計算回数は，パターン1に次いで多くなると考えられる．
+
+\begin{table}[hbtp]
+	\centering
+	\caption{パターン6の進行方向判定条件}
+	\label{tb:patan3_joken}
+	\begin{tabular}{c|c|c|c}
+		\hline \hline
+		右 & 左 & 上 & 下  \\ \hline
+		$ \cos(\frac{1}{2}\theta_{view}) \leq  e_y $ 
+		& $ e_y \leq -\cos(\frac{1}{2}\theta_{view})$ 
+		& $ \sin(\frac{1}{2}(\pi - \theta_{view})) \leq e_x $ 
+		& $ e_x \leq \sin(\frac{1}{2}(\pi - \theta_{view}))  $ \\ \hline
+	\end{tabular}
+\end{table}
+
+\section{評価}
+視野を用いたSFMに対するエージェント間距離の計算回数削減手法の有効性を確認するために，
+既存手法であるセル分割法を用いたパターン1および提案手法である
+パターン2～6を用いて人流シミュレーションを行う．
+評価環境は，
+CPUがIntel Xeon CPU E5-2687w v2， 
+メモリが64GB，
+OSがLinux 4.12.9であり，
+プログラムのコンパイルにはgcc 7.2.0で-O3オプションを設定する．
+また，本評価では，
+視野を用いたSFMで期待される押し合い圧し合いを行う群衆の行動を再現するために，
+エージェントの初期配置および目的地を\figref{fig:agent_haichi}のように設定し，
+\tabref{tb:tab_para}を用いて運動方程式を計算する．
+\tabref{tb:tab_para}のパラメータは文献\cite{sfm_para2}を参考に設定したものであり，
+これを踏まえてセル分割法のセルサイズは視野範囲に合わせて20mとする．
+本測定では，\figref{fig:agent_haichi}の緑色の範囲内にエージェントをランダムに生成し，
+各エージェントの目的地を解析領域上で初期配置と点対称となる座標に設定することで，
+解析領域の中央でエージェントが密集した状態を作る．
+
+%tb:評価環境
+\if 0
+\begin{table}[tb]
+  \begin{center}
+    \caption{評価環境}
+    %\ecaption{The evaluation environment.}
+    \label{tb:com_env}
+    \begin{tabular}{c|c}
+      \hline \hline
+      CPU              & Intel Xeon CPU E5-2687w v2 \\ \hline
+      メモリ           & 64GB                       \\ \hline
+      OS               & Linux 4.12.9               \\ \hline
+      コンパイラ       & gcc 7.2.0                  \\ \hline
+      最適化オプション & -O3                        \\ \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+\fi
+
+%tb:定数設定
+\begin{table}[tb]
+  \begin{center}
+    \caption{測定条件}
+    %\ecaption{Measurement Condition.}
+    \label{tb:tab_para}
+    \begin{tabular}{c|c}
+      \hline \hline
+      $A_i$            & 2000N                              \\ \hline 
+      $B_i$            & 0.08m                              \\ \hline 
+      $k$              & $1.2 \times 10^5 kg s^{-2} $       \\ \hline 
+      $\kappa$         & $2.4 \times 10^5 kg m^{-1} s^{-2}$ \\ \hline 
+      $v_i^0$          & $1.4$m/s                           \\ \hline 
+      $m_i$            & $80$kg                             \\ \hline 
+      $\tau_i$         & 0.01                               \\ \hline 
+      $r_i$            & $0.25$m                            \\ \hline 
+		視野角         & $\frac{2}{3}\pi$                   \\ \hline 
+      視野距離         & $20$m                              \\ \hline 
+      タイムステップ数 & 25000                              \\ \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+\figtb{エージェントの初期配置}{Initial position of agents.}{4}{20221031_haichi.eps}{agent_haichi}
+
+%tb:計算回数
+\begin{table*}[tb]
+\caption{エージェント間距離の計算回数[$10^{10}$回]}
+%\ecaption{The number of distance calculations between agents.}
+\label{tb:count_result_yobi}
+\begin{center}
+\begin{tabular}{c|r|r|r|r|r|r}
+\hline \hline
+	人数 & パターン1 & パターン2 & パターン3 & パターン4 & パターン5 & パターン6 \\  
+	\hline
+	\multirow{2}{*}{3000} 
+	& 5.1   & $\mathbf{3.9}$   & 4.0    & 4.4    & 4.1    & 4.4   \\  
+	&       & ($\mathbf{24.5}$\%) 					& (22.9\%) & (15.3\%) & (20.7\%) & (15.2\%) \\ \hline
+	\multirow{2}{*}{5000} 
+	& 14.4  &  $\mathbf{10.9}$  					  & 11.1   & 12.2   & 11.4   & 12.2  \\  
+	&       & ($\mathbf{23.8}$\%) 					& (22.6\%) & (15.2\%) & (20.5\%) & (15.1\%) \\ \hline
+	\multirow{2}{*}{7500} 
+	& 33.1  & $\mathbf{25.2}$	 		    	 	 & 25.8   & 28.3   & 26.7   & 28.3  \\ 
+	&       & ($\mathbf{23.9}$\%) 					& (22.2\%) & (14.6\%) & (19.4\%) & (14.6\%) \\ \hline
+    \end{tabular}
+  \end{center}
+\end{table*}
+
+%tb:解析時間
+\begin{table*}[tb]
+  \caption{解析時間[s]}
+  %\ecaption{Execute time.}
+  \label{tb:time_result_yobi}
+  \begin{center}
+    \begin{tabular}{c|r|r|r|r|r|r}
+      \hline \hline
+          人数 & パターン1 & パターン2 & パターン3 & パターン4 & パターン5 & パターン6  \\  \hline
+          3000 & 2636      & $\mathbf{2123}$      & 2140      & 2307      &  2184     & 2292      \\  \hline
+          5000 & 7435      & $\mathbf{5941}$      & 6016      & 6463      &  6162     & 6453      \\  \hline
+          7500 & 17198     & $\mathbf{13730}$     & 13985     & 15048     & 14931     & 15036     \\  \hline
+    \end{tabular}
+  \end{center}
+\end{table*}
+
+\subsection{エージェント間距離の計算回数}
+\label{sec:count}
+%*************************************************
+\tabref{tb:count_result_yobi}に，エージェント間距離の計算回数および削減率を示す．
+表中の括弧内の数値は，削減率であり，
+パターン$n$のエージェント間距離の計算回数$C_{n}$と
+パターン1（セル分割法）のエージェント間距離の計算回数$C_{1}$より
+\eq{sakugen}のように求める．
+%
+\begin{align}
+	\mbox{削減率[\%]} = ( 1 - \frac{C_{n}}{C_{1}}) \times 100
+    \label{eq:sakugen}
+\end{align}
+
+\tabref{tb:count_result_yobi}より，
+パターン2～6はセル分割法よりもエージェント間距離の計算回数が少なく，
+最も高い削減率が得られたのはパターン2であることが確認できる．
+パターン2は近似領域が視野範囲全体を含まない可能性のある手法であるが，
+セル分割法と同じ解析精度の手法に限定しても，
+パターン2と同じ手順で進行方向を判定したパターン3が最も高い削減率である．
+パターン3で高い削減率が得られたのは，
+エージェントの初期配置を\figref{fig:agent_haichi}のように設定したことにより，
+\tabref{tb:hantei_jouken}で削減可能な角度の範囲の広さが削減率に強く影響したためであると考えられる．
+本測定条件では，初期のエージェントの進行方向がすべて異なり，
+時間経過による進行方向の変化も少ない．
+実問題のシミュレーションでは，エージェントが同一の目的地を目指すものが多く，
+進行方向が一定の方向に偏ることが多いため，
+解析対象に応じて表1から適切なパターンを選択する必要があると考えられる．
+横方向や縦方向に進むエージェントが多い問題では，パターン3の近似領域を
+用いることで，より多くのエージェント間距離の計算回数が削減できる．
+一方で，斜め方向に進むエージェントが多い問題では，パターン3を用いた場合に
+近似領域を削減できないため，進行方向の角度に応じで使用するパターンを
+決定することが有効であると考えられる．
+同様に，削減率が最も低いパターン6は，
+\tabref{tb:hantei_jouken}の条件を満たさない角度が最も広いため，
+パターン1（セル分割法）と同じ近似領域を用いることが多く，
+高い削減率が得られなかったと考えられる．
+
+また，各パターンの削減率は，エージェント数によらず一定であることが分かる．
+これは，パターン2が周囲のエージェント情報を参照せずに近似領域を設定するためである．
+エージェント数や，エージェントの密度が変化してもエージェントごとの近似領域の面積は変わらない．
+加えて，解析領域中央付近でエージェントが密集するように条件を設定しており，
+エージェント間距離の計算はほとんどが密集状態で実行されるものである．
+一方，密集領域以外では，近似領域から除外した領域のエージェント数が少なくなりやすい．
+これに伴い，すべての視野に対して近傍領域の面積の約3割を削減するパターン2で
+\tabref{tb:count_result_yobi}の削減率が3割未満となり，
+近傍領域の面積の削減率とエージェント間距離の演算回数の削減率に差が生じた．
+
+\subsection{シミュレーションの実行時間の測定}
+第\ref{sec:count}節より，
+提案手法であるパターン2～6を用いることで，パターン1（セル分割法）よりも
+エージェント間距離の計算回数が削減できることが確認できた．
+一方で，提案手法はパターン1が必要としない進行方向を求める処理を実行するため，
+進行方向を求める処理の分だけ実行時間は増加する．
+このため，進行方向を求めるために必要な時間を考慮しても
+エージェント間距離の計算回数削減による高速化が有効であることを確認する．
+\tabref{tb:time_result_yobi}にシミュレーションの実行時間を，
+\figref{fig:kousokuka2}に\eq{kousokuka}より算出した高速化率を示す．
+%
+\begin{align}
+    \centering
+	\mbox{高速化率[倍]} = \frac{\mbox{パターン1の実行時間[s]}}{\mbox{パターン}n\mbox{の実行時間[s]}}
+    \label{eq:kousokuka}
+\end{align}
+%
+\tabref{tb:time_result_yobi}，\figref{fig:kousokuka2}より，
+提案手法であるパターン2〜6は，すべてのパターンにおいてパターン1（セル分割法）よりも1.14倍から1.25倍高速であり，
+従来手法よりも解析時間が1.3割から2.0割削減できることが確認できる．
+また，すべてのパターンにおいて削減率に応じた高速化率が得られており，
+進行方向を求める処理を追加したことによる処理時間の時間増加は小さいといえる．
+これを踏まえると，パターン2とパターン3の高速化率の差は，
+本来計算が必要なエージェント間距離の計算の有無によるものであると考えられる．
+つまり，パターン3はパターン2の処理に加えて視野の座標を求め，
+厳密に視野範囲を予測しているが，追加の処理による実行時間の増加は小さいといえる．
+
+\subsection{シミュレーション精度の測定}
+提案手法のうち最も高速な手法はパターン2であるが，
+パターン2は他の手法と異なり視野範囲の一部が近似領域外となることを許容する．
+つまり，
+提案手法のうちパターン2のみ，
+パターン1（セル分割法）のシミュレーションと比べてシミュレーション誤差が生じる手法となる．
+このため，パターン1のシミュレーション結果とパターン2のシミュレーション結果を比較し，
+シミュレーション精度を確かめる．
+誤差は，パターン1とパターン2が算出した時間ステップごとに各エージェントの座標を出力し，
+2手法の同時刻・同エージェント同士によるエージェント間距離の最大値とした．
+本測定条件下のパターン2の誤差は，エージェント数によらず約3.2cmであった．
+これは，解析領域全体や人の大きさを踏まえると小さな数値であり，
+シミュレーション結果として十分に実用的であると考えられる．
+誤差を小さな数値で抑えることができたのは，
+SFMではエージェントが目的地に向かう特性から，
+時間ステップごとの位置座標に応じて進行方向が更新され，
+細かな誤差が発生してもそれを蓄積しにくいためであると考えられる．
+加えて，パターン2が相互作用力の計算を省略したのは視界の隅にあたる領域であり，
+パターン2を用いても人の行動を自然に再現できると考えられる．
+
+\figtb{パターン1（セル分割法）に対する高速化率}
+{Speedup ratio of the proposed method compared with pattern 1.}{8}{20230226_kousokuka.eps}{kousokuka2}
+
+\section{本章のまとめ}%{{{
+%**********************************************************
+本論文では，視野を用いたSFMを高速化するために，エージェント間距離の計算回数を削減する手法を提案し，
+その有効性を評価した．
+評価の結果，提案手法は，エージェントが交差するように移動する問題において，
+十分に許容可能な誤差の範囲で約1.25倍の高速化率が得られることを確認した．
+提案手法を用いた人流シミュレーションは，従来手法よりも解析時間を最大2割削減できるため，
+解析に必要な電力コストを解析時間に応じて削減できる可能性があり，
+これは建物の設計に必要な開発コストの削減にもつながると考えられる．
+また，本測定の提案手法で発生した誤差より大きい誤差を許容することができる場合，
+近似領域の視野範囲に対する近似制度を高めることが可能であり，
+エージェント間距離の計算回数の削減量を増やすことができると期待できる．
+このため，精度低下を許容できる問題に対しては，さらなる高速化が見込めるといえる．
+さらに，提案手法を用いた人流シミュレーションは，
+エージェントごとに独立して計算できる並列性があるため，
+CPUやGPUを用いて並列処理することで
+高速に解析できると考えられる．
+特にGPUを用いた人流シミュレーションは，GPU上でエージェントごとに視野領域の内外判定を
+計算し，進行方向を計算することが一般的である\cite{seru_sfm1}，\cite{seru_sfm2}．
+GPUを用いた解析は，条件分岐により，実行効率が落ちることが知られている．
+このため，提案手法をGPU上で実装する場合は，
+同じ処理をまとめて計算するなどの条件分岐を削減する工夫が必要であると
+考えられる．
+
 
 %***** END ************************************************

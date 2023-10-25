@@ -19,26 +19,27 @@
 \contentsline {section}{\numberline {3.4}経路選択時の判定回数削減}{22}{}%
 \contentsline {subsection}{\numberline {3.4.1}経路選択の単純化}{22}{}%
 \contentsline {subsection}{\numberline {3.4.2}経路選択手法の～～}{22}{}%
-\contentsline {section}{\numberline {3.5}abstract.tex}{22}{}%
-\contentsline {section}{\numberline {3.6}簡単コマンド}{22}{}%
-\contentsline {section}{\numberline {3.7}参考文献}{23}{}%
-\contentsline {subsection}{\numberline {3.7.1}bibファイルを使う場合}{24}{}%
-\contentsline {subsection}{\numberline {3.7.2}bibファイルを使わない場合}{24}{}%
-\contentsline {chapter}{\numberline {第4章}エージェント間距離の削減手法}{26}{}%
-\contentsline {section}{\numberline {4.1}パターン1（セル分割法）}{28}{}%
-\contentsline {section}{\numberline {4.2}パターン2}{28}{}%
-\contentsline {section}{\numberline {4.3}パターン3}{29}{}%
-\contentsline {section}{\numberline {4.4}パターン4}{29}{}%
-\contentsline {subsection}{\numberline {4.4.1}パターン5}{30}{}%
-\contentsline {section}{\numberline {4.5}パターン6}{30}{}%
-\contentsline {chapter}{\numberline {第5章}格子分割による進行方向ベクトル計算の削減手法}{31}{}%
-\contentsline {section}{\numberline {5.1}進行方向計算の前処理}{31}{}%
-\contentsline {section}{\numberline {5.2}壁を避ける力の前処理}{31}{}%
-\contentsline {chapter}{\numberline {第6章}評価}{36}{}%
-\contentsline {chapter}{\numberline {第7章}おわりに}{37}{}%
-\contentsline {chapter}{謝辞}{38}{}%
-\contentsline {chapter}{参考文献}{39}{}%
-\contentsline {chapter}{\numberline {付 録 A }プログラムの説明}{40}{}%
-\contentsline {section}{\numberline {A.1}節番号のテスト}{40}{}%
-\contentsline {subsection}{\numberline {A.1.1}項番号のテスト}{40}{}%
-\contentsline {section}{\numberline {A.2}ページレイアウト表示}{40}{}%
+\contentsline {chapter}{\numberline {第4章}エージェント間距離の削減手法}{23}{}%
+\contentsline {section}{\numberline {4.1}はじめに}{23}{}%
+\contentsline {section}{\numberline {4.2}近似領域の選択方法}{24}{}%
+\contentsline {subsection}{\numberline {4.2.1}パターン1（セル分割法）}{26}{}%
+\contentsline {subsection}{\numberline {4.2.2}パターン2}{27}{}%
+\contentsline {subsection}{\numberline {4.2.3}パターン3}{28}{}%
+\contentsline {subsection}{\numberline {4.2.4}パターン4}{29}{}%
+\contentsline {subsection}{\numberline {4.2.5}パターン5}{30}{}%
+\contentsline {subsection}{\numberline {4.2.6}パターン6}{31}{}%
+\contentsline {section}{\numberline {4.3}評価}{31}{}%
+\contentsline {subsection}{\numberline {4.3.1}エージェント間距離の計算回数}{32}{}%
+\contentsline {subsection}{\numberline {4.3.2}シミュレーションの実行時間の測定}{34}{}%
+\contentsline {subsection}{\numberline {4.3.3}シミュレーション精度の測定}{34}{}%
+\contentsline {section}{\numberline {4.4}本章のまとめ}{35}{}%
+\contentsline {chapter}{\numberline {第5章}格子分割による進行方向ベクトル計算の削減手法}{37}{}%
+\contentsline {section}{\numberline {5.1}進行方向計算の前処理}{37}{}%
+\contentsline {section}{\numberline {5.2}壁を避ける力の前処理}{37}{}%
+\contentsline {chapter}{\numberline {第6章}評価}{42}{}%
+\contentsline {chapter}{\numberline {第7章}おわりに}{43}{}%
+\contentsline {chapter}{謝辞}{44}{}%
+\contentsline {chapter}{参考文献}{45}{}%
+\contentsline {chapter}{\numberline {付 録 A }プログラムの説明}{47}{}%
+\contentsline {section}{\numberline {A.1}節番号のテスト}{47}{}%
+\contentsline {subsection}{\numberline {A.1.1}項番号のテスト}{47}{}%

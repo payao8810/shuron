@@ -3,68 +3,55 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
 The style file: sty/ipsjunsrt.bst
 Database file #1: bibfile.bib
-Warning--entry type for "test1" isn't style-file defined
---line 16 of file bibfile.bib
-Warning--I didn't find a database entry for "sim_jirei1"
-Warning--I didn't find a database entry for "sim_jirei2"
-Warning--I didn't find a database entry for "sim_jirei3"
-Warning--I didn't find a database entry for "sim_jirei8"
-Warning--I didn't find a database entry for "21_Isozaki"
-Warning--I didn't find a database entry for "ando_sfm"
-Warning--I didn't find a database entry for "seru_sfm1"
-Warning--I didn't find a database entry for "seru_sfm2"
-Warning--I didn't find a database entry for "mps"
-Warning--I didn't find a database entry for "sph"
-Warning--I didn't find a database entry for "cell1"
-Warning--I didn't find a database entry for "cell2"
-Warning--I didn't find a database entry for "cell_book1"
-Warning--I didn't find a database entry for "cell_renketu"
+Warning--entry type for "sim_jirei2" isn't style-file defined
+--line 461 of file bibfile.bib
+Warning--entry type for "sim_jirei8" isn't style-file defined
+--line 475 of file bibfile.bib
 Warning--I didn't find a database entry for "katayose"
-Warning--editor or author is missing in 1983_Ibaraki
-Warning--Missing required argument title in 1983_Ibaraki
-Warning--Missing required argument publisher in 1983_Ibaraki
-Warning--Missing required argument author in test1
-Warning--Missing required argument title in test1
-You've used 2 entries,
+Warning--Missing required argument pages in 21_Isozaki
+Warning--Missing required argument year in ando_sfm
+Warning--there's no number and/or volumeando_sfm
+Warning--Missing required argument pages in ando_sfm
+You've used 16 entries,
             2207 wiz_defined-function locations,
-            557 strings with 4390 characters,
-and the built_in function-call counts, 233 in all, are:
-= -- 6
-> -- 2
-< -- 0
-+ -- 2
-- -- 0
-* -- 23
-:= -- 29
-add.period$ -- 2
-call.type$ -- 2
+            643 strings with 6742 characters,
+and the built_in function-call counts, 4716 in all, are:
+= -- 362
+> -- 159
+< -- 10
++ -- 56
+- -- 40
+* -- 296
+:= -- 590
+add.period$ -- 16
+call.type$ -- 16
 change.case$ -- 0
 chr.to.int$ -- 0
-cite$ -- 7
-duplicate$ -- 13
-empty$ -- 39
-format.name$ -- 0
-if$ -- 51
+cite$ -- 20
+duplicate$ -- 318
+empty$ -- 450
+format.name$ -- 60
+if$ -- 1180
 int.to.chr$ -- 0
-int.to.str$ -- 2
-missing$ -- 1
-newline$ -- 9
-num.names$ -- 0
-pop$ -- 11
+int.to.str$ -- 16
+missing$ -- 14
+newline$ -- 51
+num.names$ -- 16
+pop$ -- 68
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 12
+skip$ -- 255
 stack$ -- 0
-substring$ -- 0
-swap$ -- 0
-text.length$ -- 0
+substring$ -- 292
+swap$ -- 100
+text.length$ -- 33
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 5
-while$ -- 0
-width$ -- 3
-write$ -- 11
-is.kanji.str$ -- 2
-(There were 21 warnings)
+warning$ -- 4
+while$ -- 36
+width$ -- 18
+write$ -- 120
+is.kanji.str$ -- 119
+(There were 7 warnings)
