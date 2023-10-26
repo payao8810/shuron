@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.141592653-p3.9.1-210218-2.6 (utf8.euc) (TeX Live 2022/dev/Debian) (preloaded format=platex 2023.6.24)  26 OCT 2023 16:38
+This is e-pTeX, Version 3.141592653-p3.9.1-210218-2.6 (utf8.euc) (TeX Live 2022/dev/Debian) (preloaded format=platex 2023.6.24)  26 OCT 2023 19:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -258,12 +258,6 @@ LaTeX Warning: Label `fig:atigenshou' multiply defined.
 
 
 LaTeX Warning: Label `fig:sougo_hani' multiply defined.
-
-
-LaTeX Warning: Label `tb:patan3_joken' multiply defined.
-
-
-LaTeX Warning: Label `tb:patan3_joken' multiply defined.
 
 
 LaTeX Warning: Label `sec:method' multiply defined.
@@ -564,116 +558,94 @@ File: figure/ryoiki_heiretu.eps Graphic file (type eps)
 
 ]
 第 4 章
-
-LaTeX Warning: Reference `tb:hantei_jouken' on page 23 undefined on input line 
-53.
-
-
-LaTeX Warning: Reference `tb:hantei_jouken' on page 23 undefined on input line 
-54.
-
-
-LaTeX Warning: Reference `tb:hantei_jouken' on page 23 undefined on input line 
-58.
-
-[23
-
-]
 File: figure/20230614_hanni_ex.eps Graphic file (type eps)
- <figure/20230614_hanni_ex.eps>
-File: figure/20231007_hanni.eps Graphic file (type eps)
- <figure/20231007_hanni.eps>
+<figure/20230614_hanni_ex.eps> [23
+
+]
 File: figure/20220225_sentaku.eps Graphic file (type eps)
-
-<figure/20220225_sentaku.eps> [24] [25]
+ <figure/20220225_sentaku.eps> [24]
 File: figure/patan1_ex.eps Graphic file (type eps)
- <figure/patan1_ex.eps> [26
+
+<figure/patan1_ex.eps> [25
 
 ]
-
-LaTeX Warning: Reference `tb:hantei_jouken' on page 27 undefined on input line 
-88.
-
 File: figure/patan2_ex.eps Graphic file (type eps)
-<figure/patan2_ex.eps> [27
-
-]
+ <figure/patan2_ex.eps>
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <8> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 126.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 125.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <8> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 126.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 125.
 
 
-LaTeX Warning: Citation `katayose' on page 28 undefined on input line 126.
+LaTeX Warning: Citation `katayose' on page 26 undefined on input line 125.
 
+[26]
 File: figure/patan3_good.eps Graphic file (type eps)
-<figure/patan3_good.eps>
+ <figure/patan3_good.eps>
 File: figure/patan3_ex.eps Graphic file (type eps)
- <figure/patan3_ex.eps> [28
-
-]
-
-LaTeX Warning: Reference `tb:hantei_jouken' on page 29 undefined on input line 
-148.
-
-
-LaTeX Warning: Reference `tb:hantei_jouken' on page 29 undefined on input line 
-154.
-
+ <figure/patan3_ex.eps> [27]
 File: figure/patan4_good.eps Graphic file (type eps)
+
 <figure/patan4_good.eps>
 File: figure/patan4_ex.eps Graphic file (type eps)
- <figure/patan4_ex.eps> [29
+ <figure/patan4_ex.eps>
 
-] [30]
-
-LaTeX Warning: Reference `tb:hantei_jouken' on page 31 undefined on input line 
-186.
+LaTeX Warning: Reference `fig:patan5_joken' on page 28 undefined on input line 
+190.
 
 
-Overfull \hbox (5.97342pt too wide) in paragraph at lines 176--188
+LaTeX Warning: Reference `patan5_joken' on page 28 undefined on input line 193.
+
+
+
+Overfull \hbox (5.97342pt too wide) in paragraph at lines 185--205
 []\twlmin パタ ーン \OT1/cmr/m/n/12 5 \twlmin は ， セル分割法のセル座標と視野
 範囲の左右両端の座標 $\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 L[]; L[]\OT1/cmr/m/n/12
  )$\twlmin ， $\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 R[]; R[]\OT1/cmr/m/n/12 )$
  []
 
+[28]
 File: figure/patan5_good.eps Graphic file (type eps)
-<figure/patan5_good.eps>
+ <figure/patan5_good.eps>
 File: figure/patan5_ex.eps Graphic file (type eps)
- <figure/patan5_ex.eps> [31
+ <figure/patan5_ex.eps>
 
-] [32]
-Overfull \hbox (18.35948pt too wide) in paragraph at lines 227--235
+LaTeX Warning: Reference `tab:patan6_joken' on page 29 undefined on input line 
+233.
+
+[29]
+Overfull \hbox (18.35948pt too wide) in paragraph at lines 244--252
  [][][][] 
  []
 
+[30]
 File: figure/20221031_haichi.eps Graphic file (type eps)
-<figure/20221031_haichi.eps>
-Overfull \hbox (7.50938pt too wide) in paragraph at lines 306--320
+ <figure/20221031_haichi.eps>
+Overfull \hbox (7.50938pt too wide) in paragraph at lines 323--337
  [][][] 
  []
 
 
-Overfull \hbox (7.50938pt too wide) in paragraph at lines 329--336
+Overfull \hbox (7.50938pt too wide) in paragraph at lines 346--353
  [][][] 
  []
 
-[33
+[31
 
 ]
 
-LaTeX Warning: Reference `tb:hantei_jouken' on page 34 undefined on input line 
-361.
+LaTeX Warning: Reference `tb:hantei_jouken' on page 32 undefined on input line 
+378.
 
 
-LaTeX Warning: Reference `tb:hantei_jouken' on page 34 undefined on input line 
-373.
+LaTeX Warning: Reference `tb:hantei_jouken' on page 32 undefined on input line 
+390.
 
-[34] [35] [36]
+[32] [33]
 File: figure/20230226_kousokuka.eps Graphic file (type eps)
- <figure/20230226_kousokuka.eps> [37]) (./5_method.tex [38]
+ <figure/20230226_kousokuka.eps> [34]) (./5_method.tex [35]
 第 5 章
-[39
+[36
 
 ]
 File: figure/ex1.eps Graphic file (type eps)
@@ -687,11 +659,11 @@ File: figure/5_teian_flow2.eps Graphic file (type eps)
 <figure/5_teian_flow2.eps>
 File: figure/5_teian_flow3.eps Graphic file (type eps)
  <figure/5_teian_flow3.eps>) (./6_discuss.tex
-[40] [41] [42] [43]
+[37] [38] [39] [40]
 第 6 章
-) [44
+) [41
 
-] (./thanks.tex) [45
+] (./thanks.tex) [42
 
 
 ] (./main.bbl
@@ -703,16 +675,16 @@ LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
 (Font)              No change on input line 47.
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
 (Font)              No change on input line 52.
- [46
+ [43
 
 ]
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
 (Font)              No change on input line 61.
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
 (Font)              No change on input line 71.
-) (./appendix.tex [47]
+) (./appendix.tex [44]
 付 録  A  
-) [48
+) [45
 
 ] (./main.aux)
 
@@ -723,12 +695,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 3667 strings out of 479850
- 56182 string characters out of 5887378
- 370532 words of memory out of 5000000
+ 3666 strings out of 479850
+ 56104 string characters out of 5887378
+ 370546 words of memory out of 5000000
  21890 multiletter control sequences out of 15000+600000
  494795 words of font info for 136 fonts, out of 8000000 for 9000
  264 hyphenation exceptions out of 8191
  70i,14n,76p,234b,482s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.dvi (56 pages, 149324 bytes).
+Output written on main.dvi (53 pages, 151816 bytes).

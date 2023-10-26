@@ -9,6 +9,9 @@
 SFMの運動方程式では，エージェント間距離が大きいほどエージェント間に働く相互作用力が小さくなる．
 このため，SFMでは，影響半径$R_{c}$を用いてエージェント間距離の計算回数を削減するのが一般的である．
 \figref{fig:sougo_hani}に，エージェント4の影響半径の例を示す．
+%
+\figtb{影響範囲の例}{An example of the scope of influence.}{5}{20230614_hanni_ex.eps}{sougo_hani}
+%
 \figref{fig:sougo_hani}中の〇はエージェントであり，
 オレンジ色の点線で囲まれた領域がエージェント4の影響範囲である．
 影響半径$R_{c}$は影響範囲の半径であり，
@@ -43,31 +46,27 @@ SFMで用いられるエージェント間距離の計算回数削減手法は�
 視野範囲はエージェントの進行方向前方に存在するため，
 エージェントの進行方向を長方形の辺数に合わせて上下左右の4パターンに分類し，
 エージェントの進行方向に応じた近似領域を設定する．
+\figref{fig:sentaku}に上下左右の4パターンの近似領域を示す．
+\figref{fig:sentaku}中の◯はエージェント，矢印は進行方向，格子はセル分割法のセル，
+青い四角は，各進行方向ごとの近似領域である．
+\figref{fig:sentaku}の近似領域の選択方法は，エージェントの座標や進行方向などといった
+複数の選択方法が考えられる．
 エージェントの進行方向の分類方法によりシミュレーション時間が変化する可能性があるため，
 本論文では，既存手法であるセル分割法を含む6パターン実装し，その有効性を評価する．
-%パターン2～6は，パターン1のセル分割法で用いたセルを利用しており，
-%各手法の影響範囲の設定条件は\tabref{tb:hantei_jouken}の通りである．
 提案手法であるパターン2～6は，いずれの手法もパターン1のセル分割法の考え方を基にしており，
 時間ステップごとに影響範囲の近似領域を設定した上で，
 近似領域内で影響範囲内となるエージェントを相互作用力を計算する対象として設定する．
-\tabref{tb:hantei_jouken}に，エージェントの進行方向を分類する条件を示す．
-ただし，\tabref{tb:hantei_jouken}で条件に数式が2つ記述されているものは，
-両条件を満たす必要があることを表す．
-また，
-\figref{fig:90do_hamideru}に，\figref{fig:sougo_hani}のエージェント4に対して
-\tabref{tb:hantei_jouken}の各実装パターンが設定する視野範囲の近似領域を示す．
 
-\figtb{影響範囲の例}{An example of the scope of influence.}{5}{20230614_hanni_ex.eps}{sougo_hani}
+%\figtb{エージェント4の実装パターンごとの近似領域の例}{The approximation region for each pattern of agent 4.}{9}{20231007_hanni.eps}{90do_hamideru}
 
-\figtb{エージェント4の実装パターンごとの近似領域の例}{The approximation region for each pattern of agent 4.}{9}{20231007_hanni.eps}{90do_hamideru}
-
-\figtb{進行方向ごとの近似領域}{The approximation regions for each direction.}{8}{20220225_sentaku.eps}{sentaku}
+\figtb{進行方向ごとの近似領域}{}{8}{20220225_sentaku.eps}{sentaku}
 
 \clearpage
 \subsection{パターン1（セル分割法）}
-パターン1は，一般的なセル分割法\cite{cell1}，\cite{cell2}によるエージェント間距離の計算回数削減を行う．
-\figref{fig:90do_hamideru}では黄色の領域がセル分割法による近似領域を表す．
-セル分割法は，\figref{fig:90do_hamideru}のように解析領域を格子状のセルに分割し，
+パターン1は，一般的なセル分割法\cite{cell1}，\cite{cell2}によるエージェント間距離の計算回数を削減する．
+\figref{fig:patan1_ex}に\figref{fig:sougo_hani}中のエージェント4にパターン1を用いて
+近似領域を設定した例を示す．
+セル分割法は，\figref{fig:patan1_ex}のように解析領域を格子状に分割し，
 影響半径$R_{c}$の円内に重なるセルを近似領域とする手法である．
 本手法は，分割するセルのサイズを影響半径と同じ距離に設定することで，
 近似領域をエージェントの近傍9セルに限定することができる．
@@ -78,25 +77,9 @@ SFMで用いられるエージェント間距離の計算回数削減手法は�
 また，本論文では，セル分割法のなかでもメモリ使用量を抑えることができると知られている
 連結リスト法\cite{cell_book1}，\cite{cell_renketu}を用いる．
 
-\figtb{パターン1を用いたエージェント4の近似領域}{}{5}{patan1_ex}{patan1_ex}
+\figtb{パターン1を用いたエージェント4の近似領域}{}{4}{patan1_ex}{patan1_ex}
 
-
-\clearpage
-\subsection{パターン2}
-パターン2は，エージェントの進行方向を表す単位ベクトル$e_{i}$を参照することで，
-パターン1の近似領域を視野範囲に近づける手法である．
-本手法は，\tabref{tb:hantei_jouken}の条件に基づいて
-単位ベクトル$e_{i}$が示す進行方向を上下左右を$\frac{1}{2}\pi$の均等な角度で分割し，
-セル分割法の近似領域から\figref{fig:sentaku}のように進行方向の反対側にある3セルを除外する．
-\figref{fig:90do_hamideru}の例では，エージェントの進行方向は右と判定され，
-\figref{fig:sentaku}に示す右方向の青いセルを近似領域に設定する．
-このため，白色のセルに存在するエージェントに対する距離計算を削減できる．
-パターン2は，進行方向を必ず上下左右のいずれかに設定するため，
-常に近似領域が6セルとなり，セル分割法の9セルに比べて近似領域の面積を$\frac{2}{3}$に削減できる．
-一方で，\figref{fig:90do_hamideru}のように視野範囲全体が近似領域内に含まれる保障がないため，
-本来相互作用力の計算が必要なエージェントに対する計算を削減し，誤差が発生する可能性がある．
-
-\begin{table}[hbtp]
+\begin{table}[t]
 	\centering
 	\caption{パターン2，3の進行方向判定条件}
 	\label{tb:patan2_joken}
@@ -116,21 +99,44 @@ SFMで用いられるエージェント間距離の計算回数削減手法は�
 	\end{tabular}
 \end{table}
 
+\subsection{パターン2}
+パターン2は，エージェントの進行方向を表す単位ベクトル$e_{i}$を参照することで，
+パターン1の近似領域を視野範囲に近づける手法である．
+\tabref{tb:patan2_joken}にパターン2の近似領域を選択するための条件を示す．
+\tabref{tb:patan2_joken}中の条件1と条件2の両方を満たす進行方向から近似領域を選択する．
+本手法は，\tabref{tb:patan2_joken}の条件に基づいて
+単位ベクトル$e_{i}$が示す進行方向を上下左右を$\frac{1}{2}\pi$の均等な角度で分割し，
+セル分割法の近似領域から\figref{fig:sentaku}のように進行方向の反対側にある3セルを除外する．
+\figref{fig:patan2_ex}に\figref{fig:sougo_hani}の例におけるエージェント4の近似領域を
+パターン2を用いて選択した例を示す．
+\figref{fig:patan2_ex}の例では，エージェントの進行方向は右と判定され，
+\figref{fig:sentaku}に示す右方向の青いセルを近似領域に設定する．
+このため，白色のセルに存在するエージェントに対する距離計算を削減できる．
+パターン2は，進行方向を必ず上下左右のいずれかに設定するため，
+常に近似領域が6セルとなり，セル分割法の9セルに比べて近似領域の面積を$\frac{2}{3}$に削減できる．
+一方で，\figref{fig:patan2_ex}のように視野範囲全体が近似領域内に含まれる保障がないため，
+本来相互作用力の計算が必要なエージェントに対する計算を削減し，誤差が発生する可能性がある．
+
 \figtb{パターン2を用いたエージェント4の近似領域}{}{5}{patan2_ex}{patan2_ex}
 
-
-\clearpage
 \subsection{パターン3}
 パターン3は，パターン2で発生する誤差を防ぐために，
 近似領域外に視野範囲が存在しないかを判定する処理を追加し，
 セル分割法と同じ精度を保つ手法である\cite{katayose}．
-本手法は，パターン2の近似領域を導出したのち，
+本手法は，\tabref{tb:patan2_joken}を用いてパターン2の近似領域を導出したのち，
 視野の座標$(L_x,L_y)$，$(R_x,R_y)$が
 近似領域内のセルであればパターン2の近似領域を用いて相互作用力を計算し，
 そうでなければパターン1の近似領域を用いて相互作用力を計算する．
-\figref{fig:90do_hamideru}のエージェントは，
-$L_{x}, L_{y}$がパターン2の近似領域の外にあるため，
-パターン3ではパターン1と同様に近傍9セルを近似領域とする．
+\figref{fig:patan3_good}にパターン3を用いて近似領域を削減できる例を示す．
+\figref{fig:patan3_good}中の緑色の視野領域上に存在する黒点は，視野の座標
+である$(L_x,L_y)$と$(R_x,R_y)$を示す．
+\figref{fig:patan3_good}の例では，\tabref{tb:patan2_joken}中の進行方向が右
+の条件を満たし，視野の座標$(L_x,L_y)$と$(R_x,R_y)$が青色の近似領域内であるため，
+\figref{fig:sentaku}に示す右方向の青いセルが近似領域になり，セル分割法よりも
+近似領域を削減できる．
+一方で，\figref{fig:sougo_hani}中のエージェント4にパターン3の条件を適用した場合は，
+\figref{fig:patan3_ex}のように，視野の座標$(L_x,L_y)$が\figref{fig:sentaku}の
+青いセル以外に存在するため，近似領域がパターン1と同様に近傍9セルとなる．
 エージェントの座標は時間ステップごとに変化するため，
 パターン3を用いると，進行方向が変化しないエージェントに対しても
 すべての時間ステップでパターン1よりもエージェント間距離の計算を削減できるとは限らない．
@@ -140,24 +146,28 @@ $L_{x}, L_{y}$がパターン2の近似領域の外にあるため，
 
 \figtb{パターン3を用いたエージェント4の近似領域}{}{5}{patan3_ex}{patan3_ex}
 
-\clearpage
 \subsection{パターン4}
 パターン4は，視野の左右両端の座標$(L_x,L_y)$，$(R_x,R_y)$を用いて近似領域を設定する手法である．
 視野範囲は進行方向の前方に存在するため，
 視野の左右両端の座標はエージェント座標から見て必ず進行方向側となる．
-この特性を利用し，パターン4では，\tabref{tb:hantei_jouken}のように，
+この特性を利用し，パターン4では，\tabref{tb:patan4_joken}に示すように，
 エージェント座標$(A_x,A_y)$と視野座標$(R_x,R_y)$，$(L_x,L_y)$の
 大小関係を用いて進行方向を判定する．
-\figref{fig:90do_hamideru}の例では，$R_x \geq A_x$および$L_x \geq A_x$が成り立つため，
-エージェントの進行方向は上と判定される．
-進行方向が求まると，近傍9セルから進行方向反対側の3セルを除外した6セルを近似領域とする．
-\tabref{tb:hantei_jouken}のいずれの条件にも当てはまらない場合は，
-パターン1（セル分割法）と同様に近傍9セルを近似領域とする．
+本手法の\tabref{tb:patan4_joken}に満たない場合は，パターン1と同様に近傍9セルを近似領域にする．
+\figref{fig:patan4_good}にパターン4を用いた近傍領域の削減例を示す．
+\figref{fig:patan4_good}の例では，エージェント座標$(A_x,A_y)$と
+視野座標$(R_x,R_y)$，$(L_x,L_y)$が\tabref{tb:patan4_joken}中の
+条件である$R_x \geq A_x$および$L_x \geq A_x$が成り立つため，進行方向が右と判定され，
+\figref{fig:sentaku}の右方向の青いセルが近似領域となる．
+\figref{fig:patan4_ex}に\figref{fig:sougo_hani}中のエージェント4にパターン4を用いて
+近似領域を決定した例を示す．
+\figref{fig:patan4_ex}の例は，\tabref{tb:patan4_joken}中の判定条件を満たす進行方向がないため，
+パターン1と同様に近傍9セルを近傍領域とする．
 
-\begin{table}[hbtp]
+\begin{table}[t]
 	\centering
 	\caption{パターン4の進行方向判定条件}
-	\label{tb:patan3_joken}
+	\label{tb:patan4_joken}
 	\begin{tabular}{c|c|c|c|c}
 		\hline \hline
 		& 右 & 左 & 上 & 下  \\ \hline
@@ -171,25 +181,32 @@ $L_{x}, L_{y}$がパターン2の近似領域の外にあるため，
 \figtb{パターン4を用いたエージェント4の近似領域}{}{5}{patan4_ex}{patan4_ex}
 
 
-\clearpage
 \subsection{パターン5}
 パターン5は，セル分割法のセル座標と視野範囲の左右両端の座標$(L_x,L_y)$，$(R_x,R_y)$を
 用いて近似領域を設定する手法である．
 本手法は，運動方程式を算出するエージェントが所属するセルの
 左上座標$(x_1,y_2)$および右下座標$(x_2, y_1)$を用いて，
 \figref{fig:sentaku}の4パターンの水色の領域内に視野が収まっているかを判定する．
-\figref{fig:90do_hamideru}の例では，
+\tabref{fig:patan5_joken}にセルの
+左上座標$(x_1,y_2)$および右下座標$(x_2, y_1)$を用いたパターン5の判定条件を示す．
+また，\figref{fig:patan5_good}にパターン5を用いた場合の近似領域を削減する例を示す．
+\figref{fig:patan5_good}の例では，\tabref{patan5_joken}中の
+$R_x \geq x_1$および$L_x \geq x_1$が成り立つため，進行方向は右と分類される．
+このため，\figref{fig:patan5_good}の例では，近似領域は図中の青いセルとなる．
+\figref{fig:patan5_ex}に\figref{fig:sougo_hani}中のエージェント4にパターン5を用いて
+近似領域を選択した例を示す．
+\figref{fig:patan5_ex}の例では，
 $R_y \geq y_1$および$L_y \geq y_2$が成り立つため，進行方向は上と分類される．
 本手法は，エージェントのセル上の位置に応じて進行方向を分類するため，
 ベクトル$e_i$の表す進行方向が同じエージェントでも
 エージェント座標に応じて異なる方向に分類される可能性がある．
-本手法も\tabref{tb:hantei_jouken}のいずれの条件にも当てはまらない場合は，
+本手法も\tabref{tb:patan5_joken}のいずれの条件にも当てはまらない場合は，
 パターン1（セル分割法）と同様に近傍9セルを近似領域とする．
 
-\begin{table}[hbtp]
+\begin{table}[t]
 	\centering
 	\caption{パターン5の進行方向判定条件}
-	\label{tb:patan3_joken}
+	\label{tb:patan5_joken}
 	\begin{tabular}{c|c|c|c|c}
 		\hline \hline
 		& 右 & 左 & 上 & 下  \\ \hline
@@ -202,7 +219,6 @@ $R_y \geq y_1$および$L_y \geq y_2$が成り立つため，進行方向は上�
 
 \figtb{パターン5を用いたエージェント4の近似領域}{}{5}{patan5_ex}{patan5_ex}
 
-\clearpage
 \subsection{パターン6}
 パターン6は，パターン2で設定した上下左右の角度範囲を，
 シミュレーション誤差の出ない範囲で設定する手法である．
@@ -214,16 +230,17 @@ $R_y \geq y_1$および$L_y \geq y_2$が成り立つため，進行方向は上�
 $\frac{1}{2}(\pi - \theta_{view})$から$\frac{1}{2}(\pi + \theta_{view})$の間であり，
 これを用いて進行方向ベクトル$e_{i} = (e_{x}, e_{y})$の範囲が
 $\sin{(\frac{1}{2}(\pi - \theta_{view}))} \leq e_{x}$という条件を設定できる．
+\tabref{tab:patan6_joken}にパターン6の進行方向判定条件を示す．
 パターン6は，パターン3～6のように視野座標$(R_x,R_y)$および$(L_x,L_y)$を算出する必要がないため，
 他の分類条件よりも高速に進行方向を分類することができる．
 一方で，進行方向が特定の方向である場合は，
 エージェント座標に関係なくパターン1（セル分割法）と同じ近似領域を設定するため，
 エージェント間距離の計算回数は，パターン1に次いで多くなると考えられる．
 
-\begin{table}[hbtp]
+\begin{table}[t]
 	\centering
 	\caption{パターン6の進行方向判定条件}
-	\label{tb:patan3_joken}
+	\label{tb:patan6_joken}
 	\begin{tabular}{c|c|c|c}
 		\hline \hline
 		右 & 左 & 上 & 下  \\ \hline
@@ -233,6 +250,8 @@ $\sin{(\frac{1}{2}(\pi - \theta_{view}))} \leq e_{x}$という条件を設定で
 		& $ e_x \leq \sin(\frac{1}{2}(\pi - \theta_{view}))  $ \\ \hline
 	\end{tabular}
 \end{table}
+
+\clearpage
 
 \section{評価}
 視野を用いたSFMに対するエージェント間距離の計算回数削減手法の有効性を確認するために，
@@ -276,7 +295,6 @@ OSがLinux 4.12.9であり，
 \begin{table}[tb]
   \begin{center}
     \caption{測定条件}
-    %\ecaption{Measurement Condition.}
     \label{tb:tab_para}
     \begin{tabular}{c|c}
       \hline \hline
@@ -298,11 +316,10 @@ OSがLinux 4.12.9であり，
 \figtb{エージェントの初期配置}{Initial position of agents.}{4}{20221031_haichi.eps}{agent_haichi}
 
 %tb:計算回数
-\begin{table*}[tb]
-\caption{エージェント間距離の計算回数[$10^{10}$回]}
-%\ecaption{The number of distance calculations between agents.}
-\label{tb:count_result_yobi}
+\begin{table}[tb]
 \begin{center}
+\caption{エージェント間距離の計算回数[$10^{10}$回]}
+\label{tb:count_result_yobi}
 \begin{tabular}{c|r|r|r|r|r|r}
 \hline \hline
 	人数 & パターン1 & パターン2 & パターン3 & パターン4 & パターン5 & パターン6 \\  
@@ -318,7 +335,7 @@ OSがLinux 4.12.9であり，
 	&       & ($\mathbf{23.9}$\%) 					& (22.2\%) & (14.6\%) & (19.4\%) & (14.6\%) \\ \hline
     \end{tabular}
   \end{center}
-\end{table*}
+\end{table}
 
 %tb:解析時間
 \begin{table*}[tb]
@@ -432,7 +449,7 @@ SFMではエージェントが目的地に向かう特性から，
 パターン2を用いても人の行動を自然に再現できると考えられる．
 
 \figtb{パターン1（セル分割法）に対する高速化率}
-{Speedup ratio of the proposed method compared with pattern 1.}{8}{20230226_kousokuka.eps}{kousokuka2}
+{Speedup ratio of the proposed method compared with pattern 1.}{9}{20230226_kousokuka.eps}{kousokuka2}
 
 \section{本章のまとめ}%{{{
 %**********************************************************
