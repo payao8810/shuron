@@ -38,7 +38,7 @@ MAIN=main
 
 #追加した.texファイルがあれば，拡張子付で書き足す
 BODY=1_intro.tex 2_background.tex 3_survey.tex 4_method.tex	\
-	  5_method.tex 6_result.tex 7_discuss.tex 							\
+	  5_method.tex 6_discuss.tex						\
 	 thanks.tex
 
 APPEND=appendix.tex
