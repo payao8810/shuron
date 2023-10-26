@@ -78,6 +78,9 @@ SFMで用いられるエージェント間距離の計算回数削減手法は�
 また，本論文では，セル分割法のなかでもメモリ使用量を抑えることができると知られている
 連結リスト法\cite{cell_book1}，\cite{cell_renketu}を用いる．
 
+\figtb{パターン1を用いたエージェント4の近似領域}{}{5}{patan1_ex}{patan1_ex}
+
+
 \clearpage
 \subsection{パターン2}
 パターン2は，エージェントの進行方向を表す単位ベクトル$e_{i}$を参照することで，
@@ -113,6 +116,9 @@ SFMで用いられるエージェント間距離の計算回数削減手法は�
 	\end{tabular}
 \end{table}
 
+\figtb{パターン2を用いたエージェント4の近似領域}{}{5}{patan2_ex}{patan2_ex}
+
+
 \clearpage
 \subsection{パターン3}
 パターン3は，パターン2で発生する誤差を防ぐために，
@@ -129,6 +135,10 @@ $L_{x}, L_{y}$がパターン2の近似領域の外にあるため，
 パターン3を用いると，進行方向が変化しないエージェントに対しても
 すべての時間ステップでパターン1よりもエージェント間距離の計算を削減できるとは限らない．
 一方で，パターン3は，パターン1のセル分割法と同じ精度のシミュレーション結果を得ることができる．
+
+\figtb{パターン3を用いた近似領域の削減例}{}{5}{patan3_good}{patan3_good}
+
+\figtb{パターン3を用いたエージェント4の近似領域}{}{5}{patan3_ex}{patan3_ex}
 
 \clearpage
 \subsection{パターン4}
@@ -155,6 +165,11 @@ $L_{x}, L_{y}$がパターン2の近似領域の外にあるため，
 	  条件2 & $L_x \geq A_x$ & $L_x < A_x$ & $L_y \geq A_y$ & $L_y < A_y$ \\ \hline
 	\end{tabular}
 \end{table}
+
+\figtb{パターン4を用いた近似領域の削減例}{}{5}{patan4_good}{patan4_good}
+
+\figtb{パターン4を用いたエージェント4の近似領域}{}{5}{patan4_ex}{patan4_ex}
+
 
 \clearpage
 \subsection{パターン5}
@@ -183,6 +198,9 @@ $R_y \geq y_1$および$L_y \geq y_2$が成り立つため，進行方向は上�
 	\end{tabular}
 \end{table}
 
+\figtb{パターン5を用いた近似領域の削減例}{}{5}{patan5_good}{patan5_good}
+
+\figtb{パターン5を用いたエージェント4の近似領域}{}{5}{patan5_ex}{patan5_ex}
 
 \clearpage
 \subsection{パターン6}

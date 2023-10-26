@@ -26,13 +26,21 @@
 \contentsline {figure}{\numberline {4\mbox {--}1}{\ignorespaces 影響範囲の例}}{24}{}%
 \contentsline {figure}{\numberline {4\mbox {--}2}{\ignorespaces エージェント4の実装パターンごとの近似領域の例}}{25}{}%
 \contentsline {figure}{\numberline {4\mbox {--}3}{\ignorespaces 進行方向ごとの近似領域}}{25}{}%
-\contentsline {figure}{\numberline {4\mbox {--}4}{\ignorespaces エージェントの初期配置}}{32}{}%
-\contentsline {figure}{\numberline {4\mbox {--}5}{\ignorespaces パターン1（セル分割法）に対する高速化率}}{35}{}%
+\contentsline {figure}{\numberline {4\mbox {--}4}{\ignorespaces パターン1を用いたエージェント4の近似領域}}{26}{}%
+\contentsline {figure}{\numberline {4\mbox {--}5}{\ignorespaces パターン2を用いたエージェント4の近似領域}}{27}{}%
+\contentsline {figure}{\numberline {4\mbox {--}6}{\ignorespaces パターン3を用いた近似領域の削減例}}{28}{}%
+\contentsline {figure}{\numberline {4\mbox {--}7}{\ignorespaces パターン3を用いたエージェント4の近似領域}}{28}{}%
+\contentsline {figure}{\numberline {4\mbox {--}8}{\ignorespaces パターン4を用いた近似領域の削減例}}{29}{}%
+\contentsline {figure}{\numberline {4\mbox {--}9}{\ignorespaces パターン4を用いたエージェント4の近似領域}}{30}{}%
+\contentsline {figure}{\numberline {4\mbox {--}10}{\ignorespaces パターン5を用いた近似領域の削減例}}{31}{}%
+\contentsline {figure}{\numberline {4\mbox {--}11}{\ignorespaces パターン5を用いたエージェント4の近似領域}}{32}{}%
+\contentsline {figure}{\numberline {4\mbox {--}12}{\ignorespaces エージェントの初期配置}}{34}{}%
+\contentsline {figure}{\numberline {4\mbox {--}13}{\ignorespaces パターン1（セル分割法）に対する高速化率}}{37}{}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5\mbox {--}1}{\ignorespaces 提案する格子分割の例}}{38}{}%
-\contentsline {figure}{\numberline {5\mbox {--}2}{\ignorespaces 経由地がある場合の進行方向の例}}{38}{}%
-\contentsline {figure}{\numberline {5\mbox {--}3}{\ignorespaces 提案手法の解析全体のフローチャート}}{39}{}%
-\contentsline {figure}{\numberline {5\mbox {--}4}{\ignorespaces 提案手法の前処理のフローチャート}}{40}{}%
-\contentsline {figure}{\numberline {5\mbox {--}5}{\ignorespaces 提案手法の運動方程式計算のフローチャート}}{41}{}%
+\contentsline {figure}{\numberline {5\mbox {--}1}{\ignorespaces 提案する格子分割の例}}{40}{}%
+\contentsline {figure}{\numberline {5\mbox {--}2}{\ignorespaces 経由地がある場合の進行方向の例}}{40}{}%
+\contentsline {figure}{\numberline {5\mbox {--}3}{\ignorespaces 提案手法の解析全体のフローチャート}}{41}{}%
+\contentsline {figure}{\numberline {5\mbox {--}4}{\ignorespaces 提案手法の前処理のフローチャート}}{42}{}%
+\contentsline {figure}{\numberline {5\mbox {--}5}{\ignorespaces 提案手法の運動方程式計算のフローチャート}}{43}{}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
