@@ -9,6 +9,15 @@
 \documentclass[a4j,12pt]{jreport}
 \usepackage{graphicx}
 
+%====[ テスト ] ====================================================
+\newcommand{\figtb}[5]{ %引数 {日本語タイトル}{英語タイトル}{サイズ}{ファイル名}{ラベル名}
+\begin{figure}[tb]
+  \begin{center}
+    \includegraphics[width=#3cm,clip]{figure/#4}
+    \caption{#1}
+    \label{fig:#5}
+  \end{center}
+\end{figure}}
 
 %====[ プリアンプル ]================================================
 %
@@ -19,6 +28,7 @@
 \usepackage{amsfonts}   % \mathbb 4兄弟 (数式の太文字フォント/自然数Nとかで使う)
 \usepackage{amsmath}    % \mathbb
 \usepackage{amssymb}    % \mathbb
+\usepackage{multirow}   %表のmaltirow
 %\usepackage{bbm}               % \mathbb
 %\usepackage{enumitem}  % 箇条書きのフォーマットを編集できる
 %\usepackage{theorem}   % 補題/定理/定義 
@@ -26,7 +36,6 @@
 %\usepackage{cases}             % 場合分けした数式に式番号をつける
 %\usepackage{mathrsfs}  % 花文字
 %\usepackage{fancybox}  % verbatimを四角で囲む
-
 
 %以下の2行はコメントアウトすると卒業できなくなる
 \usepackage[HeaderWithUnderline]{shuronABS}     % アブストラクト
@@ -43,7 +52,7 @@
 \input{2_background}
 \input{3_survey}
 \input{4_method}
-\input{5_result}
+\input{5_method}
 \input{6_discuss}
 
 
@@ -58,7 +67,7 @@
 \clearpage
 \addcontentsline{toc}{chapter}{参考文献}
 \markright{参考文献}
-\bibliography{bibfile}          % どちらか片方を選択     
+\bibliography{bibfile1}          % どちらか片方を選択     
 %\input{bibfile}                        % どちらか片方を選択
 
 

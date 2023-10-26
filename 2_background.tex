@@ -1,20 +1,12 @@
 % vim: set tabstop=4 :
 
-\newcommand{\figtb}[5]{ %引数 {日本語タイトル}{英語タイトル}{サイズ}{ファイル名}{ラベル名}
-\begin{figure}[tb]
-  \begin{center}
-    \includegraphics[width=#3cm,clip]{figure/#4}
-    \caption{#1}
-    \ecaption{#2}
-    \label{fig:#5}
-  \end{center}
-\end{figure}}
 \newcommand{\eq}[1]{式（\ref{eq:#1}）}
 %**********************************************************
 \chapter{人流シミュレーション}
 %\chapter{本来なら問題定義や背景的な何かを書く}
 \label{sec:background}
 %**********************************************************
+\section{本章の概要}
 人流シミュレーションは，コンピュータ上で人の動きを再現する手法であり，
 図\ref{fig:jinryu_image}に人流シミュレーションの例を示す．
 図\ref{fig:jinryu_image}中の

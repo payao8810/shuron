@@ -1,9 +1,76 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
+
+\bibitem{sim_jirei1}
+北上靖大，　森俊勝，坂平文博，志村泰知，杉浦哲平：
+  都市課題の改善に向けたマルチエージェント・シミュレーションの活用，電気学会論文誌C(電子・情報・システム部門誌)，
+  Vol.~133, No.~9, pp.\ 1640--1644 (2013).
+
+\bibitem{sim_jirei2}
+NTTデータ理数システム：
+  人流シミュレーションによるオリンピック開催時の駅の混雑分析事例.
+
+\bibitem{sim_jirei3}
+大西正輝，山下倫央，星川哲也，佐藤和人：
+  人の流れの計測とシミュレーションによる避難誘導方法の伝承－新国立劇場における避難体験オペラコンサートを例に－，人工知能学会第二種研究会資料，
+  Vol.~2015, No.~KST-26, p.~06 (2015).
+
+\bibitem{sim_jirei8}
+株式会社ホロラボ：
+  ホロラボが鹿島のBIMデータを活用した避難シミュレーションのMicrosoft HoloLens 2
+  版開発を支援.
+
+\bibitem{21_Isozaki}
+磯崎勝吾，　中辻隆： Social force
+  modelを基にした歩行者の避難シミュレーションモデルに関する研究，土木学会北海道支部論文報告集，
+  Vol.~66 (2009).
+
+\bibitem{ando_sfm}
+　安藤歩：
+  ソーシャルフォースモデルを用いた教室内における避難行動シミュレーション，東京都立大学都市教養学部都市教養学科卒業論文.
+
+\bibitem{seru_sfm1}
+Chisholm, R., Maddock, S. and Richmond, P.: Improved GPU near neighbours
+  performance for multi-agent simulations, {\em Journal of Parallel and
+  Distributed Computing},  Vol.~137, pp.\ 53--64 (2020).
+
+\bibitem{seru_sfm2}
+Li, X., Cai, W. and Turner, S.~J.: Efficient Neighbor Searching for Agent-Based
+  Simulation on GPU, {\em 2014 IEEE/ACM 18th International Symposium on
+  Distributed Simulation and Real Time Applications}, pp.\ 87--96 (2014).
+
+\bibitem{mps}
+後藤仁志，堀智恵実五十里洋行，KHAYYER, A.：
+  GPUによる粒子法半陰解法アルゴリズムの高速化，土木学会論文集B， Vol.~66,
+  No.~2, pp.\ 217--222 (2010).
+
+\bibitem{sph}
+Hu, X. and Adams, N.: An incompressible multi-phase SPH method, {\em Journal of
+  Computational Physics},  Vol.~227, No.~1, pp.\ 264--278 (2007).
+
+\bibitem{cell1}
+Oguchi, K., Shibuta, Y. and Suzuki, T.: Accelerating Molecular Dynamics
+  Simulation Performed on GPU, {\em Journal of the Japan Institute of Metals
+  and Materials},  Vol.~76, No.~7, pp.\ 462--467 (2012).
+
+\bibitem{cell2}
+茂渡悠介，酒井幹夫，越塚誠一，山田祥徳：
+  GPUによる離散要素法シミュレーションの高速化，粉体工学会誌， Vol.~45, No.~11,
+  pp.\ 758--765 (2008).
+
+\bibitem{cell_book1}
+Allen, M.~P. and Tildesley, D.~J.: {\em Computer simulation of liquids}, Oxford
+  university press (2017).
+
+\bibitem{cell_renketu}
+平林久義，佐藤雅弘：
+  線形リストを用いた粒子法の近傍粒子探索，日本計算工学会論文集， Vol.~2010,
+  pp.\ 20100001--20100001 (2010).
+
+\bibitem{sfm_para2}
+Helbing, D., Farkas, I. and Vicsek, T.: Simulating dynamical features of escape
+  panic, {\em Nature},  Vol.~407, No.~6803, pp.\ 487--490 (2000).
 
 \bibitem{1983_Ibaraki}
-:  (1983).
-
-\bibitem{test1}
-: .
+茨木俊秀： 組合せ最適化 ---分枝限定法を中心として---，産業図書 (1983).
 
 \end{thebibliography}
