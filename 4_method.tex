@@ -337,21 +337,6 @@ OSがLinux 4.12.9であり，
   \end{center}
 \end{table}
 
-%tb:解析時間
-\begin{table*}[tb]
-  \caption{解析時間[s]}
-  %\ecaption{Execute time.}
-  \label{tb:time_result_yobi}
-  \begin{center}
-    \begin{tabular}{c|r|r|r|r|r|r}
-      \hline \hline
-          人数 & パターン1 & パターン2 & パターン3 & パターン4 & パターン5 & パターン6  \\  \hline
-          3000 & 2636      & $\mathbf{2123}$      & 2140      & 2307      &  2184     & 2292      \\  \hline
-          5000 & 7435      & $\mathbf{5941}$      & 6016      & 6463      &  6162     & 6453      \\  \hline
-          7500 & 17198     & $\mathbf{13730}$     & 13985     & 15048     & 14931     & 15036     \\  \hline
-    \end{tabular}
-  \end{center}
-\end{table*}
 
 \subsection{エージェント間距離の計算回数}
 \label{sec:count}
@@ -401,6 +386,22 @@ OSがLinux 4.12.9であり，
 \tabref{tb:count_result_yobi}の削減率が3割未満となり，
 近傍領域の面積の削減率とエージェント間距離の演算回数の削減率に差が生じた．
 
+%tb:解析時間
+\begin{table*}[t]
+  \caption{解析時間[s]}
+  %\ecaption{Execute time.}
+  \label{tb:time_result_yobi}
+  \begin{center}
+    \begin{tabular}{c|r|r|r|r|r|r}
+      \hline \hline
+          人数 & パターン1 & パターン2 & パターン3 & パターン4 & パターン5 & パターン6  \\  \hline
+          3000 & 2636      & $\mathbf{2123}$      & 2140      & 2307      &  2184     & 2292      \\  \hline
+          5000 & 7435      & $\mathbf{5941}$      & 6016      & 6463      &  6162     & 6453      \\  \hline
+          7500 & 17198     & $\mathbf{13730}$     & 13985     & 15048     & 14931     & 15036     \\  \hline
+    \end{tabular}
+  \end{center}
+\end{table*}
+
 \subsection{シミュレーションの実行時間の測定}
 第\ref{sec:count}節より，
 提案手法であるパターン2～6を用いることで，パターン1（セル分割法）よりも
@@ -428,6 +429,8 @@ OSがLinux 4.12.9であり，
 つまり，パターン3はパターン2の処理に加えて視野の座標を求め，
 厳密に視野範囲を予測しているが，追加の処理による実行時間の増加は小さいといえる．
 
+\figtb{パターン1（セル分割法）に対する高速化率}{}{10}{20230226_kousokuka.eps}{kousokuka2}
+
 \subsection{シミュレーション精度の測定}
 提案手法のうち最も高速な手法はパターン2であるが，
 パターン2は他の手法と異なり視野範囲の一部が近似領域外となることを許容する．
@@ -447,9 +450,6 @@ SFMではエージェントが目的地に向かう特性から，
 細かな誤差が発生してもそれを蓄積しにくいためであると考えられる．
 加えて，パターン2が相互作用力の計算を省略したのは視界の隅にあたる領域であり，
 パターン2を用いても人の行動を自然に再現できると考えられる．
-
-\figtb{パターン1（セル分割法）に対する高速化率}
-{Speedup ratio of the proposed method compared with pattern 1.}{9}{20230226_kousokuka.eps}{kousokuka2}
 
 \section{本章のまとめ}%{{{
 %**********************************************************

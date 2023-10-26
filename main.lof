@@ -34,7 +34,7 @@
 \contentsline {figure}{\numberline {4\mbox {--}9}{\ignorespaces パターン5を用いた近似領域の削減例}}{29}{}%
 \contentsline {figure}{\numberline {4\mbox {--}10}{\ignorespaces パターン5を用いたエージェント4の近似領域}}{30}{}%
 \contentsline {figure}{\numberline {4\mbox {--}11}{\ignorespaces エージェントの初期配置}}{32}{}%
-\contentsline {figure}{\numberline {4\mbox {--}12}{\ignorespaces パターン1（セル分割法）に対する高速化率}}{35}{}%
+\contentsline {figure}{\numberline {4\mbox {--}12}{\ignorespaces パターン1（セル分割法）に対する高速化率}}{34}{}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {5\mbox {--}1}{\ignorespaces 提案する格子分割の例}}{37}{}%
 \contentsline {figure}{\numberline {5\mbox {--}2}{\ignorespaces 経由地がある場合の進行方向の例}}{37}{}%
