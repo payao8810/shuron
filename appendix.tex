@@ -14,6 +14,195 @@
 また，付録のページは，
 本文中で邪魔になった定義とか証明とかの避難場所としても利用可能です．
 
+\section{データ構造}
+エージェントのデータ構造は，agent\_tの構造体名で構造体配列として
+保持する．agent\_tの構造体中のメンバを下記に示す．
+%
+\begin{itembox}[l]{エージェントの構造体}
+typedef struct\{\\
+　int num;\\
+　double x, y;\\
+　double gx, gy;\\
+　int r\_num;\\
+　struct route\_t *goal\_p;\\
+\}agent\_t;
+\end{itembox}
+%
+agent\_t中のnumのメンバはエージェントの番号，xとyのメンバはエージェント
+の座標，gxとgyのメンバは目的地の座標，r\_numのメンバは経由地の番号，
+*goal\_pのメンバはエージェントが向かう経由地のポインタを示す．
+経由地のデータ構造造は，route\_tの構造体名で構造体配列として
+保持する．route\_tの構造体中のメンバを下記に示す．
+%
+\begin{itembox}[l]{経由地の構造体}
+typedef struct\{\\
+　int num;\\
+　double x, y;\\
+　double rad:\\
+　int next\_num;\\
+　struct route\_t *next;\\
+　double **ex, **ey;\\
+\}route\_t;
+\end{itembox}
+%
+route\_t中のnumのメンバは経由地の番号，xとyのメンバは経由地の座標，
+radのメンバは経由地のゴール判定の半径，next\_numのメンバは，
+次の経由地番号，*nextのメンバは次の経由地のポインタ，
+**exと**eyのメンバは，格子分割を用いた場合の前処理で算出した
+経由地までの進行方向を保持する配列である．
+
+壁粒子のデータ構造は，wall\_tの構造体名で単方向リストとして
+保持する．本論文は，壁を複数の粒子として実装しているため，
+壁粒子から受ける力の計算にセル分割法を用いる．
+壁粒子は，解析開始から終了まで固定されているため，座標が変化しない．
+このため，壁粒子のセル分割法のデータ構造は，シミュレーション開始の
+一回のみの生成となるため，連結リスト法で実装する．
+下記に壁粒子の構造体を示す．
+%
+\begin{itembox}[l]{壁粒子の構造体}
+typedef struct \{\\
+　double x, y;\\
+　struct wall\_t *np;\\ 
+\}wall\_t;
+\end{itembox}
+%
+wall\_t中のxとyのメンバは壁粒子の座標，*npのメンバは次の壁粒子の
+ポインタを示す．
+下記にエージェントのセル分割法に用いるハッシュ法の構造体cell\_tの
+メンバを示す．
+\begin{itembox}[l]{セル分割法(ハッシュ法)の構造体}
+typedef struct \{\\
+　int *hash;\\
+　int *index;\\
+　int *start;\\
+\}cell\_t;
+\end{itembox}
+構造体cell\_t中の*hashのメンバはハッシュ法のハッシュ配列，*indexのメンバはハッシュ法の
+インデックス配列，*startのメンバはハッシュ法のスタート配列である．
+エージェントのセル分割法は，時間ステップごとにエージェントの座標が変わるため，
+時間ステップごとに再構築する必要がある．このため，再構築する速度や
+保守性の観点からセル分割法の中でもハッシュ法を構造体としてデータを保持する．
+
+\section{実行方法}
+SFMを実装したプログラムのコンパイルは下記のコマンドの通りである．
+\begin{itembox}[l]{コンパイル方法}
+  gcc [ファイル名] -lm -O3 `pkg-config --cflags --libs glib-2.0`
+\end{itembox}
+本プログラムの入力データは，GIMPを用いてC言語に出力したものであり，
+プログラム上で処理するためにglib.hをインクルードする必要がある．
+glib.hをインクルードするためには，コンパイル時に`pkg-config --cflags --libs glib-2.0`を
+追記することが必要である．
+
+コンパイルして生成されたファイルは，次のコマンドで実行することができる．
+\begin{itembox}[l]{実行方法}
+./[実行ファイル名] [実行ステップ数] [格子サイズ]
+\end{itembox}
+第2引数は，実行ステップ数で解析したいステップ数を入力する必要がある．
+第3引数は，提案手法の格子サイズを入力する必要がある．既存手法で実行する
+場合は，第3引数を使うことがないが仮に入力が求められる．
+既存のセル分割法と提案手法は．一つのファイルで構成されており，
+切り替えるために，\#DEFINEで定義された変数(KIZON)が使用されている．
+\tabref{tb:toggle_kizon}に既存手法と提案手法を切り替えるための
+変数(KIZON)の状態を示す．
+%
+\begin{table}[H]
+  \begin{center}
+    \caption{既存手法と提案手法の切り替え方法}
+    %\ecaption{The evaluation environment.}
+    \label{tb:toggle_kizon}
+    \begin{tabular}{c|c}
+      \hline \hline
+      \#DEFINE KIZON     & 既存手法(セル分割法)で実行 \\ \hline
+      //\#DEFINE KIZON & 格子分割を用いた進行方向計算の削減手法で実行\\ \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+%
+\tabref{tb:toggle_kizon}に示すように，提案手法で実行する場合は，
+\#DEFINE KIZONをコメントアウトする必要がある．
+
+\subsection{入力ファイルの切り替え方法}
+
+
+\clearpage
+\section{測定条件の変更方法}
+本節では，測定条件のパラメータの変更方法について述べる．
+測定条件のパラメータは，C言語中の\#DEFINEを用いた変数で設定できる．
+\tabref{tb:parameter_settings}にそれぞれの変数とパラメータ内容に
+ついて示す．\tabref{tb:parameter_settings}中のパラメータの初期設定
+は，\tabref{tb:tab_para}と同じ値である．
+
+
+%tb:定数設定
+\begin{table}[t]
+  \begin{center}
+    \caption{測定条件のパラメータ変数}
+    \label{tb:parameter_settings}
+    \begin{tabular}{c|c}
+      \hline \hline
+      変数名 & 内容 \\ \hline
+      A\_I & $A_i$ \\ \hline
+      B\_I & $B_i$ \\ \hline 
+      K   & $k$   \\ \hline 
+      KAPPA & $\kappa$  \\ \hline 
+      V\_0 & $v_i^0$     \\ \hline 
+      M\_I & $m_i$       \\ \hline 
+      TAU & $\tau_i$    \\ \hline 
+      R\_I & $r_i$       \\ \hline 
+      H   & 刻み値 \\ \hline
+      MAX\_SPEED & 最大歩行速度 \\ \hline
+      NEIGHBOR\_RADIUS & エージェントの影響半径 \\ \hline
+
+    \end{tabular}
+  \end{center}
+\end{table}
+
+\section{初期配置のデータの生成方法}
+
+\begin{itembox}[l]{プログラムのファイル構造}
+\dirtree{%
+.1 \includegraphics[width=0.25cm]{dire.png} sfm\_program.
+.2 sfm.c.
+.2 \includegraphics[width=0.25cm]{dire.png} inputwall.
+.3 pc\_3.c.
+.3 kyositu.c.
+}
+\end{itembox}
+
+\begin{table}[H]
+  \begin{center}
+    \caption{動作確認済み環境}
+    %\ecaption{The evaluation environment.}
+    \label{tb:conform_env}
+    \begin{tabular}{c|c}
+      \hline \hline
+      CPU              & Intel Xeon CPU E5-2687w v2 \\ \hline
+      メモリ           & 16GB                       \\ \hline
+      OS               & Linux 4.12.9               \\ \hline
+      GIMPバージョン & x.x.x \\ \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[width=5cm,clip]{figure/gimp1.png}
+    \caption{GIMPの出力ファイル形式の選択}
+    \label{fig:gimp1}
+  \end{center}
+\end{figure}
+
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[width=5cm,clip]{figure/gimp2.png}
+    \caption{GIMPのC言語出力画面}
+    \label{fig:gimp1}
+  \end{center}
+\end{figure}
+
+
 \section{節番号のテスト}
 \subsection{項番号のテスト}
 付録では，こんな風に章番号が表示されます．

@@ -7,7 +7,8 @@
 %
 %====================================================================
 \documentclass[a4j,12pt]{jreport}
-\usepackage{graphicx}
+%\usepackage{graphicx}
+\usepackage[dvipdfmx]{graphicx}
 
 %====[ テスト ] ====================================================
 \newcommand{\figtb}[5]{ %引数 {日本語タイトル}{英語タイトル}{サイズ}{ファイル名}{ラベル名}
@@ -36,6 +37,10 @@
 %\usepackage{cases}             % 場合分けした数式に式番号をつける
 %\usepackage{mathrsfs}  % 花文字
 %\usepackage{fancybox}  % verbatimを四角で囲む
+
+\usepackage{here}
+\usepackage{ascmac} %角が丸い四角枠
+\usepackage{dirtree} %ディレクトリ構造
 
 %以下の2行はコメントアウトすると卒業できなくなる
 \usepackage[HeaderWithUnderline]{shuronABS}     % アブストラクト
