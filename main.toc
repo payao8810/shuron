@@ -1,5 +1,5 @@
-\contentsline {chapter}{図一覧}{iii}{}%
-\contentsline {chapter}{表一覧}{v}{}%
+\contentsline {chapter}{図一覧}{iv}{}%
+\contentsline {chapter}{表一覧}{vi}{}%
 \contentsline {chapter}{\numberline {第1章}はじめに}{1}{}%
 \contentsline {chapter}{\numberline {第2章}人流シミュレーション}{3}{}%
 \contentsline {section}{\numberline {2.1}本章の概要}{3}{}%
@@ -49,6 +49,8 @@
 \contentsline {section}{\numberline {A.2}プログラムのファイル構造}{47}{}%
 \contentsline {section}{\numberline {A.3}実行方法}{48}{}%
 \contentsline {section}{\numberline {A.4}測定条件の変更方法}{49}{}%
-\contentsline {section}{\numberline {A.5}初期配置のデータの生成方法}{50}{}%
-\contentsline {section}{\numberline {A.6}節番号のテスト}{51}{}%
-\contentsline {subsection}{\numberline {A.6.1}項番号のテスト}{51}{}%
+\contentsline {section}{\numberline {A.5}初期配置のデータの作成方法}{50}{}%
+\contentsline {subsection}{\numberline {A.5.1}GIMPを用いた初期配置の作成方法}{50}{}%
+\contentsline {subsection}{\numberline {A.5.2}GIMPを用いたC言語の出力方法}{51}{}%
+\contentsline {section}{\numberline {A.6}節番号のテスト}{52}{}%
+\contentsline {subsection}{\numberline {A.6.1}項番号のテスト}{52}{}%

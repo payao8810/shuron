@@ -1,26 +1,26 @@
-This is e-pTeX, Version 3.141592653-p3.9.0-210218-2.6 (utf8.euc) (TeX Live 2021) (preloaded format=platex 2022.2.2)  28 OCT 2023 12:05
+This is e-pTeX, Version 3.141592653-p3.9.1-210218-2.6 (utf8.euc) (TeX Live 2022/dev/Debian) (preloaded format=platex 2023.6.24)  28 OCT 2023 13:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **main
 (./main.tex
-pLaTeX2e <2020-10-01>+2 (based on LaTeX2e <2020-10-01> patch level 4)
-L3 programming layer <2021-02-18>
-(/usr/local/texlive/2021/texmf-dist/tex/platex/base/jreport.cls
+pLaTeX2e <2021-11-15> (based on LaTeX2e <2021-11-15> patch level 1)
+L3 programming layer <2022-01-21>
+(/usr/share/texlive/texmf-dist/tex/platex/base/jreport.cls
 Document Class: jreport 2020/09/30 v1.8f Standard pLaTeX class
-\c@@paper=\count178
-(/usr/local/texlive/2021/texmf-dist/tex/platex/base/jsize12.clo
+\c@@paper=\count184
+(/usr/share/texlive/texmf-dist/tex/platex/base/jsize12.clo
 File: jsize12.clo 2020/09/30 v1.8f Standard pLaTeX file (size option)
 )
-\c@part=\count179
-\c@chapter=\count180
-\c@section=\count181
-\c@subsection=\count182
-\c@subsubsection=\count183
-\c@paragraph=\count184
-\c@subparagraph=\count185
-\c@figure=\count186
-\c@table=\count187
+\c@part=\count185
+\c@chapter=\count186
+\c@section=\count187
+\c@subsection=\count188
+\c@subsubsection=\count189
+\c@paragraph=\count190
+\c@subparagraph=\count191
+\c@figure=\count192
+\c@table=\count193
 \abovecaptionskip=\skip47
 \belowcaptionskip=\skip48
 \symmincho=\mathgroup4
@@ -29,33 +29,33 @@ LaTeX Font Info:    Overwriting symbol font `mincho' in version `bold'
 \toclineskip=\dimen154
 \@lnumwidth=\dimen155
 \bibindent=\dimen156
-\heisei=\count188
+\heisei=\count194
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/keyval.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks16
+\KV@toks@=\toks17
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/trig.sty
-Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: dvipdfmx.def on input line 105.
+Package graphics Info: Driver file: dvipdfmx.def on input line 107.
 
-(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-def/dvipdfmx.def
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/dvipdfmx.def
 File: dvipdfmx.def 2021/03/18 v5.0j Graphics/color driver for dvipdfmx
 ))
 \Gin@req@height=\dimen157
 \Gin@req@width=\dimen158
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/subfigure/subfigure.sty
+(/usr/share/texlive/texmf-dist/tex/latex/subfigure/subfigure.sty
 Package: subfigure 2002/03/15 v2.1.5 subfigure package
 \subfigtopskip=\skip49
 \subfigcapskip=\skip50
@@ -63,131 +63,131 @@ Package: subfigure 2002/03/15 v2.1.5 subfigure package
 \subfigbottomskip=\skip51
 \subfigcapmargin=\dimen160
 \subfiglabelskip=\skip52
-\c@subfigure=\count189
-\c@lofdepth=\count190
-\c@subtable=\count191
-\c@lotdepth=\count192
+\c@subfigure=\count195
+\c@lofdepth=\count196
+\c@subtable=\count197
+\c@lotdepth=\count198
 
 ****************************************
 * Local config file subfigure.cfg used *
 ****************************************
-(/usr/local/texlive/2021/texmf-dist/tex/latex/subfigure/subfigure.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/subfigure/subfigure.cfg)
 \subfig@top=\skip53
 \subfig@bottom=\skip54
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
-\@emptytoks=\toks17
+\@emptytoks=\toks18
 \symAMSa=\mathgroup5
 \symAMSb=\mathgroup6
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2020/09/23 v2.17i AMS math features
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2021/10/15 v2.17l AMS math features
 \@mathmargin=\skip55
 
 For additional information on amsmath, use the `?' option.
-(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amstext.sty
-Package: amstext 2000/06/29 v2.01 AMS text
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
 
-(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsgen.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks18
+\@emptytoks=\toks19
 \ex@=\dimen161
 ))
-(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsbsy.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen162
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsopn.sty
-Package: amsopn 2016/03/08 v2.02 operator names
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2021/08/26 v2.02 operator names
 )
-\inf@bad=\count193
+\inf@bad=\count199
 LaTeX Info: Redefining \frac on input line 234.
-\uproot@=\count194
-\leftroot@=\count195
+\uproot@=\count266
+\leftroot@=\count267
 LaTeX Info: Redefining \overline on input line 399.
-\classnum@=\count196
-\DOTSCASE@=\count197
+\classnum@=\count268
+\DOTSCASE@=\count269
 LaTeX Info: Redefining \ldots on input line 496.
 LaTeX Info: Redefining \dots on input line 499.
 LaTeX Info: Redefining \cdots on input line 620.
-\Mathstrutbox@=\box64
-\strutbox@=\box65
+\Mathstrutbox@=\box67
+\strutbox@=\box68
 \big@size=\dimen163
 LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
-\macc@depth=\count198
-\c@MaxMatrixCols=\count199
+\macc@depth=\count270
+\c@MaxMatrixCols=\count271
 \dotsspace@=\muskip16
-\c@parentequation=\count266
-\dspbrk@lvl=\count267
-\tag@help=\toks19
-\row@=\count268
-\column@=\count269
-\maxfields@=\count270
-\andhelp@=\toks20
+\c@parentequation=\count272
+\dspbrk@lvl=\count273
+\tag@help=\toks20
+\row@=\count274
+\column@=\count275
+\maxfields@=\count276
+\andhelp@=\toks21
 \eqnshift@=\dimen164
 \alignsep@=\dimen165
 \tagshift@=\dimen166
 \tagwidth@=\dimen167
 \totwidth@=\dimen168
 \lineht@=\dimen169
-\@envbody=\toks21
+\@envbody=\toks22
 \multlinegap=\skip56
 \multlinetaggap=\skip57
-\mathdisplay@stack=\toks22
-LaTeX Info: Redefining \[ on input line 2923.
-LaTeX Info: Redefining \] on input line 2924.
+\mathdisplay@stack=\toks23
+LaTeX Info: Redefining \[ on input line 2938.
+LaTeX Info: Redefining \] on input line 2939.
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/multirow/multirow.sty
+(/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
 Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
 \multirow@colwidth=\skip58
-\multirow@cntb=\count271
+\multirow@cntb=\count277
 \multirow@dima=\skip59
 \bigstrutjot=\dimen170
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/here/here.sty)
-(/usr/local/texlive/2021/texmf-dist/tex/latex/float/float.sty
+(/usr/share/texlive/texmf-dist/tex/latex/here/here.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count272
-\float@exts=\toks23
-\float@box=\box66
-\@float@everytoks=\toks24
-\@floatcapt=\box67
+\c@float@type=\count278
+\float@exts=\toks24
+\float@box=\box69
+\@float@everytoks=\toks25
+\@floatcapt=\box70
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/ascmac/ascmac.sty
+(/usr/share/texlive/texmf-dist/tex/latex/ascmac/ascmac.sty
 Package: ascmac 2020/01/15 v2.1 ascmac wrapper (community edition) 
 
-(/usr/local/texlive/2021/texmf-dist/tex/latex/ascmac/tascmac.sty
+(/usr/share/texlive/texmf-dist/tex/latex/ascmac/tascmac.sty
 Package: tascmac 2020/01/15 v2.1 ascmac package (community edition) 
 \@savetbaselineshift=\dimen171
 \@saveybaselineshift=\dimen172
-\scb@x=\box68
-\scscb@x=\box69
+\scb@x=\box71
+\scscb@x=\box72
 \@bw=\dimen173
-\@nbox=\box70
-\@nbody=\box71
+\@nbox=\box73
+\@nbody=\box74
 \@scw=\dimen174
-\ascmac@hoboxa=\box72
-\ascmac@hoboxb=\box73
+\ascmac@hoboxa=\box75
+\ascmac@hoboxb=\box76
 \@itemh=\dimen175
-\@iboxpos=\toks25
-\@iboxstr=\box74
-\@bwsp=\box75
-\@@bwsp=\box76
-\@bcal=\count273
+\@iboxpos=\toks26
+\@iboxstr=\box77
+\@bwsp=\box78
+\@@bwsp=\box79
+\@bcal=\count279
 \shaderule=\dimen176
 ))
-(/usr/local/texlive/2021/texmf-dist/tex/generic/dirtree/dirtree.sty
+(/usr/share/texlive/texmf-dist/tex/generic/dirtree/dirtree.sty
 Package: dirtree 2012/12/11 v0.32 package wrapper for dirtree
 
-(/usr/local/texlive/2021/texmf-dist/tex/generic/dirtree/dirtree.tex
+(/usr/share/texlive/texmf-dist/tex/generic/dirtree/dirtree.tex
 `dirtree' v0.32, 2012/12/11 (jcc)
 \DT@offset=\dimen177
 \DT@width=\dimen178
@@ -196,21 +196,21 @@ Package: dirtree 2012/12/11 v0.32 package wrapper for dirtree
 \DT@rulewidth=\dimen181
 \DT@dotwidth=\dimen182
 \DTbaselineskip=\dimen183
-\DT@counti=\count274
-\DT@countii=\count275
-\DT@countiii=\count276
-\DT@countiv=\count277
+\DT@counti=\count280
+\DT@countii=\count281
+\DT@countiii=\count282
+\DT@countiv=\count283
 \DT@indent=\dimen184
 \DT@parskip=\dimen185
 \DT@baselineskip=\dimen186
 )
 File: dirtree.tex 2012/12/11 v0.32 `dirtree' (jcc)
 ) (./shuronABS.sty
-\和文論文要旨=\toks26
-\英文論文要旨=\toks27
+\和文論文要旨=\toks27
+\英文論文要旨=\toks28
 \HOFFSET=\dimen187
 \VOFFSET=\dimen188
-\dummybox=\box77
+\dummybox=\box80
 \X=\dimen189
 \Y=\dimen190
 \XXA=\dimen191
@@ -225,18 +225,18 @@ File: penguin.sty
 Package: penguin 2015/02/20 v2015.0
 
  Penguin cheer for you. ------ I hope you feel happier. ------
-(/usr/local/texlive/2021/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
 
-(/usr/local/texlive/2021/texmf-dist/tex/generic/iftex/ifvtex.sty
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 
-(/usr/local/texlive/2021/texmf-dist/tex/generic/iftex/iftex.sty
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2020/03/06 v1.0d TeX engine tests
 ))
-\Gm@cnth=\count278
-\Gm@cntv=\count279
-\c@Gm@tempcnt=\count280
+\Gm@cnth=\count284
+\Gm@cntv=\count285
+\c@Gm@tempcnt=\count286
 \Gm@bindingoffset=\dimen198
 \Gm@wd@mp=\dimen199
 \Gm@odd@mp=\dimen256
@@ -245,53 +245,55 @@ Package: iftex 2020/03/06 v1.0d TeX engine tests
 \Gm@layoutheight=\dimen259
 \Gm@layouthoffset=\dimen260
 \Gm@layoutvoffset=\dimen261
-\Gm@dimlist=\toks28
+\Gm@dimlist=\toks29
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/tools/layout.sty
-Package: layout 2014/10/28 v1.2c Show layout parameters
-\oneinch=\count281
-\cnt@paperwidth=\count282
-\cnt@paperheight=\count283
-\cnt@hoffset=\count284
-\cnt@voffset=\count285
-\cnt@textheight=\count286
-\cnt@textwidth=\count287
-\cnt@topmargin=\count288
-\cnt@oddsidemargin=\count289
-\cnt@evensidemargin=\count290
-\cnt@headheight=\count291
-\cnt@headsep=\count292
-\cnt@marginparsep=\count293
-\cnt@marginparwidth=\count294
-\cnt@marginparpush=\count295
-\cnt@footskip=\count296
-\fheight=\count297
-\ref@top=\count298
-\ref@hoffset=\count299
-\ref@voffset=\count300
-\ref@head=\count301
-\ref@body=\count302
-\ref@foot=\count303
-\ref@margin=\count304
-\ref@marginwidth=\count305
-\ref@marginpar=\count306
-\Interval=\count307
-\ExtraYPos=\count308
-\PositionX=\count309
-\PositionY=\count310
-\ArrowLength=\count311
+(/usr/share/texlive/texmf-dist/tex/latex/tools/layout.sty
+Package: layout 2021-03-10 v1.2e Show layout parameters
+\oneinch=\count287
+\cnt@paperwidth=\count288
+\cnt@paperheight=\count289
+\cnt@hoffset=\count290
+\cnt@voffset=\count291
+\cnt@textheight=\count292
+\cnt@textwidth=\count293
+\cnt@topmargin=\count294
+\cnt@oddsidemargin=\count295
+\cnt@evensidemargin=\count296
+\cnt@headheight=\count297
+\cnt@headsep=\count298
+\cnt@marginparsep=\count299
+\cnt@marginparwidth=\count300
+\cnt@marginparpush=\count301
+\cnt@footskip=\count302
+\fheight=\count303
+\ref@top=\count304
+\ref@hoffset=\count305
+\ref@voffset=\count306
+\ref@head=\count307
+\ref@body=\count308
+\ref@foot=\count309
+\ref@margin=\count310
+\ref@marginwidth=\count311
+\ref@marginpar=\count312
+\Interval=\count313
+\ExtraYPos=\count314
+\PositionX=\count315
+\PositionY=\count316
+\ArrowLength=\count317
 ) (./abstract.tex)
 LaTeX Info: Redefining \ol on input line 404.
-) (/usr/local/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-dvips.def
-File: l3backend-dvips.def 2021-03-18 L3 backend support: dvips
-\l__pdf_internal_box=\box78
-\g__pdf_backend_object_int=\count312
-\l__pdf_backend_content_box=\box79
-\l__pdf_backend_model_box=\box80
-\g__pdf_backend_annotation_int=\count313
-\g__pdf_backend_link_int=\count314
-\g__pdf_backend_link_sf_int=\count315
-) (./main.aux
+)
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-dvips.def
+File: l3backend-dvips.def 2022-01-12 L3 backend support: dvips
+\l__pdf_internal_box=\box81
+\g__pdf_backend_object_int=\count318
+\l__pdf_backend_content_box=\box82
+\l__pdf_backend_model_box=\box83
+\g__pdf_backend_annotation_int=\count319
+\g__pdf_backend_link_int=\count320
+\g__pdf_backend_link_sf_int=\count321
+)
+(./main.aux
 
 LaTeX Warning: Label `fig:floormodel_kyori' multiply defined.
 
@@ -315,9 +317,6 @@ LaTeX Warning: Label `sec:method' multiply defined.
 
 
 LaTeX Warning: Label `fig:5_teian_flow2' multiply defined.
-
-
-LaTeX Warning: Label `fig:gimp1' multiply defined.
 
 )
 \openout1 = `main.aux'.
@@ -391,13 +390,13 @@ LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <24.88> not available
 (Font)              Font shape `JY1/gt/m/n' tried instead on input line 51.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 51.
 
-(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 51.
 
 
-(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 Overfull \hbox (52.79187pt too wide) in paragraph at lines 51--51
@@ -441,24 +440,25 @@ LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <12> not available
  [1
 
 
-])
+] [2])
 \tf@toc=\write3
 \openout3 = `main.toc'.
 
- [2] (./main.lof [3
+ [3] (./main.lof [4
 
 ])
 \tf@lof=\write4
 \openout4 = `main.lof'.
 
- [4] (./main.lot)
+ [5] (./main.lot)
 \tf@lot=\write5
 \openout5 = `main.lot'.
 
- [5
+ [6
 
 
-] (./1_intro.tex
+]
+(./1_intro.tex
 第 1 章
 [1
 
@@ -752,7 +752,7 @@ LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
 付 録  A  
 LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 2
 2.
-(/usr/local/texlive/2021/texmf-dist/tex/latex/base/omscmr.fd
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
@@ -764,13 +764,13 @@ File: dire.png Graphic file (type bmp)
 <dire.png>
 File: dire.png Graphic file (type bmp)
 <dire.png>
-
-[47] [48] [49]
+ [47]
+[48] [49] [50]
 File: figure/gimp1.png Graphic file (type bmp)
 <figure/gimp1.png>
 File: figure/gimp2.png Graphic file (type bmp)
 <figure/gimp2.png>
- [50]) [51] (./main.aux)
+ [51]) [52] (./main.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -779,12 +779,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 3772 strings out of 479466
- 52900 string characters out of 5870549
- 372940 words of memory out of 5000000
- 21319 multiletter control sequences out of 15000+600000
- 429231 words of font info for 137 fonts, out of 8000000 for 9000
- 929 hyphenation exceptions out of 8191
- 83i,14n,88p,234b,473s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 4311 strings out of 479850
+ 69838 string characters out of 5887378
+ 376061 words of memory out of 5000000
+ 22485 multiletter control sequences out of 15000+600000
+ 495060 words of font info for 138 fonts, out of 8000000 for 9000
+ 264 hyphenation exceptions out of 8191
+ 70i,14n,76p,234b,486s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.dvi (59 pages, 168972 bytes).
+Output written on main.dvi (61 pages, 174540 bytes).

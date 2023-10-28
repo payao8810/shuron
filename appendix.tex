@@ -193,39 +193,82 @@ glib.hをインクルードするためには，コンパイル時に`pkg-config
   \end{center}
 \end{table}
 
-\section{初期配置のデータの生成方法}
+\section{初期配置のデータの作成方法}
+初期配置データの作成方法は，画像編集ソフトGIMPを用いて作成することができる．
+\tabref{tb:conform_env}に本論文で作成したときに動作確認した環境を示す．
+また，本節で述べるデータの作成方法は，\tabref{tb:conform_env}の環境下での
+作成方法である．
+
+\subsection{GIMPを用いた初期配置の作成方法}
+GIMP画像中の1ピクセルの大きさは，プログラム中の変数GRID\_SIZEと同じである．
+変数GRID\_SIZEは，初期の設定で0.25mであるため，4ピクセルで1mの大きさとなる．
+1ピクセルは，RGBとAと呼ばれる4要素で構成され，Rが赤，Gが緑，Bが青，Aが透過度
+を示す．
+本プログラムでは，1ピクセル中のRGB(RGB225形式)を用いてエージェントと壁，経由地を判定する．
+\tabref{tb:rgb_settings}に各要素の設定方法を示す．
+\tabref{tb:rgb_settings}中のハイフンは，プログラム中で使用しない値である．
+エージェントのR(赤)に240.0，G(緑)にエージェントが向かう経由地番号を設定する．
+エージェントのG(緑)に設定した経由地番号は，プログラム実行時に存在しない場合，
+エラーとして入力時に中断するため，注意が必要である．
+壁粒子は，R(赤)に0.0を設定する．壁粒子は，解析中動くこともなく，プログラム中で
+座標の情報のみを使用する．このため，壁粒子のG(緑)とB(青)は，任意の値を設定する．
+経由地は，R(赤)に24.0，G(緑)に経由地の番号，B(青)に次進む経由地番号を設定する．
 
 
-\begin{table}[H]
+\begin{table}[t]
   \begin{center}
     \caption{動作確認済み環境}
-    %\ecaption{The evaluation environment.}
     \label{tb:conform_env}
     \begin{tabular}{c|c}
       \hline \hline
-      CPU              & Intel Xeon CPU E5-2687w v2 \\ \hline
-      メモリ           & 16GB                       \\ \hline
-      OS               & Linux 4.12.9               \\ \hline
-      GIMPバージョン & x.x.x \\ \hline
+      CPU              & Intel Core CPU i5 8259U    \\ \hline
+      メモリ            & 16GB                       \\ \hline
+      OS               & Linux 6.5.9                 \\ \hline
+      GIMPバージョン    & 2.10.34 \\ \hline
     \end{tabular}
   \end{center}
 \end{table}
 
-
-\begin{figure}[H]
+\begin{table}[t]
   \begin{center}
-    \includegraphics[width=5cm,clip]{figure/gimp1.png}
+    \caption{各要素の設定方法}
+    \label{tb:rgb_settings}
+    \begin{tabular}{c|c|c|c}
+      \hline \hline
+      要素名        & R     & G & B \\ \hline
+      エージェント   & 240.0 & 初期経由地番号 & - \\ \hline
+      壁粒子         & 0.0    & - & -\\ \hline
+      経由地番号      & 24.0  & 経由地番号 & 次の経由地番号 \\ \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+\subsection{GIMPを用いたC言語の出力方法}
+前節の設定方法で初期配置した場合は，sfm.cを用いたプログラムで
+使用するために，C言語で出力する必要がある．
+C言語で出よくするためには，\figref{fig:gimp1}に示すように
+GIMPのエクスポート機能を用いたときに，Cソースコードを出力
+ファイル形式に設定する必要がある．
+Cソースコードをファイル形式に設定後は，\figref{fig:gimp2}に
+示すようなダイアログが表示されるため，\figref{fig:gimp2}と
+同じようにチェックボックスを付けて保存する．
+保存後は，sfm.c中に保存したC言語ファイルをインクルードすることで
+使用することができる．
+
+\begin{figure}[t]
+  \begin{center}
+    \includegraphics[width=7.5cm,clip]{figure/gimp1.png}
     \caption{GIMPの出力ファイル形式の選択}
     \label{fig:gimp1}
   \end{center}
 \end{figure}
 
 
-\begin{figure}[H]
+\begin{figure}[t]
   \begin{center}
     \includegraphics[width=5cm,clip]{figure/gimp2.png}
     \caption{GIMPのC言語出力画面}
-    \label{fig:gimp1}
+    \label{fig:gimp2}
   \end{center}
 \end{figure}
 
