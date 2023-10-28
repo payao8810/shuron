@@ -20,6 +20,16 @@
   \end{center}
 \end{figure}}
 
+\newcommand{\figh}[4]{ %引数 {日本語タイトル}{サイズ}{ファイル名}{ラベル名}
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[width=#2cm,clip]{figure/#3}
+    \caption{#1}
+    \label{fig:#4}
+  \end{center}
+\end{figure}}
+
+
 %====[ プリアンプル ]================================================
 %
 % 不必要ならコメントアウトするとコンパイルが速くなる

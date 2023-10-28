@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.141592653-p3.9.1-210218-2.6 (utf8.euc) (TeX Live 2022/dev/Debian) (preloaded format=platex 2023.6.24)  28 OCT 2023 14:27
+This is e-pTeX, Version 3.141592653-p3.9.1-210218-2.6 (utf8.euc) (TeX Live 2022/dev/Debian) (preloaded format=platex 2023.6.24)  28 OCT 2023 15:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -321,24 +321,24 @@ LaTeX Warning: Label `fig:5_teian_flow2' multiply defined.
 )
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: dvips
@@ -375,60 +375,60 @@ LaTeX Font Info:    ... okay on input line 50.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 
-Overfull \hbox (41.25647pt too wide) detected at line 51
+Overfull \hbox (41.25647pt too wide) detected at line 61
  [] 
  []
 
 
-Overfull \hbox (41.25647pt too wide) detected at line 51
+Overfull \hbox (41.25647pt too wide) detected at line 61
  [] 
  []
 
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <24.88> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 51.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 61.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <24.88> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 51.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 51.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 61.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 61.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 51.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 61.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Overfull \hbox (52.79187pt too wide) in paragraph at lines 51--51
+Overfull \hbox (52.79187pt too wide) in paragraph at lines 61--61
 [][][][] 
  []
 
 
-Overfull \hbox (41.25647pt too wide) detected at line 51
+Overfull \hbox (41.25647pt too wide) detected at line 61
  [] 
  []
 
 
-Overfull \hbox (41.25647pt too wide) detected at line 51
+Overfull \hbox (41.25647pt too wide) detected at line 61
  [] 
  []
 
 
-Overfull \hbox (41.25647pt too wide) detected at line 51
+Overfull \hbox (41.25647pt too wide) detected at line 61
  [] 
  []
 
 [1
 
 ]
-Overfull \hbox (10.57735pt too wide) in paragraph at lines 51--51
+Overfull \hbox (10.57735pt too wide) in paragraph at lines 61--61
 [][][][]  
  []
 
 [1
 
 ]
-Overfull \hbox (16.2679pt too wide) in paragraph at lines 51--51
+Overfull \hbox (16.2679pt too wide) in paragraph at lines 61--61
 [][][][]  
  []
 
@@ -712,11 +712,14 @@ File: figure/20230226_kousokuka.eps Graphic file (type eps)
 <figure/20230226_kousokuka.eps>
  [34]) (./5_method.tex [35]
 第 5 章
+File: figure/ex1.eps Graphic file (type eps)
+<figure/ex1.eps>
+
+LaTeX Warning: Reference `fig:ex1' on page 36 undefined on input line 29.
+
 [36
 
 ]
-File: figure/ex1.eps Graphic file (type eps)
-<figure/ex1.eps>
 File: figure/ex2.eps Graphic file (type eps)
 <figure/ex2.eps>
 File: figure/5_teian_flow1.eps Graphic file (type eps)
@@ -725,11 +728,11 @@ File: figure/5_teian_flow2.eps Graphic file (type eps)
 <figure/5_teian_flow2.eps>
 File: figure/5_teian_flow3.eps Graphic file (type eps)
 <figure/5_teian_flow3.eps>
-) (./6_discuss.tex [37] [38] [39] [40]
+) (./6_discuss.tex [37] [38] [39] [40] [41]
 第 6 章
-) [41
+) [42
 
-] (./thanks.tex) [42
+] (./thanks.tex) [43
 
 
 ] (./main.bbl
@@ -741,14 +744,14 @@ LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
 (Font)              No change on input line 47.
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
 (Font)              No change on input line 52.
- [43
+ [44
 
 ]
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
 (Font)              No change on input line 61.
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
 (Font)              No change on input line 71.
-) (./appendix.tex [44]
+) (./appendix.tex [45]
 付 録  A  
 LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 1
 6.
@@ -757,20 +760,20 @@ File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 16.
- [45
+ [46
 
-] [46]
+] [47]
 File: dire.png Graphic file (type bmp)
 <dire.png>
 File: dire.png Graphic file (type bmp)
 <dire.png>
- [47]
-[48] [49] [50]
+ [48]
+[49] [50] [51]
 File: figure/gimp1.png Graphic file (type bmp)
 <figure/gimp1.png>
 File: figure/gimp2.png Graphic file (type bmp)
 <figure/gimp2.png>
- [51]) [52] (./main.aux)
+ [52]) [53] (./main.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -779,12 +782,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 4312 strings out of 479850
- 69857 string characters out of 5887378
- 376076 words of memory out of 5000000
- 22486 multiletter control sequences out of 15000+600000
- 495060 words of font info for 138 fonts, out of 8000000 for 9000
+ 4331 strings out of 479850
+ 70068 string characters out of 5887378
+ 377167 words of memory out of 5000000
+ 22505 multiletter control sequences out of 15000+600000
+ 495801 words of font info for 142 fonts, out of 8000000 for 9000
  264 hyphenation exceptions out of 8191
  70i,14n,76p,234b,486s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.dvi (61 pages, 175456 bytes).
+Output written on main.dvi (62 pages, 177036 bytes).

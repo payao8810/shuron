@@ -37,19 +37,19 @@
 \contentsline {section}{\numberline {4.4}本章のまとめ}{35}{}%
 \contentsline {chapter}{\numberline {第5章}格子分割による進行方向ベクトル計算の削減手法}{36}{}%
 \contentsline {section}{\numberline {5.1}本章の概要}{36}{}%
-\contentsline {section}{\numberline {5.2}進行方向計算の前処理}{36}{}%
-\contentsline {section}{\numberline {5.3}壁を避ける力の前処理}{36}{}%
+\contentsline {section}{\numberline {5.2}格子分割を用いた進行方向ベクトル$e$の計算方法}{36}{}%
+\contentsline {section}{\numberline {5.3}格子分割を用いた障害物を避ける力$F_{iW}$の計算方法}{37}{}%
 \contentsline {section}{\numberline {5.4}評価}{38}{}%
 \contentsline {section}{\numberline {5.5}本章のまとめ}{38}{}%
-\contentsline {chapter}{\numberline {第6章}おわりに}{41}{}%
-\contentsline {chapter}{謝辞}{42}{}%
-\contentsline {chapter}{参考文献}{43}{}%
-\contentsline {chapter}{\numberline {付 録 A }プログラムの説明}{45}{}%
-\contentsline {section}{\numberline {A.1}データ構造}{45}{}%
-\contentsline {section}{\numberline {A.2}プログラムのファイル構造}{47}{}%
-\contentsline {section}{\numberline {A.3}実行方法}{48}{}%
-\contentsline {section}{\numberline {A.4}測定条件の変更方法}{49}{}%
-\contentsline {section}{\numberline {A.5}初期配置のデータの作成方法}{50}{}%
-\contentsline {subsection}{\numberline {A.5.1}GIMPを用いた初期配置の作成方法}{50}{}%
-\contentsline {subsection}{\numberline {A.5.2}GIMPを用いたC言語の出力方法}{51}{}%
-\contentsline {section}{\numberline {A.6}プログラム実行時の出力フォーマット}{52}{}%
+\contentsline {chapter}{\numberline {第6章}おわりに}{42}{}%
+\contentsline {chapter}{謝辞}{43}{}%
+\contentsline {chapter}{参考文献}{44}{}%
+\contentsline {chapter}{\numberline {付 録 A }プログラムの説明}{46}{}%
+\contentsline {section}{\numberline {A.1}データ構造}{46}{}%
+\contentsline {section}{\numberline {A.2}プログラムのファイル構造}{48}{}%
+\contentsline {section}{\numberline {A.3}実行方法}{49}{}%
+\contentsline {section}{\numberline {A.4}測定条件の変更方法}{50}{}%
+\contentsline {section}{\numberline {A.5}初期配置のデータの作成方法}{51}{}%
+\contentsline {subsection}{\numberline {A.5.1}GIMPを用いた初期配置の作成方法}{51}{}%
+\contentsline {subsection}{\numberline {A.5.2}GIMPを用いたC言語の出力方法}{52}{}%
+\contentsline {section}{\numberline {A.6}プログラム実行時の出力フォーマット}{53}{}%
