@@ -123,14 +123,15 @@ SFMを用いた人流シミュレーションに対する
 格子分割を用いた進行方向の計算回数削減手法の有効性を確認するために，
 既存手法であるセル分割法と提案手法を用いて人流シミュレーション
 評価環境は，\tabref{tb:result_env}に示すマシンである．
-評価に用いるパラメータは，\tabref{tb:result_para}
+本評価では，\tabref{tb:result_para}に示すパラメータを用いて
+SFMの運動方程式を計算する．
+
 
 \begin{table}[tb]
   \begin{center}
     \caption{評価環境}
-    %\ecaption{The evaluation environment.}
-    \label{tb:result_env}
-    \begin{tabular}{c|c}
+      \label{tb:result_env}
+      \begin{tabular}{c|c}
       \hline \hline
       CPU              & Intel Xeon CPU E5-2667w v2 \\ \hline
       メモリ           & 32GB                       \\ \hline
