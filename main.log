@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.141592653-p3.9.0-210218-2.6 (utf8.euc) (TeX Live 2021) (preloaded format=platex 2022.2.2)  28 OCT 2023 11:49
+This is e-pTeX, Version 3.141592653-p3.9.0-210218-2.6 (utf8.euc) (TeX Live 2021) (preloaded format=platex 2022.2.2)  28 OCT 2023 12:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -760,14 +760,12 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
  [45
 
 ] [46]
-[47] [48]
 File: dire.png Graphic file (type bmp)
 <dire.png>
 File: dire.png Graphic file (type bmp)
 <dire.png>
- [49
 
-]
+[47] [48] [49]
 File: figure/gimp1.png Graphic file (type bmp)
 <figure/gimp1.png>
 File: figure/gimp2.png Graphic file (type bmp)
@@ -789,4 +787,4 @@ Here is how much of TeX's memory you used:
  929 hyphenation exceptions out of 8191
  83i,14n,88p,234b,473s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.dvi (59 pages, 168624 bytes).
+Output written on main.dvi (59 pages, 168972 bytes).

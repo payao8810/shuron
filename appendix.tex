@@ -83,6 +83,46 @@ typedef struct \{\\
 時間ステップごとに再構築する必要がある．このため，再構築する速度や
 保守性の観点からセル分割法の中でもハッシュ法を構造体としてデータを保持する．
 
+\section{プログラムのファイル構造}
+SFMを用いた人流シミュレーションのファイル構造を下記に示す．
+%
+\begin{itembox}[l]{プログラムのファイル構造}
+  \dirtree{%
+  .1 \includegraphics[width=0.25cm]{dire.png} sfm\_program.
+  .2 sfm.c.
+  .2 \includegraphics[width=0.25cm]{dire.png} inputwall.
+  .3 pc\_3.c.
+  .3 kyositu.c.
+  }
+\end{itembox}
+%
+sfm.cは，SFMを用いた人流シミュレーションのプログラムであり，C言語で記述されている．
+inputwall内に存在するC言語のファイルは，sfm.cで用いるエージェントや壁，経由地の初期
+配置が記述されたコードである．
+\tabref{tb:arrangement_gimp_files}に本論文中の評価で使用した初期配置のファイル名
+を示す．
+\tabref{tb:arrangement_gimp_files}に示すファイルは，sfm.c中にインクルードすることで
+使用することができる．
+
+\begin{table}[H]
+  \begin{center}
+    \caption{本論文中の評価で使用した初期配置}
+    %\ecaption{The evaluation environment.}
+    \label{tb:arrangement_gimp_files}
+    \begin{tabular}{c|c}
+      \hline \hline
+      配置名 & ファイル名 \\ \hline
+      演習室 & pc\_3.c \\ \hline
+      教室 & kyositu.c \\ \hline
+      演習室(dense) & pc\_3\_dense.c \\ \hline
+      演習室(sparse) & pc\_3\_sparse.c \\ \hline
+      演習室(sparse\&wide) & pc\_3\_sparse\_wide.c \\ \hline
+      通路(幅2m) & haba2.c \\ \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+
 \section{実行方法}
 SFMを実装したプログラムのコンパイルは下記のコマンドの通りである．
 \begin{itembox}[l]{コンパイル方法}
@@ -121,34 +161,6 @@ glib.hをインクルードするためには，コンパイル時に`pkg-config
 \tabref{tb:toggle_kizon}に示すように，提案手法で実行する場合は，
 \#DEFINE KIZONをコメントアウトする必要がある．
 
-\subsection{入力ファイルの切り替え方法}
-エージェントや壁，経由地の初期配置は，画像編集ファイルGIMPを用いたC言語出力により
-入力することができる．
-GIMPから出力したC言語のファイルは，sfm.c中でインクルードすることにより，
-使用することができる．
-\tabref{tb:arrangement_gimp_files}に本論文の評価で使用した配置の
-ファイル名を示す．
-
-\begin{table}[H]
-  \begin{center}
-    \caption{本論文中の評価で使用した初期配置}
-    %\ecaption{The evaluation environment.}
-    \label{tb:arrangement_gimp_files}
-    \begin{tabular}{c|c}
-      \hline \hline
-      配置名 & ファイル名 \\ \hline
-      演習室 & pc\_3.c \\ \hline
-      教室 & kyositu.c \\ \hline
-      演習室(dense) & pc\_3\_dense.c \\ \hline
-      演習室(sparse) & pc\_3\_sparse.c \\ \hline
-      演習室(sparse\&wide) & pc\_3\_sparse\_wide.c \\ \hline
-      通路(幅2m) & haba2.c \\ \hline
-    \end{tabular}
-  \end{center}
-\end{table}
-
-
-\clearpage
 \section{測定条件の変更方法}
 本節では，測定条件のパラメータの変更方法について述べる．
 測定条件のパラメータは，C言語中の\#DEFINEを用いた変数で設定できる．
@@ -183,15 +195,6 @@ GIMPから出力したC言語のファイルは，sfm.c中でインクルード�
 
 \section{初期配置のデータの生成方法}
 
-\begin{itembox}[l]{プログラムのファイル構造}
-\dirtree{%
-.1 \includegraphics[width=0.25cm]{dire.png} sfm\_program.
-.2 sfm.c.
-.2 \includegraphics[width=0.25cm]{dire.png} inputwall.
-.3 pc\_3.c.
-.3 kyositu.c.
-}
-\end{itembox}
 
 \begin{table}[H]
   \begin{center}
