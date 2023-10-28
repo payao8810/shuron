@@ -122,6 +122,30 @@ glib.hをインクルードするためには，コンパイル時に`pkg-config
 \#DEFINE KIZONをコメントアウトする必要がある．
 
 \subsection{入力ファイルの切り替え方法}
+エージェントや壁，経由地の初期配置は，画像編集ファイルGIMPを用いたC言語出力により
+入力することができる．
+GIMPから出力したC言語のファイルは，sfm.c中でインクルードすることにより，
+使用することができる．
+\tabref{tb:arrangement_gimp_files}に本論文の評価で使用した配置の
+ファイル名を示す．
+
+\begin{table}[H]
+  \begin{center}
+    \caption{本論文中の評価で使用した初期配置}
+    %\ecaption{The evaluation environment.}
+    \label{tb:arrangement_gimp_files}
+    \begin{tabular}{c|c}
+      \hline \hline
+      配置名 & ファイル名 \\ \hline
+      演習室 & pc\_3.c \\ \hline
+      教室 & kyositu.c \\ \hline
+      演習室(dense) & pc\_3\_dense.c \\ \hline
+      演習室(sparse) & pc\_3\_sparse.c \\ \hline
+      演習室(sparse\&wide) & pc\_3\_sparse\_wide.c \\ \hline
+      通路(幅2m) & haba2.c \\ \hline
+    \end{tabular}
+  \end{center}
+\end{table}
 
 
 \clearpage
