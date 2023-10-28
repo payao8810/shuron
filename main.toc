@@ -52,5 +52,4 @@
 \contentsline {section}{\numberline {A.5}初期配置のデータの作成方法}{50}{}%
 \contentsline {subsection}{\numberline {A.5.1}GIMPを用いた初期配置の作成方法}{50}{}%
 \contentsline {subsection}{\numberline {A.5.2}GIMPを用いたC言語の出力方法}{51}{}%
-\contentsline {section}{\numberline {A.6}節番号のテスト}{52}{}%
-\contentsline {subsection}{\numberline {A.6.1}項番号のテスト}{52}{}%
+\contentsline {section}{\numberline {A.6}プログラム実行時の出力フォーマット}{52}{}%

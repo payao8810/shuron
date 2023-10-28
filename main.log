@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.141592653-p3.9.1-210218-2.6 (utf8.euc) (TeX Live 2022/dev/Debian) (preloaded format=platex 2023.6.24)  28 OCT 2023 13:58
+This is e-pTeX, Version 3.141592653-p3.9.1-210218-2.6 (utf8.euc) (TeX Live 2022/dev/Debian) (preloaded format=platex 2023.6.24)  28 OCT 2023 14:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -440,11 +440,11 @@ LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <12> not available
  [1
 
 
-] [2])
+])
 \tf@toc=\write3
 \openout3 = `main.toc'.
 
- [3] (./main.lof [4
+ [2] [3] (./main.lof [4
 
 ])
 \tf@lof=\write4
@@ -750,13 +750,13 @@ LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
 (Font)              No change on input line 71.
 ) (./appendix.tex [44]
 付 録  A  
-LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 2
-2.
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 1
+6.
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 22.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 16.
  [45
 
 ] [46]
@@ -779,12 +779,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 4311 strings out of 479850
- 69838 string characters out of 5887378
- 376061 words of memory out of 5000000
- 22485 multiletter control sequences out of 15000+600000
+ 4312 strings out of 479850
+ 69857 string characters out of 5887378
+ 376076 words of memory out of 5000000
+ 22486 multiletter control sequences out of 15000+600000
  495060 words of font info for 138 fonts, out of 8000000 for 9000
  264 hyphenation exceptions out of 8191
  70i,14n,76p,234b,486s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.dvi (61 pages, 174540 bytes).
+Output written on main.dvi (61 pages, 175456 bytes).
