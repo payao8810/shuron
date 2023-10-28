@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.141592653-p4.1.0-230214-2.6 (utf8.euc) (TeX Live 2023) (preloaded format=platex 2023.9.23)  28 OCT 2023 17:28
+This is e-pTeX, Version 3.141592653-p4.1.0-230214-2.6 (utf8.euc) (TeX Live 2023) (preloaded format=platex 2023.9.23)  28 OCT 2023 18:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -325,7 +325,7 @@ LaTeX Warning: Label `fig:sougo_hani' multiply defined.
 LaTeX Warning: Label `sec:method' multiply defined.
 
 
-LaTeX Warning: Label `fig:5_teian_flow2' multiply defined.
+LaTeX Warning: Label `fig:5_e_flow' multiply defined.
 
 )
 \openout1 = `main.aux'.
@@ -727,14 +727,31 @@ File: figure/ex1.eps Graphic file (type eps)
 <figure/ex1.eps>
 [36
 
-] [37] [38]
+] [37]
+File: figure/5_e_flow.eps Graphic file (type eps)
+<figure/5_e_flow.eps>
+ [38]
+
+LaTeX Warning: Reference `fig:5_teian_flow2' on page 39 undefined on input line
+ 94.
+
+
+LaTeX Warning: Reference `fig:5_teian_flow2' on page 39 undefined on input line
+ 95.
+
+
+LaTeX Warning: Reference `fig:5_teian_flow2' on page 39 undefined on input line
+ 97.
+
+
+LaTeX Warning: Reference `fig:5_teian_flow2' on page 39 undefined on input line
+ 102.
+
 File: figure/ex2.eps Graphic file (type eps)
 <figure/ex2.eps>
-File: figure/5_teian_flow2.eps Graphic file (type eps)
-<figure/5_teian_flow2.eps>
-File: figure/5_teian_flow3.eps Graphic file (type eps)
-<figure/5_teian_flow3.eps>
-) (./6_discuss.tex [39] [40] [41]
+File: figure/5_e_flow.eps Graphic file (type eps)
+<figure/5_e_flow.eps>
+[39]) (./6_discuss.tex [40] [41]
 第 6 章
 ) [42
 
@@ -790,12 +807,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 4392 strings out of 476693
- 70521 string characters out of 5810547
+ 4390 strings out of 476693
+ 70403 string characters out of 5810547
  1866209 words of memory out of 5000000
- 24696 multiletter control sequences out of 15000+600000
+ 24695 multiletter control sequences out of 15000+600000
  539835 words of font info for 152 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
  70i,14n,76p,272b,494s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.dvi (62 pages, 180968 bytes).
+Output written on main.dvi (62 pages, 183356 bytes).

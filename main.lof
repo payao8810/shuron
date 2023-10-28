@@ -37,10 +37,10 @@
 \contentsline {figure}{\numberline {4\mbox {--}12}{\ignorespaces パターン1（セル分割法）に対する高速化率}}{34}{}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {5\mbox {--}1}{\ignorespaces 提案手法の解析全体のフローチャート}}{37}{}%
-\contentsline {figure}{\numberline {5\mbox {--}2}{\ignorespaces 提案する格子分割の例}}{38}{}%
-\contentsline {figure}{\numberline {5\mbox {--}3}{\ignorespaces 経由地がある場合の進行方向の例}}{39}{}%
-\contentsline {figure}{\numberline {5\mbox {--}4}{\ignorespaces 提案手法の前処理のフローチャート}}{40}{}%
-\contentsline {figure}{\numberline {5\mbox {--}5}{\ignorespaces 提案手法の運動方程式計算のフローチャート}}{41}{}%
+\contentsline {figure}{\numberline {5\mbox {--}2}{\ignorespaces 提案する格子分割の例}}{37}{}%
+\contentsline {figure}{\numberline {5\mbox {--}3}{\ignorespaces シミュレーション中の進行方向計算のフローチャート}}{38}{}%
+\contentsline {figure}{\numberline {5\mbox {--}4}{\ignorespaces 経由地がある場合の進行方向の例}}{39}{}%
+\contentsline {figure}{\numberline {5\mbox {--}5}{\ignorespaces シミュレーション中の$f_{iW}$計算のフローチャート}}{39}{}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {A\mbox {--}1}{\ignorespaces GIMPの出力ファイル形式の選択}}{52}{}%

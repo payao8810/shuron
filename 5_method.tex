@@ -25,7 +25,6 @@ $v_i^0(t)$が係数である．一方で，障害物から受ける力$f_{iW}$�
 式\eqref{eq:sfm_siki1}に示すように，式の第3項である．
 このため，進行方向ベクトル$e$と障害物を避ける力$f_{iW}$は，
 別々の配列に格納する必要がある．
-
 \figref{fig:5_teian_flow1}に格子分割を用いた
 進行方向ベクトル計算の削減手法のフローチャートを示す．
 \figref{fig:5_teian_flow1}中の前処理は，提案手法に必要である格子ごとの進行方向や
@@ -35,7 +34,7 @@ $v_i^0(t)$が係数である．一方で，障害物から受ける力$f_{iW}$�
 エージェントの進行方向ベクトル$e$や
 障害物を避ける力$f_{iW}$を前処理で算出した値を参照する．
 
-\figtb{提案手法の解析全体のフローチャート}{}{5}{5_teian_flow1.eps}{5_teian_flow1}
+\figtb{提案手法の解析全体のフローチャート}{}{4.5}{5_teian_flow1.eps}{5_teian_flow1}
 
 %\subsection{格子分割を用いた進行方向ベクトル$e$の計算方法}
 \subsection{格子ごとの進行方向ベクトル$e$の計算方法}
@@ -74,10 +73,13 @@ $v_i^0(t)$が係数である．一方で，障害物から受ける力$f_{iW}$�
 配列の要素数に応じて格子ごとの進行方向計算回数が増加するため，
 配列の大きさに応じて増加する．
 
+
+\figtb{シミュレーション中の進行方向計算のフローチャート}{}{8.5}{5_e_flow.eps}{5_e_flow}
+
 %%工事中
 
 %\subsection{格子分割を用いた障害物を避ける力$F_{iW}$の計算方法}
-\subsection{格子ごとの障害物を避ける力$F_{iW}$の計算方法}
+\subsection{格子ごとの障害物を避ける力$F_{iW}$の計算方法(工事中)}
 格子ごとの進行方向は，格子の中心座標から目的地までのベクトル$e$を求め，配列に格納する．同様に，
 壁から受ける力$f_{iW}$は，解析中に机や壁が動かない特徴を利用し，格子ごとの中心座標を用いて，
 $f_{iW}$をあらかじめ算出する．
@@ -103,22 +105,63 @@ $f_{iW}$をあらかじめ算出する．
 計算回数が増加する．
 
 \figtb{経由地がある場合の進行方向の例}{An example of proposed method with waypoints.}{7}{ex2.eps}{ex2}
-\figtb{提案手法の前処理のフローチャート}{}{5}{5_teian_flow2.eps}{5_teian_flow2}
-\figtb{提案手法の運動方程式計算のフローチャート}{}{9}{5_teian_flow3.eps}{5_teian_flow2}
+%\figtb{提案手法の前処理のフローチャート}{}{5}{5_teian_flow2.eps}{5_teian_flow2}
+%\figtb{提案手法の運動方程式計算のフローチャート}{}{9}{5_teian_flow3.eps}{5_teian_flow2}
 
+\figtb{シミュレーション中の$f_{iW}$計算のフローチャート}{}{8.5}{5_e_flow.eps}{5_e_flow}
 
 \begin{eqnarray}
  \mbox{障害物を避ける力を格納する格子の要素数[個]} =  \Big( \frac{\mbox{解析領域[m]}}{\mbox{格子サイズ[m]}} \Big) ^ 2
  \label{eq:fiw_youso_size}
 \end{eqnarray}
 
-\subsection{格子分割を用いたSFM}
+\subsection{格子分割を用いたSFM(工事中)}
 工事中．
 
-\section{評価}
-工事中．
+\section{評価(工事中)}
+SFMを用いた人流シミュレーションに対する
+格子分割を用いた進行方向の計算回数削減手法の有効性を確認するために，
+既存手法であるセル分割法と提案手法を用いて人流シミュレーション
+評価環境は，\tabref{tb:result_env}に示すマシンである．
+評価に用いるパラメータは，\tabref{tb:result_para}
 
-\section{本章のまとめ}
+\begin{table}[tb]
+  \begin{center}
+    \caption{評価環境}
+    %\ecaption{The evaluation environment.}
+    \label{tb:result_env}
+    \begin{tabular}{c|c}
+      \hline \hline
+      CPU              & Intel Xeon CPU E5-2667w v2 \\ \hline
+      メモリ           & 32GB                       \\ \hline
+      OS               & Linux 6.5.8               \\ \hline
+      コンパイラ       & gcc 13.2.0                  \\ \hline
+      最適化オプション & -O3                        \\ \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+\begin{table}[tb]
+  \begin{center}
+    \caption{測定条件}
+    \label{tb:result_para}
+    \begin{tabular}{c|c}
+      \hline \hline
+      $A_i$            & 2000N                              \\ \hline 
+      $B_i$            & 0.08m                              \\ \hline 
+      $k$              & $1.2 \times 10^5 kg s^{-2} $       \\ \hline 
+      $\kappa$         & $2.4 \times 10^5 kg m^{-1} s^{-2}$ \\ \hline 
+      $v_i^0$          & $1.4$m/s                           \\ \hline 
+      $m_i$            & $80$kg                             \\ \hline 
+      $\tau_i$         & 0.5                               \\ \hline 
+      $r_i$            & $0.25$m                            \\ \hline 
+      相互作用範囲     & $5$m                              \\ \hline 
+    \end{tabular}
+  \end{center}
+\end{table}
+
+
+\section{本章のまとめ(工事中)}
 工事中．
 
 %***** END ************************************************

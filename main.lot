@@ -11,6 +11,8 @@
 \contentsline {table}{\numberline {4\mbox {--}6}{\ignorespaces エージェント間距離の計算回数[$10^{10}$回]}}{32}{}%
 \contentsline {table}{\numberline {4\mbox {--}7}{\ignorespaces 解析時間[s]}}{33}{}%
 \addvspace {10\p@ }
+\contentsline {table}{\numberline {5\mbox {--}1}{\ignorespaces 評価環境}}{40}{}%
+\contentsline {table}{\numberline {5\mbox {--}2}{\ignorespaces 測定条件}}{40}{}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {A\mbox {--}1}{\ignorespaces 本論文中の評価で使用した初期配置}}{49}{}%
