@@ -16,32 +16,37 @@
 \contentsline {figure}{\numberline {2\mbox {--}14}{\ignorespaces 経由地を設定するSFMの例}}{14}{}%
 \contentsline {figure}{\numberline {2\mbox {--}15}{\ignorespaces 経由地を設定するSFMの例}}{14}{}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3\mbox {--}1}{\ignorespaces 一次元モデルの例}}{18}{}%
-\contentsline {figure}{\numberline {3\mbox {--}2}{\ignorespaces アーチ現象の例}}{18}{}%
-\contentsline {figure}{\numberline {3\mbox {--}3}{\ignorespaces セル分割法を用いた例}}{19}{}%
-\contentsline {figure}{\numberline {3\mbox {--}4}{\ignorespaces SFMの並列化可能な処理}}{20}{}%
-\contentsline {figure}{\numberline {3\mbox {--}5}{\ignorespaces 3スレッドでの並列化の例}}{21}{}%
-\contentsline {figure}{\numberline {3\mbox {--}6}{\ignorespaces 領域分割の例}}{21}{}%
+\contentsline {figure}{\numberline {3\mbox {--}1}{\ignorespaces 一次元モデルの例}}{16}{}%
+\contentsline {figure}{\numberline {3\mbox {--}2}{\ignorespaces アーチ現象の例}}{16}{}%
+\contentsline {figure}{\numberline {3\mbox {--}3}{\ignorespaces セル分割法を用いた例}}{17}{}%
+\contentsline {figure}{\numberline {3\mbox {--}4}{\ignorespaces SFMの並列化可能な処理}}{18}{}%
+\contentsline {figure}{\numberline {3\mbox {--}5}{\ignorespaces 3スレッドでの並列化の例}}{19}{}%
+\contentsline {figure}{\numberline {3\mbox {--}6}{\ignorespaces 領域分割の例}}{19}{}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4\mbox {--}1}{\ignorespaces 影響範囲の例}}{23}{}%
-\contentsline {figure}{\numberline {4\mbox {--}2}{\ignorespaces 進行方向ごとの近似領域}}{24}{}%
-\contentsline {figure}{\numberline {4\mbox {--}3}{\ignorespaces パターン1を用いたエージェント4の近似領域}}{25}{}%
-\contentsline {figure}{\numberline {4\mbox {--}4}{\ignorespaces パターン2を用いたエージェント4の近似領域}}{26}{}%
-\contentsline {figure}{\numberline {4\mbox {--}5}{\ignorespaces パターン3を用いた近似領域の削減例}}{27}{}%
-\contentsline {figure}{\numberline {4\mbox {--}6}{\ignorespaces パターン3を用いたエージェント4の近似領域}}{27}{}%
-\contentsline {figure}{\numberline {4\mbox {--}7}{\ignorespaces パターン4を用いた近似領域の削減例}}{28}{}%
-\contentsline {figure}{\numberline {4\mbox {--}8}{\ignorespaces パターン4を用いたエージェント4の近似領域}}{28}{}%
-\contentsline {figure}{\numberline {4\mbox {--}9}{\ignorespaces パターン5を用いた近似領域の削減例}}{29}{}%
-\contentsline {figure}{\numberline {4\mbox {--}10}{\ignorespaces パターン5を用いたエージェント4の近似領域}}{30}{}%
-\contentsline {figure}{\numberline {4\mbox {--}11}{\ignorespaces エージェントの初期配置}}{32}{}%
-\contentsline {figure}{\numberline {4\mbox {--}12}{\ignorespaces パターン1（セル分割法）に対する高速化率}}{34}{}%
+\contentsline {figure}{\numberline {4\mbox {--}1}{\ignorespaces 影響範囲の例}}{21}{}%
+\contentsline {figure}{\numberline {4\mbox {--}2}{\ignorespaces 進行方向ごとの近似領域}}{22}{}%
+\contentsline {figure}{\numberline {4\mbox {--}3}{\ignorespaces パターン1を用いたエージェント4の近似領域}}{23}{}%
+\contentsline {figure}{\numberline {4\mbox {--}4}{\ignorespaces パターン2を用いたエージェント4の近似領域}}{24}{}%
+\contentsline {figure}{\numberline {4\mbox {--}5}{\ignorespaces パターン3を用いた近似領域の削減例}}{25}{}%
+\contentsline {figure}{\numberline {4\mbox {--}6}{\ignorespaces パターン3を用いたエージェント4の近似領域}}{25}{}%
+\contentsline {figure}{\numberline {4\mbox {--}7}{\ignorespaces パターン4を用いた近似領域の削減例}}{26}{}%
+\contentsline {figure}{\numberline {4\mbox {--}8}{\ignorespaces パターン4を用いたエージェント4の近似領域}}{26}{}%
+\contentsline {figure}{\numberline {4\mbox {--}9}{\ignorespaces パターン5を用いた近似領域の削減例}}{27}{}%
+\contentsline {figure}{\numberline {4\mbox {--}10}{\ignorespaces パターン5を用いたエージェント4の近似領域}}{28}{}%
+\contentsline {figure}{\numberline {4\mbox {--}11}{\ignorespaces エージェントの初期配置}}{30}{}%
+\contentsline {figure}{\numberline {4\mbox {--}12}{\ignorespaces パターン1（セル分割法）に対する高速化率}}{32}{}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5\mbox {--}1}{\ignorespaces 提案手法の解析全体のフローチャート}}{37}{}%
-\contentsline {figure}{\numberline {5\mbox {--}2}{\ignorespaces 提案する格子分割の例}}{37}{}%
-\contentsline {figure}{\numberline {5\mbox {--}3}{\ignorespaces シミュレーション中の進行方向計算のフローチャート}}{38}{}%
-\contentsline {figure}{\numberline {5\mbox {--}4}{\ignorespaces 経由地がある場合の進行方向の例}}{39}{}%
-\contentsline {figure}{\numberline {5\mbox {--}5}{\ignorespaces シミュレーション中の$f_{iW}$計算のフローチャート}}{39}{}%
+\contentsline {figure}{\numberline {5\mbox {--}1}{\ignorespaces 提案手法の解析全体のフローチャート}}{35}{}%
+\contentsline {figure}{\numberline {5\mbox {--}2}{\ignorespaces 提案する格子分割の例}}{35}{}%
+\contentsline {figure}{\numberline {5\mbox {--}3}{\ignorespaces シミュレーション中の進行方向計算のフローチャート}}{36}{}%
+\contentsline {figure}{\numberline {5\mbox {--}4}{\ignorespaces 格子分割した障害物を避ける力$F_{iW}$の例}}{37}{}%
+\contentsline {figure}{\numberline {5\mbox {--}5}{\ignorespaces 経由地がある場合の進行方向の例}}{38}{}%
+\contentsline {figure}{\numberline {5\mbox {--}6}{\ignorespaces シミュレーション中の$f_{iW}$計算のフローチャート}}{38}{}%
+\contentsline {figure}{\numberline {5\mbox {--}7}{\ignorespaces 通路幅2mの初期配置}}{39}{}%
+\contentsline {figure}{\numberline {5\mbox {--}8}{\ignorespaces 通路幅5mの初期配置}}{39}{}%
+\contentsline {figure}{\numberline {5\mbox {--}9}{\ignorespaces 通路幅10mの初期配置}}{40}{}%
+\contentsline {figure}{\numberline {5\mbox {--}10}{\ignorespaces 通路幅20mの初期配置}}{40}{}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {A\mbox {--}1}{\ignorespaces GIMPの出力ファイル形式の選択}}{52}{}%
-\contentsline {figure}{\numberline {A\mbox {--}2}{\ignorespaces GIMPのC言語出力画面}}{52}{}%
+\contentsline {figure}{\numberline {A\mbox {--}1}{\ignorespaces GIMPの出力ファイル形式の選択}}{51}{}%
+\contentsline {figure}{\numberline {A\mbox {--}2}{\ignorespaces GIMPのC言語出力画面}}{51}{}%

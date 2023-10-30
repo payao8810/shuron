@@ -29,6 +29,22 @@
   \end{center}
 \end{figure}}
 
+\newcommand{\dfig}[6]{
+\begin{figure}[hbtp]
+	\begin{minipage}[b]{0.45\linewidth}
+		\centering
+		\includegraphics[keepaspectratio, scale=0.5]{figure/#2.eps}
+		\caption{#1}
+		\label{fig:#3}
+	\end{minipage}
+	\begin{minipage}[b]{0.45\linewidth}
+		\centering
+		\includegraphics[keepaspectratio, scale=0.5]{figure/#5.eps}
+		\caption{#4}
+		\label{fig:#6}
+	\end{minipage}
+\end{figure}
+}
 
 %====[ プリアンプル ]================================================
 %
