@@ -51,8 +51,16 @@
 また，シミュレーション対象が商業施設や駅構内などの施設上の人々を解析するためには，
 フロアフィールドモデルやSFMが用いられる（参考文献）．
 \fi
+\begin{figure}[t]
 
-\section{ネットワークモデルの歩行者モデル**}
+  \begin{center}
+     \includegraphics[width=13cm,clip]{figure/networkmodel_ex.eps}
+     \caption{ネットワークモデルの例}
+     \label{fig:network_ex}
+    \end{center}
+\end{figure}
+
+\section{ネットワークモデル}
 ネットワークモデルは，人々の移動や行動をネットワーク構造としてモデル化する手法である．
 図\ref{fig:network_ex}にネットワークモデルの例を示す．
 図\ref{fig:network_ex}中の(a)は解析対象であり，(b)はネットワークモデルである．
@@ -69,19 +77,14 @@
 ことに用いられることが多いため，ネットワークモデルを用いた場合は，滞留などの再現ができない．
 このため，人の流量が低下する原因や滞留の原因を突き止めるために解析するときは，静的フロアモデルやSFM
 などが用いられることが一般的である．
-
-
 %
-\begin{figure}[h]
-    \begin{center}
-     \includegraphics[width=14cm,clip]{figure/networkmodel_ex.eps}
-     \caption{ネットワークモデルの例}
-     \label{fig:network_ex}
-    \end{center}
-\end{figure}
 %
 \clearpage
 \section{静的フロアモデル}
+静的フロアモデルは，解析領域を格子状に分割し，
+
+ーーーーーーーーーーーー下記は下書きーーーーーーーーーーー
+
 静的フロアモデルは，図\ref{fig:serumaton}に示すようなフロアフィールドモデルの空間モデルを用いて
 おり，格子ごとに目的地までの距離を設定し，確率を用いてエージェントを移動させることで解析する手法である．
 図\ref{fig:huroa_model_image}に静的フロアフィールドモデルのイメージを示す．
@@ -95,7 +98,23 @@
 
 \doublefig{静的フロアフィールドモデルのイメージ}{floormodel_image}{5}{1.5}{マンハッタン距離を用いた静的フロアフィールドモデルの例}{floormodel_kyori}{5}
 
-\doublefig{マンハッタン距離を用いた静的フロアフィールドモデルの例}{floormodel_kyori}{5}{1.5}{静的フロアフィールドモデルを用いたアーチ現象の再現}{floormodel_ex2}{5}
+%\doublefig{マンハッタン距離を用いた静的フロアフィールドモデルの例}{}{5}{1.5}{静的フロアフィールドモデルを用いたアーチ現象の再現}{floormodel_ex2}{5}
+
+\begin{figure}[t]
+	\begin{minipage}[b]{0.45\linewidth}
+		\centering
+		\includegraphics[keepaspectratio, scale=2.5]{figure/draft.eps}
+		\caption{アーチ現象の例}
+		\label{fig:a-tigenshou}
+	\end{minipage}
+	\begin{minipage}[b]{0.45\linewidth}
+		\centering
+		\includegraphics[keepaspectratio, scale=0.35]{figure/floormodel_ex2.eps}
+		\caption{静的フロアフィールドモデルを用いたアーチ現象}
+		\label{fig:floormodel_ex2}
+	\end{minipage}
+\end{figure}
+
 
 静的フロアフィールドモデルは，図\ref{fig:huroa_manhattan}に示すように，計算対象のエージェントの周囲のセルのなかから，出口までの
 距離が小さくなるようなセルを選択することで，出口までの解析が可能となる．
@@ -276,13 +295,12 @@ SFMを用いた人流シミュレーションは，図\ref{fig:sfm_flowchart}に
 ト間の距離$d_{ij}$の算出が必要である．
 本論文では，式(\ref{eq:kyori_siki})を用いてエージェント間の距離$d_{ij}$
 を求め，他のエージェントから受ける力の範囲内であるかどうか判定する．
-
+%
 \begin{eqnarray}
 　d_{ij} =  \sqrt{ (x_i-x_j)^2 + (y_i-y_j)^2 }
  \label{eq:kyori_siki}
 \end{eqnarray}
-
-
+%
 式(\ref{eq:kyori_siki})中の$x_i$と$y_i$はエージェント$i$の座標$(x_i,y_i)$，$x_j$
 と$y_j$はエージェント$j$の座標$(x_j,y_j)$である．エージェント$i$は
 ，式(\ref{eq:kyori_siki})
@@ -290,12 +308,12 @@ SFMを用いた人流シミュレーションは，図\ref{fig:sfm_flowchart}に
 エージェント$j$から式(\ref{eq:sfm_siki2})を用いて算出した力を受ける．
 他のエージェントから受ける力の範囲の半径を$R$としたとき，エージェント$i$の他のエージェント
 $j$が範囲内にいるかどうかの判定式を式(\ref{eq:jouken_siki1})に示す．
-
+%
 \begin{eqnarray}
   \label{eq:jouken_siki1}
   R \geq d_{ij}
 \end{eqnarray}
-
+%
 エージェント$i$は，式(\ref{eq:jouken_siki1})の条件を満たす他のエージェント$j$から式(\ref{eq:sfm_siki2})
 で求まる力を受ける．
 

@@ -4,8 +4,8 @@
 \contentsline {figure}{\numberline {2\mbox {--}2}{\ignorespaces ネットワークモデルの例}}{4}{}%
 \contentsline {figure}{\numberline {2\mbox {--}3}{\ignorespaces 静的フロアフィールドモデルのイメージ}}{5}{}%
 \contentsline {figure}{\numberline {2\mbox {--}4}{\ignorespaces マンハッタン距離を用いた静的フロアフィールドモデルの例}}{5}{}%
-\contentsline {figure}{\numberline {2\mbox {--}5}{\ignorespaces マンハッタン距離を用いた静的フロアフィールドモデルの例}}{5}{}%
-\contentsline {figure}{\numberline {2\mbox {--}6}{\ignorespaces 静的フロアフィールドモデルを用いたアーチ現象の再現}}{5}{}%
+\contentsline {figure}{\numberline {2\mbox {--}5}{\ignorespaces アーチ現象の例}}{6}{}%
+\contentsline {figure}{\numberline {2\mbox {--}6}{\ignorespaces 静的フロアフィールドモデルを用いたアーチ現象}}{6}{}%
 \contentsline {figure}{\numberline {2\mbox {--}7}{\ignorespaces フロアフィールドモデルの例}}{6}{}%
 \contentsline {figure}{\numberline {2\mbox {--}8}{\ignorespaces 二次元連続座標モデルの例}}{6}{}%
 \contentsline {figure}{\numberline {2\mbox {--}9}{\ignorespaces SFMを用いた人流シミュレーションのフローチャート}}{8}{}%
@@ -50,3 +50,4 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {A\mbox {--}1}{\ignorespaces GIMPの出力ファイル形式の選択}}{51}{}%
 \contentsline {figure}{\numberline {A\mbox {--}2}{\ignorespaces GIMPのC言語出力画面}}{51}{}%
+\addvspace {10\p@ }
