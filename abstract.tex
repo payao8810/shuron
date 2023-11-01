@@ -13,9 +13,7 @@
 %\表紙題目{進行方向の計算回数削減による\\SFMの高速化に関する研究}
 %\表紙題目{進行方向の計算回数削減による\\SFMを用いた人流シミュレーションの高速化}
 \表紙題目{
-進行方向の計算回数削減による\\人流シミュレーションの高速化\\ \\
-進行方向の計算回数削減による\\SFMを用いた人流シミュレーション\\の高速化\\ \\
-進行方向の計算回数削減による\\SFMの高速化
+進行方向の計算回数削減による\\SFMを用いた人流シミュレーション\\の高速化
 }
 
 %名前の間は半角スペース
@@ -29,7 +27,11 @@
 
 \提出日{2023年12月24日} % 表紙だけじゃなくて謝辞でも使っているので注意
 
-\和文題目{格子分割を用いた進行方向計算の削減による\\人流シミュレーションの高速化}
+%\和文題目{格子分割を用いた進行方向計算の削減による\\人流シミュレーションの高速化}
+
+\和文題目{
+進行方向の計算回数削減による\\SFMを用いた人流シミュレーションの高速化
+}
 
 
 %%%%%[ここから下は修士のみ記入]%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -47,42 +49,65 @@
 本論文は，SFM(Social Force Model)を用いた人流シミュレーションを高速化するために，
 エージェントの進行方向の計算回数を削減する手法を提案する．
 SFMは，時間ステップごとに各エージェントの運動方程式を解くことで，人々の流れを解析する手法である．
-SFMの運動方程式は，目的地に向かう力，周囲のエージェントを避ける力，障害物を避ける力の合力を
-用いてエージェントの移動を決定する．
+SFMの運動方程式は，目的地に向かう力，周囲のエージェントを避ける力，障害物を避ける力の合力を用いて
+エージェントの移動を決定する．
 SFMを用いた人流シミュレーションは，解析人数や壁などの障害物数が増えるほど，
 解析時間が膨大になるため，高速化が求められている．
-人流シミュレーションのなかでも避難時の解析は，机や壁などの障害物が多い
-傾向がある．
-机や壁などの固定されている障害物や目的地は，解析中に座標が変化しないという特徴があり，
-目的地までに向かう力を計算するために必要なエージェントから目的地までの
-ベクトルは，エージェントの座標に応じで決定するという特徴がある．
+周囲のエージェントや障害物を避ける力は，影響範囲内のエージェントや障害物から距離に応じた大きさの力を受けるため，
+距離計算を用いた影響範囲内外の判定が必要である．
+人流シミュレーションのなかでも避難時の解析は，机や壁などの障害物が多い傾向がある．
+机や壁などの固定されている障害物や目的地は，解析中に座標が変化しない特徴があり，
+目的地までの向かうベクトルは，エージェントの座標に応じて決定するという特徴がある．
 そこで，本論文では，解析領域を格子状に分割し，格子領域ごとに進行方向をあらかじめ計算することで，
 解析中の進行方向の計算回数を削減する．
 評価の結果，提案手法は，従来のセル分割法に対して，許容できる誤差の範囲で
 解析時間が最大〇〇倍高速することを確認した．
-(508文字)
-}% 600字程度
+}
 
 \英文論文要旨={
-This paper proposes a speedup method by reducing the number of 
-calculations of the agent's traveling direction for the Social Force Model(SFM).
-The SFM is a method to simulate human behavior based on motion equations.
-%SFMの運動方程式の構成
-The motion equation of the SFM uses the resultant forces of the force to go to the destination,
-the force from surrounding agents, and the force avoiding the obstructions to determine the agent's
-movement.
-%高速化の理由
-The SFM is required to speed up because analysis time increases as the number of agents and obstacles.
-%SFMの特徴を述べる
-fixed obstacles and destinations have characteristics that the coordinates do not change under analysis.
-%そこで，提案～を提案する
-Therefore, the proposed method reduces the number of calculations of the agent's traveling direction 
-during analysis by dividing the analysis region into a grid and calculating the direction of travel 
-for each grid region in advance.
-%評価の結果
-As a result of the evaluation, 
-the proposed method gives us about [高速化率] times speedup within an acceptable error range.
-}% about 200 words
+
+}
+
+%\和文論文要旨={
+%本論文は，sfm(social force model)を用いた人流シミュレーションを高速化するために，
+%エージェントの進行方向の計算回数を削減する手法を提案する．
+%sfmは，時間ステップごとに各エージェントの運動方程式を解くことで，人々の流れを解析する手法である．
+%sfmの運動方程式は，目的地に向かう力，周囲のエージェントを避ける力，障害物を避ける力の合力を
+%用いてエージェントの移動を決定する．
+%sfmを用いた人流シミュレーションは，解析人数や壁などの障害物数が増えるほど，
+%解析時間が膨大になるため，高速化が求められている．
+%人流シミュレーションのなかでも避難時の解析は，机や壁などの障害物が多い
+%傾向がある．
+%机や壁などの固定されている障害物や目的地は，解析中に座標が変化しないという特徴があり，
+%目的地までに向かう力を計算するために必要なエージェントから目的地までの
+%ベクトルは，エージェントの座標に応じで決定するという特徴がある．
+%そこで，本論文では，解析領域を格子状に分割し，格子領域ごとに進行方向をあらかじめ計算することで，
+%解析中の進行方向の計算回数を削減する．
+%評価の結果，提案手法は，従来のセル分割法に対して，許容できる誤差の範囲で
+%解析時間が最大〇〇倍高速することを確認した．
+%(508文字)
+%}% 600字程度
+%
+%\英文論文要旨={
+%This paper proposes a speedup method by reducing the number of 
+%calculations of the agent's traveling direction for the Social Force Model(SFM).
+%The SFM is a method to simulate human behavior based on motion equations.
+%%SFMの運動方程式の構成
+%The motion equation of the SFM uses the resultant forces of the force to go to the destination,
+%the force from surrounding agents, and the force avoiding the obstructions to determine the agent's
+%movement.
+%%高速化の理由
+%The SFM is required to speed up because analysis time increases as the number of agents and obstacles.
+%%SFMの特徴を述べる
+%fixed obstacles and destinations have characteristics that the coordinates do not change under analysis.
+%%そこで，提案～を提案する
+%Therefore, the proposed method reduces the number of calculations of the agent's traveling direction 
+%during analysis by dividing the analysis region into a grid and calculating the direction of travel 
+%for each grid region in advance.
+%%評価の結果
+%As a result of the evaluation, 
+%the proposed method gives us about [高速化率] times speedup within an acceptable error range.
+%}% about 200 words
 
 \if 0
 memo
