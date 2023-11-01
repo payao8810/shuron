@@ -63,4 +63,5 @@
 \contentsline {section}{\numberline {B.2}手段}{54}{}%
 \contentsline {section}{\numberline {B.3}結果}{54}{}%
 \contentsline {section}{\numberline {B.4}タイトル（案）}{54}{}%
-\contentsline {section}{\numberline {B.5}発表名，論文名}{55}{}%
+\contentsline {section}{\numberline {B.5}下書き}{55}{}%
+\contentsline {section}{\numberline {B.6}発表名，論文名}{55}{}%
