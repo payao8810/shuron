@@ -7,7 +7,6 @@
 %
 %====================================================================
 \documentclass[a4j,12pt]{jreport}
-%\usepackage{graphicx}
 \usepackage[dvipdfmx]{graphicx}
 
 %====[ テスト ] ====================================================
@@ -52,23 +51,29 @@
 %       パッケージの機能は「tex パッケージ名」で検索
 %
 \usepackage{subfigure}  % 図に(a)(b)(c)と記号を振れるパッケージ
+\usepackage{url}    	% URLのアンダーバー表示
 \usepackage{amsfonts}   % \mathbb 4兄弟 (数式の太文字フォント/自然数Nとかで使う)
 \usepackage{amsmath}    % \mathbb
 \usepackage{amssymb}    % \mathbb
-\usepackage{multirow}   %表のmaltirow
-%\usepackage{bbm}               % \mathbb
+%\usepackage{bbm}       % \mathbb
 %\usepackage{enumitem}  % 箇条書きのフォーマットを編集できる
+%\usepackage{enumerate} % 箇条書きのフォーマットを編集できる
 %\usepackage{theorem}   % 補題/定理/定義 
 %\usepackage{boites}    % 文章を枠で囲む
-%\usepackage{cases}             % 場合分けした数式に式番号をつける
+%\usepackage{cases}     % 場合分けした数式に式番号をつける
 %\usepackage{mathrsfs}  % 花文字
 %\usepackage{fancybox}  % verbatimを四角で囲む
+%\usepackage{ascmac}		%タイトル付き囲み線
+%\usepackage{listings,sty/jlisting} %ソースコード貼付
 
+\usepackage{multirow}   %表のmaltirow
 \usepackage{here}
 \usepackage{ascmac} %角が丸い四角枠
 \usepackage{dirtree} %ディレクトリ構造
 \usepackage{ulem} %下線部を書きたい
 %\usepackage{multicol} %一部分を二段組に
+
+
 
 %以下の2行はコメントアウトすると卒業できなくなる
 \usepackage[HeaderWithUnderline]{shuronABS}     % アブストラクト
@@ -77,7 +82,7 @@
 %====[ 表紙 ]========================================================
 \begin{document}
 \addtitlepage           % タイトル
-\tocpage                        % 目次
+\tocpage                % 目次
 
 %====[ 本文 ]========================================================
 
@@ -100,8 +105,8 @@
 \clearpage
 \addcontentsline{toc}{chapter}{参考文献}
 \markright{参考文献}
-\bibliography{bibfile1}          % どちらか片方を選択     
-%\input{bibfile}                        % どちらか片方を選択
+\bibliography{bibfile}          % どちらか片方を選択     
+%\input{bibfile}                % どちらか片方を選択
 
 
 %====[ 付録 ]========================================================

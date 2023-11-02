@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.141592653-p4.1.0-230214-2.6 (utf8.euc) (TeX Live 2023) (preloaded format=platex 2023.9.23)  1 NOV 2023 18:24
+This is e-pTeX, Version 3.141592653-p4.1.0-230214-2.6 (utf8.euc) (TeX Live 2023) (preloaded format=platex 2023.9.23)  2 NOV 2023 16:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -75,6 +75,10 @@ Package: subfigure 2002/03/15 v2.1.5 subfigure package
 \subfig@top=\skip54
 \subfig@bottom=\skip55
 )
+(/usr/share/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip16
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
 (/usr/share/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \@emptytoks=\toks18
@@ -131,7 +135,7 @@ LaTeX Info: Redefining \smash on input line 940.
 LaTeX Info: Redefining \relbar on input line 970.
 LaTeX Info: Redefining \Relbar on input line 971.
 \c@MaxMatrixCols=\count271
-\dotsspace@=\muskip16
+\dotsspace@=\muskip17
 \c@parentequation=\count272
 \dspbrk@lvl=\count273
 \tag@help=\toks20
@@ -245,7 +249,7 @@ Package: ulem 2019/11/18
 )
 (./penguin.sty
 File: penguin.sty 
-Package: penguin 2015/02/20 v2015.0
+Package: penguin 2022/11/29 v2022.0
 
  Penguin cheer for you. ------ I hope you feel happier. ------
 (/usr/share/texmf-dist/tex/latex/geometry/geometry.sty
@@ -304,7 +308,7 @@ Package: layout 2021-03-10 v1.2e Show layout parameters
 \PositionY=\count317
 \ArrowLength=\count318
 ) (./abstract.tex)
-LaTeX Info: Redefining \ol on input line 404.
+LaTeX Info: Redefining \ol on input line 414.
 )
 (/usr/share/texmf-dist/tex/latex/l3backend/l3backend-dvips.def
 File: l3backend-dvips.def 2023-01-16 L3 backend support: dvips
@@ -340,24 +344,24 @@ LaTeX Warning: Label `fig:5_e_flow' multiply defined.
 )
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: dvips
@@ -394,55 +398,59 @@ LaTeX Font Info:    ... okay on input line 78.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 
-Overfull \hbox (41.25647pt too wide) detected at line 79
+Overfull \hbox (41.25647pt too wide) detected at line 84
  [] 
  []
 
 
-Overfull \hbox (41.25647pt too wide) detected at line 79
+Overfull \hbox (41.25647pt too wide) detected at line 84
  [] 
  []
 
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <24.88> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 79.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 84.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <24.88> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 79.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 79.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 84.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 84.
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 79.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 84.
 
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Overfull \hbox (41.25647pt too wide) detected at line 79
+Overfull \hbox (41.25647pt too wide) detected at line 84
  [] 
  []
 
 
-Overfull \hbox (41.25647pt too wide) detected at line 79
+Overfull \hbox (41.25647pt too wide) detected at line 84
  [] 
  []
 
 
-Overfull \hbox (41.25647pt too wide) detected at line 79
+Overfull \vbox (14.98822pt too high) detected at line 84
+ []
+
+
+Overfull \hbox (41.25647pt too wide) detected at line 84
  [] 
  []
 
 [1
 
 ]
-Overfull \hbox (10.57735pt too wide) in paragraph at lines 79--79
+Overfull \hbox (10.57735pt too wide) in paragraph at lines 84--84
 [][][][]  
  []
 
 [1
 
 ]
-Overfull \hbox (16.2679pt too wide) in paragraph at lines 79--79
+Overfull \hbox (16.2679pt too wide) in paragraph at lines 84--84
 [][][][]  
  []
 
@@ -776,7 +784,14 @@ File: figure/haba2_3.eps Graphic file (type eps)
 ] (./thanks.tex) [42
 
 
-] (./main.bbl [43
+] (./main.bbl
+Overfull \hbox (176.8099pt too wide) in paragraph at lines 16--20
+\twlmin の \OT1/cmr/m/n/12 Mi-crosoft HoloLens 2 \twlmin 版開発を支援 ， 入手先
+ $\OML/cmm/m/it/12 <$\OT1/cmr/m/n/12 https://prtimes.jp/main/html/rd/p/00000005
+6.000023638.html$\OML/cmm/m/it/12 >$
+ []
+
+[43
 
 ]) (./appendix.tex [44]
 付 録  A  
@@ -815,12 +830,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 4532 strings out of 476693
- 72719 string characters out of 5810547
+ 4625 strings out of 476693
+ 74014 string characters out of 5810547
  1855209 words of memory out of 5000000
- 24824 multiletter control sequences out of 15000+600000
+ 24913 multiletter control sequences out of 15000+600000
  539931 words of font info for 153 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 70i,14n,76p,272b,490s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 70i,14n,76p,271b,490s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.dvi (64 pages, 184812 bytes).
+Output written on main.dvi (64 pages, 185076 bytes).

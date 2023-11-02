@@ -1101,6 +1101,15 @@ FUNCTION {webpage}					% 3.00(1)>>
   fin.entry
 }							% 3.00(1)<<
 
+FUNCTION {direct}                       % 追加しました by Penguin >>
+{
+  title        "title"        required.argument
+  output.bibitem
+  format.authors 
+  title output
+  fin.entry
+}                                       % by Penguin << 
+
 FUNCTION {default.type} { misc }
 
 MACRO {jan} {"January"}

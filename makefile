@@ -1,3 +1,4 @@
+# vim: set tabstop=2 :
 #***********************************************************************
 # penguin_sty makefile
 #
@@ -7,7 +8,7 @@
 #
 #***********************************************************************
 #
-#  ※ M2は，39行目をコメントアウトして，40行目のコメントアウトを外すこと！
+#  ※ 研究室環境用に文字コードがEUC-JPなので注意！
 #
 #
 #  make         論文データをコンパイル→main.pdf
@@ -24,8 +25,9 @@
 # =============   ======================================================
 #  2011/02/14      作ってみた
 #  2012/01/29      篠塚に使わせたら苦情が来た
-#  2012/01/31      改築計画立案①表紙を真ん中に②4年のスタイルもまとめる
+#  2012/01/31      改築計画立案?”住罎鮨燭鹵罎豊?4年のスタイルもまとめる
 #  2016/10/22      木内にbibtex関係が分かりにくいって文句言われた
+#  2022/11/29      研究室環境updateに合わせて更新
 #
 #
 #***********************************************************************
@@ -37,9 +39,8 @@ MAIN=main
 #--[main.texが参照するtexファイル]-------------------
 
 #追加した.texファイルがあれば，拡張子付で書き足す
-BODY=1_intro.tex 2_background.tex 3_survey.tex 4_method.tex	\
-	  5_method.tex 6_discuss.tex						\
-	 thanks.tex
+BODY=1_intro.tex 2_background.tex 3_survey.tex 4_method.tex	5_method.tex 6_discuss.tex thanks.tex
+#BODY=1_intro.tex 6_discuss.tex thanks.tex
 
 APPEND=appendix.tex
 COVER=cover
@@ -61,8 +62,9 @@ SRC 		= $(MAIN).tex $(BODY) $(APPEND)  $(REF).bib $(REF).tex
 
 ABSTDELFILE = ils.tfm 
 
-DELFILE 	= $(MAIN).lof $(MAIN).lot $(MAIN).toc $(MAIN).log $(MAIN).aux $(MAIN).bbl $(MAIN).blg $(ABSTDELFILE)
-DELCOVER	= $(COVER).log $(COVER).aux
+DELFILE 	= $(MAIN).lof $(MAIN).lot $(MAIN).toc $(MAIN).log $(MAIN).aux $(MAIN).blg 
+#$(ABSTDELFILE)
+#DELCOVER	= $(COVER).log $(COVER).aux
 #------------------------------------------------------
 
 all:COMPILE2
@@ -72,7 +74,7 @@ COMPILE2:BIBCOMPILE
 	$(PLATEX) $(MAIN)
 
 BIBCOMPILE:$(REF).bib  $(REF).tex COMPILE
-	$(BIBTEX) $(MAIN)
+	-@ $(BIBTEX) $(MAIN)
 
 COMPILE:makefile $(SRC) 
 	$(PLATEX) $(MAIN)
@@ -81,6 +83,8 @@ COMPILE:makefile $(SRC)
 
 cover: platex_cover
 	$(DVIPDFM) $(COVER)
+	rm $(COVER).log $(COVER).aux
+	evince $(COVER).pdf &
 
 platex_cover: $(COVER).tex abstract.tex
 	$(PLATEX) $(COVER)
@@ -88,7 +92,8 @@ platex_cover: $(COVER).tex abstract.tex
 #------------------------------------------------------
 
 pdf:all cover
-	echo create "cover.pdf" & "main.pdf"
+	evince $(MAIN).pdf &
+#	echo create "cover.pdf" & "main.pdf"
 
 #------------------------------------------------------
 
