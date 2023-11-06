@@ -8,12 +8,17 @@
 \section{本章の概要}
 SFMの運動方程式では，エージェント間距離が大きいほどエージェント間に働く相互作用力が小さくなる．
 このため，SFMでは，影響半径$R_{c}$を用いてエージェント間距離の計算回数を削減するのが一般的である．
-\figref{fig:sougo_hani}に，エージェント4の影響半径の例を示す．
+\figref{fig:sougo_hani}にエージェント4の影響半径の例を示す．また\figref{fig:serubunkatu_siya}に
+\figref{fig:sougo_hani}にセル分割法を用いた例を示す．
 %
 \figtb{影響範囲の例}{An example of the scope of influence.}{5}{20230614_hanni_ex.eps}{sougo_hani}
 %
-\figref{fig:sougo_hani}中の〇はエージェントであり，
+\figtb{視野を用いたSFMにセル分割法を適用した例}{}{5}{serubunkatu_siya.eps}{serubunkatu_siya}
+%
+\figref{fig:sougo_hani}および\figref{fig:serubunkatu_siya}中の〇はエージェントであり，
 オレンジ色の点線で囲まれた領域がエージェント4の影響範囲である．
+また\figref{fig:serubunkatu}中の四角はセル分割法の格子，青色の四角はセル分割法における
+周辺のエージェントが影響範囲内かの判定に用いるセルである．
 影響半径$R_{c}$は影響範囲の半径であり，
 影響範囲外から受ける力を0とすることで，
 運動方程式を計算する際に演算を省略することができる．
@@ -38,6 +43,7 @@ SFMで用いられるエージェント間距離の計算回数削減手法は�
 視野形状である扇形に近似した領域を設定し，
 近似領域外のエージェントに対するエージェント間距離の計算回数を削減することで，
 視野を用いたSFMを高速化する．
+%fig{serubunkatu_siya}を使ってセル分割法の話を入れたい
 
 \section{近似領域の選択方法}
 提案手法では，近似領域の算出に必要な計算時間を最小限に抑えるために，
@@ -61,7 +67,6 @@ SFMで用いられるエージェント間距離の計算回数削減手法は�
 
 \figtb{進行方向ごとの近似領域}{}{8}{20220225_sentaku.eps}{sentaku}
 
-\clearpage
 \subsection{パターン1（セル分割法）}
 パターン1は，一般的なセル分割法\cite{cell1}，\cite{cell2}によるエージェント間距離の計算回数を削減する．
 \figref{fig:patan1_ex}に\figref{fig:sougo_hani}中のエージェント4にパターン1を用いて
