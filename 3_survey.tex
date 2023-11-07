@@ -60,6 +60,15 @@ SFMは，解析人数が増加するほど周囲のエージェントから受�
 エージェント間距離の計算回数削減手法にセル分割法や視野パラメータを用いた
 削減手法がある．
 
+\begin{figure}[t]
+ \begin{center}
+  \includegraphics[width=11.5cm,clip]{figure/serubunkatu_ex1.eps}
+  \caption{セル分割法を用いた例}
+  \label{fig:seru_ex1}
+ \end{center}
+\end{figure}
+
+
 \subsection{セル分割法}
 セル分割法は，水や空気などの動きを解析できるMPS法\cite{mps}や銀河系などの圧縮性
 流体に用いられるSPH法\cite{sph}などの粒子法によく用いられている．
@@ -78,38 +87,50 @@ SFMは，解析人数が増加するほど周囲のエージェントから受�
 用いて計算するため，エージェントの進行方向後方のセルに存在するエージェント情報は不要になる，
 このため，視野を用いるSFMでは，視野を考慮し，参照するセルを視野範囲に近づけることで，
 計算回数を減らすことができる．
+セル分割法の実装方法は，連結リスト法やハッシュ法などがよく用いられる（参考文献）．
 
-\begin{figure}[hbtp]
- \begin{center}
-  \includegraphics[width=11.5cm,clip]{figure/seru_ex1_r2.eps}
-  \caption{セル分割法を用いた例}
-  \label{fig:seru_ex1}
- \end{center}
-\end{figure}
+連結リスト法は，単方向リストを用いたセル分割法である．
+\figref{fig:renketu_list}に連結リスト法を用いたセル分割法の例を示す．
+\figref{fig:renketu_list}中の左側にある四角は解析領域，解析領域内の格子はセル分割法の
+格子，各格子内の左下に記された番号は格子の番号，白色の丸はエージェント，
+丸の中の番号は，エージェント番号を示す．また，図中の左側は，連結リスト法のデータ構造を
+示しており，青色の四角は各格子の先頭，緑色の四角はエージェントのノードを示す．
+\figref{fig:renketu_list}のように，各エージェントは，同じ格子に存在する他のエージェントの
+インデックス番号を保持することで，単方向のリストを作成する．
+各格子内の最後のエージェントは，最後のエージェントを示す-1を保持する．
+周囲のエージェントを参照するときは，周囲のセルの先頭から終端のエージェントを
+辿ることで，周囲のセルに存在するエージェントを
+絞ることができる．
 
-\begin{figure}[hbtp]
- \begin{center}
-  \includegraphics[width=11.5cm,clip]{figure/serubunkatu_ex1.eps}
-  \caption{セル分割法を用いた例}
-  \label{fig:seru_ex1}
- \end{center}
-\end{figure}
-%連結リストを用いたセル分割法
+ハッシュ法は，3つの配列を用いてセル分割法を実装する方法である．
+ハッシュ法の配列は，hash配列とindex配列，start配列の3つで構成される．
+hash配列は，エージェントの所属するセルの番号を保持する．また，index配列は，
+エージェントのインデックス番号を保持する．start配列は，各セルの始点を示すインデックス
+を保持する．
+\figref{fig:hash}にハッシュ法を用いたセル分割法を示す．
+\figref{fig:hash}中の右側に示す四角は，各配列を示す．
+\figref{fig:hash}に示すように，ハッシュ法は，index配列に各エージェントの
+インデックス番号，hash配列に各エージェントのセル番号を格納する．次に，
+hash配列とindex配列をhash配列の値を用いて昇順にソートを行う．
+ソート後は，start配列に各セルのhash配列の始点を格納する．
+エージェントが存在しないセルは，hash配列の値に-1を格納する．
+周囲のエージェントを参照するときは，start配列から参照するセルの
+始点を取得し，hash配列のセル番号が変わるまで繰り返すことで，
+周囲のエージェントを絞ることができる．
 
-\begin{figure}[hbtp]
+\begin{figure}[t]
  \begin{center}
   \includegraphics[width=11.5cm,clip]{figure/serubunkatu_serurinku.eps}
-  \caption{セル分割法を用いた例}
-  \label{fig:seru_ex1}
+  \caption{連結リスト法を用いたセル分割法の例}
+  \label{fig:renketu_list}
  \end{center}
 \end{figure}
-%ハッシュ法を用いたセル分割法について述べる！！ 
 
-\begin{figure}[hbtp]
+\begin{figure}[t]
  \begin{center}
   \includegraphics[width=11.5cm,clip]{figure/serubunkatu_hash.eps}
-  \caption{セル分割法を用いた例}
-  \label{fig:seru_ex1}
+  \caption{ハッシュを用いたセル分割法の例}
+  \label{fig:hash}
  \end{center}
 \end{figure}
 
