@@ -201,6 +201,11 @@ Green, S.: Particle simulation using cuda, {\em NVIDIA Whitepaper},
   マルチエージェントを用いた大学等を対象とした避難シミュレーションシステムの高速化，第75回全国大会講演論文集，
   Vol.~2, pp.\ 387--388 (2013).
 
+\bibitem{sfm_with_daikusutora}
+Khamis, N., Selamat, H., Yusof, R. and Ismail, F.~S.: Magnetic Force Model
+  Approach with Path Finding Feature for an Improved Crowd Movement Simulation
+  (2017).
+
 \bibitem{mps}
 後藤仁志，堀智恵実五十里洋行，KHAYYER, A.：
   GPUによる粒子法半陰解法アルゴリズムの高速化，土木学会論文集B， Vol.~66,

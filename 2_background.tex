@@ -279,6 +279,23 @@ SFMを用いた人流シミュレーションは，図\ref{fig:sfm_flowchart}に
 \cite{seru_sfm1}\cite{seru_sfm2}．
 他のエージェントから受ける力を計算する範囲を限定することで，遠くに存在する
 エージェントから受ける力を0に近似することができる．
+%
+\begin{figure}[t]
+ \begin{center}
+  \includegraphics[width=11.5cm,clip]{figure/eikyo_hankei_ex1.eps}
+  \caption{他のエージェントから受ける力の範囲を限定するときの例}
+  \label{fig:sougo_hani}
+ \end{center}
+\end{figure}
+%
+\begin{figure}[t]
+ \begin{center}
+  \includegraphics[width=5cm,clip]{figure/agent_flow.eps}
+  \caption{SFMにおける周囲のエージェントから受ける力の計算}
+  \label{fig:sougo_hani_flow}
+ \end{center}
+\end{figure}
+%
 図\ref{fig:sougo_hani}に他のエージェントから受ける力の計算範囲の例
 を示す．図\ref{fig:sougo_hani}の赤丸は他のエージェントから受ける力を計算
 するエージェント，黒丸はエージェント4が計算するときの他のエージェント，
@@ -316,66 +333,43 @@ $j$が範囲内にいるかどうかの判定式を式(\ref{eq:jouken_siki1})に
 %
 エージェント$i$は，式(\ref{eq:jouken_siki1})の条件を満たす他のエージェント$j$から式(\ref{eq:sfm_siki2})
 で求まる力を受ける．
-
 他のエージェントから受ける力の範囲を限定するSFMのフローチャート
-を図\ref{fig:sougosayou_flow}に示す．
-図\ref{fig:sougosayou_flow}のフローチャートでは，各エージェントに対しエー
+を図\ref{fig:sougo_hani_flow}に示す．
+図\ref{fig:sougo_hani_flow}のフローチャートでは，各エージェントに対しエー
 ジェント間の距離を計算し，範囲内であるか判定することで，他のエージェントから受ける力の範囲を限定
-している．SFMを用いる人流シミュレーションは，他のエージェントから受ける力の範囲を視野の範囲に
-することで，視野を再現できる．
-
-\begin{figure}[t]
- \begin{center}
-  \includegraphics[width=5cm,clip]{figure/agent_flow.eps}
-  \caption{SFMにおける周囲のエージェントから受ける力の計算}
-  \label{fig:sougo_hani_flow}
- \end{center}
-\end{figure}
+する．
 
 
 
-\begin{figure}[h]
- \begin{center}
-  \includegraphics[width=11.5cm,clip]{figure/sougo_hani_image_r2.eps}
-  \caption{他のエージェントから受ける力の範囲を限定するときの例}
-  \label{fig:sougo_hani}
- \end{center}
-\end{figure}
-
-
-\begin{figure}[h]
- \begin{center}
-  \includegraphics[width=11.5cm,clip]{figure/eikyo_hankei_ex1.eps}
-  \caption{他のエージェントから受ける力の範囲を限定するときの例}
-  \label{fig:sougo_hani}
- \end{center}
-\end{figure}
-
-\newpage
-
+\clearpage
 \subsection{周囲の壁から受ける力}
 周囲の壁から受ける力は，エージェントの周囲の障害物を避けるために受ける力である．
 SFMを用いた人流シミュレーションは，壁や机などの障害物を粒子として計算することが
 一般的である（参考文献）．
 図\ref{fig:kaberyuusi_ex}に壁を粒子化した例を示す．
-図\ref{fig:kaberyuusi_ex}中の○○色の丸はエージェント，△△色の丸は壁粒子である．
-図\ref{fig:kaberyuusi_ex}のように，〜〜である．
+図\ref{fig:kaberyuusi_ex}中の緑色の丸はエージェント，黄色の丸は壁粒子である．
+図\ref{fig:kaberyuusi_ex}のように，障害物を粒子化して解析する場合は，
+机や壁などの障害物を粒子のかたまりとして離散化する．
+エージェントの周囲の障害物を避ける力は，影響範囲内に存在する障害物の粒子から
+受けるため，障害物の粒子の増加に応じて障害物を避ける力の計算回数が増加する
+傾向がある．
 
-\begin{figure}[h]
+
+
+\begin{figure}[t]
  \begin{center}
   \includegraphics[width=11.5cm,clip]{figure/shougaibutu_ryuusika.eps}
   \caption{障害物を粒子として計算する例}
-  \label{fig:sougo_hani}
+  \label{fig:kaberyuusi_ex}
  \end{center}
 \end{figure}
 
 
-
-\begin{figure}[hbtp]
+\begin{figure}[t]
  \begin{center}
   \includegraphics[width=5cm,clip]{figure/kabe_flow.eps}
-  \caption{SFMにおける周囲の壁から受ける力の計算}
-  \label{fig:sfm_flowchart}
+  \caption{周囲の壁から受ける力の計算のフローチャート}
+  \label{fig:kabe_flowchart}
  \end{center}
 \end{figure}
 
@@ -406,11 +400,9 @@ SFMは，エージェントと目的地の間に障害物が存在するとス�
 図\ref{fig:jitumondai_ex}の例では，エージェントは一番近くの経由地から
 目的地までの道のりを辿る．
 目的地までの道のりを決定する手法は，ダイクストラ法などのグラフ理論で用いられる
-手法が使われることが多い\cite{keiro_daikusu}．
-ダイクストラ法は，○○である．
+手法が使われることが多い\cite{keiro_daikusu}\cite{sfm_with_daikusutora}．
 
-
-\begin{figure}[tb]
+\begin{figure}[t]
  \begin{center}
   \includegraphics[height=4cm,clip]{figure/sutakku_ex.eps}
   \caption{SFMでスタック現象が起きる例}
@@ -418,7 +410,7 @@ SFMは，エージェントと目的地の間に障害物が存在するとス�
  \end{center}
 \end{figure}
 
-\begin{figure}[tb]
+\begin{figure}[t]
  \begin{center}
   \includegraphics[height=4cm,clip]{figure/keiyuti_ex.eps}
   \caption{経由地を設定するSFMの例}
@@ -426,10 +418,10 @@ SFMは，エージェントと目的地の間に障害物が存在するとス�
  \end{center}
 \end{figure}
 
-\begin{figure}[tb]
+\begin{figure}[t]
  \begin{center}
   \includegraphics[height=4cm,clip]{figure/keiyuti_ex2.eps}
-  \caption{経由地を設定するSFMの例}
+  \caption{教室からの避難シミュレーションにおける経由地の設定}
   \label{fig:jitumondai_ex}
  \end{center}
 \end{figure}
