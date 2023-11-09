@@ -9,10 +9,6 @@ WEB,
   N.~N.明石 歩道事故から21年「群衆雪崩」再現 安全対策に，入手先$<$https://www3.nhk.or.jp/kansai-news/20220721/2000064071.html$>$
   (2023-2-26).
 
-\bibitem{mas_pandemic}
-福士雄太，白井英之： マルチエージェントを用いた並列パンデミックシミュレーション，{\em
-  IPSJ SIG Technical Report},  Vol.~2015-ICS-178, No.~13, pp.\ 1--7 (2015).
-
 \bibitem{sim_jirei1}
 北上靖大，　森俊勝，坂平文博，志村泰知，杉浦哲平： 都市課題の改善に向けたマルチエージェント・シミュレーションの活用，電気学会論文誌C(電子・情報・システム部門誌)， Vol.~133,
   No.~9, pp.\ 1640--1644 (2013).
@@ -36,9 +32,108 @@ NTTデータ理数システム人流シミュレーションによるオリン�
   JINRYU」を開発，入手先$<$https://www.taisei.co.jp/about\_us/wn/2020/200428\_4912.html$>$
   (2023-02-20).
 
+\bibitem{sim_walk}
+SAVANHANSIMULATIONSSIMWALK Full-service provider for crowd management,
+  available from $<$https://www.simwalk.com$>$ (accessed 2023-11-9).
+
+\bibitem{sfm_jirei1}
+Yang, X., Dong, H., Wang, Q., Chen, Y. and Hu, X.: Guided crowd dynamics via
+  modified social force model, {\em Physica A: Statistical Mechanics and its
+  Applications},  Vol.~411, pp.\ 63--73 (2014).
+
+\bibitem{sfm_jirei2}
+^^c5^^a0ochman, J. and Hogg, D.~C.: Who knows who - Inverting the Social Force
+  Model for finding groups, {\em 2011 IEEE International Conference on Computer
+  Vision Workshops (ICCV Workshops)}, pp.\ 830--837 (2011).
+
 \bibitem{helbing_sfm}
 Helbing, D. and Molnar, P.: Social force model for pedestrian dynamics, {\em
   Physical review E},  Vol.~51, No.~5, p.\ 4282 (1995).
+
+\bibitem{seru_sfm1}
+Chisholm, R., Maddock, S. and Richmond, P.: Improved GPU near neighbours
+  performance for multi-agent simulations, {\em Journal of Parallel and
+  Distributed Computing},  Vol.~137, pp.\ 53--64 (2020).
+
+\bibitem{seru_sfm2}
+Li, X., Cai, W. and Turner, S.~J.: Efficient Neighbor Searching for Agent-Based
+  Simulation on GPU, {\em 2014 IEEE/ACM 18th International Symposium on
+  Distributed Simulation and Real Time Applications}, pp.\ 87--96 (2014).
+
+\bibitem{sfm_gpu1}
+Pham, N. Q.~A., Fan, R. and Cai, W.: Optimizing {Agent-Based} Simulations for
+  the {GPU}, {\em 2018 International Conference on High Performance Computing
+  Simulation ({HPCS})}, ieeexplore.ieee.org, pp.\ 171--179 (2018).
+
+\bibitem{sfm_gpu2}
+{Richmond} and {Romano}: A high performance framework for agent based
+  pedestrian dynamics on gpu hardware, {\em Proceedings of EUROSIS ESM} (2008).
+
+\bibitem{sfm_gpu3}
+Xiaosong, L., Wentong, C. and John, T.~S.: Efficient Neighbor Searching for
+  Agent-Based Simulation on gpu hardware, {\em 2014 IEEE/ACM 18th International
+  Symposium on Distributed Simulation and Real Time Applications}, pp.\ 87--96
+  (2014).
+
+\bibitem{sfm_gpu4}
+Richmond, P., Walker, D., Coakly, S. and Romano, D.: High performance cellular
+  level agent-based simulation with FLAME for the GPU, {\em Briefings in
+  Bioinformatics},  Vol.~2, No.~3, pp.\ 334--347 (2009).
+
+\bibitem{mpi1}
+牧野嶋文泰，今村文彦： マルチエージェント津波避難シミュレーションの高速化と市街地スケール計算での評価，情報処理学会第79回論文集， Vol.~1,
+  pp.\ 217--218 (2017).
+
+\bibitem{mpi2}
+浅野俊幸，廣川雄一，西川憲明： 群集流動マルチエージェントシミュレーションのための並列処理実装手法の検討，第18回情報科学技術フォーラム論文集， Vol.~2,
+  pp.\ 291--294 (2019).
+
+\bibitem{1jigen_model}
+　岡田崇，山下倫央，野田五十樹ほか： 歩行者シミュレータ NetMAS
+  を用いた網羅的分析，研究報告知能システム (ICS)， Vol.~2012, No.~5, pp.\ 1--6
+  (2012).
+
+\bibitem{1jigen_model1}
+副田俊介，山下倫央，野田五十樹： ネットワーク型マルチエージェント人流シミュレータのモデル化とパラメータ調整，人工知能学会全国大会論文集 第 23
+  回 (2009)，一般社団法人 人工知能学会，pp.\ 1D2OS610--1D2OS610 (2009).
+
+\bibitem{1jigen_model2}
+倫央山下，俊介副田，正輝大西，育士依田，五十樹野田： 一次元歩行者モデルを用いた高速避難シミュレータの開発とその応用，情報処理学会論文誌， Vol.~53,
+  No.~7, pp.\ 1732--1744 (2012).
+
+\bibitem{1jigen_katuyou}
+Yamashita, T., Soeda, S. and Noda, I.: Evacuation Planning Assist System with
+  Network Model-Based Pedestrian Simulator, {\em Principles of Practice in
+  Multi-Agent Systems}, Berlin, Heidelberg, Springer Berlin Heidelberg, pp.\
+  649--656 (2009).
+
+\bibitem{1jigen_model_ev1}
+山下倫央，　岡田崇，野田五十樹： 都市エリアにおける大規模誘導に向けた歩行者マクロモデルの提案，人工知能学会全国大会論文集 第 26
+  回 (2012)，一般社団法人 人工知能学会，pp.\ 3F2OS107--3F2OS107 (2012).
+
+\bibitem{1jigen_model_ev2}
+泉野桂一朗，山下倫央，野田五十樹： 時間的制御を組み込んだ歩行者移動のシミュレーションによる効率評価，人工知能学会全国大会論文集 第 28
+  回 (2014)，一般社団法人 人工知能学会，pp.\ 4N11--4N11 (2014).
+
+\bibitem{cell1}
+Oguchi, K., Shibuta, Y. and Suzuki, T.: Accelerating Molecular Dynamics
+  Simulation Performed on GPU, {\em Journal of the Japan Institute of Metals
+  and Materials},  Vol.~76, No.~7, pp.\ 462--467 (2012).
+
+\bibitem{cell2}
+茂渡悠介，酒井幹夫，越塚誠一，山田祥徳： GPUによる離散要素法シミュレーションの高速化，粉体工学会誌， Vol.~45,
+  No.~11, pp.\ 758--765 (2008).
+
+\bibitem{eikyo_space}
+中村紀香，大代浩一朗，石坂空大，伊藤　尚： Social
+  Forceモデルによる避難シミュレーションへのパーソナルスペース縮小の導入，{\em
+  IEICE Conferences Archives},  Vol.~IEICE-121,
+  No.~IEICE-CAS-196,IEICE-NLP-197, pp.\
+  IEICE--CAS--51,IEICE--NLP--51--IEICE--CAS--56,IEICE--NLP--56 (2021).
+
+\bibitem{mas_pandemic}
+福士雄太，白井英之： マルチエージェントを用いた並列パンデミックシミュレーション，{\em
+  IPSJ SIG Technical Report},  Vol.~2015-ICS-178, No.~13, pp.\ 1--7 (2015).
 
 \bibitem{sfm_ntt}
 MSIISMNTTデータ理数システム$S^4$ Simulation System バージョン 6.2
@@ -108,60 +203,6 @@ Liu, H., Xu, B., Lu, D. and Zhang, G.: A path planning approach for crowd
 磯崎勝吾，　中辻隆： Social force model
   を基にした歩行者の避難シミュレーションモデルに関する研究，平成 21
   年度土木学会北海道支部論文報告集第， No.~66 (2009).
-
-\bibitem{seru_sfm1}
-Chisholm, R., Maddock, S. and Richmond, P.: Improved GPU near neighbours
-  performance for multi-agent simulations, {\em Journal of Parallel and
-  Distributed Computing},  Vol.~137, pp.\ 53--64 (2020).
-
-\bibitem{seru_sfm2}
-Li, X., Cai, W. and Turner, S.~J.: Efficient Neighbor Searching for Agent-Based
-  Simulation on GPU, {\em 2014 IEEE/ACM 18th International Symposium on
-  Distributed Simulation and Real Time Applications}, pp.\ 87--96 (2014).
-
-\bibitem{sfm_gpu1}
-Pham, N. Q.~A., Fan, R. and Cai, W.: Optimizing {Agent-Based} Simulations for
-  the {GPU}, {\em 2018 International Conference on High Performance Computing
-  Simulation ({HPCS})}, ieeexplore.ieee.org, pp.\ 171--179 (2018).
-
-\bibitem{sfm_gpu2}
-{Richmond} and {Romano}: A high performance framework for agent based
-  pedestrian dynamics on gpu hardware, {\em Proceedings of EUROSIS ESM} (2008).
-
-\bibitem{sfm_gpu3}
-Xiaosong, L., Wentong, C. and John, T.~S.: Efficient Neighbor Searching for
-  Agent-Based Simulation on gpu hardware, {\em 2014 IEEE/ACM 18th International
-  Symposium on Distributed Simulation and Real Time Applications}, pp.\ 87--96
-  (2014).
-
-\bibitem{sfm_gpu4}
-Richmond, P., Walker, D., Coakly, S. and Romano, D.: High performance cellular
-  level agent-based simulation with FLAME for the GPU, {\em Briefings in
-  Bioinformatics},  Vol.~2, No.~3, pp.\ 334--347 (2009).
-
-\bibitem{mpi1}
-牧野嶋文泰，今村文彦： マルチエージェント津波避難シミュレーションの高速化と市街地スケール計算での評価，情報処理学会第79回論文集， Vol.~1,
-  pp.\ 217--218 (2017).
-
-\bibitem{mpi2}
-浅野俊幸，廣川雄一，西川憲明： 群集流動マルチエージェントシミュレーションのための並列処理実装手法の検討，第18回情報科学技術フォーラム論文集， Vol.~2,
-  pp.\ 291--294 (2019).
-
-\bibitem{cell1}
-Oguchi, K., Shibuta, Y. and Suzuki, T.: Accelerating Molecular Dynamics
-  Simulation Performed on GPU, {\em Journal of the Japan Institute of Metals
-  and Materials},  Vol.~76, No.~7, pp.\ 462--467 (2012).
-
-\bibitem{cell2}
-茂渡悠介，酒井幹夫，越塚誠一，山田祥徳： GPUによる離散要素法シミュレーションの高速化，粉体工学会誌， Vol.~45,
-  No.~11, pp.\ 758--765 (2008).
-
-\bibitem{eikyo_space}
-中村紀香，大代浩一朗，石坂空大，伊藤　尚： Social
-  Forceモデルによる避難シミュレーションへのパーソナルスペース縮小の導入，{\em
-  IEICE Conferences Archives},  Vol.~IEICE-121,
-  No.~IEICE-CAS-196,IEICE-NLP-197, pp.\
-  IEICE--CAS--51,IEICE--NLP--51--IEICE--CAS--56,IEICE--NLP--56 (2021).
 
 \bibitem{cell_book1}
 Allen, M.~P. and Tildesley, D.~J.: {\em Computer simulation of liquids}, Oxford
