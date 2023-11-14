@@ -70,9 +70,9 @@ SFMを用いた人流シミュレーションは，解析人数や壁などの�
 解析時間が最大〇〇倍高速することを確認した．
 }
 
-\英文論文要旨={
-hi, there.
-}
+%\英文論文要旨={
+%hi, there.
+%}
 
 %\和文論文要旨={
 %本論文は，sfm(social force model)を用いた人流シミュレーションを高速化するために，
@@ -94,26 +94,26 @@ hi, there.
 %(508文字)
 %}% 600字程度
 %
-%\英文論文要旨={
-%This paper proposes a speedup method by reducing the number of 
-%calculations of the agent's traveling direction for the Social Force Model(SFM).
-%The SFM is a method to simulate human behavior based on motion equations.
-%%SFMの運動方程式の構成
-%The motion equation of the SFM uses the resultant forces of the force to go to the destination,
-%the force from surrounding agents, and the force avoiding the obstructions to determine the agent's
-%movement.
-%%高速化の理由
-%The SFM is required to speed up because analysis time increases as the number of agents and obstacles.
-%%SFMの特徴を述べる
-%fixed obstacles and destinations have characteristics that the coordinates do not change under analysis.
-%%そこで，提案～を提案する
-%Therefore, the proposed method reduces the number of calculations of the agent's traveling direction 
-%during analysis by dividing the analysis region into a grid and calculating the direction of travel 
-%for each grid region in advance.
-%%評価の結果
-%As a result of the evaluation, 
-%the proposed method gives us about [高速化率] times speedup within an acceptable error range.
-%}% about 200 words
+\英文論文要旨={
+This paper proposes a speedup method by reducing the number of 
+calculations of the agent's traveling direction for the Social Force Model(SFM).
+The SFM is a method to simulate human behavior based on motion equations.
+%SFMの運動方程式の構成
+The motion equation of the SFM uses the resultant forces of the force to go to the destination,
+the force from surrounding agents, and the force avoiding the obstructions to determine the agent's
+movement.
+%高速化の理由
+The SFM is required to speed up because analysis time increases as the number of agents and obstacles.
+%SFMの特徴を述べる
+fixed obstacles and destinations have characteristics that the coordinates do not change under analysis.
+%そこで，提案～を提案する
+Therefore, the proposed method reduces the number of calculations of the agent's traveling direction 
+during analysis by dividing the analysis region into a grid and calculating the direction of travel 
+for each grid region in advance.
+%評価の結果
+As a result of the evaluation, 
+the proposed method gives us about [高速化率] times speedup within an acceptable error range.
+}% about 200 words
 
 \if 0
 memo
