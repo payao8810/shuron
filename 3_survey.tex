@@ -133,7 +133,16 @@ hash配列とindex配列をhash配列の値を用いて昇順にソートを行�
 始点を取得し，hash配列のセル番号が変わるまで繰り返すことで，
 周囲のエージェントを絞ることができる．
 
-\section{単位時間あたりの計算回数を多くする手法}
+
+\begin{figure}[t]
+ \begin{center}
+  \includegraphics[width=8cm,clip]{figure/heiretuka_sfm.eps}
+  \caption{SFMの並列化可能な処理}
+  \label{fig:sfm_heiretu}
+ \end{center}
+\end{figure}
+
+\section{単位時間あたりの計算回数を多くする手法(工事中)}
 SFMは，エージェントごとの計算に並列性があるため，
 高い並列性を得ることが可能である．
 \figref{fig:sfm_heiretu}にSFMの並列に計算できる処理を示したフローチャートを示す．
@@ -145,23 +154,27 @@ SFMを並列に実行するためには，GPU(Graphics Processing Unit)やMPI(Me
 GPUを用いたSFMは，エージェントごとの計算をスレッドごとに並列に計算する方法が
 一般的である\cite{seru_sfm1}\cite{seru_sfm2}．
 \figref{fig:agent_heiretu}に3スレッドで並列化したSFMの例を示す．
-\figref{fig:agent_heiretu}中の緑色の○はスレッド1が計算するエージェント，
-赤色の○はスレッド2が計算するエージェント，
-青色の○はスレッド3が計算するエージェントである．
+\figref{fig:agent_heiretu}中の緑色の丸はスレッド1が計算するエージェント，
+赤色の丸はスレッド2が計算するエージェント，
+青色の丸はスレッド3が計算するエージェントである．
 \figref{fig:agent_heiretu}に示すように，△△の手法は，
 それぞれのスレッドが担当するエージェント数が等しくなるように，
 各スレッドで分割し，エージェントの進行方向を計算する．
+MPIを用いた並列化は，主に分散メモリ環境に用いられているため，
+各プロセッサ間の通信時間が余計に時間がかかる．
+このため，MPIを用いたSFMでは，各プロセッサ間の通信回数を削減するために，
+各プロセッサの担当するエージェントを解析領域ごとに決定することが一般的である．
+\figref{fig:ryouiki_heiretu}にMPIを用いたSFMの領域分割の例を示す．
+\figref{fig:ryouiki_heiretu}中の
+黄色の丸はプロセッサ(PE)1が担当するエージェント，
+赤色の丸はPE2が担当するエージェント，
+青色の丸はPE3が担当するエージェント，
+緑色の丸はPE4が担当するエージェントである．
+\figref{fig:ryouiki_heiretu}のように，MPIを用いたSFMは，
+各PEに担当する領域に存在するエージェントの進行方向を計算する．
 
 
-\begin{figure}[hp]
- \begin{center}
-  \includegraphics[width=10cm,clip]{figure/heiretuka_sfm.eps}
-  \caption{SFMの並列化可能な処理}
-  \label{fig:sfm_heiretu}
- \end{center}
-\end{figure}
-
-\begin{figure}[hp]
+\begin{figure}[t]
  \begin{center}
   \includegraphics[width=10cm,clip]{figure/sureddo_heiretu.eps}
   \caption{3スレッドでの並列化の例}
@@ -170,21 +183,17 @@ GPUを用いたSFMは，エージェントごとの計算をスレッドごと�
 \end{figure}
 
 
-\begin{figure}[hbtp]
+\begin{figure}[t]
  \begin{center}
   \includegraphics[width=10cm,clip]{figure/ryoiki_heiretu.eps}
-  \caption{領域分割の例}
-  \label{fig:atigenshou}
+  \caption{MPIを用いたSFMの領域分割の例}
+  \label{fig:ryouiki_heiretu}
  \end{center}
 \end{figure}
 
 
 \clearpage
-
-\subsection{解析領域ごとの並列性を用いた手法}
-aaAa
-
-\section{経路選択時の判定回数削減}
+\section{経路選択時の判定回数削減(工事中)}
 aa
 
 \subsection{経路選択の単純化}
