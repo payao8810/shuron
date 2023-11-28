@@ -1,0 +1,212 @@
+\documentclass{maelab_y}
+%\documentstyle{jarticle}
+\usepackage{graphicx}
+\usepackage[dvipdfmx]{color}
+\usepackage{multirow}
+
+\if 0
+\usepackage[dvipdfmx]{graphicx}
+\fi
+
+\begin{document}
+\title{進行方向の計算回数削減による\\ソーシャルフォースモデルを用いた人流シミュレーションの高速化}
+\学生番号{2281011}
+\author{片寄\ 颯人}
+\maketitle
+
+\section{はじめに}
+駅や商業施設などのように人が多く集まる場所では，利便性や災害時の
+逃げ遅れ防止などの安全性の観点から，混雑や滞留の対策が重要であり，
+混雑や滞留の対策には，ソーシャルフォースモデル(SFM)を用いた
+人流シミュレーションが広く用いられている\cite{helbing_sfm}．
+SFMは，人を運動方程式に基づくエージェントとして解析する手法である．
+SFMを用いた人流シミュレーションは，解析人数が多いほど	
+進行方向の計算回数やエージェント間距離の計算回数が増加し，
+解析時間が膨大になるため，高速化が求められている．
+そこで，本稿では，SFMを用いた人流シミュレーションを高速化するために，
+エージェント間距離の計算回数を削減する手法および
+エージェントの進行方向の計算回数を削減する手法を提案する．
+
+\section{ソーシャルフォースモデル(SFM)}
+SFMは，時間ステップごとに各エージェントの進行方向を決定する運動方程式を
+解くことで，人々の流れを解析する手法である．
+SFMの運動方程式は，目的地に向かう力，周囲のエージェントを避ける力，
+障害物を避ける力の合力を用いてエージェントの動きを決定する．
+目的地に向かう力は，エージェントが目的地に向かうベクトル(ベクトル$e$)であり，
+エージェントの座標と目的地の座標から算出する．
+周囲のエージェントや障害物を避ける力は，影響半径内に存在するエージェントや
+障害物から距離に応じた力を受ける．
+%パラメータの話
+SFMは，必要に応じてパラメータを追加することでシミュレーション精度を
+高めることができる．例えば，避難時の人の流れを再現する際には，
+視野を再現するパラメータを追加し，SFMのシミュレーションの精度を向上
+することが有効であると知られている\cite{21_Isozaki}．
+%視野を用いたSFMの話
+視野を用いたSFM(FSFM)は，周囲のエージェントを避ける力の影響範囲を
+視野に近似した領域内に限定することで人間の視野を再現する手法である．
+視野は扇状であり，運動方式を算出する際にはエージェント間距離と角度を
+用いた視野内外の判定処理が必要となる．
+
+\if 0
+sfmは，他の人を避ける社会心理学的な要素と
+他の人の衝突時の物理的要素を組み合わせた手法である．
+sfmに視野要素を導入した手法として，fsfmがある．
+図\ref{fig:seru_ex1}にfsfmの例を示す．
+図中の四角は解析領域を分割したセル，
+赤丸は計算対象のエージェント，黒丸は他のエージェント，
+色のついた四角は判定に用いるセル，点線は視野範囲を表す．
+エージェント$i$の時刻$t$の加速度は，
+自身の体重$m_i$，希望速度$v_i^0(t)$，現在速度$v_i(t)$，時定数$t_i$，
+および，近傍のエージェントから受ける力$f_{ij}$，
+障害物から受ける力$f_{iw}$に基づいて算出する．
+本手法は，解析領域を格子状の視野距離の大きさのセルに分割することで，
+エージェントが存在するセルと接するセルに存在する他のエージェントに対して，
+エージェントの視野内であるかを判定する手法である．
+図\ref{fig:seru_ex1}の例では，エージェント0の進行方向を計算するとき，
+色のついたセルに存在するエージェントに対して視野内であるかを判定する．
+判定に用いるセルは，色のついたセルであるため，白いセルに存在するエージェントの
+視野内であるかの判定を減らすことができる．
+
+\begin{figure}[hbtp]
+ \begin{center}
+  \includegraphics[draft, width=7.21cm,clip]{figure/kougai_ex6.eps}
+  \caption{sfmの計算例}
+  \label{fig:seru_ex1}
+ \end{center}
+\end{figure}
+\fi
+
+\section{エージェント間距離の計算回数削減手法}
+FSFMは，視野の範囲がエージェントの進行方向前方の扇状の範囲であり，
+後方のセルに存在する他のエージェントが視野の範囲内に存在するかという
+の判定が不要になる．
+正確に視野範囲のセルを選択するには，エージェントの座標や視野角度などの
+情報から視野範囲を計算し，正確にセルを選択する必要があるので，時間がかかる．
+そこで，本稿では，セルの選択にかかる処理時間を小さくするために，
+図\ref{fig:teian_image}の5つのパターンを用いることで，
+視野範囲内であるかの判定に用いるセルを削減し，FSFMを高速化する．
+図\ref{fig:seru_ex1}の例では，提案手法のエージェントの進行方向から右の
+削減パターンを適用することで，エージェント4，6とのエージェント間距離の
+計算と視野範囲内かどうかの判定を減らすことができる．
+　
+
+\if 0
+\begin{figure}[hbtp]
+ \begin{center}
+  \includegraphics[draft, width=5.5cm]{figure/kougai_teian_image.eps}
+  \caption{提案する削減パターン}
+  \label{fig:teian_image}
+ \end{center}
+\end{figure}
+\fi
+
+\section{進行方向の計算回数削減手法}
+aaaa
+
+
+\section{評価}
+提案手法の人流シミュレーションに対する有効性を確認するために，
+セル分割法と提案手法のエージェント間計算回数と実行時間を測定する．
+評価環境は，CPUがIntel Xeon E5-2687W v2，メモリが64GBである．
+測定に用いる初期配置は，図\ref{fig:agent_haichi_image}に示すように，
+交差と直進の配置である．
+表\ref{tab:result}にセル分割法と提案手法の実行時間と高速化率，削減率を示す．
+高速化率，削減率は式(\ref{eq:kousokukaritu})，
+式(\ref{eq:sakugenritu})を用いる．
+式(\ref{eq:kousokukaritu})中の$T_{k}$は既存手法の
+エージェント間距離の計算回数，$T_{t}$は，提案手法の
+エージェント間距離の計算回数である．
+
+\begin{eqnarray}
+  \label{eq:kousokukaritu}
+  \mbox{高速化率[倍]} =
+  \frac{\mbox{セル分割法の実行時間[s]}}{\mbox{提案手法の実行時間[s]}}
+\end{eqnarray}
+
+\begin{eqnarray}
+  \label{eq:sakugenritu}
+  \mbox{削減率[\%]} =
+  \frac{T_{k} - T_{t}}{T_{k}} \times 100
+\end{eqnarray}
+
+\vspace{2mm}
+
+表\ref{tab:result}より，提案手法は，既存手法よりも高速に解析
+できることが確認できた．また，
+提案手法のエージェント間距離の計算回数の
+削減率は，交差の配置で約21\%，直進の配置で約31\%であり，
+提案手法の高速化率は，既存手法に対して約1.5倍であることが
+確認できた．これは，提案手法によるエージェント
+間距離の計算回数が削減により，解析時間の短縮に繋がったから
+と考えられる．また，直進の配置の方が削減率が高いのは，
+後ろに近傍のエージェントが存在することが多いことが要因であると考えられる．
+
+\if 0
+\vspace{-2mm}
+\begin{figure}[hbtp]
+ \begin{center}
+  \includegraphics[draft, width=4.5cm,clip]{figure/kougai_haichi_2.eps}
+  \caption{エージェントの初期配置}
+  \label{fig:agent_haichi_image}
+ \end{center}
+\end{figure}
+\fi
+
+\vspace{-1em}
+\begin{table}[hbtp]
+  \begin{center}
+    \caption{セル分割法と提案手法の実行時間と高速化率と削減率}
+    \label{tab:result}
+    \begin{tabular}{c|c|c|c|c}
+      \hline \hline
+        &　既存手法[s] & 提案手法[s] & 高速化率 & 削減率 \\
+      \hline
+      5000人交差 & \multicolumn{1}{|r|}{8321} &
+       \multicolumn{1}{|r|}{5522} &
+       \multicolumn{1}{|r|}{1.51} &
+       \multicolumn{1}{|r}{21} \\
+      \hline
+      10000人交差 &
+      \multicolumn{1}{|r|}{33898} &
+      \multicolumn{1}{|r|}{22231} &
+      \multicolumn{1}{|r|}{1.52}  &
+      \multicolumn{1}{|r}{22} \\
+      \hline
+      5000人直進 &
+      \multicolumn{1}{|r|}{29790} &
+      \multicolumn{1}{|r|}{19337} &
+      \multicolumn{1}{|r|}{1.54}  &
+      \multicolumn{1}{|r}{31} \\
+      \hline
+      10000人直進 &
+      \multicolumn{1}{|r|}{118212} &
+      \multicolumn{1}{|r|}{77265} &
+      \multicolumn{1}{|r|}{1.54} &
+      \multicolumn{1}{|r}{31}  \\
+      \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+\vspace{-1em}
+\section{おわりに}
+本稿では，視野を用いた人流シミュレーションを高速化するために，
+SFMのエージェント間距離の
+計算回数を削減する手法を提案し，その有効性を評価した．評価の結果，提案手法の実行時間は，セル分割法に対して約1.5倍高速化することが確認できた．
+
+\begin{thebibliography}{9}
+{\footnotesize
+
+\bibitem{helbing_sfm}
+  Helbing, D. and Molnar, P.: Social force model for pedestrian dynamics，{\em
+    Physical review E}， Vol.~51, No.~5, p.\ 4282 (1995).
+
+\bibitem{21_Isozaki}
+  磯崎勝吾，中辻隆：Social force
+  modelを基にした歩行者の避難シミュレーションモデルに関する研究，土木学会北海道支部論文報告集，
+  Vol.~66 (2009).
+}
+
+\end{thebibliography}
+
+\end{document}
