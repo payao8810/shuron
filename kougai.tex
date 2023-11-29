@@ -9,7 +9,8 @@
 \fi
 
 \begin{document}
-\title{進行方向の計算回数削減による\\ソーシャルフォースモデルを用いた人流シミュレーションの高速化}
+\title{進行方向の計算回数削減による
+\\ソーシャルフォースモデルを用いた人流シミュレーションの高速化}
 \学生番号{2281011}
 \author{片寄\ 颯人}
 \maketitle
@@ -103,7 +104,6 @@ FSFMは，視野の範囲がエージェントの進行方向前方の扇状の�
 \section{進行方向の計算回数削減手法}
 aaaa
 
-
 \section{評価}
 提案手法の人流シミュレーションに対する有効性を確認するために，
 セル分割法と提案手法のエージェント間計算回数と実行時間を測定する．
@@ -129,8 +129,6 @@ aaaa
   \frac{T_{k} - T_{t}}{T_{k}} \times 100
 \end{eqnarray}
 
-\vspace{2mm}
-
 表\ref{tab:result}より，提案手法は，既存手法よりも高速に解析
 できることが確認できた．また，
 提案手法のエージェント間距離の計算回数の
@@ -142,7 +140,6 @@ aaaa
 後ろに近傍のエージェントが存在することが多いことが要因であると考えられる．
 
 \if 0
-\vspace{-2mm}
 \begin{figure}[hbtp]
  \begin{center}
   \includegraphics[draft, width=4.5cm,clip]{figure/kougai_haichi_2.eps}
@@ -152,7 +149,6 @@ aaaa
 \end{figure}
 \fi
 
-\vspace{-1em}
 \begin{table}[hbtp]
   \begin{center}
     \caption{セル分割法と提案手法の実行時間と高速化率と削減率}
@@ -188,7 +184,6 @@ aaaa
   \end{center}
 \end{table}
 
-\vspace{-1em}
 \section{おわりに}
 本稿では，視野を用いた人流シミュレーションを高速化するために，
 SFMのエージェント間距離の
