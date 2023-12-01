@@ -242,79 +242,53 @@ SFMの運動方程式を計算する．
 提案手法は，どの通路幅においても進行方向ベクトル$e$の計算回数が削減できることがわかる．
 
 
-\begin{table}[t]
-  \centering
-  \caption{幅2mの計算回数[回]}
-  \label{tb:haba2_times}
-  \begin{tabular}{r|r|r|r}
-  \hline \hline
-          & 進行方向ベクトル$e$ & エージェント間距離$d_{ij}$ & 壁を避ける力$f_{iW}$ \\ \hline
-    50.00 & 120000 & 4090023 & 25225464 \\ \hline
-    25.00 & 120000 & 4090023 & 25225464 \\ \hline
-    12.50 & 85821 & 4076346 & 25248928 \\ \hline
-    6.25 & 46602 & 4092571 & 25229560 \\ \hline
-    3.12 & 36236 & 4064182 & 25290728 \\ \hline
-    1.56 & 21757 & 4076729 & 25279752 \\ \hline
-    0.78 & 10797 & 4089809 & 25184712 \\ \hline
-    0.39 & 2978 & 3836216 & 12672856 \\ \hline
-    0.19 & 849 & 3738185 & 15438664 \\ \hline
-    0.09 & 440 & 3909087 & 29316784 \\ \hline
-    0.04 & 208 & 3972287 & 83614880 \\ \hline
-    0.02 & 136 & 4067447 & 338197848 \\ \hline
-    0.01 & 79 & 4097481 & 1314075632 \\ \hline
-  \end{tabular}
-\end{table}
-
-\begin{table}[t]
-  \centering
-  \caption{幅5mの計算回数[回]}
-  \label{tb:haba5_times}
-  \begin{tabular}{r|r|r|r}
-  \hline \hline
-    & 進行方向ベクトル$e$ & エージェント間距離$d_{ij}$ & 壁を避ける力$f_{iW}$ \\ \hline
-    50.00 & 120000 & 4688353 & 25456584 \\ \hline
-    25.00 & 120000 & 4688353 & 25456584 \\ \hline
-    12.50 & 88503 & 4681867 & 25472272 \\ \hline
-    6.25 & 50471 & 4689221 & 25449696 \\ \hline
-    3.12 & 40568 & 4685846 & 25473036 \\ \hline
-    1.56 & 26145 & 4688548 & 25519296 \\ \hline
-    0.78 & 12177 & 4690114 & 15310712 \\ \hline
-    0.39 & 3329 & 4667880 & 11812128 \\ \hline
-    0.19 & 999 & 4673550 & 15628648 \\ \hline
-    0.09 & 171 & 4691341 & 27346592 \\ \hline
-    0.04 & 633 & 4689957 & 92133096 \\ \hline
-    0.02 & 56 & 4688792 & 306084120 \\ \hline
-    0.01 & 71 & 4688649 & 1312357208 \\ \hline
-  \end{tabular}
-\end{table}
+\begin{eqnarray}
+\mbox{削減率[\%]} = \Big ( \frac{C_p}{C_e}  \Big) \times 100
+\end{eqnarray}
 
 
-\begin{table}[t]
+\figtb{通路幅2mの計算回数}{}{9}{5_result_2m_times.eps}{result_2m_times}
+\figtb{通路幅5mの計算回数}{}{9}{5_result_5m_times.eps}{result_5m_times}
+\figtb{通路幅10mの計算回数}{}{9}{5_result_10m_times.eps}{result_10m_times}
+\figtb{通路幅20mの計算回数}{}{9}{5_result_20m_times.eps}{result_20m_times}
+
+\figtb{通路幅2m(壁粒子2倍)の計算回数}{}{9}{5_result_2bai_times.eps}{result_2bai_times}
+\figtb{通路幅2m(壁粒子3倍)の計算回数(仮画像)}{}{9}{5_result_2bai_times.eps}{result_2bai_times}
+
+\begin{table}[tb]
   \centering
-  \caption{幅10mの計算回数[回]}
-  \label{tb:haba10_times}
-  \begin{tabular}{r|r|r|r}
-  \hline \hline
-          & 進行方向ベクトル$e$ & エージェント間距離$d_{ij}$ & 壁を避ける力$f_{iW}$ \\ \hline
-    50.00 & 120000 & 4795258 & 21142956 \\ \hline
-    25.00 & 120000 & 4795258 & 21142956 \\ \hline
-    12.50 & 83748 & 4796443 & 20908708 \\ \hline
-    6.25 & 41698 & 4749379 & 22060416 \\ \hline
-    3.12 & 33785 & 4788528 & 21266744 \\ \hline
-    1.56 & 22287 & 4795440 & 11418180 \\ \hline
-    0.78 & 8512 & 4794687 & 6968740 \\ \hline
-    0.39 & 2200 & 4795356 & 9522400 \\ \hline
-    0.19 & 611 & 4794782 & 11900008 \\ \hline
-    0.09 & 181 & 4794855 & 24206932 \\ \hline
-    0.04 & 75 & 4795260 & 89404732 \\ \hline
-    0.02 & 22 & 4794879 & 333616556 \\ \hline
-    0.01 & 78 & 4793933 & 1310055356 \\ \hline
-  \end{tabular}
+  \caption{各通路幅の格子サイズごとの計算回数の削減率[\%]}
+  \label{tb:5_times_sakugenritu}
+    \begin{tabular}{r|r|r|r|r}
+    \hline \hline
+              & 通路幅2m       & 通路幅5m       & 通路幅10m      & 通路幅20m     \\ \hline
+        50.00 & 0.00           & 0.00           & 0.00           & 0.00          \\ \hline
+        25.00 & 0.00           & 0.00           & 0.00           & 0.00          \\ \hline
+        12.50 & 0.08           & 0.07           & 1.03           & 0.03          \\ \hline
+        6.25  & 0.23           & 0.25           & -3.04          & -0.93         \\ \hline
+        3.12  & 0.15           & 0.22           & -0.12          & 1.57          \\ \hline
+        1.56  & 0.19           & 0.10           & 37.69          & 6.44          \\ \hline
+        0.78  & 0.50           & 33.86          & \textbf{54.81} & \textbf{8.25} \\ \hline
+        0.39  & \textbf{43.85} & \textbf{45.48} & 44.98          & 1.60          \\ \hline
+        0.19  & 34.61          & 32.68          & 35.66          & -23.33        \\ \hline
+        0.09  & -13.93         & -6.88          & -12.48         & -137.22       \\ \hline
+        0.04  & -235.83        & -225.08        & -267.49        & -738.82       \\ \hline
+    \end{tabular}
 \end{table}
+
 
 
 \clearpage
 \subsection{シミュレーションの実行時間の測定}
+
+
+\begin{align}
+    \centering
+	\mbox{高速化率[倍]} = \frac{\mbox{セル分割法の実行時間[s]}}
+    {\mbox{提案手法の実行時間[s]}}
+    \label{eq:kousokuka}
+\end{align}
+
 
 \subsection{シミュレーション精度の測定}
 
