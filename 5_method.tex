@@ -157,7 +157,7 @@ $F_{iW}$のxインデックスとyインデックスは$F_{iW}$配列に格納�
 
 
 \clearpage
-\section{評価(工事中)}
+\section{評価}
 SFMを用いた人流シミュレーションに対する
 格子分割を用いた進行方向の計算回数削減手法の有効性を確認するために，
 既存手法であるセル分割法と提案手法を用いて人流シミュレーション
@@ -229,23 +229,34 @@ SFMの運動方程式を計算する．
 \dfig{厚さ2倍}{haba2_2}{haba2_2}{厚さ3倍}{haba2_3}{haba2_3}
 
 \clearpage
-\subsection{進行方向計算の計算回数}
-%幅の測定のタイムステップは，3000ステップです．
-本測定では，格子分割を用いた進行方向の計算回数削減手法の有効性を評価するために，
-既存手法(セル分割法)と格子分割を用いた進行方向計算の回数削減手法の
-計算回数を測定する．
-測定する計算は，進行方向ベクトル$e$とエージェント間距離$d_{ij}$，壁を避ける力$f_{iW}$であり，
-前処理の計算回数と解析中の計算回数の総和である．
-\tabref{tb:haba2_times}から\tabref{tb:haba20_times}に配置ごとの各演算回数を示す．
-
-\tabref{tb:haba2_times}から\tabref{tb:haba20_times}より，
-提案手法は，どの通路幅においても進行方向ベクトル$e$の計算回数が削減できることがわかる．
-
-
+\subsection{進行方向計算の計算回数(工事中)}
+本測定では，格子分割を用いた進行方向の計算回数削減手法の
+有効性を評価するために，既存手法であるセル分割法と
+格子分割を用いた進行方向の計算回数削減手法の計算回数を測定する．
+測定する計算は，エージェントの進行方向の決定に必要な
+エージェントの進行方向ベクトル$e$と
+障害物を避ける力$F_{iW}$であり，前処理と解析中の回数である．
+\figref{fig:result_2m_times}，\figref{fig:result_5m_times}，
+\figref{fig:result_10m_times}，\figref{fig:result_20m_times}に
+各配置における計算回数を示す．
+また，\tabref{tb:5_times_sakugenritu}に各配置における削減率を示す．
+\tabref{tb:5_times_sakugenritu}に示す削減率は，式\eqref{eq:5_sakugenritu}
+のように，セル分割法の各計算の総和$C_e$と提案手法の各計算の総和$C_p$を
+用いて算出する．
+%
 \begin{eqnarray}
 \mbox{削減率[\%]} = \Big ( \frac{C_p}{C_e}  \Big) \times 100
+\label{eq:5_sakugenritu}
 \end{eqnarray}
+%
 
+\figref{fig:result_2m_times}から\figref{fig:result_20m_times}より，
+提案手法は，セル分割法よりも進行方向の計算回数が削減できる格子サイズが
+あることが確認できる．
+また，すべての配置において格子サイズが小さくなるほど，前処理の計算が
+占める割合が高くなることがわかる．
+これは，格子サイズが小さくなるほど，格子分割した
+(工事中)
 
 \figtb{通路幅2mの計算回数}{}{9}{5_result_2m_times.eps}{result_2m_times}
 \figtb{通路幅5mの計算回数}{}{9}{5_result_5m_times.eps}{result_5m_times}
@@ -286,7 +297,7 @@ SFMの運動方程式を計算する．
     \centering
 	\mbox{高速化率[倍]} = \frac{\mbox{セル分割法の実行時間[s]}}
     {\mbox{提案手法の実行時間[s]}}
-    \label{eq:kousokuka}
+    \label{eq:5_kousokuka}
 \end{align}
 
 
