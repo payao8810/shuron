@@ -1,0 +1,211 @@
+This is e-pTeX, Version 3.141592653-p3.9.1-210218-2.6 (utf8.euc) (TeX Live 2022/dev/Debian) (preloaded format=platex 2023.6.24)  28 NOV 2023 20:26
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**kougai.tex
+(./kougai.tex
+pLaTeX2e <2021-11-15> (based on LaTeX2e <2021-11-15> patch level 1)
+L3 programming layer <2022-01-21> (./maelab_y.cls
+Document Class: maelab_y 2007/06/15 ver 2.12
+(./maelab_y.sty
+\old@latex@skip=\skip47
+\@Q=\dimen154
+\jfsize=\count184
+\jspaceskip=\dimen155
+\@mojihaba=\dimen156
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9> on input line 551.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 551.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 551.
+\@abstractbox=\box67
+\@titlewidth=\dimen157
+\@eabstractbox=\box68
+\mkt@prevdepth=\dimen158
+\mkt@titlebox=\box69
+\mkt@cnta=\count185
+\mkt@cntb=\count186
+\mkt@sname=\count187
+\mkt@gname=\count188
+\mkt@boxa=\box70
+\mkt@namewidth=\dimen159
+\c@affi@footnote=\count189
+\c@affi@pfootnote=\count190
+\c@volpageoffset=\count191
+\c@volume=\count192
+\c@day=\count193
+\c@number=\count194
+\c@year=\count195
+\@leftcolumnfootnote=\box71
+\@rightcolumnfootnote=\box72
+\opt@baselineskip=\skip48
+\bio@picbox=\box73
+\bio@colht=\dimen160
+\bio@splitheight=\dimen161
+\bio@maxgap=\dimen162
+\bio@lastgap=\dimen163
+\bio@th=\dimen164
+\bio@lhA=\dimen165
+\bio@hA=\dimen166
+\bio@hB=\dimen167
+\bio@lh=\dimen168
+\bio@rh=\dimen169
+\bio@tempdim=\dimen170
+\bio@pbox=\insert199
+ (./maelab_common_y.sty
+\c@section=\count196
+\c@subsection=\count197
+\c@subsubsection=\count198
+\c@paragraph=\count266
+\c@subparagraph=\count267
+\bib@adjustheight=\dimen171
+\c@figure=\count268
+\c@table=\count269
+\cap@linewidth=\dimen172
+\cap@hsize=\dimen173
+\cap@prevgraf=\count270
+\cap@box=\box74
+\PF@fnotectr=\count271
+\PF@page=\count272
+\adj@boxa=\box75
+\adj@boxb=\box76
+\adj@height=\dimen174
+\adj@deadcycle=\count273
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <10> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 880.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <10> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 880.
+)))
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks17
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: dvips.def on input line 107.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/dvips.def
+File: dvips.def 2017/06/20 v3.1d Graphics/color driver for dvips
+))
+\Gin@req@height=\dimen175
+\Gin@req@width=\dimen176
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2021/12/07 v1.3c Standard LaTeX Color (DPC)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: dvipdfmx.def on input line 149.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/dvipdfmx.def
+File: dvipdfmx.def 2021/03/18 v5.0j Graphics/color driver for dvipdfmx
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/dvipsnam.def
+File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
+\multirow@colwidth=\skip49
+\multirow@cntb=\count274
+\multirow@dima=\skip50
+\bigstrutjot=\dimen177
+)
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-dvips.def
+File: l3backend-dvips.def 2022-01-12 L3 backend support: dvips
+\l__pdf_internal_box=\box77
+\g__pdf_backend_object_int=\count275
+\l__pdf_backend_content_box=\box78
+\l__pdf_backend_model_box=\box79
+\g__pdf_backend_annotation_int=\count276
+\g__pdf_backend_link_int=\count277
+\g__pdf_backend_link_sf_int=\count278
+)
+(./kougai.aux)
+\openout1 = `kougai.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+
+
+Class ipsjpapers Warning: \title for headding is too wide on input line 15.
+
+
+Class ipsjpapers Warning: Missing abstract env on input line 15.
+
+
+Class ipsjpapers Warning: Missing eabstract env on input line 15.
+
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <9> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 86.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <9> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 86.
+
+LaTeX Warning: Reference `fig:teian_image' on page 1 undefined on input line 86
+.
+
+
+LaTeX Warning: Reference `fig:seru_ex1' on page 1 undefined on input line 88.
+
+
+LaTeX Warning: Reference `fig:agent_haichi_image' on page 1 undefined on input 
+line 111.
+
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <7> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 158.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <7> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 158.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 160.
+LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
+(Font)              No change on input line 201.
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ 
+ []
+
+[1
+
+
+] (./kougai.aux)
+
+LaTeX Warning: There were undefined references.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 1711 strings out of 479850
+ 25902 string characters out of 5887378
+ 348259 words of memory out of 5000000
+ 20060 multiletter control sequences out of 15000+600000
+ 480201 words of font info for 71 fonts, out of 8000000 for 9000
+ 264 hyphenation exceptions out of 8191
+ 55i,9n,62p,211b,398s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on kougai.dvi (1 page, 11812 bytes).
