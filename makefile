@@ -1,3 +1,7 @@
+# font 埋め込み設定(WSL)
+#	kanji-config-updmap ipaex
+#
+#
 # vim: set tabstop=2 :
 #***********************************************************************
 # penguin_sty makefile

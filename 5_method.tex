@@ -366,7 +366,7 @@ SFMの運動方程式を計算する．
 	\hspace{0.04\columnwidth}
 	\begin{minipage}[b]{0.48\columnwidth}
 		\begin{center}
-		\includegraphics[width=\columnwidth]{figure/5_result_2bai_times.eps}
+		\includegraphics[width=\columnwidth]{figure/5_result_3bai_times.eps}
 		\caption{通路幅2m(壁粒子3倍)の格子サイズごとの計算回数(仮画像)}
 		\label{fig:result_3bai_times}
 		\end{center}
@@ -405,8 +405,32 @@ SFMの運動方程式を計算する．
 \end{table}
 %}}}
 
+%壁粒子数を変えたときの削減率{{{
+\begin{table}[tb]
+  \centering
+  \caption{各通路幅の格子サイズごとの計算回数の削減率[\%]}
+  \label{tb:5_times_sakugenritu}
+    \begin{tabular}{r|r|r|r}
+    \hline \hline
+		      & 壁粒子(1倍)    & 壁粒子(2倍)      & 壁粒子(3倍)        \\ \hline
+		50.00 & 0.00           & 0.00             & 0.00               \\ \hline
+		25.00 & 0.00           & 0.00             & 0.00               \\ \hline
+		12.50 & 0.08           & 0.00             & 0.03               \\ \hline
+		 6.25 & 0.23           & 0.03             & 0.08               \\ \hline
+		 3.12 & 0.15           & 0.02             & 0.00               \\ \hline
+		 1.56 & 0.19           & 0.05             & 0.11               \\ \hline
+		 0.78 & 0.50           & 0.21             & 0.29               \\ \hline
+		 0.39 & \textbf{43.85} & \textbf{47.00}   & \textbf{48.46}     \\ \hline
+		 0.19 & 34.61          & 36.81            & 39.93              \\ \hline
+		 0.09 & -13.93         & -14.68           & -13.39             \\ \hline
+		 0.04 & -235.83        & -251.21          & -255.13            \\ \hline
+    \end{tabular}
+\end{table}
+%}}}
+
+
 \figref{fig:result_2bai_times}，\figref{fig:result_3bai_times}より，
-壁粒子数を増やした場合は，
+
 
 テテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストスト
 テテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストスト
