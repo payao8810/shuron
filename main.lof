@@ -1,0 +1,65 @@
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2\mbox {--}1}{\ignorespaces 人流シミュレーションの活用例}}{4}{}%
+\contentsline {figure}{\numberline {2\mbox {--}2}{\ignorespaces SFMを用いた人流シミュレーションのフローチャート}}{7}{}%
+\contentsline {figure}{\numberline {2\mbox {--}3}{\ignorespaces 他のエージェントから受ける力の範囲を限定するときの例}}{8}{}%
+\contentsline {figure}{\numberline {2\mbox {--}4}{\ignorespaces SFMにおける周囲のエージェントから受ける力の計算}}{9}{}%
+\contentsline {figure}{\numberline {2\mbox {--}5}{\ignorespaces 障害物を粒子として計算する例}}{10}{}%
+\contentsline {figure}{\numberline {2\mbox {--}6}{\ignorespaces 周囲の壁から受ける力の計算のフローチャート}}{11}{}%
+\contentsline {figure}{\numberline {2\mbox {--}7}{\ignorespaces SFMでスタック現象が起きる例}}{12}{}%
+\contentsline {figure}{\numberline {2\mbox {--}8}{\ignorespaces 経由地を設定するSFMの例}}{12}{}%
+\contentsline {figure}{\numberline {2\mbox {--}9}{\ignorespaces 教室からの避難シミュレーションにおける経由地の設定}}{13}{}%
+\contentsline {figure}{\numberline {2\mbox {--}10}{\ignorespaces 視野を用いたSFMの影響範囲}}{13}{}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3\mbox {--}1}{\ignorespaces 一次元モデルの例}}{15}{}%
+\contentsline {figure}{\numberline {3\mbox {--}2}{\ignorespaces アーチ現象の例}}{15}{}%
+\contentsline {figure}{\numberline {3\mbox {--}3}{\ignorespaces セル分割法を用いた例}}{16}{}%
+\contentsline {figure}{\numberline {3\mbox {--}4}{\ignorespaces 連結リスト法を用いたセル分割法の例}}{17}{}%
+\contentsline {figure}{\numberline {3\mbox {--}5}{\ignorespaces ハッシュを用いたセル分割法の例}}{17}{}%
+\contentsline {figure}{\numberline {3\mbox {--}6}{\ignorespaces SFMの並列化可能な処理}}{18}{}%
+\contentsline {figure}{\numberline {3\mbox {--}7}{\ignorespaces 3スレッドでの並列化の例}}{19}{}%
+\contentsline {figure}{\numberline {3\mbox {--}8}{\ignorespaces MPIを用いたSFMの領域分割の例}}{19}{}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4\mbox {--}1}{\ignorespaces 影響範囲の例}}{21}{}%
+\contentsline {figure}{\numberline {4\mbox {--}2}{\ignorespaces 視野を用いたSFMにセル分割法を適用した例}}{22}{}%
+\contentsline {figure}{\numberline {4\mbox {--}3}{\ignorespaces 進行方向ごとの近似領域}}{23}{}%
+\contentsline {figure}{\numberline {4\mbox {--}4}{\ignorespaces パターン1を用いたエージェント4の近似領域}}{23}{}%
+\contentsline {figure}{\numberline {4\mbox {--}5}{\ignorespaces パターン2を用いたエージェント4の近似領域}}{24}{}%
+\contentsline {figure}{\numberline {4\mbox {--}6}{\ignorespaces パターン3を用いた近似領域の削減例}}{25}{}%
+\contentsline {figure}{\numberline {4\mbox {--}7}{\ignorespaces パターン3を用いたエージェント4の近似領域}}{25}{}%
+\contentsline {figure}{\numberline {4\mbox {--}8}{\ignorespaces パターン4を用いた近似領域の削減例}}{26}{}%
+\contentsline {figure}{\numberline {4\mbox {--}9}{\ignorespaces パターン4を用いたエージェント4の近似領域}}{27}{}%
+\contentsline {figure}{\numberline {4\mbox {--}10}{\ignorespaces パターン5を用いた近似領域の削減例}}{28}{}%
+\contentsline {figure}{\numberline {4\mbox {--}11}{\ignorespaces パターン5を用いたエージェント4の近似領域}}{28}{}%
+\contentsline {figure}{\numberline {4\mbox {--}12}{\ignorespaces エージェントの初期配置}}{31}{}%
+\contentsline {figure}{\numberline {4\mbox {--}13}{\ignorespaces パターン1（セル分割法）に対する高速化率}}{33}{}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5\mbox {--}1}{\ignorespaces 提案手法の解析全体のフローチャート}}{36}{}%
+\contentsline {figure}{\numberline {5\mbox {--}2}{\ignorespaces 提案する格子分割の例}}{36}{}%
+\contentsline {figure}{\numberline {5\mbox {--}3}{\ignorespaces 経由地がある場合の進行方向の例}}{37}{}%
+\contentsline {figure}{\numberline {5\mbox {--}4}{\ignorespaces 格子分割した障害物を避ける力$F_{iW}$の例}}{38}{}%
+\contentsline {figure}{\numberline {5\mbox {--}5}{\ignorespaces 格子分割の前処理のフローチャート}}{39}{}%
+\contentsline {figure}{\numberline {5\mbox {--}6}{\ignorespaces 提案手法の運動方程式計算のフローチャート}}{40}{}%
+\contentsline {figure}{\numberline {5\mbox {--}7}{\ignorespaces エージェントの初期配置}}{43}{}%
+\contentsline {figure}{\numberline {5\mbox {--}8}{\ignorespaces 通路幅2mの初期配置}}{44}{}%
+\contentsline {figure}{\numberline {5\mbox {--}9}{\ignorespaces 通路幅5mの初期配置}}{44}{}%
+\contentsline {figure}{\numberline {5\mbox {--}10}{\ignorespaces 通路幅10mの初期配置}}{44}{}%
+\contentsline {figure}{\numberline {5\mbox {--}11}{\ignorespaces 通路幅20mの初期配置}}{44}{}%
+\contentsline {figure}{\numberline {5\mbox {--}12}{\ignorespaces 通路幅2m(壁粒子数2倍)の初期配置}}{44}{}%
+\contentsline {figure}{\numberline {5\mbox {--}13}{\ignorespaces 通路幅2m(壁粒子数3倍)の初期配置}}{44}{}%
+\contentsline {figure}{\numberline {5\mbox {--}14}{\ignorespaces 通路幅2mの格子サイズごとの計算回数}}{46}{}%
+\contentsline {figure}{\numberline {5\mbox {--}15}{\ignorespaces 通路幅5mの格子サイズごとの計算回数}}{46}{}%
+\contentsline {figure}{\numberline {5\mbox {--}16}{\ignorespaces 通路幅10mの格子サイズごとの計算回数}}{46}{}%
+\contentsline {figure}{\numberline {5\mbox {--}17}{\ignorespaces 通路幅20mの格子サイズごとの計算回数}}{46}{}%
+\contentsline {figure}{\numberline {5\mbox {--}18}{\ignorespaces 通路幅2m(壁粒子2倍)の格子サイズごとの計算回数}}{47}{}%
+\contentsline {figure}{\numberline {5\mbox {--}19}{\ignorespaces 通路幅2m(壁粒子3倍)の格子サイズごとの計算回数(仮画像)}}{47}{}%
+\contentsline {figure}{\numberline {5\mbox {--}20}{\ignorespaces 教室の初期配置}}{50}{}%
+\contentsline {figure}{\numberline {5\mbox {--}21}{\ignorespaces 演習室の初期配置}}{50}{}%
+\contentsline {figure}{\numberline {5\mbox {--}22}{\ignorespaces 教室の配置における格子サイズごとの解析時間}}{51}{}%
+\contentsline {figure}{\numberline {5\mbox {--}23}{\ignorespaces 演習室の配置における格子サイズごとの解析時間}}{51}{}%
+\contentsline {figure}{\numberline {5\mbox {--}24}{\ignorespaces 教室の配置における格子サイズごとの最大誤差}}{51}{}%
+\contentsline {figure}{\numberline {5\mbox {--}25}{\ignorespaces 演習室の配置における格子サイズごとの最大誤差}}{51}{}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {A\mbox {--}1}{\ignorespaces GIMPの出力ファイル形式の選択}}{66}{}%
+\contentsline {figure}{\numberline {A\mbox {--}2}{\ignorespaces GIMPのC言語出力画面}}{66}{}%
