@@ -67,7 +67,7 @@ $v_i^0(t)$が係数である．一方で，障害物から受ける力$f_{iW}$�
 %
 \begin{eqnarray}
  \mbox{進行方向の格子の要素数[個]} = 
- \big( \frac{\mbox{解析領域[m]}}{\mbox{格子サイズ[m]}} \big) ^ 2 \times  2 \times \mbox{経由地数[個]}
+ \Big( \frac{\mbox{解析領域[m]}}{\mbox{格子サイズ[m]}} \Big) ^ 2 \times  2 \times \mbox{経由地数[個]}
  \label{eq:route_youso_size}
 \end{eqnarray}
 %
@@ -181,10 +181,8 @@ SFMの運動方程式を計算する．
 また，\figref{fig:haba2_2}，\figref{fig:haba2_3}に通路幅2mのときの配置(\figref{fig:haba2})
 の壁粒子をそれぞれ2倍，3倍にした配置を示す．
 図中の黒丸は壁粒子，紫色の丸はエージェント，青色の丸は目的地である．
-図に示す配置のエージェントは40人，壁粒子は592個，経由地は1個，
+図に示す配置のエージェントは40人，壁粒子は〇〇個，経由地は1個，
 解析領域は$50m \times 50m$である．
-また，壁粒子を変えた配置(\figref{fig:haba2_2}，\figref{fig:haba2_3})の
-壁粒子数は\tabref{tb:haba_atusa}に示す通りである．
 図中のすべてのエージェントは，青色の丸が示す目的地に向かうように設定する．
 測定する格子サイズは，解析領域の一辺(50m)を半分ずつ割った値を用いる．
 
@@ -223,21 +221,6 @@ SFMの運動方程式を計算する．
 \end{table}
 
 
-\begin{table}
-  \begin{center}
-    \caption{壁の厚さを変えたときの初期配置のパラメータ}
-    \label{tb:haba_atusa}
-    \begin{tabular}{c|c|c|c}
-      \hline \hline
-            & 壁粒子数[個] & エージェント数[人] & 経由地数[個] \\ \hline
-      厚さ1倍 & 592  & 40 & 1 \\ \hline
-      厚さ2倍 & 1184 & 40 & 1 \\ \hline
-      厚さ3倍 & 1776 & 40 & 1 \\ \hline
-    \end{tabular}
-  \end{center}
-\end{table}
-
-
 \figtb{エージェントの初期配置}{}{11}{5_initialconfiguration.eps}{5_initialconf}
 
 \clearpage
@@ -246,7 +229,7 @@ SFMの運動方程式を計算する．
 
 \dfig{通路幅10mの初期配置}{20231023_haba10}{haba10}{通路幅20mの初期配置}{20231023_haba20}{haba20}
 
-\dfig{通路幅2m(壁粒子数2倍)の初期配置}{haba2_2}{haba2_2}{通路幅2m(壁粒子数3倍)の初期配置}{haba2_3}{haba2_3}
+\dfig{厚さ2倍}{haba2_2}{haba2_2}{厚さ3倍}{haba2_3}{haba2_3}
 
 \clearpage
 \subsection{進行方向計算の計算回数(工事中)}
@@ -265,7 +248,7 @@ SFMの運動方程式を計算する．
 用いて算出する．
 %
 \begin{eqnarray}
-\mbox{削減率[\%]} = \Big ( 1 - \frac{C_p}{C_e}  \Big) \times 100
+\mbox{削減率[\%]} = \Big ( \frac{C_p}{C_e}  \Big) \times 100
 \label{eq:5_sakugenritu}
 \end{eqnarray}
 %
@@ -281,107 +264,32 @@ SFMの運動方程式を計算する．
 これは，解析中の進行方向ベクトル$e$の計算回数が最大で
 エージェント数とタイムステップ数の積であることから，障害物を避ける力の
 計算回数よりも低いためであると考えられる．
-%
-\tabref{tb:5_times_sakugenritu}より，
-提案手法がセル分割法に対して計算回数が削減できる格子サイズは，
-通路幅2mで0.39mから0.19m，
-通路幅5mで0.78mから0.19m，
-通路幅10mで1.56mから0.19m，
-通路幅20mで3.12mから0.78mであり，
-通路幅が広くなるほど削減できる格子サイズの大きさが大きくなる．
-これは，通路幅が広くなるほど，エージェントが通る場所の格子内に
-壁粒子が含まれにくくなるため，あらかじめ計算した進行方向を
-用いることができるからであると考えれれる．
-[\textbf{炭治郎柄の図を使って説明しても良い}]
-%
-各通路幅の削減率は，\tabref{tb:5_times_sakugenritu}より，通路幅2mで最大43.85\%，
-通路幅5mで最大45.48\%，通路幅10mで最大54.81\%，通路幅20mで最大8.25\%である．
-通路幅20mの最大の削減率は，最大約8\%であり，他の通路幅の最大削減率(約50\%前後)と
-比べて低いことがわかる．
-これは，\figref{fig:result_2m_times}から\figref{fig:result_20m_times}より，
-通路幅2mから10mのセル分割法の計算回数が約2000万回から約3000万回の間であるのに対して，
-通路幅20mのときのセル分割法の計算回数が約500万回であり，
-通路幅20mの計算回数が少なく，削減率が低くなったためであると考えられる．
-また，
-通路幅20mにおける既存手法の計算回数が少ない理由は，本評価で用いたパラメータの
-影響範囲が5mであり，\figref{fig:haba20}に示すように，エージェントが通る場所が
-通路幅20mであるため，エージェントの障害物を避ける力の影響範囲に壁粒子が存在しない
-ことが多く，障害物を避ける力の計算回数が他の通路幅と比べて少ない結果が得られたと
-考えられる．
-%
-\figref{fig:result_5m_times}から\figref{fig:result_20m_times}より，
-前処理中の計算回数が占める割合は，どの通路幅の配置においても同様の傾向である結果が得られた．
-これは，本評価に用いる配置の経由地数と解析領域が同じであるため，
-式\eqref{eq:route_youso_size}や式\eqref{eq:fiw_youso_size}に示す前処理に必要な要素数が同じであり，
-壁粒子数が同じであることから，通路幅が変わっても同様の傾向が得られたと考えられる．
 
-
-
-%result figure {{{
 \begin{figure}[tb]
 	\begin{minipage}[b]{0.48\columnwidth}
 		\begin{center}
 		\includegraphics[width=\columnwidth]{figure/5_result_2m_times.eps}
 		\caption{通路幅2mの格子サイズごとの計算回数}
-		\label{fig:result_2m_times}
 		\end{center}
 	\end{minipage}
 	\hspace{0.04\columnwidth}
 	\begin{minipage}[b]{0.48\columnwidth}
 		\begin{center}
-		\includegraphics[width=\columnwidth]{figure/5_result_5m_times.eps}
-		\caption{通路幅5mの格子サイズごとの計算回数}
-		\label{fig:result_5m_times}
+		\includegraphics[width=\columnwidth]{figure/5_result_2m_times.eps}
+		\caption{画像です}
 		\end{center}
 	\end{minipage}
 \end{figure}
-%}}}
-%result figure {{{
-\begin{figure}[tb]
-	\begin{minipage}[b]{0.48\columnwidth}
-		\begin{center}
-		\includegraphics[width=\columnwidth]{figure/5_result_10m_times.eps}
-		\caption{通路幅10mの格子サイズごとの計算回数}
-		\label{fig:result_10m_times}
-		\end{center}
-	\end{minipage}
-	\hspace{0.04\columnwidth}
-	\begin{minipage}[b]{0.48\columnwidth}
-		\begin{center}
-		\includegraphics[width=\columnwidth]{figure/5_result_20m_times.eps}
-		\caption{通路幅20mの格子サイズごとの計算回数}
-		\label{fig:result_20m_times}
-		\end{center}
-	\end{minipage}
-\end{figure}
-%}}}
-%result figure {{{
-\begin{figure}[tb]
-	\begin{minipage}[b]{0.48\columnwidth}
-		\begin{center}
-		\includegraphics[width=\columnwidth]{figure/5_result_2bai_times.eps}
-		\caption{通路幅2m(壁粒子2倍)の格子サイズごとの計算回数}
-		\label{fig:result_2bai_times}
-		\end{center}
-	\end{minipage}
-	\hspace{0.04\columnwidth}
-	\begin{minipage}[b]{0.48\columnwidth}
-		\begin{center}
-		\includegraphics[width=\columnwidth]{figure/5_result_2bai_times.eps}
-		\caption{通路幅2m(壁粒子3倍)の格子サイズごとの計算回数(仮画像)}
-		\label{fig:result_3bai_times}
-		\end{center}
-	\end{minipage}
-\end{figure}
-%}}}
 
-%\figtb{通路幅2mの計算回数}{}{11}{5_result_2m_times.eps}{result_2m_times}
-%\figtb{通路幅5mの計算回数}{}{11}{5_result_5m_times.eps}{result_5m_times}
-%\figtb{通路幅10mの計算回数}{}{11}{5_result_10m_times.eps}{result_10m_times}
-%\figtb{通路幅20mの計算回数}{}{11}{5_result_20m_times.eps}{result_20m_times}
-%
-%\figtb{通路幅2m(壁粒子2倍)の計算回数}{}{11}{5_result_2bai_times.eps}{result_2bai_times}
-%\figtb{通路幅2m(壁粒子3倍)の計算回数(仮画像)}{}{11}{5_result_2bai_times.eps}{result_2bai_times}
+
+
+\figtb{通路幅2mの計算回数}{}{11}{5_result_2m_times.eps}{result_2m_times}
+\figtb{通路幅5mの計算回数}{}{11}{5_result_5m_times.eps}{result_5m_times}
+\figtb{通路幅10mの計算回数}{}{11}{5_result_10m_times.eps}{result_10m_times}
+\figtb{通路幅20mの計算回数}{}{11}{5_result_20m_times.eps}{result_20m_times}
+
+\figtb{通路幅2m(壁粒子2倍)の計算回数}{}{11}{5_result_2bai_times.eps}{result_2bai_times}
+\figtb{通路幅2m(壁粒子3倍)の計算回数(仮画像)}{}{11}{5_result_2bai_times.eps}{result_2bai_times}
 
 \begin{table}[tb]
   \centering
@@ -420,91 +328,9 @@ SFMの運動方程式を計算する．
 
 \subsection{シミュレーション精度の測定}
 
-
-\clearpage
 \subsection{実問題に対する提案手法の有効性}
 
-
-\begin{figure}[tb]
-	\begin{minipage}[b]{0.5\columnwidth}
-		\centering
-		\includegraphics[width=\columnwidth]{figure/kyositu_v2.eps}
-		\caption{教室の初期配置}
-    \label{fig:kyositu_haichi}
-	\end{minipage}
-	\begin{minipage}[b]{0.5\columnwidth}
-		\centering
-		\includegraphics[width=\columnwidth]{figure/pc_m.eps}
-		\caption{演習室の初期配置}
-    \label{fig:pc_haichi}
-	\end{minipage}
-\end{figure}
-
-
-
-\begin{table}[tb]
-  \begin{center}
-    \caption{各配置の詳細}
-    \label{tb:haichi_para}
-    \begin{tabular}{c|c|c}
-      \hline \hline
-      & 教室 & 演習室 \\ \hline 
-      エージェント数[人] & 96 & 204 \\ \hline
-      壁粒子数[個] & 1037 & 1454\\ \hline
-      経由地数[個] & 12   & 26 \\ \hline
-      解析領域 & $50m\times50m$ & $50m\times50m$ \\ \hline
-    \end{tabular}
-  \end{center}
-\end{table}
-
-
-%教室と演習室の解析時間{{{
-\begin{figure}[tb]
-	\begin{minipage}[b]{0.48\columnwidth}
-		\begin{center}
-		\includegraphics[width=\columnwidth]{figure/20231016_kyositu_time.eps}
-		\caption{教室の配置における格子サイズごとの解析時間}
-		\label{fig:kyositu_time}
-		\end{center}
-	\end{minipage}
-	\hspace{0.04\columnwidth}
-	\begin{minipage}[b]{0.48\columnwidth}
-		\begin{center}
-		\includegraphics[width=\columnwidth]{figure/20231016_pc_time.eps}
-		\caption{演習室の配置における格子サイズごとの解析時間}
-		\label{fig:pc_time}
-		\end{center}
-	\end{minipage}
-\end{figure}
-%}}}
-
-%教室と演習室の誤差{{{
-\begin{figure}[tb]
-	\begin{minipage}[b]{0.48\columnwidth}
-		\begin{center}
-		\includegraphics[width=\columnwidth]{figure/20231016_kyositu_gosa.eps}
-		\caption{教室の配置における格子サイズごとの最大誤差}
-		\label{fig:kyositu_gosa}
-		\end{center}
-	\end{minipage}
-	\hspace{0.04\columnwidth}
-	\begin{minipage}[b]{0.48\columnwidth}
-		\begin{center}
-		\includegraphics[width=\columnwidth]{figure/20231016_pc_gosa.eps}
-		\caption{演習室の配置における格子サイズごとの最大誤差}
-		\label{fig:pc_gosa}
-		\end{center}
-	\end{minipage}
-\end{figure}
-%}}}
-
-
-%\figtb{格子サイズごとの解析時間(教室)}{}{8.0}{20231016_kyositu_time}{kyositu_time}
-%\figtb{格子サイズごとの解析時間(演習室)}{}{8}{20231016_pc_time.eps}{pc_time}
-%\figtb{格子サイズごとの最大誤差(教室)}{}{8.0}{20231016_kyositu_gosa}{kyositu_gosa}
-%\figtb{格子サイズごとの最大誤差(演習室)}{}{8}{20231016_pc_gosa.eps}{kyositu_gosa}
-
-
-\clearpage
 \section{本章のまとめ(工事中)}
 工事中．
+
+%***** END ************************************************
