@@ -473,8 +473,12 @@ SFMの運動方程式を計算する．
 一方で，提案手法は，解析前にあらかじめ各格子の進行方向を計算するため，解析前の前処理の
 実行時間は増加する．このため，あらかじめ計算するために必要な時間を考慮しても
 格子分割を用いた進行方向の計算回数削減による高速化が有効であることを確認する．
-表○○にシミュレーション実行時間を，図○○に式\eqref{eq:5_kousokuka}を用いて算出した
+\figref{fig:result_2m_jikan}，\figref{fig:result_5m_jikan}，
+\figref{fig:result_10m_jikan}，\figref{fig:result_20m_jikan}に通路幅ごとの
+シミュレーション実行時間を，\figref{fig:5_kousokuka_haba}に式\eqref{eq:5_kousokuka}を用いて算出した
 高速化率を示す．
+また，\figref{fig:result_2bai_jikan}，\figref{fig:result_3bai_jikan}に通路幅2mのときの
+粒子数を2倍，3倍にした配置のシミュレーション実行時間を，\figref{fig:5_kousokuka_atusa}に高速化率を示す．
 %
 \begin{align}
 	\mbox{高速化率[倍]} = \frac{\mbox{セル分割法の実行時間[s]}}
@@ -482,9 +486,29 @@ SFMの運動方程式を計算する．
     \label{eq:5_kousokuka}
 \end{align}
 %
-
-
-
+\figref{fig:result_2m_jikan}，\figref{fig:result_5m_jikan}，
+\figref{fig:result_10m_jikan}，\figref{fig:result_20m_jikan}，
+\figref{fig:5_kousokuka_haba}より，
+提案手法は，セル分割法よりも最大△△倍高速であり，
+従来手法よりも解析時間が最大○○割削減できることが確認できる．
+また，格子サイズが小さくなるほど，前処理の計算にかかる時間の
+割合が多くなり，通路幅2mでは0.09m，通路幅5mでは0.09m，通路幅10mでは
+0.19m，通路幅20mでは0.39m以下の格子サイズで，従来手法よりも
+遅くなることが確認できる．
+前処理時間にかかる時間は，\ref{sec:5_calc_times}節で示した
+前処理中の計算回数が占める割合の傾向と同様であることがわかる．
+従来手法よりも高速に解析できる提案手法の格子サイズは，
+通路幅2mで0.39mから0.19m，
+通路幅5mで0.78mから0.19m，
+通路幅10mで1.56mから0.19m，
+通路幅20mで6.25mから0.39mであり，
+通路幅が広くなるほど，従来手法よりも高速に解析できる格子サイズが
+多くなることがわかる．
+これをふまえると，従来手法よりも高速に解析できる提案手法の
+格子サイズは，エージェントが通る場所の障害物と障害物の間の距離に
+応じて変わることが考えられる．
+\textbf{[壁粒子数を変えた時のシミュレーション実行時間と高速化率
+について述べる！！！]} 
 
 \begin{figure}[tb]
 	\begin{minipage}[b]{0.48\columnwidth}
@@ -499,7 +523,7 @@ SFMの運動方程式を計算する．
 		\begin{center}
 		\includegraphics[width=\columnwidth]{figure/5_5m_jikan.eps}
 		\caption{通路幅5mの格子サイズごとの解析時間}
-		\label{fig:result_5m_times}
+		\label{fig:result_5m_jikan}
 		\end{center}
 	\end{minipage}
 \end{figure}
@@ -509,7 +533,7 @@ SFMの運動方程式を計算する．
 		\begin{center}
 		\includegraphics[width=\columnwidth]{figure/5_10m_jikan.eps}
 		\caption{通路幅10mの格子サイズごとの解析時間}
-		\label{fig:result_2m_jikan}
+		\label{fig:result_10m_jikan}
 		\end{center}
 	\end{minipage}
 	\hspace{0.04\columnwidth}
@@ -517,7 +541,7 @@ SFMの運動方程式を計算する．
 		\begin{center}
 		\includegraphics[width=\columnwidth]{figure/5_20m_jikan.eps}
 		\caption{通路幅20mの格子サイズごとの解析時間}
-		\label{fig:result_5m_times}
+		\label{fig:result_20m_jikan}
 		\end{center}
 	\end{minipage}
 \end{figure}
@@ -527,7 +551,7 @@ SFMの運動方程式を計算する．
 		\begin{center}
 		\includegraphics[width=\columnwidth]{figure/5_2bai_jikan.eps}
 		\caption{通路幅2m(粒子数2倍)の格子サイズごとの解析時間}
-		\label{fig:result_2m_jikan}
+		\label{fig:result_2bai_jikan}
 		\end{center}
 	\end{minipage}
 	\hspace{0.04\columnwidth}
@@ -535,7 +559,7 @@ SFMの運動方程式を計算する．
 		\begin{center}
 		\includegraphics[width=\columnwidth]{figure/5_3bai_jikan.eps}
 		\caption{通路幅3m(粒子数3倍)の格子サイズごとの解析時間}
-		\label{fig:result_5m_times}
+		\label{fig:result_3bai_times}
 		\end{center}
 	\end{minipage}
 \end{figure}
@@ -543,18 +567,18 @@ SFMの運動方程式を計算する．
 
 \begin{figure}[tb]
  \begin{center}
-  \includegraphics[width=11cm,clip]{figure/5_kousokukaritu.eps}
+  \includegraphics[width=12.5cm,clip]{figure/5_kousokukaritu.eps}
   \caption{通路幅を変えたときの高速化率}
-  \label{fig:5_kousokuka}
+  \label{fig:5_kousokuka_haba}
  \end{center}
 \end{figure}
 
 
 \begin{figure}[tb]
  \begin{center}
-  \includegraphics[width=11cm,clip]{figure/5_bai_kousokukaritu.eps}
+  \includegraphics[width=12.5cm,clip]{figure/5_bai_kousokukaritu.eps}
   \caption{壁粒子数を変えたときの高速化率}
-  \label{fig:5_kousokuka}
+  \label{fig:5_kousokuka_atusa}
  \end{center}
 \end{figure}
 
