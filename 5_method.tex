@@ -468,6 +468,7 @@ SFMの運動方程式を計算する．
 
 \clearpage
 \subsection{シミュレーションの実行時間の測定}
+\label{sec:5_calc_jikan}
 \ref{sec:5_calc_times}節より，提案手法を用いることで，既存手法であるセル分割法よりも
 進行方向の計算回数を削減できることが確認できた．
 一方で，提案手法は，解析前にあらかじめ各格子の進行方向を計算するため，解析前の前処理の
@@ -509,6 +510,19 @@ SFMの運動方程式を計算する．
 応じて変わることが考えられる．
 \textbf{[壁粒子数を変えた時のシミュレーション実行時間と高速化率
 について述べる！！！]} 
+
+\figref{fig:result_2bai_jikan}，\figref{fig:result_3bai_jikan}，
+\figref{fig:5_kousokuka_atusa}より，
+提案手法のセル分割法に対する高速化率は，
+壁粒子数1倍のときで最大○○倍，
+壁粒子数2倍のときで最大○○倍，
+壁粒子数3倍のときで最大○○倍であり，
+壁粒子数が増えるほど高速化率の最大値が高くなることが確認できる．
+これは，壁粒子を増やす方法が壁粒子の密度が高くなるような設定をしているため，
+密度が高くなるほど，\ref{sec:5_calc_times}節で示した計算回数が削減でき，
+解析時間の短縮に繋がったと考えられる．
+
+
 
 \begin{figure}[tb]
 	\begin{minipage}[b]{0.48\columnwidth}
@@ -559,7 +573,7 @@ SFMの運動方程式を計算する．
 		\begin{center}
 		\includegraphics[width=\columnwidth]{figure/5_3bai_jikan.eps}
 		\caption{通路幅3m(粒子数3倍)の格子サイズごとの解析時間}
-		\label{fig:result_3bai_times}
+		\label{fig:result_3bai_jikan}
 		\end{center}
 	\end{minipage}
 \end{figure}
@@ -585,11 +599,40 @@ SFMの運動方程式を計算する．
 
 \clearpage
 \subsection{シミュレーション精度の測定}
+\ref{sec:5_calc_jikan}節より，
+提案手法は，一部の格子サイズでセル分割法よりも高速に解析できることが確認できた．
+一方で，本手法は，解析領域を格子状に分割した格子ごとに計算した進行方向ベクトル$e$と
+障害物を避ける力$F_{iW}$を解析中に用いるため，セル分割法のシミュレーションと比べて
+シミュレーション誤差が生じる手法となる．
+このため，提案手法の格子ごとのシミュレーション結果と従来手法であるセル分割法の
+シミュレーション結果を比較し，シミュレーション精度を確かめる．
+誤差は，提案手法とセル分割法が算出した時間ステップごとに各エージェントの座標を
+出力し，2手法の同時刻・同エージェントどうしによるエージェント間距離の最大値とする．
+\textbf{
+[図○○に各配置のシミュレーションの最大誤差を示す．]
+}
 
 
 \clearpage
-\subsection{実問題に対する提案手法の有効性}
+\subsection{避難シミュレーションに対する提案手法の有効性}
+\label{sec:5_real}
+本節では，実問題に対する提案手法の有効性を示すために，実際の状況下で
+避難シミュレーションを行い，シミュレーション実行時間とシミュレーション精度を
+確かめる．
+本評価に用いるエージェントの初期配置は，\figref{fig:kyositu_haichi}，\figref{fig:pc_haichi}に示すように，大学の演習室や教室の避難時の配置で設定する．
+\figref{fig:kyositu_haichi}，\figref{fig:pc_haichi}の黒点は壁粒子，紫色の点はエージェント，青色の丸は経由地の座標およびゴール判定の大きさ，赤色の矢印は経由地のグラフを示す．
+それぞれの配置のエージェントや壁，経由地は，\tabref{tb:haichi_para}に示すような数で配置する．
+本測定では，パラメータを\tabref{tb:result_para}で設定し，すべてのエージェントが
+部屋から避難できるまでを刻み値0.001で解析する．
+\textbf{
+[結果を表示する]
+}
 
+
+\begin{eqnarray}
+\label{eq:gosa_hinan}
+\mbox{誤差$[\%]$} = \left | \frac{C_{time} - T_{time}}{C_{time}} \right | \times 100
+\end{eqnarray}
 
 \begin{figure}[tb]
 	\begin{minipage}[b]{0.5\columnwidth}
