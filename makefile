@@ -67,6 +67,9 @@ SRC 		= $(MAIN).tex $(BODY) $(APPEND)  $(REF).bib $(REF).tex
 ABSTDELFILE = ils.tfm 
 
 DELFILE 	= $(MAIN).lof $(MAIN).lot $(MAIN).toc $(MAIN).log $(MAIN).aux $(MAIN).blg 
+
+KOUGAITEX=kougai
+
 #$(ABSTDELFILE)
 #DELCOVER	= $(COVER).log $(COVER).aux
 #------------------------------------------------------
@@ -84,6 +87,18 @@ COMPILE:makefile $(SRC)
 	$(PLATEX) $(MAIN)
 
 #------------------------------------------------------
+
+kougai:KOUGAI_COMPILE2
+	$(DVIPDFM) $(KOUGAITEX)
+	rm $(KOUGAITEX).log $(KOUGAITEX).aux $(KOUGAITEX).dvi $(KOUGAITEX).fls
+
+  
+
+KOUGAI_COMPILE2:KOUGAI_COMPILE
+	$(PLATEX) $(KOUGAITEX)
+
+KOUGAI_COMPILE:$(KOUGAITEX)
+	$(PLATEX) $(KOUGAITEX)
 
 cover: platex_cover
 	$(DVIPDFM) $(COVER)
