@@ -5,23 +5,21 @@ NHK首都圏ナビ群衆事故のリスクは？韓国ソウル転倒事故「�
   (2023-2-26).
 
 \bibitem{taisaku2}
-WEB, N.~N.明石 歩道事故から21年「群衆雪崩」再現
-  安全対策に，入手先$<$https://www3.nhk.or.jp/kansai-news/20220721/2000064071.html$>$
+WEB,
+  N.~N.明石 歩道事故から21年「群衆雪崩」再現 安全対策に，入手先$<$https://www3.nhk.or.jp/kansai-news/20220721/2000064071.html$>$
   (2023-2-26).
 
 \bibitem{sim_jirei1}
-北上靖大，　森俊勝，坂平文博，志村泰知，杉浦哲平：
-  都市課題の改善に向けたマルチエージェント・シミュレーションの活用，電気学会論文誌C(電子・情報・システム部門誌)，
-  Vol.~133, No.~9, pp.\ 1640--1644 (2013).
+北上靖大，　森俊勝，坂平文博，志村泰知，杉浦哲平： 都市課題の改善に向けたマルチエージェント・シミュレーションの活用，電気学会論文誌C(電子・情報・システム部門誌)， Vol.~133,
+  No.~9, pp.\ 1640--1644 (2013).
 
 \bibitem{sim_jirei2}
 NTTデータ理数システム人流シミュレーションによるオリンピック開催時の駅の混雑分析事例，入手先$<$https://www.msiism.jp/article/taguchi-olympic-human-flow-simulation.html$>$
   (2021-04-21).
 
 \bibitem{sim_jirei3}
-大西正輝，山下倫央，星川哲也，佐藤和人：
-  人の流れの計測とシミュレーションによる避難誘導方法の伝承－新国立劇場における避難体験オペラコンサートを例に－，人工知能学会第二種研究会資料，
-  Vol.~2015, No.~KST-26, p.~06 (2015).
+大西正輝，山下倫央，星川哲也，佐藤和人： 人の流れの計測とシミュレーションによる避難誘導方法の伝承－新国立劇場における避難体験オペラコンサートを例に－，人工知能学会第二種研究会資料， Vol.~2015,
+  No.~KST-26, p.~06 (2015).
 
 \bibitem{sim_jirei8}
 株式会社ホロラボホロラボが鹿島のBIMデータを活用した避難シミュレーションのMicrosoft
@@ -35,8 +33,7 @@ NTTデータ理数システム人流シミュレーションによるオリン�
   (2023-02-20).
 
 \bibitem{floa_field3}
-丸山大地，高橋達二：
-  渋滞学における高密度を避けるフロアフィールドモデル，第76回全国大会講演論文集，Vol.~2014,
+丸山大地，高橋達二： 渋滞学における高密度を避けるフロアフィールドモデル，第76回全国大会講演論文集，Vol.~2014,
   No.~1, pp.\ 211--212 (2014).
 
 \bibitem{floa_field1}
@@ -55,14 +52,12 @@ Helbing, D. and Molnar, P.: Social force model for pedestrian dynamics, {\em
   Physical review E},  Vol.~51, No.~5, p.\ 4282 (1995).
 
 \bibitem{mas_pandemic}
-福士雄太，白井英之：
-  マルチエージェントを用いた並列パンデミックシミュレーション，{\em IPSJ SIG
-  Technical Report},  Vol.~2015-ICS-178, No.~13, pp.\ 1--7 (2015).
+福士雄太，白井英之： マルチエージェントを用いた並列パンデミックシミュレーション，{\em
+  IPSJ SIG Technical Report},  Vol.~2015-ICS-178, No.~13, pp.\ 1--7 (2015).
 
 \bibitem{sfm_hinan1}
-牧野嶋文泰，大石祐介，今村文彦，古村考志：
-  大規模避難シミュレーションによる臨海都市部の津波避難リスク分析と低減方策の検討，土木学会論文集B2(海岸工学)，
-  Vol.~74, No.~2, pp.\ 409--414 (2018).
+牧野嶋文泰，大石祐介，今村文彦，古村考志： 大規模避難シミュレーションによる臨海都市部の津波避難リスク分析と低減方策の検討，土木学会論文集B2(海岸工学)， Vol.~74,
+  No.~2, pp.\ 409--414 (2018).
 
 \bibitem{sfm_hinan2}
 Makinoshima, F., Imamura, F. and Abe, Y.: Enhancing a tsunami evacuation
@@ -75,17 +70,15 @@ Dulam, R., Lalith, M., Hori, M., Ichimura, T. and Tanaka, S.: Development of an
   土木学会論文集A2(応用力学)， Vol.~68, No.~2, pp.\ 513--521 (2012).
 
 \bibitem{intro_gunshu}
-東京大学社会連携部門群集マネジメント研究会： 群集マネジメント総論
-  理論と実践，東京大学出版会 (2020).
+東京大学社会連携部門群集マネジメント研究会： 群集マネジメント総論 理論と実践，東京大学出版会 (2020).
 
 \bibitem{siya_ex2}
 Joselli, M. and Clua, E.: A Flocking Boids Simulation and Optimization
   Structure for Mobile Multicore Architectures (2013).
 
 \bibitem{siya_ex3}
-森　文哉，飯島　正：
-  データ駆動屋内避難シミュレーションのための避難者モデルの構築，情報システム学会　全国大会論文集，
-  Vol.~14, pp.\ S2--B1 (2018).
+森　文哉，飯島　正： データ駆動屋内避難シミュレーションのための避難者モデルの構築，情報システム学会　全国大会論文集， Vol.~14,
+  pp.\ S2--B1 (2018).
 
 \bibitem{siya_ex4}
 Zhang, H., Liu, H., Qin, X. and Liu, B.: Modified two-layer social force model
@@ -98,9 +91,8 @@ Liu, H., Xu, B., Lu, D. and Zhang, G.: A path planning approach for crowd
   {\em Appl. Soft Comput.},  Vol.~68, pp.\ 360--376 (2018).
 
 \bibitem{siya_ex6}
-前川廣太郎，播磨大輝，延原肇：
-  学生のグループ特性を考慮した群衆歩行シミュレーションと教室配置最適化への応用，情報処理学会論文誌，
-  Vol.~57, pp.\ 1040--1048 (2016).
+前川廣太郎，播磨大輝，延原肇： 学生のグループ特性を考慮した群衆歩行シミュレーションと教室配置最適化への応用，情報処理学会論文誌， Vol.~57,
+  pp.\ 1040--1048 (2016).
 
 \bibitem{siya_ex7}
 磯崎勝吾，　中辻隆： Social force model
@@ -138,14 +130,12 @@ Richmond, P., Walker, D., Coakly, S. and Romano, D.: High performance cellular
   Bioinformatics},  Vol.~2, No.~3, pp.\ 334--347 (2009).
 
 \bibitem{mpi1}
-牧野嶋文泰，今村文彦：
-  マルチエージェント津波避難シミュレーションの高速化と市街地スケール計算での評価，情報処理学会第79回論文集，
-  Vol.~1, pp.\ 217--218 (2017).
+牧野嶋文泰，今村文彦： マルチエージェント津波避難シミュレーションの高速化と市街地スケール計算での評価，情報処理学会第79回論文集， Vol.~1,
+  pp.\ 217--218 (2017).
 
 \bibitem{mpi2}
-浅野俊幸，廣川雄一，西川憲明：
-  群集流動マルチエージェントシミュレーションのための並列処理実装手法の検討，第18回情報科学技術フォーラム論文集，
-  Vol.~2, pp.\ 291--294 (2019).
+浅野俊幸，廣川雄一，西川憲明： 群集流動マルチエージェントシミュレーションのための並列処理実装手法の検討，第18回情報科学技術フォーラム論文集， Vol.~2,
+  pp.\ 291--294 (2019).
 
 \bibitem{1jigen_model}
 　岡田崇，山下倫央，野田五十樹ほか： 歩行者シミュレータ NetMAS
@@ -153,14 +143,12 @@ Richmond, P., Walker, D., Coakly, S. and Romano, D.: High performance cellular
   (2012).
 
 \bibitem{1jigen_model1}
-副田俊介，山下倫央，野田五十樹：
-  ネットワーク型マルチエージェント人流シミュレータのモデル化とパラメータ調整，人工知能学会全国大会論文集
-  第 23 回 (2009)，一般社団法人 人工知能学会，pp.\ 1D2OS610--1D2OS610 (2009).
+副田俊介，山下倫央，野田五十樹： ネットワーク型マルチエージェント人流シミュレータのモデル化とパラメータ調整，人工知能学会全国大会論文集 第 23
+  回 (2009)，一般社団法人 人工知能学会，pp.\ 1D2OS610--1D2OS610 (2009).
 
 \bibitem{1jigen_model2}
-倫央山下，俊介副田，正輝大西，育士依田，五十樹野田：
-  一次元歩行者モデルを用いた高速避難シミュレータの開発とその応用，情報処理学会論文誌，
-  Vol.~53, No.~7, pp.\ 1732--1744 (2012).
+倫央山下，俊介副田，正輝大西，育士依田，五十樹野田： 一次元歩行者モデルを用いた高速避難シミュレータの開発とその応用，情報処理学会論文誌， Vol.~53,
+  No.~7, pp.\ 1732--1744 (2012).
 
 \bibitem{1jigen_katuyou}
 Yamashita, T., Soeda, S. and Noda, I.: Evacuation Planning Assist System with
@@ -169,14 +157,12 @@ Yamashita, T., Soeda, S. and Noda, I.: Evacuation Planning Assist System with
   649--656 (2009).
 
 \bibitem{1jigen_model_ev1}
-山下倫央，　岡田崇，野田五十樹：
-  都市エリアにおける大規模誘導に向けた歩行者マクロモデルの提案，人工知能学会全国大会論文集
-  第 26 回 (2012)，一般社団法人 人工知能学会，pp.\ 3F2OS107--3F2OS107 (2012).
+山下倫央，　岡田崇，野田五十樹： 都市エリアにおける大規模誘導に向けた歩行者マクロモデルの提案，人工知能学会全国大会論文集 第 26
+  回 (2012)，一般社団法人 人工知能学会，pp.\ 3F2OS107--3F2OS107 (2012).
 
 \bibitem{1jigen_model_ev2}
-泉野桂一朗，山下倫央，野田五十樹：
-  時間的制御を組み込んだ歩行者移動のシミュレーションによる効率評価，人工知能学会全国大会論文集
-  第 28 回 (2014)，一般社団法人 人工知能学会，pp.\ 4N11--4N11 (2014).
+泉野桂一朗，山下倫央，野田五十樹： 時間的制御を組み込んだ歩行者移動のシミュレーションによる効率評価，人工知能学会全国大会論文集 第 28
+  回 (2014)，一般社団法人 人工知能学会，pp.\ 4N11--4N11 (2014).
 
 \bibitem{cell1}
 Oguchi, K., Shibuta, Y. and Suzuki, T.: Accelerating Molecular Dynamics
@@ -184,9 +170,8 @@ Oguchi, K., Shibuta, Y. and Suzuki, T.: Accelerating Molecular Dynamics
   and Materials},  Vol.~76, No.~7, pp.\ 462--467 (2012).
 
 \bibitem{cell2}
-茂渡悠介，酒井幹夫，越塚誠一，山田祥徳：
-  GPUによる離散要素法シミュレーションの高速化，粉体工学会誌， Vol.~45, No.~11,
-  pp.\ 758--765 (2008).
+茂渡悠介，酒井幹夫，越塚誠一，山田祥徳： GPUによる離散要素法シミュレーションの高速化，粉体工学会誌， Vol.~45,
+  No.~11, pp.\ 758--765 (2008).
 
 \bibitem{eikyo_space}
 中村紀香，大代浩一朗，石坂空大，伊藤　尚： Social
@@ -195,27 +180,17 @@ Oguchi, K., Shibuta, Y. and Suzuki, T.: Accelerating Molecular Dynamics
   No.~IEICE-CAS-196,IEICE-NLP-197, pp.\
   IEICE--CAS--51,IEICE--NLP--51--IEICE--CAS--56,IEICE--NLP--56 (2021).
 
-\bibitem{cell_book1}
-Allen, M.~P. and Tildesley, D.~J.: {\em Computer simulation of liquids}, Oxford
-  university press (2017).
-
-\bibitem{hash}
-Green, S.: Particle simulation using cuda, {\em NVIDIA Whitepaper},
-  Vol.~December 2010 (2010).
-
 \bibitem{21_Isozaki}
 磯崎勝吾，　中辻隆： Social force
-  modelを基にした歩行者の避難シミュレーションモデルに関する研究，土木学会北海道支部論文報告集，
-  Vol.~66 (2009).
+  modelを基にした歩行者の避難シミュレーションモデルに関する研究，土木学会北海道支部論文報告集， Vol.~66
+  (2009).
 
 \bibitem{ando_sfm}
-　安藤歩：
-  ソーシャルフォースモデルを用いた教室内における避難行動シミュレーション，東京都立大学都市教養学部都市教養学科卒業論文.
+　安藤歩： ソーシャルフォースモデルを用いた教室内における避難行動シミュレーション，東京都立大学都市教養学部都市教養学科卒業論文.
 
 \bibitem{keiro_daikusu}
-長名優子，牧石大輝：
-  マルチエージェントを用いた大学等を対象とした避難シミュレーションシステムの高速化，第75回全国大会講演論文集，
-  Vol.~2, pp.\ 387--388 (2013).
+長名優子，牧石大輝： マルチエージェントを用いた大学等を対象とした避難シミュレーションシステムの高速化，第75回全国大会講演論文集， Vol.~2,
+  pp.\ 387--388 (2013).
 
 \bibitem{sfm_with_daikusutora}
 Khamis, N., Selamat, H., Yusof, R. and Ismail, F.~S.: Magnetic Force Model
@@ -223,23 +198,25 @@ Khamis, N., Selamat, H., Yusof, R. and Ismail, F.~S.: Magnetic Force Model
   (2017).
 
 \bibitem{mps}
-後藤仁志，堀智恵実五十里洋行，KHAYYER, A.：
-  GPUによる粒子法半陰解法アルゴリズムの高速化，土木学会論文集B， Vol.~66,
+後藤仁志，堀智恵実五十里洋行，KHAYYER,
+  A.： GPUによる粒子法半陰解法アルゴリズムの高速化，土木学会論文集B， Vol.~66,
   No.~2, pp.\ 217--222 (2010).
 
 \bibitem{sph}
 Hu, X. and Adams, N.: An incompressible multi-phase SPH method, {\em Journal of
   Computational Physics},  Vol.~227, No.~1, pp.\ 264--278 (2007).
 
+\bibitem{cell_book1}
+Allen, M.~P. and Tildesley, D.~J.: {\em Computer simulation of liquids}, Oxford
+  university press (2017).
+
 \bibitem{cell_renketu}
-平林久義，佐藤雅弘：
-  線形リストを用いた粒子法の近傍粒子探索，日本計算工学会論文集， Vol.~2010,
+平林久義，佐藤雅弘： 線形リストを用いた粒子法の近傍粒子探索，日本計算工学会論文集， Vol.~2010,
   pp.\ 20100001--20100001 (2010).
 
 \bibitem{katayose}
-片寄颯人，中村あすか，富永博文，前川仁孝：
-  視野を考慮した探索範囲削減による人流シミュレーションの高速化，{\em IEICE
-  Conferences Archives},  Vol.~2, pp.\ 371--372 (2021).
+片寄颯人，中村あすか，富永博文，前川仁孝： 視野を考慮した探索範囲削減による人流シミュレーションの高速化，{\em
+  IEICE Conferences Archives},  Vol.~2, pp.\ 371--372 (2021).
 
 \bibitem{sfm_para2}
 Helbing, D., Farkas, I. and Vicsek, T.: Simulating dynamical features of escape
