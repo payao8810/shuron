@@ -536,8 +536,6 @@ SFMの運動方程式を計算する．
 これをふまえると，従来手法よりも高速に解析できる提案手法の
 格子サイズは，エージェントが通る場所の障害物と障害物の間の距離に
 応じて変わることが考えられる．
-\textbf{[壁粒子数を変えた時のシミュレーション実行時間と高速化率
-について述べる！！！]} 
 
 \figref{fig:result_2bai_jikan}，\figref{fig:result_3bai_jikan}，
 \figref{fig:5_kousokuka_atusa}より，
@@ -609,20 +607,21 @@ SFMの運動方程式を計算する．
 
 \begin{figure}[tb]
  \begin{center}
-  \includegraphics[width=12.5cm,clip]{figure/5_kousokukaritu.eps}
+  \includegraphics[width=\columnwidth]{figure/5_kousokukaritu.eps}
   \caption{通路幅を変えたときの高速化率}
   \label{fig:5_kousokuka_haba}
  \end{center}
 \end{figure}
 
-
 \begin{figure}[tb]
  \begin{center}
-  \includegraphics[width=12.5cm,clip]{figure/5_bai_kousokukaritu.eps}
+  \includegraphics[width=\columnwidth]{figure/5_bai_kousokukaritu.eps}
   \caption{壁粒子数を変えたときの高速化率}
   \label{fig:5_kousokuka_atusa}
  \end{center}
 \end{figure}
+
+
 
 \if 0
 \clearpage
@@ -643,6 +642,8 @@ SFMの運動方程式を計算する．
 \fi
 
 \clearpage
+
+\if 0
 %配置のイメージ図{{{
 \begin{figure}[tb]
 	\begin{minipage}[b]{0.5\columnwidth}
@@ -659,6 +660,11 @@ SFMの運動方程式を計算する．
 	\end{minipage}
 \end{figure}
 %}}}
+\fi
+
+\figtb{教室の初期配置}{}{12}{kyositu_v2.eps}{kyositu_haichi}
+\figtb{演習室の初期配置}{}{12}{pc_m.eps}{pc_haichi}
+
 %各配置における粒子数{{{
 \begin{table}[tb]
   \begin{center}
