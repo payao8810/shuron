@@ -24,7 +24,7 @@ NTTデータ理数システム人流シミュレーションによるオリン�
 \bibitem{sim_jirei8}
 株式会社ホロラボホロラボが鹿島のBIMデータを活用した避難シミュレーションのMicrosoft
   HoloLens 2
-  版開発を支援，入手先$<$https://prtimes.jp/main/html/rd/p/000000056.000023638.html$>$
+  版開発を支援，入手先$<$https://prtimes.jp/main/html/\\rd/p/000000056.000023638.html$>$
   (2023-02-20).
 
 \bibitem{sim_jirei7}
@@ -45,7 +45,7 @@ Kirchner, A., Nishinari, K. and Schadschneider, A.: Friction effects and
 \bibitem{floa_field2}
 Nishinari, K., Kirchner, A., Namazi, A. and Schadschneider, A.: Extended Floor
   Field CA Model for Evacuation Dynamics, {\em IEICE Transactions on
-  Information and Systems},  Vol.~E87-D (2003).
+  Inform\\-ation and Systems},  Vol.~E87-D (2003).
 
 \bibitem{helbing_sfm}
 Helbing, D. and Molnar, P.: Social force model for pedestrian dynamics, {\em
