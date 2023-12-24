@@ -2,7 +2,7 @@
 %**********************************************************
 %\chapter{提案手法にあたる章}
 %\chapter{格子分割を用いた進行方向計算の削減手法}
-\chapter{エージェント間距離の削減手法}
+\chapter{エージェント間距離の計算回数削減}
 \label{sec:reduce_distance}
 %**********************************************************
 SFMの運動方程式では，エージェント間距離が大きいほどエージェント間に働く相互作用力が小さくなる．
@@ -41,7 +41,7 @@ SFMで用いられるエージェント間距離の計算回数削減手法は�
 このため，本章では，
 視野形状である扇形に近似した領域を設定し，
 近似領域外のエージェントに対するエージェント間距離の計算回数を削減することで，
-視野を用いたSFMを高速化する．
+視野を用いたSFMを高速化する手法について述べる．
 %fig{serubunkatu_siya}を使ってセル分割法の話を入れたい
 
 \section{近似領域の選択方法}
@@ -67,7 +67,7 @@ SFMで用いられるエージェント間距離の計算回数削減手法は�
 \figtb{進行方向ごとの近似領域}{}{8}{20220225_sentaku.eps}{sentaku}
 
 \subsection{パターン1(セル分割法)}
-パターン1は，一般的なセル分割法\cite{cell1}，\cite{cell2}によるエージェント間距離の計算回数を削減する．
+パターン1は，一般的なセル分割法\cite{cell1}\cite{cell2}によるエージェント間距離の計算回数を削減する．
 \figref{fig:patan1_ex}に\figref{fig:sougo_hani}中のエージェント4にパターン1を用いて
 近似領域を設定した例を示す．
 セル分割法は，\figref{fig:patan1_ex}のように解析領域を格子状に分割し，
@@ -79,7 +79,7 @@ SFMで用いられるエージェント間距離の計算回数削減手法は�
 なお，セル分割法は相互作用力を計算する範囲を円形で想定した手法であるため，
 近似領域が正方形となることから，パターン1の実装では進行方向の推測は行わない．
 また，本論文では，セル分割法のなかでもメモリ使用量を抑えることができると知られている
-連結リスト法\cite{cell_book1}，\cite{cell_renketu}を用いる．
+連結リスト法\cite{cell_book1}\cite{cell_renketu}を用いる．
 
 \figtb{パターン1を用いたエージェント4の近似領域}{}{4}{patan1_ex}{patan1_ex}
 
@@ -146,9 +146,9 @@ SFMで用いられるエージェント間距離の計算回数削減手法は�
 すべての時間ステップでパターン1よりもエージェント間距離の計算を削減できるとは限らない．
 一方で，パターン3は，パターン1のセル分割法と同じ精度のシミュレーション結果を得ることができる．
 
-\figtb{パターン3を用いた近似領域の削減例}{}{5}{patan3_good}{patan3_good}
+\figtb{パターン3を用いた近似領域の削減例}{}{4.75}{patan3_good}{patan3_good}
 
-\figtb{パターン3を用いたエージェント4の近似領域}{}{5}{patan3_ex}{patan3_ex}
+\figtb{パターン3を用いたエージェント4の近似領域}{}{4.75}{patan3_ex}{patan3_ex}
 
 \subsection{パターン4(視野座標を用いた近似)}
 パターン4は，視野の左右両端の座標$(L_x,L_y)$，$(R_x,R_y)$を用いて近似領域を設定する手法である．
@@ -257,43 +257,6 @@ $\sin{(\frac{1}{2}(\pi - \theta_{view}))} \leq e_{x}$という条件を設定で
 \end{table}
 
 \clearpage
-\section{評価}
-視野を用いたSFMに対するエージェント間距離の計算回数削減手法の有効性を確認するために，
-既存手法であるセル分割法を用いたパターン1および提案手法である
-パターン2～6を用いて人流シミュレーションを行う．
-評価環境は，
-CPUがIntel Xeon CPU E5-2687w v2， 
-メモリが64GB，
-OSがLinux 4.12.9であり，
-プログラムのコンパイルにはgcc 7.2.0で-O3オプションを設定する．
-また，本評価では，
-視野を用いたSFMで期待される押し合い圧し合いを行う群衆の行動を再現するために，
-エージェントの初期配置および目的地を\figref{fig:agent_haichi}のように設定し，
-\tabref{tb:tab_para}を用いて運動方程式を計算する．
-\tabref{tb:tab_para}のパラメータは文献\cite{sfm_para2}を参考に設定したものであり，
-これを踏まえてセル分割法のセルサイズは視野範囲に合わせて20mとする．
-本測定では，\figref{fig:agent_haichi}の緑色の範囲内にエージェントをランダムに生成し，
-各エージェントの目的地を解析領域上で初期配置と点対称となる座標に設定することで，
-解析領域の中央でエージェントが密集した状態を作る．
-
-%tb:評価環境
-\if 0
-\begin{table}[tb]
-  \begin{center}
-    \caption{評価環境}
-    %\ecaption{The evaluation environment.}
-    \label{tb:com_env}
-    \begin{tabular}{c|c}
-      \hline \hline
-      CPU              & Intel Xeon CPU E5-2687w v2 \\ \hline
-      メモリ           & 64GB                       \\ \hline
-      OS               & Linux 4.12.9               \\ \hline
-      コンパイラ       & gcc 7.2.0                  \\ \hline
-      最適化オプション & -O3                        \\ \hline
-    \end{tabular}
-  \end{center}
-\end{table}
-\fi
 
 %tb:定数設定
 \begin{table}[tb]
@@ -318,6 +281,45 @@ OSがLinux 4.12.9であり，
 \end{table}
 
 \figtb{エージェントの初期配置}{Initial position of agents.}{4}{20221031_haichi.eps}{agent_haichi}
+
+\section{評価}
+視野を用いたSFMに対するエージェント間距離の計算回数削減手法の有効性を確認するために，
+既存手法であるセル分割法を用いたパターン1および提案手法である
+パターン2～6を用いて人流シミュレーションを行う．
+評価環境は，
+CPUがIntel Xeon CPU E5-2687w v2， 
+メモリが64GB，
+OSがLinux 4.12.9であり，
+プログラムのコンパイルにはgcc 7.2.0で-O3オプションを設定する．
+また，本評価では，
+視野を用いたSFMで期待される押し合い圧し合いを行う群衆の行動を再現するために，
+エージェントの初期配置および目的地を\figref{fig:agent_haichi}のように設定し，
+\tabref{tb:tab_para}を用いて運動方程式を計算する．%\Cite{sfm_para2}
+\tabref{tb:tab_para}のパラメータは文献[2]を参考に設定したものであり，
+これを踏まえてセル分割法のセルサイズは視野範囲に合わせて20mとする．
+本測定では，\figref{fig:agent_haichi}の緑色の範囲内にエージェントをランダムに生成し，
+各エージェントの目的地を解析領域上で初期配置と点対称となる座標に設定することで，
+解析領域の中央でエージェントが密集した状態を作る．
+
+%tb:評価環境
+\if 0
+\begin{table}[tb]
+  \begin{center}
+    \caption{評価環境}
+    %\ecaption{The evaluation environment.}
+    \label{tb:com_env}
+    \begin{tabular}{c|c}
+      \hline \hline
+      CPU              & Intel Xeon CPU E5-2687w v2 \\ \hline
+      メモリ           & 64GB                       \\ \hline
+      OS               & Linux 4.12.9               \\ \hline
+      コンパイラ       & gcc 7.2.0                  \\ \hline
+      最適化オプション & -O3                        \\ \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+\fi
+
 
 %tb:計算回数
 \begin{table}[tb]
