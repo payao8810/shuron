@@ -49,6 +49,22 @@
 \end{center}
 \end{table}}
 
+\newcommand{\距離計算new}{
+\begin{table}[hbtp]
+  \caption{エージェント間距離の計算回数[$10^{10}$回]}
+  \label{tab:my-table}
+  \centering
+  \begin{tabular}{c|rrrrrr}
+  \hline \hline
+  \multirow{2}{*}{人数} & \multicolumn{6}{c}{パターン}                                                                                                                                          \\ \cline{2-7} 
+                      & \multicolumn{1}{c|}{1}    & \multicolumn{1}{c|}{2}    & \multicolumn{1}{c|}{3}    & \multicolumn{1}{c|}{4}    & \multicolumn{1}{c|}{5}    & \multicolumn{1}{c}{6} \\ \hline
+  3000                & \multicolumn{1}{r|}{5.1}  & \multicolumn{1}{r|}{3.9}  & \multicolumn{1}{r|}{4.0}  & \multicolumn{1}{r|}{4.4}  & \multicolumn{1}{r|}{4.1}  & 4.4                   \\ \hline
+  5000                & \multicolumn{1}{r|}{14.4} & \multicolumn{1}{r|}{10.9} & \multicolumn{1}{r|}{11.1} & \multicolumn{1}{r|}{12.2} & \multicolumn{1}{r|}{11.4} & 12.2                  \\ \hline
+  7500                & \multicolumn{1}{r|}{33.1} & \multicolumn{1}{r|}{25.2} & \multicolumn{1}{r|}{25.8} & \multicolumn{1}{r|}{28.3} & \multicolumn{1}{r|}{26.7} & 28.3                  \\ \hline
+  \end{tabular}
+  \end{table}
+}
+
 \newcommand{\距離計算回数}{
 \begin{table}[hbtp]
 \begin{center}
@@ -178,6 +194,8 @@ FSFMは，視野の範囲がエージェントの進行方向前方の扇状の�
 \分類条件
 
 \距離計算回数
+
+\距離計算new
 
 \section{進行方向の計算回数削減手法}
 aaaa
