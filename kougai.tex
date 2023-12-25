@@ -4,7 +4,6 @@
 \usepackage[dvipdfmx]{color}
 \usepackage{multirow}
 \usepackage{here}
-\usepackage{float}
 
 \newcommand{\figtb}[5]{ %引数 {日本語タイトル}{英語タイトル}{サイズ}{ファイル名}{ラベル名}
 \begin{figure}[hbtp]
@@ -16,16 +15,49 @@
 \end{figure}}
 
 \newcommand{\分類条件}{
-}
+\begin{table}[t]
+\begin{center}
+\caption{進行方向を分類する条件}
+\ecaption{Classification condition of moving direction $e_{i}$.}
+\label{tb:hantei_jouken}
+\begin{tabular}{c|c|c|c|c}
+\hline \hline
+			& 右 & 左 & 上 & 下 \\ \hline
+パターン2   & $\frac{1}{\sqrt{2}} < e_x \leq 1  $
+		    & $ -1 \leq e_x < \frac{-1}{\sqrt{2}}$ 
+		    & $ \frac{-1}{\sqrt{2}} < e_x < \frac{1}{\sqrt{2}} $ 
+		    & $ \frac{-1}{2} < e_x < \frac{1}{2} $ \\
+パターン3   & $\frac{-1}{2} < e_y < \frac{1}{2} $ 
+		    & $\frac{-1}{2} < e_y < \frac{1}{2} $
+            & $ \frac{1}{\sqrt{2}} < e_y \leq 1$
+		    & $ -1 \leq e_y < \frac{-1}{\sqrt{2}} $ \\
+\hline
+\multirow{2}{*}{パターン4}   
+			& $R_x \geq A_x$ & $R_x < A_x$ & $R_y \geq A_y$ & $R_y < A_y $ \\
+	        &  $L_x \geq A_x$ & $L_x < A_x$ & $L_y \geq A_y$ & $L_y < A_y$ \\
+\hline
+\multirow{2}{*}{パターン5}   
+ 			& $R_x \geq x_1$ & $R_x < x_2$ & $R_y \geq y_1$ & $R_y < y_2 $ \\
+			& $L_x \geq x_1$ & $L_x < x_2$ & $L_y \geq y_1$ & $L_y < y_2 $ \\
+\hline
+パターン6   & $ \cos(\frac{1}{2}\theta_{view}) \leq  e_y $ 
+			& $ e_y \leq -\cos(\frac{1}{2}\theta_{view})$ 
+			& $ \sin(\frac{1}{2}(\pi - \theta_{view})) \leq e_x $ 
+			& $ e_x \leq \sin(\frac{1}{2}(\pi - \theta_{view}))  $ \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}}
 
 \newcommand{\距離計算回数}{
-\begin{table}[t]
+\begin{table}[hbtp]
 \begin{center}
 \caption{エージェント間距離の計算回数[$10^{10}$回]}
 \label{tb:count_result_yobi}
 \begin{tabular}{c|r|r|r|r|r|r}
 \hline \hline
-	人数 & パターン1 & パターン2 & パターン3 & パターン4 & パターン5 & パターン6 \\  
+	%人数 & パターン1 & パターン2 & パターン3 & パターン4 & パターン5 & パターン6 \\  
+	人数 & 1 & 2 & 3 & 4 & 5 & 6 \\  
 	\hline
 	\multirow{2}{*}{3000} 
 	& 5.1   & $\mathbf{3.9}$   & 4.0    & 4.4    & 4.1    & 4.4   \\  
@@ -143,42 +175,10 @@ FSFMは，視野の範囲がエージェントの進行方向前方の扇状の�
 削減パターンを適用することで，エージェント4，6とのエージェント間距離の
 計算と視野範囲内かどうかの判定を減らすことができる．
 
-\begin{table}[t]
-\begin{center}
-\caption{進行方向を分類する条件}
-\ecaption{Classification condition of moving direction $e_{i}$.}
-\label{tb:hantei_jouken}
-\begin{tabular}{c|c|c|c|c}
-\hline \hline
-			& 右 & 左 & 上 & 下 \\ \hline
-パターン2   & $\frac{1}{\sqrt{2}} < e_x \leq 1  $
-		    & $ -1 \leq e_x < \frac{-1}{\sqrt{2}}$ 
-		    & $ \frac{-1}{\sqrt{2}} < e_x < \frac{1}{\sqrt{2}} $ 
-		    & $ \frac{-1}{2} < e_x < \frac{1}{2} $ \\
-パターン3   & $\frac{-1}{2} < e_y < \frac{1}{2} $ 
-		    & $\frac{-1}{2} < e_y < \frac{1}{2} $
-            & $ \frac{1}{\sqrt{2}} < e_y \leq 1$
-		    & $ -1 \leq e_y < \frac{-1}{\sqrt{2}} $ \\
-\hline
-\multirow{2}{*}{パターン4}   
-			& $R_x \geq A_x$ & $R_x < A_x$ & $R_y \geq A_y$ & $R_y < A_y $ \\
-	        &  $L_x \geq A_x$ & $L_x < A_x$ & $L_y \geq A_y$ & $L_y < A_y$ \\
-\hline
-\multirow{2}{*}{パターン5}   
- 			& $R_x \geq x_1$ & $R_x < x_2$ & $R_y \geq y_1$ & $R_y < y_2 $ \\
-			& $L_x \geq x_1$ & $L_x < x_2$ & $L_y \geq y_1$ & $L_y < y_2 $ \\
-\hline
-パターン6   & $ \cos(\frac{1}{2}\theta_{view}) \leq  e_y $ 
-			& $ e_y \leq -\cos(\frac{1}{2}\theta_{view})$ 
-			& $ \sin(\frac{1}{2}(\pi - \theta_{view})) \leq e_x $ 
-			& $ e_x \leq \sin(\frac{1}{2}(\pi - \theta_{view}))  $ \\
-\hline
-\end{tabular}
-\end{center}
-\end{table}
-%
-%\距離計算回数
-%
+\分類条件
+
+\距離計算回数
+
 \section{進行方向の計算回数削減手法}
 aaaa
 
