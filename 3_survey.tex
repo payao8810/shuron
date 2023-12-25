@@ -121,10 +121,10 @@ hash配列は，エージェントの所属するセルの番号を保持する�
 エージェントのインデックス番号を保持する．start配列は，各セルの始点を示すインデックス
 を保持する．
 \figref{fig:hash}にハッシュ法を用いたセル分割法を示す．
-\figref{fig:hash}中の右側に示す四角は，各配列を示す．
+\figref{fig:hash}中の右側に示す四角は，各配列である．
 \figref{fig:hash}に示すように，ハッシュ法は，index配列に各エージェントの
 インデックス番号，hash配列に各エージェントのセル番号を格納する．次に，
-hash配列とindex配列をhash配列の値を用いて昇順にソートを行う．
+hash配列とindex配列をhash配列の値を用いて昇順にソートする．
 ソート後は，start配列に各セルのhash配列の始点を格納する．
 エージェントが存在しないセルは，hash配列の値を最後であることを示す値を格納する．
 周囲のエージェントを参照するときは，start配列から参照するセルの
@@ -173,7 +173,7 @@ SFMを並列化は，共有メモリ環境や分散メモリ環境上で並列�
 \begin{figure}[t]
  \begin{center}
   \includegraphics[width=10cm,clip]{figure/sureddo_heiretu.eps}
-  \caption{3スレッドでの並列化の例}
+  \caption{集中メモリ環境におけるスレッド数3の並列化の例}
   \label{fig:agent_heiretu}
  \end{center}
 \end{figure}
@@ -181,7 +181,7 @@ SFMを並列化は，共有メモリ環境や分散メモリ環境上で並列�
 \begin{figure}[t]
  \begin{center}
   \includegraphics[width=10cm,clip]{figure/ryoiki_heiretu.eps}
-  \caption{MPIを用いたSFMの領域分割の例}
+  \caption{分散メモリ環境上におけるSFMの領域分割の例}
   \label{fig:ryouiki_heiretu}
  \end{center}
 \end{figure}
