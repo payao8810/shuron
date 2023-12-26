@@ -5,16 +5,19 @@
 \usepackage{multirow}
 \usepackage{here}
 
-\newcommand{\figtb}[5]{ %引数 {日本語タイトル}{英語タイトル}{サイズ}{ファイル名}{ラベル名}
+\newcommand{\figtb}[5]{ %引数 {日本語タイトル}{英語タイトル}{サイズ}{ファイル名}{ラベル名}{{{
+%\vspace{-0.5em}
 \begin{figure}[hbtp]
   \begin{center}
     \includegraphics[width=#3cm,clip]{figure/#4}
     \caption{#1}
     \label{fig:#5}
   \end{center}
-\end{figure}}
+\end{figure}
+%\vspace{-1em}
+}%}}}
 
-\newcommand{\分類条件}{
+\newcommand{\分類条件}{%{{{
 \begin{table}[t]
 \begin{center}
 \caption{進行方向を分類する条件}
@@ -47,9 +50,9 @@
 \hline
 \end{tabular}
 \end{center}
-\end{table}}
+\end{table}}%}}}
 
-\newcommand{\距離計算new}{
+\newcommand{\距離計算new}{%{{{
   \begin{table}[]
     \caption{エージェント間距離の計算回数[$10^{10}$回]}
     \label{tab:my-table}
@@ -64,35 +67,8 @@
     \multirow{2}{*}{7500} & \multicolumn{1}{r|}{33.1} & \multicolumn{1}{r|}{\textbf{25.2}}   & \multicolumn{1}{r|}{25.8}   & \multicolumn{1}{r|}{28.3}   & \multicolumn{1}{r|}{26.7}   & \multicolumn{1}{r}{28.3} \\
                           & \multicolumn{1}{l|}{}     & \multicolumn{1}{l|}{\textbf{(24\%)}} & \multicolumn{1}{l|}{(22\%)} & \multicolumn{1}{l|}{(15\%)} & \multicolumn{1}{l|}{(20\%)} & (15\%)                   \\ \hline
     \end{tabular}
-    \end{table}}
-
-\newcommand{\距離計算回数}{
-\begin{table}[hbtp]
-\begin{center}
-\caption{エージェント間距離の計算回数[$10^{10}$回]}
-\label{tb:count_result_yobi}
-\begin{tabular}{c|r|r|r|r|r|r}
-\hline \hline
-	%人数 & パターン1 & パターン2 & パターン3 & パターン4 & パターン5 & パターン6 \\  
-	人数 & 1 & 2 & 3 & 4 & 5 & 6 \\  
-	\hline
-	\multirow{2}{*}{3000} 
-	& 5.1   & $\mathbf{3.9}$   & 4.0    & 4.4    & 4.1    & 4.4   \\  
-	&       & ($\mathbf{24.5}$\%) 					& (22.9\%) & (15.3\%) & (20.7\%) & (15.2\%) \\ \hline
-	\multirow{2}{*}{5000} 
-	& 14.4  &  $\mathbf{10.9}$  					  & 11.1   & 12.2   & 11.4   & 12.2  \\  
-	&       & ($\mathbf{23.8}$\%) 					& (22.6\%) & (15.2\%) & (20.5\%) & (15.1\%) \\ \hline
-	\multirow{2}{*}{7500} 
-	& 33.1  & $\mathbf{25.2}$	 		    	 	 & 25.8   & 28.3   & 26.7   & 28.3  \\ 
-	&       & ($\mathbf{23.9}$\%) 					& (22.2\%) & (14.6\%) & (19.4\%) & (14.6\%) \\ \hline
-    \end{tabular}
-  \end{center}
-\end{table}}
-
-
-\if 0
-\usepackage[dvipdfmx]{graphicx}
-\fi
+    \end{table}
+}%}}}
 
 \begin{document}
 \title{進行方向の計算回数削減による
@@ -101,7 +77,7 @@
 \author{片寄\ 颯人}
 \maketitle
 
-\if 0
+\if 0%はじめに短いver{{{
 \section{はじめに}
 駅や商業施設などのように人が多く集まる場所では，利便性や災害時の
 安全性の観点から，混雑や滞留の対策が重要であり，
@@ -113,7 +89,7 @@ SFMを用いた人流シミュレーションは，解析規模に応じて，
 高速化が求められている．
 そこで，本稿では，SFMを用いた人流シミュレーションを高速化するために，
 進行方向計算中の演算回数を削減する手法を提案する．
-\fi
+\fi%}}}
 
 \section{はじめに}
 駅や商業施設などのように人が多く集まる場所では，利便性や災害時の
@@ -152,13 +128,7 @@ SFMは，時間ステップごとに各エージェントの進行方向を決�
 このとき，判定に用いるセルは，色の付いたセルであるため，白いセルに存在する
 エージェントの影響範囲内であるかの判定を減らすことができる．
 
-\begin{figure}[hbtp]
- \begin{center}
-  \includegraphics[width=7.21cm,clip]{figure/sfm_ex.eps}
-  \caption{SFMの計算例}
-  \label{fig:sfm_ex}
- \end{center}
-\end{figure}
+\figtb{SFMの計算例}{}{7.21}{sfm_ex.eps}{sfm_ex}
 
 \section{進行方向計算中の演算回数削減手法}
 SFMを用いた人流シミュレーションは，実問題に対して解析する場合，
@@ -173,10 +143,16 @@ SFMを用いた人流シミュレーションは，実問題に対して解析�
 あらかじめ計算できない．このため，提案手法は，
 近似領域を影響範囲に高い精度で近似することで，
 エージェントを避ける力の計算時のエージェント間距離の計算回数を削減する．
+格子分割した領域ごとに目的地に向かう力と障害物を避ける力の例を
+図\ref{fig:grid_ex1}に示す．
 
 
-\figtb{進行方向ごとの近似領域}{}{7.5}{20220225_sentaku.eps}{sentaku}
-\figtb{エージェント4の実装パターンごとの近似領域の例}{}{8}{20231007_hanni.eps}{90do_hamideru}
+\figtb{提案する格子分割の例}{}{5.5}{ex1.eps}{grid_ex1}
+\figtb{経由地がある場合の進行方向の例}{}{7}{5_e_vec_ex.eps}{ex2}
+
+
+\figtb{進行方向ごとの近似領域}{}{5.5}{20220225_sentaku.eps}{sentaku}
+\figtb{エージェント4の実装パターンごとの近似領域の例}{}{7}{20231007_hanni.eps}{90do_hamideru}
 
 
 \section{エージェント間距離の計算回数削減手法}
@@ -192,9 +168,8 @@ FSFMは，視野の範囲がエージェントの進行方向前方の扇状の�
 削減パターンを適用することで，エージェント4，6とのエージェント間距離の
 計算と視野範囲内かどうかの判定を減らすことができる．
 
-\分類条件
+%\分類条件
 
-\距離計算回数
 
 \距離計算new
 
