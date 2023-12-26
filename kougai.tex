@@ -4,6 +4,7 @@
 \usepackage[dvipdfmx]{color}
 \usepackage{multirow}
 \usepackage{here}
+\usepackage{amsmath}
 
 \newcommand{\figtb}[5]{ %引数 {日本語タイトル}{英語タイトル}{サイズ}{ファイル名}{ラベル名}{{{
 %\vspace{-0.5em}
@@ -58,7 +59,7 @@
     \label{tab:my-table}
     \begin{tabular}{c|llllll}
     \hline \hline
-    \multirow{2}{*}{人数}   & \multicolumn{6}{c}{パターン}                                                                                                                                                              \\ \cline{2-7} 
+    \multirow{2}{*}{人数}   & \multicolumn{6}{c}{パターン}                                                                                                                                                             \\ \cline{2-7} 
                           & \multicolumn{1}{c|}{1}    & \multicolumn{1}{c|}{2}               & \multicolumn{1}{c|}{3}      & \multicolumn{1}{c|}{4}      & \multicolumn{1}{c|}{5}      & \multicolumn{1}{c}{6}    \\ \hline
     \multirow{2}{*}{3000} & \multicolumn{1}{r|}{5.1}  & \multicolumn{1}{r|}{\textbf{3.9}}    & \multicolumn{1}{r|}{4.0}    & \multicolumn{1}{r|}{4.4}    & \multicolumn{1}{r|}{4.1}    & \multicolumn{1}{r}{4.4}  \\
                           & \multicolumn{1}{l|}{}     & \multicolumn{1}{l|}{\textbf{(24\%)}} & \multicolumn{1}{l|}{(23\%)} & \multicolumn{1}{l|}{(15\%)} & \multicolumn{1}{l|}{(21\%)} & (15\%)                   \\ \hline
@@ -113,20 +114,37 @@ SFMを用いた人流シミュレーションは，解析規模に応じて，
 \section{ソーシャルフォースモデル(SFM)}
 SFMは，時間ステップごとに各エージェントの進行方向を決定する運動方程式を
 解くことで，人々の流れを再現する．
-図\ref{fig:sfm_ex}にSFMのエージェント0の計算例を示す．
+式\eqref{eq:sfm_siki1}にSFMの運動方程式を示す．
+%
+\begin{align} \label{eq:sfm_siki1}
+  m_i \frac{dv_i}{dt} = m_i \frac{v_i^0 e_i - v_i}{\tau_i}
+  +\sum_{j(\neq i)}f_{ij}+\sum_{W}f_{iW}
+\end{align}
+%
+式\eqref{eq:sfm_siki1}中の$m_i$はエージェント$i$の体重，
+$v_i^0$はエージェント$i$の希望速度，
+$e_i$はエージェント$i$の目的地に向かう力，
+$v_i$はエージェント$i$の速度，
+$\tau_i$は時定数，
+$f_{ij}$はエージェントを避ける力，
+$f_{iW}$は障害物を避ける力である．
+エージェント$i$は，目的地に向かう力とエージェントを避ける力$f_{ij}$，
+障害物を避ける力$f_{iw}$の合力を式\eqref{eq:sfm_siki1}を用いて算出する．
+SFMの計算例を\figref{fig:sfm_ex}に示す．
 図中の四角は解析領域を分割したセル，赤丸は計算対象のエージェント，
-黒丸は他のエージェント，色の付いた四角は判定に用いるセル(近似領域)，
-赤い点線は影響範囲を表す．
-時刻$t$のエージェント$i$の進行方向は，
-図\ref{fig:sfm_ex}のように，
-自身の体重$m_i$，希望速度$v_i^0(t)$，現在速度$v_i(t)$，時定数$t_i$，
-および，影響範囲内のエージェントを避ける力$f_{ij}$，
-障害物を避ける力$f_{iW}$に基づいて算出する．
+黒丸は他のエージェント，緑色の点線は影響範囲，
+色の付いた四角は影響範囲の内外判定に用いるセル(近似領域)である．
+\figref{fig:sfm_ex}の例は，エージェント△の計算例であり，
+エージェント△
+
 図\ref{fig:sfm_ex}の例では，エージェント0の進行方向を計算するとき，
 色のついたセルに存在するエージェントに対して距離を計算し，
 影響範囲内であるか判定する．
 このとき，判定に用いるセルは，色の付いたセルであるため，白いセルに存在する
 エージェントの影響範囲内であるかの判定を減らすことができる．
+
+
+\figtb{SFMの計算例(影響範囲の色と範囲を変更)}{}{7.21}{serubunkatu_ex1.eps}{sougo_hani}
 
 \figtb{SFMの計算例}{}{7.21}{sfm_ex.eps}{sfm_ex}
 
@@ -220,6 +238,7 @@ aaaa
  \end{center}
 \end{figure}
 \fi
+
 
 \begin{table}[hbtp]
   \begin{center}
