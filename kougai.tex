@@ -55,6 +55,7 @@
 
 \newcommand{\距離計算new}{%{{{
   \begin{table}[]
+    \begin{center}
     \caption{エージェント間距離の計算回数[$10^{10}$回]}
     \label{tab:my-table}
     \begin{tabular}{c|llllll}
@@ -68,7 +69,42 @@
     \multirow{2}{*}{7500} & \multicolumn{1}{r|}{33.1} & \multicolumn{1}{r|}{\textbf{25.2}}   & \multicolumn{1}{r|}{25.8}   & \multicolumn{1}{r|}{28.3}   & \multicolumn{1}{r|}{26.7}   & \multicolumn{1}{r}{28.3} \\
                           & \multicolumn{1}{l|}{}     & \multicolumn{1}{l|}{\textbf{(24\%)}} & \multicolumn{1}{l|}{(22\%)} & \multicolumn{1}{l|}{(15\%)} & \multicolumn{1}{l|}{(20\%)} & (15\%)                   \\ \hline
     \end{tabular}
+    \end{center}
     \end{table}
+}%}}}
+
+\newcommand{\粒子数}{%{{{
+\begin{table}[hbtp]
+  \begin{center}
+    \caption{各配置の詳細}
+    \label{tb:haichi_para}
+    \begin{tabular}{c|c|c}
+      \hline \hline
+      & 教室 & 演習室 \\ \hline 
+      エージェント数[人] & 96 & 204 \\ \hline
+      壁粒子数[個] & 1037 & 1454\\ \hline
+      経由地数[個] & 12   & 26 \\ \hline
+      解析領域 & $50m\times50m$ & $50m\times50m$ \\ \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+}%}}}
+
+\newcommand{\評価環境}{%{{{
+\begin{table}[hbtp]
+  \begin{center}
+    \caption{各配置の詳細}
+    \label{tb:haichi_para}
+    \begin{tabular}{c|c|c}
+      \hline \hline
+                 & マシン1                & マシン2 \\ \hline 
+      CPU        & Intel Xeon E5-2687W v2 & Intel Xeon E5-2667W v2 \\ \hline
+      メモリ     & 64GB                   & 64GB \\ \hline
+      OS         & Linux 4.12.9            & Linux 6.5.8 \\ \hline
+      コンパイラ & gcc 7.2.0             & gcc 13.2.0 \\ \hline
+    \end{tabular}
+  \end{center}
+\end{table}
 }%}}}
 
 \begin{document}
@@ -146,8 +182,6 @@ SFMの計算例を\figref{fig:sfm_ex}に示す．
 
 \figtb{SFMの計算例(影響範囲の色と範囲を変更)}{}{7.21}{serubunkatu_ex1.eps}{sougo_hani}
 
-\figtb{SFMの計算例}{}{7.21}{sfm_ex.eps}{sfm_ex}
-
 \section{進行方向計算中の演算回数削減手法}
 SFMを用いた人流シミュレーションは，実問題に対して解析する場合，
 エージェントや障害物が多く存在するため，進行方向の計算に時間がかかる．
@@ -172,7 +206,7 @@ SFMを用いた人流シミュレーションは，実問題に対して解析�
 \figtb{進行方向ごとの近似領域}{}{5.5}{20220225_sentaku.eps}{sentaku}
 \figtb{エージェント4の実装パターンごとの近似領域の例}{}{7}{20231007_hanni.eps}{90do_hamideru}
 
-
+\if 0
 \section{エージェント間距離の計算回数削減手法}
 FSFMは，視野の範囲がエージェントの進行方向前方の扇状の範囲であり，
 後方のセルに存在する他のエージェントが視野の範囲内に存在するかという
@@ -185,14 +219,8 @@ FSFMは，視野の範囲がエージェントの進行方向前方の扇状の�
 図\ref{fig:seru_ex1}の例では，提案手法のエージェントの進行方向から右の
 削減パターンを適用することで，エージェント4，6とのエージェント間距離の
 計算と視野範囲内かどうかの判定を減らすことができる．
+\fi
 
-%\分類条件
-
-
-\距離計算new
-
-\section{進行方向の計算回数削減手法}
-aaaa
 
 \section{評価}
 提案手法の人流シミュレーションに対する有効性を確認するために，
@@ -229,51 +257,16 @@ aaaa
 と考えられる．また，直進の配置の方が削減率が高いのは，
 後ろに近傍のエージェントが存在することが多いことが要因であると考えられる．
 
-\if 0
-\begin{figure}[hbtp]
- \begin{center}
-  \includegraphics[draft, width=4.5cm,clip]{figure/kougai_haichi_2.eps}
-  \caption{エージェントの初期配置}
-  \label{fig:agent_haichi_image}
- \end{center}
-\end{figure}
-\fi
+\評価環境
+
+\距離計算new
 
 
-\begin{table}[hbtp]
-  \begin{center}
-    \caption{セル分割法と提案手法の実行時間と高速化率と削減率}
-    \label{tab:result}
-    \begin{tabular}{c|c|c|c|c}
-      \hline \hline
-        &　既存手法[s] & 提案手法[s] & 高速化率 & 削減率 \\
-      \hline
-      5000人交差 & \multicolumn{1}{|r|}{8321} &
-       \multicolumn{1}{|r|}{5522} &
-       \multicolumn{1}{|r|}{1.51} &
-       \multicolumn{1}{|r}{21} \\
-      \hline
-      10000人交差 &
-      \multicolumn{1}{|r|}{33898} &
-      \multicolumn{1}{|r|}{22231} &
-      \multicolumn{1}{|r|}{1.52}  &
-      \multicolumn{1}{|r}{22} \\
-      \hline
-      5000人直進 &
-      \multicolumn{1}{|r|}{29790} &
-      \multicolumn{1}{|r|}{19337} &
-      \multicolumn{1}{|r|}{1.54}  &
-      \multicolumn{1}{|r}{31} \\
-      \hline
-      10000人直進 &
-      \multicolumn{1}{|r|}{118212} &
-      \multicolumn{1}{|r|}{77265} &
-      \multicolumn{1}{|r|}{1.54} &
-      \multicolumn{1}{|r}{31}  \\
-      \hline
-    \end{tabular}
-  \end{center}
-\end{table}
+\figtb{エージェントの初期配置}{Initial position of agents.}{4}{20221031_haichi.eps}{agent_haichi}
+
+\粒子数
+
+\figtb{パターン1（セル分割法）に対する高速化率}{}{8}{20230226_kousokuka.eps}{kousokuka2}
 
 \section{おわりに}
 本稿では，視野を用いた人流シミュレーションを高速化するために，
