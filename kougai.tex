@@ -54,7 +54,7 @@
 \end{table}}%}}}
 
 \newcommand{\距離計算new}{%{{{
-  \begin{table}[]
+  \begin{table}[hbtp]
     \begin{center}
     \caption{エージェント間距離の計算回数[$10^{10}$回]}
     \label{tab:my-table}
@@ -98,7 +98,7 @@
     \begin{tabular}{c|c|c}
       \hline \hline
                  & マシン1                & マシン2 \\ \hline 
-      CPU        & Intel Xeon E5-2687W v2 & Intel Xeon E5-2667W v2 \\ \hline
+      CPU        & Intel Xeon E5-2687W & Intel Xeon E5-2667W \\ \hline
       メモリ     & 64GB                   & 64GB \\ \hline
       OS         & Linux 4.12.9            & Linux 6.5.8 \\ \hline
       コンパイラ & gcc 7.2.0             & gcc 13.2.0 \\ \hline
@@ -106,6 +106,7 @@
   \end{center}
 \end{table}
 }%}}}
+
 
 \begin{document}
 \title{進行方向の計算回数削減による
@@ -224,7 +225,8 @@ FSFMは，視野の範囲がエージェントの進行方向前方の扇状の�
 \section{評価}
 提案手法の人流シミュレーションに対する有効性を確認するために，
 セル分割法と提案手法のエージェント間計算回数と実行時間を測定する．
-評価環境は，CPUがIntel Xeon E5-2687W v2，メモリが64GBである．
+評価環境は，CPUがIntel Xeon E5-2667W v2，メモリが64GBのマシンと
+CPUがIntel Xeon E5-2687W v2，メモリが64GBのマシンを用いる．
 測定に用いる初期配置は，図\ref{fig:agent_haichi_image}に示すように，
 交差と直進の配置である．
 表\ref{tab:result}にセル分割法と提案手法の実行時間と高速化率，削減率を示す．
@@ -255,8 +257,6 @@ FSFMは，視野の範囲がエージェントの進行方向前方の扇状の�
 間距離の計算回数が削減により，解析時間の短縮に繋がったから
 と考えられる．また，直進の配置の方が削減率が高いのは，
 後ろに近傍のエージェントが存在することが多いことが要因であると考えられる．
-
-\評価環境
 
 \距離計算new
 
