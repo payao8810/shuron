@@ -5,6 +5,7 @@
 \usepackage{multirow}
 \usepackage{here}
 \usepackage{amsmath}
+\usepackage{array}
 
 \newcommand{\figtb}[5]{ %引数 {日本語タイトル}{英語タイトル}{サイズ}{ファイル名}{ラベル名}{{{
 %\vspace{-0.5em}
@@ -51,7 +52,8 @@
 \hline
 \end{tabular}
 \end{center}
-\end{table}}%}}}
+\end{table}
+}%}}}
 
 \newcommand{\距離計算new}{%{{{
   \begin{table}[hbtp]
@@ -107,6 +109,28 @@
 \end{table}
 }%}}}
 
+\newcommand{\判定条件new}{%{{{
+  \begin{table}[hbtp]
+    \centering
+		\caption{パターンごとの進行方向分類条件}
+		\label{tb:joken}
+		{\scriptsize
+    \begin{tabular}{Wc{0.5em}|cccWc{8em}}
+    \hline \hline
+    \multirow{2}{*}{} & \multicolumn{4}{c}{パターン}                                                                             \\ \cline{2-5} 
+                          & \multicolumn{1}{c|}{2,3} & \multicolumn{1}{c|}{4}   & \multicolumn{1}{c|}{5}   & 6                   \\ \hline
+    \multirow{2}{*}{右}    & \multicolumn{1}{c|}{$\frac{1}{\sqrt{2}} < e_x \leq 1$}  & \multicolumn{1}{c|}{$R_x \geq A_x$}  & \multicolumn{1}{c|}{$R_x \geq x_1$}  & \multirow{2}{*}{$ \cos(\frac{1}{2}\theta_v) \leq  e_y $} \\
+                          & \multicolumn{1}{c|}{$\frac{-1}{2} < e_y < \frac{1}{2} $}   & \multicolumn{1}{l|}{$L_x \geq A_x$} & \multicolumn{1}{l|}{$L_x \geq x_1$} &                     \\ \hline
+    \multirow{2}{*}{左}    & \multicolumn{1}{c|}{$ -1 \leq e_x < \frac{-1}{\sqrt{2}}$}  & \multicolumn{1}{c|}{$R_x < A_x$}  & \multicolumn{1}{c|}{$R_x < x_2$}  & \multirow{2}{*}{$ e_y \leq -\cos(\frac{1}{2}\theta_{v})$} \\
+                          & \multicolumn{1}{l|}{$\frac{-1}{2} < e_y < \frac{1}{2} $}   & \multicolumn{1}{l|}{$L_x < A_x$} & \multicolumn{1}{l|}{$L_x < x_2$ } &                     \\ \hline
+    \multirow{2}{*}{上}    & \multicolumn{1}{c|}{$ \frac{-1}{\sqrt{2}} < e_x < \frac{1}{\sqrt{2}}$}  & \multicolumn{1}{c|}{$R_y \geq A_y$ }  & \multicolumn{1}{c|}{$R_y \geq y_1$ }  & \multirow{2}{*}{$ \sin(\frac{1}{2}(\theta_{\pi - v})) \leq e_x$} \\
+                          & \multicolumn{1}{l|}{$ \frac{1}{\sqrt{2}} < e_y \leq 1$}   & \multicolumn{1}{l|}{$L_y \geq A_y$} & \multicolumn{1}{l|}{$L_y \geq y_1$} &                     \\ \hline
+    \multirow{2}{*}{下}    & \multicolumn{1}{c|}{$ \frac{-1}{2} < e_x < \frac{1}{2} $}  & \multicolumn{1}{c|}{$R_y < A_y $}  & \multicolumn{1}{c|}{$R_y < y_2 $ }  & \multirow{2}{*}{$ e_x \leq \sin(\frac{1}{2}(\theta_{\pi - v}))$} \\
+                          & \multicolumn{1}{l|}{$ -1 \leq e_y < \frac{-1}{\sqrt{2}} $}   & \multicolumn{1}{l|}{$L_y < A_y$} & \multicolumn{1}{l|}{$L_y < y_2 $ } &                     \\ \hline
+    \end{tabular}
+		}
+    \end{table}
+}%}}}
 
 \begin{document}
 \title{進行方向の計算回数削減による
@@ -209,30 +233,7 @@ SFMを用いた人流シミュレーションは，実問題に対して解析�
 近似領域を長方形で視野範囲に近似する．
 
 
-\begin{table}[hbtp]
-	\centering
-	\caption{パターン4の進行方向判定条件}
-	\label{tb:patan4_joken}
-	\begin{tabular}{c|c|c|c|c}
-		\hline \hline
-		パターン & 右 & 左 & 上 & 下  \\ \hline
-    \multirow{2}{*}{2，3}
-		& $\frac{1}{\sqrt{2}} < e_x \leq 1$
-		& $ -1 \leq e_x < \frac{-1}{\sqrt{2}}$
-		& $ \frac{-1}{\sqrt{2}} < e_x < \frac{1}{\sqrt{2}}$
-		& $ \frac{-1}{2} < e_x < \frac{1}{2} $ \\
-		& $\frac{-1}{2} < e_y < \frac{1}{2} $ 
-		& $\frac{-1}{2} < e_y < \frac{1}{2} $
-  	& $ \frac{1}{\sqrt{2}} < e_y \leq 1$
-		& $ -1 \leq e_y < \frac{-1}{\sqrt{2}} $ \\ \hline
-
-    \multirow{2}{*}{1}
-    & $R_x \geq A_x$ & $R_x < A_x$ & $R_y \geq A_y$ & $R_y < A_y $ \\ 
-	  & $L_x \geq A_x$ & $L_x < A_x$ & $L_y \geq A_y$ & $L_y < A_y$ \\ \hline
-	\end{tabular}
-\end{table}
-
-
+\判定条件new
 
 \figtb{提案する格子分割の例}{}{5.5}{ex1.eps}{grid_ex1}
 \figtb{経由地がある場合の進行方向の例}{}{7}{5_e_vec_ex1.eps}{ex2}
